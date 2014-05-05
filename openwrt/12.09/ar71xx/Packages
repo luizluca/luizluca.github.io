@@ -1,0 +1,517 @@
+Package: aiccu
+Version: 20070115-11
+Depends: libc, libpthread, ip, kmod-sit, kmod-tun
+Provides: 
+Source: feeds/packages/ipv6/aiccu
+Section: ipv6
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 25396
+Filename: aiccu_20070115-11_ar71xx.ipk
+Size: 25927
+MD5Sum: a224f1188956663517b8a6d5c68cfd25
+Description:  SixXS Automatic IPv6 Connectivity Client Utility
+
+Package: iftop
+Version: 1.0pre4-1
+Depends: libc, libpcap, libncurses, libpthread
+Provides: 
+Source: feeds/packages/net/iftop
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 22455
+Filename: iftop_1.0pre4-1_ar71xx.ipk
+Size: 22885
+MD5Sum: d1eb66ec715c1809e718721d835e5172
+Description:  iftop does for network usage what top(1) does for CPU usage. It 
+ listens to network traffic on a named interface and displays a 
+ table of current bandwidth usage by pairs of hosts. Handy for 
+ answering the question 'why is our ADSL link so slow?'.
+
+Package: kmod-tcp_htcp
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-812d03f68436276f357b5db371863a2b)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 2275
+Filename: kmod-tcp_htcp_3.3.8-1_ar71xx.ipk
+Size: 3088
+MD5Sum: b1e377e3efddb0fc6ad4a82a3e786445
+Description:  Kernel modules for TCP H-TCP congestion control algorithm for high speed networks with high latency
+
+Package: kmod-tcp_lp
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-812d03f68436276f357b5db371863a2b)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 1542
+Filename: kmod-tcp_lp_3.3.8-1_ar71xx.ipk
+Size: 2341
+MD5Sum: 6a8a0496041ed2f52ea8a5b3b060011f
+Description:  Kernel modules for TCP LP (Low Priority) congestion control algorithm
+
+Package: libruby
+Version: 1.9.3-p545-1
+Depends: libc, libpthread, librt
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 690830
+Filename: libruby_1.9.3-p545-1_ar71xx.ipk
+Size: 685831
+MD5Sum: 716b90356da8e476e0b77d9896302344
+Description:  Ruby scripting language (shared library)
+
+Package: luci-i18n-portuguese-brazilian
+Version: 0.11+svn9415-1
+Depends: libc
+Provides: 
+Source: feeds/luci/luci
+Section: luci
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ar71xx
+Installed-Size: 21751
+Filename: luci-i18n-portuguese-brazilian_0.11+svn9415-1_ar71xx.ipk
+Size: 22547
+MD5Sum: a4b13792df26495e55ab0e74ee45295d
+Description:  Portuguese (Brazilian) (by Carlos Cesario)
+
+Package: minidlna
+Version: 1.1.2-1
+Depends: libc, libpthread, libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid
+Provides: 
+Source: feeds/packages/multimedia/minidlna
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 115119
+Filename: minidlna_1.1.2-1_ar71xx.ipk
+Size: 114712
+MD5Sum: 6b0dbd0f59151f35f158f9fc502a3fdd
+Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
+ being fully compliant with DLNA/UPnP-AV clients.
+
+Package: ruby
+Version: 1.9.3-p545-1
+Depends: libc, libruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 1404
+Filename: ruby_1.9.3-p545-1_ar71xx.ipk
+Size: 2167
+MD5Sum: 78ae0b1e0f48ecb3fb67557b6620f50b
+Description:  Ruby is the interpreted scripting language for quick and  easy
+ object-oriented programming.  It has many features to process text files
+ and to do system management tasks (as in perl).  It is simple,
+ straight-forward, and extensible.
+
+Package: ruby-cgi
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 27460
+Filename: ruby-cgi_1.9.3-p545-1_ar71xx.ipk
+Size: 28097
+MD5Sum: 43773675a52f931c91d04dcb261e4fb0
+Description:  Ruby CGI support toolkit
+
+Package: ruby-core
+Version: 1.9.3-p545-1
+Depends: libc, ruby, libdb47, libffi
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 727016
+Filename: ruby-core_1.9.3-p545-1_ar71xx.ipk
+Size: 720889
+MD5Sum: a1ba8b0f87be6b5dab1dc86a7ae6ec53
+Description:  Ruby standard libraries
+
+Package: ruby-dl
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 12274
+Filename: ruby-dl_1.9.3-p545-1_ar71xx.ipk
+Size: 12918
+MD5Sum: c41b7e79cbd3c7a910b67b6eb467a188
+Description:  Ruby scripting language (dynamic linker support) (adds 5MB+)
+
+Package: ruby-enc
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 1096908
+Filename: ruby-enc_1.9.3-p545-1_ar71xx.ipk
+Size: 1030025
+MD5Sum: 28963ccf388c84991b5acb7233fe562e
+Description:  Ruby scripting language (character re-coding library) (adds 2MB+)
+
+Package: ruby-erb
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 9390
+Filename: ruby-erb_1.9.3-p545-1_ar71xx.ipk
+Size: 10051
+MD5Sum: 5db9cb160629a68373f8483c44dca8f5
+Description:  Ruby scripting language (embedded interpreter)
+
+Package: ruby-gdbm
+Version: 1.9.3-p545-1
+Depends: libc, ruby, libgdbm
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 7062
+Filename: ruby-gdbm_1.9.3-p545-1_ar71xx.ipk
+Size: 7716
+MD5Sum: f463a4a550ca93702a5933345acbaf12
+Description:  Ruby support for gdbm
+
+Package: ruby-gems
+Version: 1.9.3-p545-1
+Depends: libc, ruby, ruby-yaml, ruby-zlib, ruby-openssl, ruby-webrick, ruby-erb
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 265664
+Filename: ruby-gems_1.9.3-p545-1_ar71xx.ipk
+Size: 266439
+MD5Sum: ae783a4b209efff7f638ee3ad1f272aa
+Description:  Ruby gems packet management
+
+Package: ruby-irb
+Version: 1.9.3-p545-1
+Depends: libc, ruby, ruby-core
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 33449
+Filename: ruby-irb_1.9.3-p545-1_ar71xx.ipk
+Size: 34190
+MD5Sum: cfdff4cbea4ef4c4906f195496da666b
+Description:  Ruby scripting language (interactive shell)
+
+Package: ruby-json
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 24038
+Filename: ruby-json_1.9.3-p545-1_ar71xx.ipk
+Size: 24675
+MD5Sum: 8cd498e19b60386018d6f912dd43c11a
+Description:  Ruby support for JSON
+
+Package: ruby-ncurses
+Version: 1.9.3-p545-1
+Depends: libc, ruby, libncurses, libncursesw
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 11624
+Filename: ruby-ncurses_1.9.3-p545-1_ar71xx.ipk
+Size: 12143
+MD5Sum: 5398203dc2935cd37da82c49157246f7
+Description:  Ruby support for ncurses
+
+Package: ruby-nkf
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 100896
+Filename: ruby-nkf_1.9.3-p545-1_ar71xx.ipk
+Size: 100551
+MD5Sum: 32cafc08593ac0dc08892efb5aeaa2be
+Description:  Ruby Network Kanji Filter
+
+Package: ruby-openssl
+Version: 1.9.3-p545-1
+Depends: libc, ruby, libopenssl
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 102680
+Filename: ruby-openssl_1.9.3-p545-1_ar71xx.ipk
+Size: 102898
+MD5Sum: ec96ae36cfad3630d478f7226487d7a4
+Description:  Ruby support for openssl
+
+Package: ruby-rake
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 36726
+Filename: ruby-rake_1.9.3-p545-1_ar71xx.ipk
+Size: 37502
+MD5Sum: 7d55749b18484281502b4e6d5c837f41
+Description:  Ruby scripting language Ruby Rake (make replacement)
+
+Package: ruby-rdoc
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 170925
+Filename: ruby-rdoc_1.9.3-p545-1_ar71xx.ipk
+Size: 171755
+MD5Sum: a11bade817ab4f794d4092773a0e69a0
+Description:  Ruby scripting language (documentation generator)
+
+Package: ruby-readline
+Version: 1.9.3-p545-1
+Depends: libc, ruby, libncurses, libreadline
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 7149
+Filename: ruby-readline_1.9.3-p545-1_ar71xx.ipk
+Size: 7810
+MD5Sum: f06e275164932f5cfdb751332a93020b
+Description:  Ruby support for readline
+
+Package: ruby-rexml
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 70446
+Filename: ruby-rexml_1.9.3-p545-1_ar71xx.ipk
+Size: 71221
+MD5Sum: c08e259e49b540be1a0605fa0b5c842a
+Description:  Ruby XML toolkit
+
+Package: ruby-rss
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 43555
+Filename: ruby-rss_1.9.3-p545-1_ar71xx.ipk
+Size: 44243
+MD5Sum: bc684e0cdbb97c9717ee899835428e3b
+Description:  Ruby RSS toolkit
+
+Package: ruby-unit
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 9483
+Filename: ruby-unit_1.9.3-p545-1_ar71xx.ipk
+Size: 10120
+MD5Sum: 11d288e849f482fd8e5e7f19229ded3e
+Description:  Ruby unit testing toolkit
+
+Package: ruby-webrick
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 45693
+Filename: ruby-webrick_1.9.3-p545-1_ar71xx.ipk
+Size: 46381
+MD5Sum: 5ef9c587170bdf72a1528d7b9ef03754
+Description:  Ruby Web server toolkit
+
+Package: ruby-xmlrpc
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 21988
+Filename: ruby-xmlrpc_1.9.3-p545-1_ar71xx.ipk
+Size: 22610
+MD5Sum: 4ef926e23ed8f5b3d35440325a308361
+Description:  Ruby XML-RPC toolkit
+
+Package: ruby-yaml
+Version: 1.9.3-p545-1
+Depends: libc, ruby
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 46976
+Filename: ruby-yaml_1.9.3-p545-1_ar71xx.ipk
+Size: 47700
+MD5Sum: a1ed6928d0635a01276ec62d49a0e129
+Description:  Ruby YAML toolkit
+
+Package: ruby-zlib
+Version: 1.9.3-p545-1
+Depends: libc, ruby, zlib
+Provides: 
+Source: feeds/packages/lang/ruby
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 18363
+Filename: ruby-zlib_1.9.3-p545-1_ar71xx.ipk
+Size: 18990
+MD5Sum: 3665d5565267f7f340e01a6906f854d9
+Description:  Ruby support for zlib
+
