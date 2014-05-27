@@ -15,10 +15,11 @@ for DIR; do
 		<a href='..'>[Parent]</a><br>
 $(
 	ls -1 --color=never --group-directories-first -p | grep -v '.*~' | while read FILE; do
+		[ "$FILE" == "index.html" ] && continue
 		echo \
 "		<a href='$FILE'>$FILE</a><br>"
 	done
-)		
+)
 	</body>
 </html>	
 EOF
