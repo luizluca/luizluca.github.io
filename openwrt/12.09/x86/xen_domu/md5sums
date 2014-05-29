@@ -1,6 +1,6 @@
-f340d04516cf41c5e54ebfd2d09ee388 *openwrt-x86-xen_domu-combined-ext4.img.gz
-10a614a8b28fd8acfddadc687a62529c *openwrt-x86-xen_domu-combined-squashfs.img
-54d1a81daaf052e633e1c4cd568822c5 *openwrt-x86-xen_domu-rootfs-ext4.img.gz
-10455fadddf73f4806231d3607e7297c *openwrt-x86-xen_domu-rootfs-squashfs.img
-5cf4d210a21b20dca274c04d0fd60a69 *openwrt-x86-xen_domu-rootfs.tar.gz
-b3d8363c99493b59d252913c6c7de712 *openwrt-x86-xen_domu-vmlinuz
+b7ca1f81d040061cc6f5de7ccede619e *openwrt-x86-xen_domu-combined-ext4.img.gz
+3145daa7d8c41978fcef880968efb160 *openwrt-x86-xen_domu-combined-squashfs.img
+18ce177841b1d6a9790611f8f21a72b8 *openwrt-x86-xen_domu-rootfs-ext4.img.gz
+6b3a598bfe38586f81684b1daab6bfde *openwrt-x86-xen_domu-rootfs-squashfs.img
+080fb79a2a8b08aef8075fd78538f3a1 *openwrt-x86-xen_domu-rootfs.tar.gz
+7247cb2d70e2881f1db584f465586c68 *openwrt-x86-xen_domu-vmlinuz
