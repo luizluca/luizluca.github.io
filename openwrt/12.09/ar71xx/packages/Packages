@@ -15,6 +15,23 @@ Size: 25927
 MD5Sum: a224f1188956663517b8a6d5c68cfd25
 Description:  SixXS Automatic IPv6 Connectivity Client Utility
 
+Package: base-files
+Version: 118.2luiz-r40431
+Depends: libc, netifd
+Provides: 
+Source: package/base-files
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 43458
+Filename: base-files_118.2luiz-r40431_ar71xx.ipk
+Size: 44257
+MD5Sum: 278c4715fe3b4222b0315da34c566988
+Description:  This package contains a base filesystem and system scripts for OpenWrt.
+
 Package: iftop
 Version: 1.0pre4-1
 Depends: libc, libpcap, libncurses, libpthread
@@ -514,4 +531,26 @@ Filename: ruby-zlib_1.9.3-p545-1_ar71xx.ipk
 Size: 18990
 MD5Sum: 3665d5565267f7f340e01a6906f854d9
 Description:  Ruby support for zlib
+
+Package: socat
+Version: 1.7.2.1-1ssl
+Depends: libc, libpthread, libopenssl
+Provides: 
+Source: package/socat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ar71xx
+Installed-Size: 89881
+Filename: socat_1.7.2.1-1ssl_ar71xx.ipk
+Size: 89618
+MD5Sum: 4888c7a898d8b5196b494b9a6b5882d2
+Description:  SoCat (for SOcket CAT) establishes two bidirectional byte streams and
+ transfers data between them.
+ Data channels may be files, pipes, devices (terminal or modem, etc.), or
+ sockets (Unix, IPv4, IPv6, raw, UDP, TCP, SSL). It provides forking,
+ logging and tracing, different modes for interprocess communication and
+ many more options.
 
