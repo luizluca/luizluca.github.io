@@ -1,0 +1,1040 @@
+Package: busybox
+Version: 1.22.1-2l
+Depends: libc
+Source: package/utils/busybox
+License: GPLv2 BSD-4c
+LicenseFiles: LICENSE archival/libarchive/bz/LICENSE
+Section: base
+Essential: yes
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: x86
+Installed-Size: 198624
+Filename: busybox_1.22.1-2l_x86.ipk
+Size: 198512
+MD5Sum: aadc07cf98200bd949294330f0918a2e
+SHA256sum: 949cced22551e220f0a0407be098ba0bf14858ce5404bb2aa38a499303bdb12b
+Description:  The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+
+Package: kmod-tcp_htcp
+Version: 3.10.49-1
+Depends: kernel (=3.10.49-1-61323bc3f988c03bfbe78ee1fbdfb065)
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: x86
+Installed-Size: 2156
+Filename: kmod-tcp_htcp_3.10.49-1_x86.ipk
+Size: 2909
+MD5Sum: 6f83f1be26517ab1200e4acbc0778e92
+SHA256sum: cab39f7d9e6bfc0c5dd57da7add3449bcfd1f6a729e665b06edef2aab1ef7563
+Description:  Kernel modules for TCP H-TCP congestion control algorithm for high speed networks with high latency
+
+Package: kmod-tcp_lp
+Version: 3.10.49-1
+Depends: kernel (=3.10.49-1-61323bc3f988c03bfbe78ee1fbdfb065)
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: x86
+Installed-Size: 1515
+Filename: kmod-tcp_lp_3.10.49-1_x86.ipk
+Size: 2255
+MD5Sum: 483e69c65169174a7f7e92d514deb30d
+SHA256sum: c012cea06270e554b8590b2e9a0a6cb909bfdbeefbf384a92183d7dd44ae5324
+Description:  Kernel modules for TCP LP (Low Priority) congestion control algorithm
+
+Package: libruby
+Version: 2.1.3-2
+Depends: libc, libpthread, librt, libgmp
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: libs
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 786376
+Filename: libruby_2.1.3-2_x86.ipk
+Size: 777668
+MD5Sum: c9b8f07fb2bfb4deff61ffa4d2807ffb
+SHA256sum: fd6a5736bb59217f77b8b6a28eca9d2ae521e72dcecf89b7123861b5d9865e79
+Description:  Ruby scripting language (shared library)
+
+Package: ruby
+Version: 2.1.3-2
+Depends: libc, libruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 1508
+Filename: ruby_2.1.3-2_x86.ipk
+Size: 2235
+MD5Sum: 6203fc1a0a7563a1830a092a2cde17de
+SHA256sum: 80fc6f68f7e4e3df6da1219175262fcd5b3851865f8f5295836002687d67aab1
+Description:  Ruby is the interpreted scripting language for quick and easy
+ object-oriented programming.  It has many features to process text files
+ and to do system management tasks (as in perl).  It is simple,
+ straight-forward, and extensible.
+ 
+
+Package: ruby-bigdecimal
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 30352
+Filename: ruby-bigdecimal_2.1.3-2_x86.ipk
+Size: 30878
+MD5Sum: d550f521d8a8d8c65883c44871aa79f5
+SHA256sum: 25f10a42af28b901fb2d7f9445ab42a822c13ced4ec60b4691919eb5bf8fd324
+Description:  Provides bigdecimal* files
+ 
+
+Package: ruby-cgi
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-filelib, ruby-pstore
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 28035
+Filename: ruby-cgi_2.1.3-2_x86.ipk
+Size: 28640
+MD5Sum: 053f5dc6881b7c57ebd97e3462d5d7e8
+SHA256sum: 81560557eea878750244b39771b4192ef3f4ec7b2c23b48841121df34000488e
+Description:  Ruby CGI support toolkit
+
+Package: ruby-csv
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-patterns, ruby-datetime, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 22678
+Filename: ruby-csv_2.1.3-2_x86.ipk
+Size: 23272
+MD5Sum: c0b7e068b5e7963196dbf99d504ea5b9
+SHA256sum: c42c074f870437a88b1f0792fad79e1f3d346cb385a933404d900ba58dd5596b
+Description:  Provides csv.rb file
+ 
+
+Package: ruby-datetime
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 63482
+Filename: ruby-datetime_2.1.3-2_x86.ipk
+Size: 63912
+MD5Sum: 1fdc5cc63fc5a3b596c90738cf1fb6ed
+SHA256sum: 4151dec9e11ca025280d6f5417d3b7a73dbe514069532e4c88bd13c7faa5ed83
+Description:  Provides date.rb and time.rb
+ 
+
+Package: ruby-dbm
+Version: 2.1.3-2
+Depends: libc, ruby, libdb47
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 7441
+Filename: ruby-dbm_2.1.3-2_x86.ipk
+Size: 8094
+MD5Sum: 484f921c52887f9dc110b2a4038821eb
+SHA256sum: 9f738ada60cec38f1fc969768d7b1df2ed1b927ce883099b6bf3947f84d8b98f
+Description:  The DBM class provides a wrapper to a Unix-style dbm or Database Manager library.
+ This package provides dbm.so file.
+ 
+
+Package: ruby-debuglib
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-multithread, ruby-prettyprint
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 29705
+Filename: ruby-debuglib_2.1.3-2_x86.ipk
+Size: 30273
+MD5Sum: 85d78d22b0ad6e9fe860e26af56a0ca3
+SHA256sum: 3c423a29dacfab7f82695c12e24084c5f6475521eace1080e6303d4b56874b60
+Description:  Provides files for debugging:
+ - benchmark.rb
+ - debug.rb
+ - objspace.so
+ - profile.rb
+ - profiler.rb
+ - tracer.rb
+ 
+
+Package: ruby-digest
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 25961
+Filename: ruby-digest_2.1.3-2_x86.ipk
+Size: 26594
+MD5Sum: 605ae118ae9c55886324a13d08af78dc
+SHA256sum: eba30d8e9527561ac7acb9edad53ab59a7b99cd91652650e2f13246e895401c8
+Description:  Provides digest* files. Can be configured to use OpenSSL or
+ bundled hash functions.
+ 
+
+Package: ruby-dl
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-fiddle, ruby-multithread
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 192991
+Filename: ruby-dl_2.1.3-2_x86.ipk
+Size: 187474
+MD5Sum: 539173f5dc39104630f277893f690dc6
+SHA256sum: b093d36a4e91948f115ea15b4ed1c386e0e39881673f001e84d44ae814864faa
+Description:  Provides dl* files. This is deprecated, use fiddle.
+ 
+
+Package: ruby-drb
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-filelib, ruby-patterns, ruby-socket
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 24700
+Filename: ruby-drb_2.1.3-2_x86.ipk
+Size: 25309
+MD5Sum: 4ae38714dd92ab0c0230118e6e74dca4
+SHA256sum: d97d58d534ded12a0c652cc9ab8d30d64ac891e2562684ac9c0d2ea2d97ddbbc
+Description:  Provides drb* files
+ 
+
+Package: ruby-enc
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 10360
+Filename: ruby-enc_2.1.3-2_x86.ipk
+Size: 11100
+MD5Sum: 128b58cdbeda80a7094955af583abced
+SHA256sum: 2db66de48d52ba389c7f48dc30d9a66ef96b1278e60ccfa8ea86cb121296758f
+Description:  Provides ruby encoding library for encodings used directly by
+ libraries in Ruby Standard Library:
+ - enc/encdb.so
+ - enc/euc_jp.so
+ - enc/iso_8859_1.so
+ - enc/utf_16be.so
+ - enc/utf_16le.so
+ - enc/utf_32be.so
+ - enc/utf_32le.so
+ FYI: ASCII-8BIT, UTF-7, UTF-8 and US-ASCII are already in Core.
+ 
+
+Package: ruby-enc-extra
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 1383533
+Filename: ruby-enc-extra_2.1.3-2_x86.ipk
+Size: 1253841
+MD5Sum: 7bbdd1edb3f140033e4939356c9c25f9
+SHA256sum: a4849cad63bbe1905cfe68cbe6177b83113e9e725729838994ea53040eeb6561
+Description:  Provides extra encodings not provided by ruby-enc:
+ - enc/big5.so
+ - enc/cp949.so
+ - enc/emacs_mule.so
+ - enc/euc_kr.so
+ - enc/euc_tw.so
+ - enc/gb18030.so
+ - enc/gb2312.so
+ - enc/gbk.so
+ - enc/iso_8859_10.so
+ - enc/iso_8859_11.so
+ - enc/iso_8859_13.so
+ - enc/iso_8859_14.so
+ - enc/iso_8859_15.so
+ - enc/iso_8859_16.so
+ - enc/iso_8859_2.so
+ - enc/iso_8859_3.so
+ - enc/iso_8859_4.so
+ - enc/iso_8859_5.so
+ - enc/iso_8859_6.so
+ - enc/iso_8859_7.so
+ - enc/iso_8859_8.so
+ - enc/iso_8859_9.so
+ - enc/koi8_r.so
+ - enc/koi8_u.so
+ - enc/shift_jis.so
+ - enc/trans/big5.so
+ - enc/trans/chinese.so
+ - enc/trans/emoji.so
+ - enc/trans/emoji_iso2022_kddi.so
+ - enc/trans/emoji_sjis_docomo.so
+ - enc/trans/emoji_sjis_kddi.so
+ - enc/trans/emoji_sjis_softbank.so
+ - enc/trans/escape.so
+ - enc/trans/gb18030.so
+ - enc/trans/gbk.so
+ - enc/trans/iso2022.so
+ - enc/trans/japanese.so
+ - enc/trans/japanese_euc.so
+ - enc/trans/japanese_sjis.so
+ - enc/trans/korean.so
+ - enc/trans/single_byte.so
+ - enc/trans/transdb.so
+ - enc/trans/utf8_mac.so
+ - enc/trans/utf_16_32.so
+ - enc/windows_1251.so
+ - enc/windows_31j.so
+ 
+
+Package: ruby-erb
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-cgi
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 9517
+Filename: ruby-erb_2.1.3-2_x86.ipk
+Size: 10125
+MD5Sum: 6e6cb83d8e8242914c680584d63b5207
+SHA256sum: be8081b2e0983de1aefeccba74450ac4af3ce962e250fe16f7286168f8d001f9
+Description:  Provides erb* files
+ 
+
+Package: ruby-fiddle
+Version: 2.1.3-2
+Depends: libc, ruby, libffi
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 20422
+Filename: ruby-fiddle_2.1.3-2_x86.ipk
+Size: 20998
+MD5Sum: cb8412362a2fecb18edac7b3c4e009cc
+SHA256sum: fb06b35199199d1ecf4ea11ca22f1245e83e31be131776c5aacd28569347b23d
+Description:  Provides fiddle* files
+ 
+
+Package: ruby-filelib
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-multithread, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 30202
+Filename: ruby-filelib_2.1.3-2_x86.ipk
+Size: 30893
+MD5Sum: 99fb7bfbb298f615d497e9a0082dff99
+SHA256sum: 06662eeecb3aaade2e4459f4a160d158b660725dd505fa9fce8679447d2e9cce
+Description:  Provides filesystem interaction files, including
+ path and temp:
+ - fileutils.rb
+ - find.rb
+ - pathname.rb
+ - pathname.so
+ - tempfile.rb
+ - tmpdir.rb
+ 
+
+Package: ruby-gdbm
+Version: 2.1.3-2
+Depends: libc, ruby, libgdbm
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 8168
+Filename: ruby-gdbm_2.1.3-2_x86.ipk
+Size: 8738
+MD5Sum: 80f3b0c1dca4a376ee17e60d6dfacc0d
+SHA256sum: bbf9da474a204c8fd7268233b99aa4b02ba706ef00d9b9e2b32b7014126da500
+Description:  Provides gdbm* files
+ 
+
+Package: ruby-gems
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-net, ruby-rdoc, ruby-zlib
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 213613
+Filename: ruby-gems_2.1.3-2_x86.ipk
+Size: 214392
+MD5Sum: 1de1b9292bb3e2f0466bf63bad952280
+SHA256sum: 59dea6370851025c7e925c4a53abb7d20b64cd5f9653025d3a18e57204367d6b
+Description:  Provides rubygems for gems usage, download and installation
+ 
+
+Package: ruby-io-console
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 5338
+Filename: ruby-io-console_2.1.3-2_x86.ipk
+Size: 5931
+MD5Sum: 60ab3eb6774cec903a42e0af7959720b
+SHA256sum: 63c8ab445c211f93ff9af8d8cf4d4d89291f0cefb4acd75a7c3885af9894524e
+Description:  Provides io-console* files
+ 
+
+Package: ruby-irb
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-debuglib, ruby-filelib, ruby-math
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 44684
+Filename: ruby-irb_2.1.3-2_x86.ipk
+Size: 45365
+MD5Sum: 3fe1e779c6a2f660010cac95da133ef8
+SHA256sum: 95ee2bf5db41f66ba12fe194e03492b6df4cff932c945a2ac805cc8829cbb820
+Description:  Provides irb* files
+ 
+
+Package: ruby-json
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-datetime, ruby-misc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 26793
+Filename: ruby-json_2.1.3-2_x86.ipk
+Size: 27296
+MD5Sum: 8b9704532f69336bbf7a5b99cc89c59b
+SHA256sum: 938083d34c18462dd88993fdb79cfbeab7fe3b33140c3f15ab14d2ebad733f1b
+Description:  Provides json* files
+ 
+
+Package: ruby-logger
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-multithread
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 13966
+Filename: ruby-logger_2.1.3-2_x86.ipk
+Size: 14579
+MD5Sum: 931152f3870354f396617cabbfbc40c2
+SHA256sum: 20822e6757ceffad8bf4a785f8d8e0c48bf003816b6cc3a24c54f9ddad526c34
+Description:  Provides log library, including syslog:
+ - logger.rb
+ - syslog.so
+ - syslog/logger.rb
+ 
+
+Package: ruby-math
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-patterns
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 26779
+Filename: ruby-math_2.1.3-2_x86.ipk
+Size: 27417
+MD5Sum: d43fef9da2965627adb5bbf4cd16aaf7
+SHA256sum: b46c312613859104d7b22ce1017fc4c1d73c6358a58daf254647783bca8e7caf
+Description:  Provides math related files:
+ - cmath.rb
+ - complex.rb
+ - mathn.rb
+ - mathn/complex.so
+ - mathn/rational.so
+ - matrix.rb
+ - matrix/eigenvalue_decomposition.rb
+ - matrix/lup_decomposition.rb
+ - prime.rb
+ - rational.rb
+ 
+
+Package: ruby-minitest
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-filelib, ruby-optparse, ruby-prettyprint, ruby-rbconfig
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 19965
+Filename: ruby-minitest_2.1.3-2_x86.ipk
+Size: 20608
+MD5Sum: e1b34023d044f72c565def094518f972
+SHA256sum: 323d2f370b62e67d356e53633a6a6e007708955aa52849d56e4ba4e46f8c4800
+Description:  Provides minitest* files
+ 
+
+Package: ruby-misc
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 69095
+Filename: ruby-misc_2.1.3-2_x86.ipk
+Size: 69891
+MD5Sum: 40944d7761cec8577897c09d1bcfad3d
+SHA256sum: 9750d82cf8b624d700dfbac264c9e2d3b9ec79609e34905e9460410b2edc462b
+Description:  This package contains miscellaneous files from stdlib
+ not splitted in other ruby packages like stringio:
+ - English.rb
+ - abbrev.rb
+ - base64.rb
+ - continuation.so
+ - coverage.so
+ - delegate.rb
+ - e2mmap.rb
+ - etc.so
+ - expect.rb
+ - fcntl.so
+ - fiber.so
+ - getoptlong.rb
+ - open3.rb
+ - ostruct.rb
+ - pty.so
+ - scanf.rb
+ - securerandom.rb
+ - set.rb
+ - shellwords.rb
+ - stringio.so
+ - strscan.so
+ - tsort.rb
+ - weakref.rb
+ 
+
+Package: ruby-mkmf
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-filelib, ruby-optparse, ruby-rbconfig
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 26327
+Filename: ruby-mkmf_2.1.3-2_x86.ipk
+Size: 26894
+MD5Sum: 0bc645647b8f4345899c10d2759ae725
+SHA256sum: ff6d8516c23aa685089272d3b485b1f5b615e312567945bc800638b85f4d5fb4
+Description:  Provides mkmf* files
+ 
+
+Package: ruby-multithread
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-misc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 14324
+Filename: ruby-multithread_2.1.3-2_x86.ipk
+Size: 15004
+MD5Sum: 360ff63e2d5fc3b82ae78129c6c87288
+SHA256sum: ba6432ad6b55516c80a83651b3756eb36e05dffc6c3b8e948b3fa13c2167eb15
+Description:  Provides files for multithread usage:
+ - io/nonblock.so
+ - io/wait.so
+ - thread.so (FYI, Thread is a core class)
+ - monitor.rb
+ - mutex_m.rb
+ - sync.rb
+ - thwait.rb
+ - timeout.rb
+ 
+
+Package: ruby-net
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-datetime, ruby-digest, ruby-filelib, ruby-uri
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 91499
+Filename: ruby-net_2.1.3-2_x86.ipk
+Size: 92220
+MD5Sum: 0b27f6fba995d9cae4981015ec030279
+SHA256sum: c15496be864aba73f3d49941583f1468f5620db851654a29a8aed17552f0bc67
+Description:  Provides net* files
+ 
+
+Package: ruby-nkf
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 120538
+Filename: ruby-nkf_2.1.3-2_x86.ipk
+Size: 119574
+MD5Sum: 747786143fc77ba1328b0761b4ffc962
+SHA256sum: b524c2a232460ee5c0a954519640231b630fc7728207eff512612a828bdadc93
+Description:  Provides nkf* files
+ 
+
+Package: ruby-openssl
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-enc, libopenssl, ruby-misc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 117333
+Filename: ruby-openssl_2.1.3-2_x86.ipk
+Size: 114945
+MD5Sum: bae4f52c7d5b4ef5d7c8dab051f6cf8b
+SHA256sum: 296f0d040cb943bb3f971ce9ddfa9000e3f86904ce3067b101ee0201091679ef
+Description:  Provides openssl* files
+ 
+
+Package: ruby-optparse
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-misc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 16346
+Filename: ruby-optparse_2.1.3-2_x86.ipk
+Size: 16903
+MD5Sum: 105b3605cca1ef043cc557e437b184a9
+SHA256sum: 99fef04c68bf58f2833033828fa57847b8d296a3a42d8ec532ef85dfcb70f91b
+Description:  Provides optparse* files
+ 
+
+Package: ruby-patterns
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-multithread
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 6005
+Filename: ruby-patterns_2.1.3-2_x86.ipk
+Size: 6613
+MD5Sum: b29e9766f13cea973018f21ad62fab0c
+SHA256sum: f2f7e9243f031a65a4316d92c88adfaf49606c2e4bce8b7bdac057cc5df1ea93
+Description:  Provides design patterns helpers files:
+ - forwardable.rb
+ - observer.rb
+ - singleton.rb
+ 
+
+Package: ruby-prettyprint
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-misc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 8894
+Filename: ruby-prettyprint_2.1.3-2_x86.ipk
+Size: 9532
+MD5Sum: 3b9789f7f4159a693765aa20c4938bda
+SHA256sum: 3d5c9af3355e0ccd3da38361e012d44a6e1aff666d286494fd94083dcd44c347
+Description:  Provides Pretty Print library:
+ - pp.rb
+ - prettyprint.rb
+ 
+
+Package: ruby-pstore
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-digest, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 4963
+Filename: ruby-pstore_2.1.3-2_x86.ipk
+Size: 5567
+MD5Sum: 0981e1c4f53fb879cec60668702424ad
+SHA256sum: ee4e4a6591faee94860b60d3f77c389cf94879ce8c8766a5cb0515eff4fd8869
+Description:  Provides pstore.rb file
+ 
+
+Package: ruby-psych
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-bigdecimal, ruby-datetime, ruby-misc, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 71589
+Filename: ruby-psych_2.1.3-2_x86.ipk
+Size: 72164
+MD5Sum: 06f0a63eb01cfbb4dc50cbe78cfafbb3
+SHA256sum: 2e969c7d7ed0b8671ac48b1e027af330cc5690a8dbaab5cde69a0652fecb6695
+Description:  Provides psych* files
+ 
+
+Package: ruby-racc
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 11046
+Filename: ruby-racc_2.1.3-2_x86.ipk
+Size: 11600
+MD5Sum: 995a2936f702f709091fe4f6d0ab351b
+SHA256sum: b6c17d0cbc4b9ba64f977ed72b53f9d75196906184f0db2f728b3f8504c6eb96
+Description:  Provides racc* files
+ 
+
+Package: ruby-rake
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-datetime, ruby-filelib, ruby-optparse, ruby-patterns, ruby-rbconfig
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 40623
+Filename: ruby-rake_2.1.3-2_x86.ipk
+Size: 41398
+MD5Sum: e5af1180e3db140928d076d983ede078
+SHA256sum: f1ce9398288632a06ae6b1e5ee67567e098d20edc0ff6cb77177763d23f241a3
+Description:  Provides rake* files
+ 
+
+Package: ruby-rbconfig
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 5929
+Filename: ruby-rbconfig_2.1.3-2_x86.ipk
+Size: 6519
+MD5Sum: 7f41fc209183331090f9059dab37d92a
+SHA256sum: 043e9ddc7d57d1dbc8955e8f3a67e8c7f395a9993c5483d0c1f98b83dad5df9c
+Description:  Provides rbconfig file
+ 
+
+Package: ruby-rdoc
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-erb, ruby-irb, ruby-json, ruby-racc, ruby-rake, ruby-yaml
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 556172
+Filename: ruby-rdoc_2.1.3-2_x86.ipk
+Size: 521943
+MD5Sum: 4056943e364f3343edeaa0bf99bee6f0
+SHA256sum: 05602d6df4833253df236406429420db139acee0afcb22ee91b24deb14d2b972
+Description:  Provides rdoc* and ri files
+ 
+
+Package: ruby-readline
+Version: 2.1.3-2
+Depends: libc, ruby, libncurses, libreadline
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 10599
+Filename: ruby-readline_2.1.3-2_x86.ipk
+Size: 11096
+MD5Sum: fee982961056eab79f046b4d92d651fb
+SHA256sum: 4f68c781b3ac0d84dfd6e291cee6267621c18ebc5472f3f286084afdf23a20fd
+Description:  Provides readline* files
+ 
+
+Package: ruby-rexml
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-patterns, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 70913
+Filename: ruby-rexml_2.1.3-2_x86.ipk
+Size: 71664
+MD5Sum: 350b150f9c7dad0993ce45e9929849b5
+SHA256sum: 05eaaf721b8b6fc2545111d2d13a1911f06756902d6cbeb0e8cbbeaa92939ce4
+Description:  Provides rexml* files
+ 
+
+Package: ruby-rinda
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-drb
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 9426
+Filename: ruby-rinda_2.1.3-2_x86.ipk
+Size: 10049
+MD5Sum: a72332b193eab0675c09d7e168593a7b
+SHA256sum: a230015c44b85bf696a57050b583fa9f759650187da42d57853d8aa90d7ee28c
+Description:  Provides rinda* files
+ 
+
+Package: ruby-ripper
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 60147
+Filename: ruby-ripper_2.1.3-2_x86.ipk
+Size: 60618
+MD5Sum: a29f48304cb7013aad94b37aba867f40
+SHA256sum: fe717158d96daea8eb87233f197c123b8cc9450964dfad687bba1c7071086823
+Description:  Provides ripper* files
+ 
+
+Package: ruby-rss
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-net, ruby-nkf, ruby-rexml
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 48197
+Filename: ruby-rss_2.1.3-2_x86.ipk
+Size: 48918
+MD5Sum: 3d83407e67ea0b512553e5bbb619d393
+SHA256sum: e7312bca5fee5ecf09b8547351442458e11c47367b6bc5d68506502d9d499a15
+Description:  Provides rss* files
+ 
+
+Package: ruby-sdbm
+Version: 2.1.3-2
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 10282
+Filename: ruby-sdbm_2.1.3-2_x86.ipk
+Size: 10846
+MD5Sum: 016f0305ceaba6f369702279e4f37faf
+SHA256sum: eafabc8a4b91869b95b66b2f27140162fbe89624dca63ab5b11702d43da4720c
+Description:  Provides sdbm* files
+ 
+
+Package: ruby-shell
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-patterns
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 11934
+Filename: ruby-shell_2.1.3-2_x86.ipk
+Size: 12537
+MD5Sum: 98303944b39a821b1349ec7bba59f98e
+SHA256sum: 473eb16eb753580385cb21d9ac0989efd1bb2a64612eea4fd14786138daa280d
+Description:  Provides shell* files
+ 
+
+Package: ruby-socket
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-multithread
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 88208
+Filename: ruby-socket_2.1.3-2_x86.ipk
+Size: 88276
+MD5Sum: 8856aa2fc126483ddfafa3644f9f660e
+SHA256sum: 1b2b93493e26d94f3dfcefcbcec5609b03eb6a56a6efae489d21ea80d4087c22
+Description:  Provides socket-related files:
+ - gserver.rb
+ - ipaddr.rb
+ - resolv-replace.rb
+ - resolv.rb
+ - socket.rb
+ - socket.so
+ 
+
+Package: ruby-stdlib
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-misc, ruby-bigdecimal, ruby-cgi, ruby-csv, ruby-datetime, ruby-dbm, ruby-debuglib, ruby-digest, ruby-dl, ruby-drb, ruby-enc, ruby-enc-extra, ruby-erb, ruby-gdbm, ruby-gems, ruby-json, ruby-io-console, ruby-irb, ruby-fiddle, ruby-filelib, ruby-logger, ruby-math, ruby-minitest, ruby-mkmf, ruby-multithread, ruby-nkf, ruby-net, ruby-openssl, ruby-optparse, ruby-patterns, ruby-prettyprint, ruby-pstore, ruby-psych, ruby-racc, ruby-rake, ruby-rbconfig, ruby-rdoc, ruby-readline, ruby-rexml, ruby-rinda, ruby-ripper, ruby-rss, ruby-sdbm, ruby-shell, ruby-socket, ruby-testunit, ruby-uri, ruby-webrick, ruby-xmlrpc, ruby-yaml, ruby-zlib
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 104
+Filename: ruby-stdlib_2.1.3-2_x86.ipk
+Size: 965
+MD5Sum: 2bbd52ae51a85a5b7c50e683716776c2
+SHA256sum: 9db795d21669d0c0dab393a2fc1917a644c4a49a79cb7092ff9c776131da7209
+Description:  This metapackage currently install all ruby-* packages,
+ providing a complete Ruby Standard Library.
+ 
+
+Package: ruby-testunit
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-minitest
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 12531
+Filename: ruby-testunit_2.1.3-2_x86.ipk
+Size: 13137
+MD5Sum: 15d77ebd017ef8d3347a9493c7b0cea9
+SHA256sum: eff183024f689c0d92a53f2e838ee1640240a21d61797a6d0bba09c512fc1a7d
+Description:  Provides test/unit* files
+ 
+
+Package: ruby-uri
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-socket, ruby-enc
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 25472
+Filename: ruby-uri_2.1.3-2_x86.ipk
+Size: 25991
+MD5Sum: 180071c4760efe877d8104466d82ce61
+SHA256sum: e5ec1b08237137d614e64a65802fb492b1997165f0340ed047aa5179d7646e18
+Description:  Provides uri* files
+ 
+
+Package: ruby-webrick
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-erb, ruby-net, ruby-patterns, ruby-rbconfig
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 50682
+Filename: ruby-webrick_2.1.3-2_x86.ipk
+Size: 51397
+MD5Sum: d3381d9b50b4980b67550452bc9aa551
+SHA256sum: 8c12ffd6dd04b46da3586e8d8bd99ced793d1aeef8b8777b9a202fa967b7ac42
+Description:  Provides webrick* files
+ 
+
+Package: ruby-xmlrpc
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-rexml, ruby-webrick
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 24457
+Filename: ruby-xmlrpc_2.1.3-2_x86.ipk
+Size: 25014
+MD5Sum: 233a8e11bd21c11b708c2b99840f054d
+SHA256sum: a0a9ec978a3f798bcea9417885adc89822f674bdc01b6e56995c2c30510372e2
+Description:  Provides xmlrpc* files
+ 
+
+Package: ruby-yaml
+Version: 2.1.3-2
+Depends: libc, ruby, ruby-dbm, ruby-pstore, ruby-psych
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 3961
+Filename: ruby-yaml_2.1.3-2_x86.ipk
+Size: 4565
+MD5Sum: ef63e72bd7165845ab9a4b939fc938af
+SHA256sum: 15ce9bc522c298492fe8848174b72529897c4dccb1508d7ccaea2d30f1002afb
+Description:  Provides yaml* files
+ 
+
+Package: ruby-zlib
+Version: 2.1.3-2
+Depends: libc, ruby, zlib
+Source: feeds/packages/lang/ruby
+License: BSD-2-Clause
+Section: lang
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 20490
+Filename: ruby-zlib_2.1.3-2_x86.ipk
+Size: 20979
+MD5Sum: b0333a15111d9bba5ed7aa8ceaed2d29
+SHA256sum: 0c83debd22bbb263a31b1ab65aeb625858117c0a05e3e6bcfbb98dc29cca73b1
+Description:  Provides zlib* files
+ 
+
