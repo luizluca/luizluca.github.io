@@ -1,16 +1,3 @@
-Package: base-files
-Version: 156-r42801
-Depends: libc, netifd, procd, jsonfilter
-Source: package/base-files
-Section: base
-Architecture: ar71xx
-Installed-Size: 42654
-Filename: base-files_156-r42801_ar71xx.ipk
-Size: 43443
-MD5Sum: a0f094fcc381872b786397f9f990f257
-SHA256sum: 85ff831e824825fb3fcb91aaac6c4b8840652cffa2f152e772807da2b69bb9fa
-Description:  This package contains a base filesystem and system scripts for OpenWrt.
-
 Package: busybox
 Version: 1.22.1-2l
 Depends: libc
