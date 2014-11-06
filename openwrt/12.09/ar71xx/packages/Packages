@@ -13,6 +13,7 @@ Installed-Size: 25396
 Filename: aiccu_20070115-11_ar71xx.ipk
 Size: 25927
 MD5Sum: a224f1188956663517b8a6d5c68cfd25
+SHA256sum: 0ea34c89718840b244ab742a806269f99f4628b9ee89d8375fc7f7eb2355fc19
 Description:  SixXS Automatic IPv6 Connectivity Client Utility
 
 Package: base-files
@@ -30,6 +31,7 @@ Installed-Size: 43458
 Filename: base-files_118.2luiz-r40431_ar71xx.ipk
 Size: 44257
 MD5Sum: 278c4715fe3b4222b0315da34c566988
+SHA256sum: 14dc3b8fd15b1ae07c42fbccdeea6fa4d20c8c49c5d7d177909376fbc4bb2710
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: iftop
@@ -47,6 +49,7 @@ Installed-Size: 22455
 Filename: iftop_1.0pre4-1_ar71xx.ipk
 Size: 22885
 MD5Sum: d1eb66ec715c1809e718721d835e5172
+SHA256sum: 12d408ff319e14b4cac101a120d4a15362bb7b250ffa872ace8ac7f116740158
 Description:  iftop does for network usage what top(1) does for CPU usage. It 
  listens to network traffic on a named interface and displays a 
  table of current bandwidth usage by pairs of hosts. Handy for 
@@ -67,6 +70,7 @@ Installed-Size: 2275
 Filename: kmod-tcp_htcp_3.3.8-1_ar71xx.ipk
 Size: 3088
 MD5Sum: b1e377e3efddb0fc6ad4a82a3e786445
+SHA256sum: 2a6fc3eff255d818b5cd64680d03695e414c11d3b98e3a66f2f03994e91f81f0
 Description:  Kernel modules for TCP H-TCP congestion control algorithm for high speed networks with high latency
 
 Package: kmod-tcp_lp
@@ -84,6 +88,7 @@ Installed-Size: 1542
 Filename: kmod-tcp_lp_3.3.8-1_ar71xx.ipk
 Size: 2341
 MD5Sum: 6a8a0496041ed2f52ea8a5b3b060011f
+SHA256sum: 7e4da586fff6fc9aec0db7d45eb42c1444d79556f4700a09bbdd6253d8cdaa6d
 Description:  Kernel modules for TCP LP (Low Priority) congestion control algorithm
 
 Package: libruby
@@ -101,6 +106,7 @@ Installed-Size: 690830
 Filename: libruby_1.9.3-p545-1_ar71xx.ipk
 Size: 685831
 MD5Sum: 716b90356da8e476e0b77d9896302344
+SHA256sum: 2cb51f621e3a0b160ae1f3f230ff51b466a9245a30ec140a2fbb0c1729bd8a24
 Description:  Ruby scripting language (shared library)
 
 Package: luci-i18n-portuguese-brazilian
@@ -118,6 +124,7 @@ Installed-Size: 21751
 Filename: luci-i18n-portuguese-brazilian_0.11+svn9415-1_ar71xx.ipk
 Size: 22547
 MD5Sum: a4b13792df26495e55ab0e74ee45295d
+SHA256sum: 5bd380d99ab69e4ad0b4a83785f350b49ceb6bf0750753ad1bcea6a1f03d1670
 Description:  Portuguese (Brazilian) (by Carlos Cesario)
 
 Package: minidlna
@@ -135,6 +142,7 @@ Installed-Size: 115119
 Filename: minidlna_1.1.2-1_ar71xx.ipk
 Size: 114712
 MD5Sum: 6b0dbd0f59151f35f158f9fc502a3fdd
+SHA256sum: d56e0d1cda8d29d2eff2fb26de58b65a2a920eff07c3eb78e0dee91b962621a4
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
@@ -153,6 +161,7 @@ Installed-Size: 1404
 Filename: ruby_1.9.3-p545-1_ar71xx.ipk
 Size: 2167
 MD5Sum: 78ae0b1e0f48ecb3fb67557b6620f50b
+SHA256sum: 3353b6c0b425044e2a5d792b2f9ff33255b1a3836cb1d7dff0f6d0531e45c2fc
 Description:  Ruby is the interpreted scripting language for quick and  easy
  object-oriented programming.  It has many features to process text files
  and to do system management tasks (as in perl).  It is simple,
@@ -173,6 +182,7 @@ Installed-Size: 27460
 Filename: ruby-cgi_1.9.3-p545-1_ar71xx.ipk
 Size: 28097
 MD5Sum: 43773675a52f931c91d04dcb261e4fb0
+SHA256sum: fb61757c041fad9251fea420c5cb4eca6bd593595f9c8fd0cc54dbe1e5bab0b8
 Description:  Ruby CGI support toolkit
 
 Package: ruby-core
@@ -190,6 +200,7 @@ Installed-Size: 727016
 Filename: ruby-core_1.9.3-p545-1_ar71xx.ipk
 Size: 720889
 MD5Sum: a1ba8b0f87be6b5dab1dc86a7ae6ec53
+SHA256sum: 85b9f2f98f479ad0e3e3514e23b0a2deaa54604dab27e88d38933b49db86ad20
 Description:  Ruby standard libraries
 
 Package: ruby-dl
@@ -207,6 +218,7 @@ Installed-Size: 12274
 Filename: ruby-dl_1.9.3-p545-1_ar71xx.ipk
 Size: 12918
 MD5Sum: c41b7e79cbd3c7a910b67b6eb467a188
+SHA256sum: 2cd7cf215ac9bfc319a65a197d8da95d9461324252dcca7766f1fb18ea5c0876
 Description:  Ruby scripting language (dynamic linker support) (adds 5MB+)
 
 Package: ruby-enc
@@ -224,6 +236,7 @@ Installed-Size: 1096908
 Filename: ruby-enc_1.9.3-p545-1_ar71xx.ipk
 Size: 1030025
 MD5Sum: 28963ccf388c84991b5acb7233fe562e
+SHA256sum: 0b7f0a1f6bf087ab03612f16461aa36bc36ce7ce94d4051cacff57fd8e57012f
 Description:  Ruby scripting language (character re-coding library) (adds 2MB+)
 
 Package: ruby-erb
@@ -241,6 +254,7 @@ Installed-Size: 9390
 Filename: ruby-erb_1.9.3-p545-1_ar71xx.ipk
 Size: 10051
 MD5Sum: 5db9cb160629a68373f8483c44dca8f5
+SHA256sum: 888982d7b47435e06f44c2ec6b813f04079e1bcfdf2e91c5da11e402209e5b67
 Description:  Ruby scripting language (embedded interpreter)
 
 Package: ruby-gdbm
@@ -258,6 +272,7 @@ Installed-Size: 7062
 Filename: ruby-gdbm_1.9.3-p545-1_ar71xx.ipk
 Size: 7716
 MD5Sum: f463a4a550ca93702a5933345acbaf12
+SHA256sum: 902fbf80b9322ecf06b0168d0b7d030a1115c30af3283c88c8d9659993161eec
 Description:  Ruby support for gdbm
 
 Package: ruby-gems
@@ -275,6 +290,7 @@ Installed-Size: 265664
 Filename: ruby-gems_1.9.3-p545-1_ar71xx.ipk
 Size: 266439
 MD5Sum: ae783a4b209efff7f638ee3ad1f272aa
+SHA256sum: a1a86609eabe2d804f10fd9793bbda981538b17378673b744b74f629f21c301b
 Description:  Ruby gems packet management
 
 Package: ruby-irb
@@ -292,6 +308,7 @@ Installed-Size: 33449
 Filename: ruby-irb_1.9.3-p545-1_ar71xx.ipk
 Size: 34190
 MD5Sum: cfdff4cbea4ef4c4906f195496da666b
+SHA256sum: 6dd73703cff5382faadd2bc80b4ce8d1b9413ac21563ab37630fb775d43e3263
 Description:  Ruby scripting language (interactive shell)
 
 Package: ruby-json
@@ -309,6 +326,7 @@ Installed-Size: 24038
 Filename: ruby-json_1.9.3-p545-1_ar71xx.ipk
 Size: 24675
 MD5Sum: 8cd498e19b60386018d6f912dd43c11a
+SHA256sum: 3c2b79540efaa9cc85aea72824fdb3844461408ccb2117624968f2f78230a879
 Description:  Ruby support for JSON
 
 Package: ruby-ncurses
@@ -326,6 +344,7 @@ Installed-Size: 11624
 Filename: ruby-ncurses_1.9.3-p545-1_ar71xx.ipk
 Size: 12143
 MD5Sum: 5398203dc2935cd37da82c49157246f7
+SHA256sum: ec3479b594567875b705e7c9ddc6822b14d7c99a839595491dd2586e44decddd
 Description:  Ruby support for ncurses
 
 Package: ruby-nkf
@@ -343,6 +362,7 @@ Installed-Size: 100896
 Filename: ruby-nkf_1.9.3-p545-1_ar71xx.ipk
 Size: 100551
 MD5Sum: 32cafc08593ac0dc08892efb5aeaa2be
+SHA256sum: 14d4263655fc818277607bdd417e704b8d4cac63883b91ea1a777c4c391d3152
 Description:  Ruby Network Kanji Filter
 
 Package: ruby-openssl
@@ -360,6 +380,7 @@ Installed-Size: 102680
 Filename: ruby-openssl_1.9.3-p545-1_ar71xx.ipk
 Size: 102898
 MD5Sum: ec96ae36cfad3630d478f7226487d7a4
+SHA256sum: 1f07ea6a791c69cb9ade3e4eec2494e14587b71032f844b423ed799874332ced
 Description:  Ruby support for openssl
 
 Package: ruby-rake
@@ -377,6 +398,7 @@ Installed-Size: 36726
 Filename: ruby-rake_1.9.3-p545-1_ar71xx.ipk
 Size: 37502
 MD5Sum: 7d55749b18484281502b4e6d5c837f41
+SHA256sum: c5f3640b3f815b93aa8a8754b58bd0ca63150cdb0d6a4589dddd481fd7c29391
 Description:  Ruby scripting language Ruby Rake (make replacement)
 
 Package: ruby-rdoc
@@ -394,6 +416,7 @@ Installed-Size: 170925
 Filename: ruby-rdoc_1.9.3-p545-1_ar71xx.ipk
 Size: 171755
 MD5Sum: a11bade817ab4f794d4092773a0e69a0
+SHA256sum: 4388800f3695e6d38d0667d7b8f7d0a3df037f3c531cfe16d01392d21b501f49
 Description:  Ruby scripting language (documentation generator)
 
 Package: ruby-readline
@@ -411,6 +434,7 @@ Installed-Size: 7149
 Filename: ruby-readline_1.9.3-p545-1_ar71xx.ipk
 Size: 7810
 MD5Sum: f06e275164932f5cfdb751332a93020b
+SHA256sum: add7ba1a4f9923850807f6150a95c4298c37a93202f9d67f0fbb0f8b79d9c5f6
 Description:  Ruby support for readline
 
 Package: ruby-rexml
@@ -428,6 +452,7 @@ Installed-Size: 70446
 Filename: ruby-rexml_1.9.3-p545-1_ar71xx.ipk
 Size: 71221
 MD5Sum: c08e259e49b540be1a0605fa0b5c842a
+SHA256sum: fc1608a65ed4bae53065fd5e405d0ab0da2c0461eae5dcfad44574ba8b969a16
 Description:  Ruby XML toolkit
 
 Package: ruby-rss
@@ -445,6 +470,7 @@ Installed-Size: 43555
 Filename: ruby-rss_1.9.3-p545-1_ar71xx.ipk
 Size: 44243
 MD5Sum: bc684e0cdbb97c9717ee899835428e3b
+SHA256sum: 2510898f2522f2fe224927bf0945774eb4f70b84e9c309be44846132477c1f99
 Description:  Ruby RSS toolkit
 
 Package: ruby-unit
@@ -462,6 +488,7 @@ Installed-Size: 9483
 Filename: ruby-unit_1.9.3-p545-1_ar71xx.ipk
 Size: 10120
 MD5Sum: 11d288e849f482fd8e5e7f19229ded3e
+SHA256sum: 6b0cee19e594a5f0f606b0adf797b781ea940a5a9178696be13eb6ef017d5f7f
 Description:  Ruby unit testing toolkit
 
 Package: ruby-webrick
@@ -479,6 +506,7 @@ Installed-Size: 45693
 Filename: ruby-webrick_1.9.3-p545-1_ar71xx.ipk
 Size: 46381
 MD5Sum: 5ef9c587170bdf72a1528d7b9ef03754
+SHA256sum: 0d3fa13d3eaaa1375fdd5ef584bc7eea9075eea168aa9f891af454b11171e189
 Description:  Ruby Web server toolkit
 
 Package: ruby-xmlrpc
@@ -496,6 +524,7 @@ Installed-Size: 21988
 Filename: ruby-xmlrpc_1.9.3-p545-1_ar71xx.ipk
 Size: 22610
 MD5Sum: 4ef926e23ed8f5b3d35440325a308361
+SHA256sum: c4291d7a370daa88cb956dec6dd9d1be9e13e2ef5dc3b5111900d1764cb11f0d
 Description:  Ruby XML-RPC toolkit
 
 Package: ruby-yaml
@@ -513,6 +542,7 @@ Installed-Size: 46976
 Filename: ruby-yaml_1.9.3-p545-1_ar71xx.ipk
 Size: 47700
 MD5Sum: a1ed6928d0635a01276ec62d49a0e129
+SHA256sum: c27e9bac73cf2f8599e9d778dd69f1e6a24fe40334e67b02417a7319ed29a386
 Description:  Ruby YAML toolkit
 
 Package: ruby-zlib
@@ -530,6 +560,7 @@ Installed-Size: 18363
 Filename: ruby-zlib_1.9.3-p545-1_ar71xx.ipk
 Size: 18990
 MD5Sum: 3665d5565267f7f340e01a6906f854d9
+SHA256sum: 6ac626327b45101785aa7a417e94919e89910fc89955f98481138b1396398451
 Description:  Ruby support for zlib
 
 Package: socat
@@ -547,6 +578,7 @@ Installed-Size: 89881
 Filename: socat_1.7.2.1-1ssl_ar71xx.ipk
 Size: 89618
 MD5Sum: 4888c7a898d8b5196b494b9a6b5882d2
+SHA256sum: cd40e4da224bc7e185ad2d04a0525077e18beebc744ceca7570d5594950d73af
 Description:  SoCat (for SOcket CAT) establishes two bidirectional byte streams and
  transfers data between them.
  Data channels may be files, pipes, devices (terminal or modem, etc.), or

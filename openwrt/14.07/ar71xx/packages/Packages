@@ -28,6 +28,21 @@ MD5Sum: 3af40478ca6e9152ff1ff0d9f80e25d5
 SHA256sum: 27d7bea7c3e2f3420bc162333a31ce9898475d16bd3385a715f269fe731161b3
 Description:  Kernel modules for TCP LP (Low Priority) congestion control algorithm
 
+Package: libelf1
+Version: 0.160-1
+Depends: libc
+Source: feeds/packages/libs/elfutils
+License: GPL-3.0+
+Section: libs
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 34634
+Filename: libelf1_0.160-1_ar71xx.ipk
+Size: 35293
+MD5Sum: 048648f4f1f4966e3ed6ed9be15bc9c4
+SHA256sum: 961b69d5972c9ea657c3a76073d89b3dcb09bad86d78e187923cfafdc2881d25
+Description:  ELF manipulation libraries (libelf)
+
 Package: libruby
 Version: 2.1.3-2
 Depends: libc, libpthread, librt, libgmp
@@ -57,6 +72,24 @@ Size: 745626
 MD5Sum: b83c8027949f1ff608e3a4b43ec76efa
 SHA256sum: 6d94505db02ee2f73b812d964a39518f151a80314871f8eb9e984f92c5275b00
 Description:  Ruby scripting language (shared library)
+
+Package: ltrace
+Version: 0.7.3-1
+Depends: libc, libelf1, libstdcpp
+Source: feeds/packages/devel/ltrace
+License: GPL-2.0+
+LicenseFiles: COPYING
+Section: devel
+Maintainer: Juan Cespedes <cespedes@debian.org>
+Architecture: ar71xx
+Installed-Size: 61854
+Filename: ltrace_0.7.3-1_ar71xx.ipk
+Size: 62580
+MD5Sum: ece1879eacd9e7215fe897d120501758
+SHA256sum: 1c5cc79109b7b8bb23511ebfe1837f87bd256c7116e9ea90a20f9c67145ccae0
+Description:  ltrace intercepts and records dynamic library calls which are called by an executed
+ process and the signals received by that process. It can also intercept and print the
+ system calls executed by the program.
 
 Package: ruby
 Version: 2.1.3-2
