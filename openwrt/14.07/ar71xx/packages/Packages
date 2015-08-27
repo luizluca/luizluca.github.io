@@ -1,3 +1,57 @@
+Package: hplip-common
+Version: 3.15.7-1
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 140371
+Filename: hplip-common_3.15.7-1_ar71xx.ipk
+Size: users
+MD5Sum: 17f94169e96288c5eeb1358596a19443
+SHA256sum: ea024bc27bea01343f168c8eea252d6578c5af7678fb9a7f28b1c721a4dddb4c
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ These are common files shared between subpackages
+
+Package: hplip-cups
+Version: 3.15.7-1
+Depends: libc, cups, hplip-common
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 5163
+Filename: hplip-cups_3.15.7-1_ar71xx.ipk
+Size: users
+MD5Sum: 34da7574f52167fca06fc997bf5f7742
+SHA256sum: f903cfa11dad693da799041e2dbb52ab6190bd18ea2ad99a9717e3fdc6501d40
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ CUPS driver for HP printers
+
+Package: hplip-sane
+Version: 3.15.7-1
+Depends: libc, libsane, hplip-common
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 61352
+Filename: hplip-sane_3.15.7-1_ar71xx.ipk
+Size: users
+MD5Sum: d9f681282839c4f0998800597c15ab9b
+SHA256sum: 0c8ff0ecab22473005c8ba7d63081ec238a5ec094075d13355707d25635bbbf1
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ S.A.N.E backend for HP Scanners
+
 Package: kmod-tcp_htcp
 Version: 3.10.49-1
 Depends: kernel (=3.10.49-1-16838a95cec5e60c393a698b78cc569c)
@@ -8,7 +62,7 @@ Status: unknown hold not-installed
 Architecture: ar71xx
 Installed-Size: 2057
 Filename: kmod-tcp_htcp_3.10.49-1_ar71xx.ipk
-Size: 2813
+Size: users
 MD5Sum: 2af0437fc06973758ab23c9488ebe8eb
 SHA256sum: e90166411baa549c23bc5ba515656710d87e7e2e6832b0cf5251f4accb2432b9
 Description:  Kernel modules for TCP H-TCP congestion control algorithm for high speed networks with high latency
@@ -23,7 +77,7 @@ Status: unknown hold not-installed
 Architecture: ar71xx
 Installed-Size: 1401
 Filename: kmod-tcp_lp_3.10.49-1_ar71xx.ipk
-Size: 2136
+Size: users
 MD5Sum: 3af40478ca6e9152ff1ff0d9f80e25d5
 SHA256sum: 27d7bea7c3e2f3420bc162333a31ce9898475d16bd3385a715f269fe731161b3
 Description:  Kernel modules for TCP LP (Low Priority) congestion control algorithm
@@ -38,7 +92,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 34634
 Filename: libelf1_0.160-1_ar71xx.ipk
-Size: 35293
+Size: users
 MD5Sum: 048648f4f1f4966e3ed6ed9be15bc9c4
 SHA256sum: 961b69d5972c9ea657c3a76073d89b3dcb09bad86d78e187923cfafdc2881d25
 Description:  ELF manipulation libraries (libelf)
@@ -53,7 +107,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 750317
 Filename: libruby_2.1.3-2_ar71xx.ipk
-Size: 745627
+Size: users
 MD5Sum: 35f85cda82fa1e32acd8063d70989247
 SHA256sum: 807675b7e8366652ed47caca4bb3d5a2107b5aab0be8b0d3e70e3a664033c911
 Description:  Ruby scripting language (shared library)
@@ -68,10 +122,27 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 750550
 Filename: libruby_2.1.4-1_ar71xx.ipk
-Size: 745626
+Size: users
 MD5Sum: b83c8027949f1ff608e3a4b43ec76efa
 SHA256sum: 6d94505db02ee2f73b812d964a39518f151a80314871f8eb9e984f92c5275b00
 Description:  Ruby scripting language (shared library)
+
+Package: libsane
+Version: 1.0.24-1
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: libs
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 59009
+Filename: libsane_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 016f745c9bb85aee08e525dad2aebba8
+SHA256sum: 78695deaff274184ec07c8290cb756f5753c393407788676faa1bd1691c81c59
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE shared libraries.
 
 Package: ltrace
 Version: 0.7.3-1
@@ -84,7 +155,7 @@ Maintainer: Juan Cespedes <cespedes@debian.org>
 Architecture: ar71xx
 Installed-Size: 61854
 Filename: ltrace_0.7.3-1_ar71xx.ipk
-Size: 62580
+Size: users
 MD5Sum: ece1879eacd9e7215fe897d120501758
 SHA256sum: 1c5cc79109b7b8bb23511ebfe1837f87bd256c7116e9ea90a20f9c67145ccae0
 Description:  ltrace intercepts and records dynamic library calls which are called by an executed
@@ -101,7 +172,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 1634
 Filename: ruby_2.1.3-2_ar71xx.ipk
-Size: 2367
+Size: users
 MD5Sum: 83d2d823cbea75f38f166f630e989d39
 SHA256sum: 10f666516f9e9f3311fda2e76bf6f990feb5485c9d04b7e3da1efb7426be652c
 Description:  Ruby is the interpreted scripting language for quick and easy
@@ -120,7 +191,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 1637
 Filename: ruby_2.1.4-1_ar71xx.ipk
-Size: 2372
+Size: users
 MD5Sum: cffd542394825b620d061fdc5da38b44
 SHA256sum: 79c2b0ce6480f903b11e9622e70c60bb17f86f4b131dea06720ad7b4e35dfd71
 Description:  Ruby is the interpreted scripting language for quick and easy
@@ -139,7 +210,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 30356
 Filename: ruby-bigdecimal_2.1.3-2_ar71xx.ipk
-Size: 30906
+Size: users
 MD5Sum: af5a7a480958481c94d6ccac6ef4dc0f
 SHA256sum: b7ff285a47b5be81720710cd40a0389c72d3ca3ec7ac2d4519b3c9a028e8afb2
 Description:  Provides bigdecimal* files
@@ -155,7 +226,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 30361
 Filename: ruby-bigdecimal_2.1.4-1_ar71xx.ipk
-Size: 30908
+Size: users
 MD5Sum: 371f1aa9ee8e6142fd7f842445d9c507
 SHA256sum: 67dee33fbfdd720617c2cef1f07bf8c154a0a428f2e94f92591e6dedae33d843
 Description:  Provides bigdecimal* files
@@ -171,7 +242,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 28039
 Filename: ruby-cgi_2.1.3-2_ar71xx.ipk
-Size: 28652
+Size: users
 MD5Sum: 687cc073170fe0d4bdd002065ec9eaec
 SHA256sum: ce84c384e101dde3bcbcc235495d26b1ffb89699b0415e8aeb8551551bf9bf6e
 Description:  Ruby CGI support toolkit
@@ -186,7 +257,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 28040
 Filename: ruby-cgi_2.1.4-1_ar71xx.ipk
-Size: 28649
+Size: users
 MD5Sum: 63a4c7cf20b43846ecc6528b14a65e05
 SHA256sum: c84d69d0a2a854d5510092933ecced9e75f1b8bc325ce044ae75ef6c994d54d3
 Description:  Ruby CGI support toolkit
@@ -201,7 +272,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 22673
 Filename: ruby-csv_2.1.3-2_ar71xx.ipk
-Size: 23267
+Size: users
 MD5Sum: 372bb06ae0edd06e6af0719a15f8c5b4
 SHA256sum: 2c3f61e7870ec14f6e2605366e512df671b55a9faf87a72d75760ecfc3b8fdbc
 Description:  Provides csv.rb file
@@ -217,7 +288,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 22677
 Filename: ruby-csv_2.1.4-1_ar71xx.ipk
-Size: 23278
+Size: users
 MD5Sum: 6beef82e4844171bb5e8cf5e5bc69e70
 SHA256sum: b3b303a6381101a3acd6234b1d7daf9b2eb053213a018f40f8e7eed9e263fda9
 Description:  Provides csv.rb file
@@ -233,7 +304,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 62321
 Filename: ruby-datetime_2.1.3-2_ar71xx.ipk
-Size: 62686
+Size: users
 MD5Sum: bc7fee9d26d48869482253a71c1b902f
 SHA256sum: 5f168caa47f3d6ecaedab89e357c5dbd819ee33453a4bec90f49d71b7bec3f92
 Description:  Provides date.rb and time.rb
@@ -249,7 +320,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 62323
 Filename: ruby-datetime_2.1.4-1_ar71xx.ipk
-Size: 62687
+Size: users
 MD5Sum: 7f9bd0c4a02ac35e93db38ea65b1e853
 SHA256sum: f3fdb8356df1b2fb5df38aa5becfa5600ef5f95d549253c271f6b78c5a6a821f
 Description:  Provides date.rb and time.rb
@@ -265,7 +336,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6415
 Filename: ruby-dbm_2.1.3-2_ar71xx.ipk
-Size: 7072
+Size: users
 MD5Sum: 36b03bd1dcd61af77587f3bb3e7d63a1
 SHA256sum: 09f5d9e2c96db5295c1c86380b5c22ab9058016aeed0b66ffc55f379b02cacf3
 Description:  The DBM class provides a wrapper to a Unix-style dbm or Database Manager library.
@@ -282,7 +353,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6415
 Filename: ruby-dbm_2.1.4-1_ar71xx.ipk
-Size: 7068
+Size: users
 MD5Sum: f2f333cbef80165ff56876b1c4ea964b
 SHA256sum: ef2235c67596204a158ec352f09fb4b985d4c55292a85c5c94557f47c96597dc
 Description:  The DBM class provides a wrapper to a Unix-style dbm or Database Manager library.
@@ -299,7 +370,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 28698
 Filename: ruby-debuglib_2.1.3-2_ar71xx.ipk
-Size: 29339
+Size: users
 MD5Sum: 293cb362f83609e60b8b38ede258ba75
 SHA256sum: 6f70c7a8988fcfb2feb0396566d6039e79dfaf0cc1359b01eae3f710fe7dd535
 Description:  Provides files for debugging:
@@ -321,7 +392,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 28695
 Filename: ruby-debuglib_2.1.4-1_ar71xx.ipk
-Size: 29339
+Size: users
 MD5Sum: 0416d5a34c6ab178bbbe8237b2c87c89
 SHA256sum: 65b47d4bcba6c0ad694bd0e6e1b5407f51fefb7b38c380fe8d2b70266e1e9b9e
 Description:  Provides files for debugging:
@@ -343,7 +414,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 27647
 Filename: ruby-digest_2.1.3-2_ar71xx.ipk
-Size: 28316
+Size: users
 MD5Sum: a30f788a1e9108b242dca5be9d698ebf
 SHA256sum: 4427a624ad57ed4006b60e8178927d3686f082b8129054f6f8bd2c66e15f0aac
 Description:  Provides digest* files. Can be configured to use OpenSSL or
@@ -360,7 +431,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 27643
 Filename: ruby-digest_2.1.4-1_ar71xx.ipk
-Size: 28320
+Size: users
 MD5Sum: e7a04b1c8861ded229414b3ad7c62d02
 SHA256sum: bacb777d1eea817105bdacb83666b0eb74f6159e189a0fad86feb6451ec3b652
 Description:  Provides digest* files. Can be configured to use OpenSSL or
@@ -377,7 +448,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 42998
 Filename: ruby-dl_2.1.3-2_ar71xx.ipk
-Size: 41517
+Size: users
 MD5Sum: 97ff71b0e0b7d405291e5948a46d8740
 SHA256sum: ed45049d3c431cc67ace7e427ef283881cdfdc3bd9dd367d2192943def444bb2
 Description:  Provides dl* files. This is deprecated, use fiddle.
@@ -393,7 +464,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 43001
 Filename: ruby-dl_2.1.4-1_ar71xx.ipk
-Size: 41546
+Size: users
 MD5Sum: 6c144a78cb76e235405c59a69ec88b31
 SHA256sum: e0a9e13b11a114d7d183d603423ac955b0bf7937d62f04258fd62153169b69ec
 Description:  Provides dl* files. This is deprecated, use fiddle.
@@ -409,7 +480,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24701
 Filename: ruby-drb_2.1.3-2_ar71xx.ipk
-Size: 25308
+Size: users
 MD5Sum: 16d46db1d768c4452faf445f4e214a14
 SHA256sum: f038c3910792790f9907668067f4d1b95e90aef4fd2608b665696468601e7f3e
 Description:  Provides drb* files
@@ -425,7 +496,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24699
 Filename: ruby-drb_2.1.4-1_ar71xx.ipk
-Size: 25313
+Size: users
 MD5Sum: 42c2770c400ea2031a77f4836f6d03e1
 SHA256sum: a1a6ddab0cfc748b01ccbf01c5d3fb34fbb314b05de8f325df81906dfaf25c1d
 Description:  Provides drb* files
@@ -441,7 +512,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9379
 Filename: ruby-enc_2.1.3-2_ar71xx.ipk
-Size: 10021
+Size: users
 MD5Sum: a3b3e7c07cd5c88ba8a7f7a65d9e698a
 SHA256sum: ee5643c6d343ec73b40acd707046500d482532cd58af0300455c6e29f02c93c9
 Description:  Provides ruby encoding library for encodings used directly by
@@ -466,7 +537,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9378
 Filename: ruby-enc_2.1.4-1_ar71xx.ipk
-Size: 10030
+Size: users
 MD5Sum: 695710f1769e4953c030d5a0b8d5709c
 SHA256sum: 164f8cc769ef438c7a03a6dc8b6204a9d9b9e845f6fcec4197fc419c896c04d8
 Description:  Provides ruby encoding library for encodings used directly by
@@ -491,7 +562,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 1231167
 Filename: ruby-enc-extra_2.1.3-2_ar71xx.ipk
-Size: 1115383
+Size: users
 MD5Sum: 5e8d035882264521dd251384e3d9ae47
 SHA256sum: 4c697269b7ab51b608124038d720cc1e511a47cad4964097868977002c7676ce
 Description:  Provides extra encodings not provided by ruby-enc:
@@ -553,7 +624,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 1231164
 Filename: ruby-enc-extra_2.1.4-1_ar71xx.ipk
-Size: 1114996
+Size: users
 MD5Sum: cc18c0dff8ace182f48761d2553faeee
 SHA256sum: 39d9c525d1dfc7b6527f868722cd245cdaedc4e86288c8f01ba91789abadc670
 Description:  Provides extra encodings not provided by ruby-enc:
@@ -615,7 +686,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9518
 Filename: ruby-erb_2.1.3-2_ar71xx.ipk
-Size: 10127
+Size: users
 MD5Sum: c87f2dcda5710c9f9b2f058d4ac79b76
 SHA256sum: ad5a718f83e4a987c31eef3edce31eeb3ad8902037bf5a9f61af5d50aba81296
 Description:  Provides erb* files
@@ -631,7 +702,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9520
 Filename: ruby-erb_2.1.4-1_ar71xx.ipk
-Size: 10136
+Size: users
 MD5Sum: 4de268fefc3d96306ec6af74a9607e67
 SHA256sum: 83e7e426ef5c476ca8f2c16656369fa6dc7dda8d2e0fb1f20ae4fc87b940e024
 Description:  Provides erb* files
@@ -647,7 +718,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 18905
 Filename: ruby-fiddle_2.1.3-2_ar71xx.ipk
-Size: 19521
+Size: users
 MD5Sum: c524ae76558ef173f8afcf3644c935b7
 SHA256sum: 7ccbdca2a9b609841b851d910b465bd321709422f38e66d19c69f983a6672f55
 Description:  Provides fiddle* files
@@ -663,7 +734,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 18908
 Filename: ruby-fiddle_2.1.4-1_ar71xx.ipk
-Size: 19527
+Size: users
 MD5Sum: e2f09bb1af2dd6ee18fef6b50facb139
 SHA256sum: 5518a4fc06411c04d5cfd917c9baeb670bab1756dd1a46f01ac61168fd1b4790
 Description:  Provides fiddle* files
@@ -679,7 +750,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 28993
 Filename: ruby-filelib_2.1.3-2_ar71xx.ipk
-Size: 29694
+Size: users
 MD5Sum: c22d2e0eb47f4937a764e4cfaa847a14
 SHA256sum: 7d8eb29b8d84ada02af4cb9a24810f13d2c328ea33c49dd18a6fcd3ff817193a
 Description:  Provides filesystem interaction files, including
@@ -702,7 +773,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 29014
 Filename: ruby-filelib_2.1.4-1_ar71xx.ipk
-Size: 29710
+Size: users
 MD5Sum: cb6b4d3584e0f1edca0707c43c14064b
 SHA256sum: 3d9b7781d10dd774673fa34f03b2ca9ba6980873eddcf7e950a6ea268ebf1529
 Description:  Provides filesystem interaction files, including
@@ -725,7 +796,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6862
 Filename: ruby-gdbm_2.1.3-2_ar71xx.ipk
-Size: 7501
+Size: users
 MD5Sum: 3771748a0e6985fca9778eab8add5572
 SHA256sum: c2b4dff331069e7aeddb975975161364d0bae15c5ab37385fff2a5c8ef617a9b
 Description:  Provides gdbm* files
@@ -741,7 +812,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6862
 Filename: ruby-gdbm_2.1.4-1_ar71xx.ipk
-Size: 7504
+Size: users
 MD5Sum: 6c1f744ec03324ea8d096250f15b4bce
 SHA256sum: 18edb40fda601223bf75765851293ef4c3d963bbcb7c148984b97d5d062c8d2f
 Description:  Provides gdbm* files
@@ -757,7 +828,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 213634
 Filename: ruby-gems_2.1.3-2_ar71xx.ipk
-Size: 214408
+Size: users
 MD5Sum: b85043aad4457f005fa0eeaae0b84bb5
 SHA256sum: 73968810a97607fc9cb7dc91197f2cf27765a7aabb46b7e46b9dda902621868e
 Description:  Provides rubygems for gems usage, download and installation
@@ -773,7 +844,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 213633
 Filename: ruby-gems_2.1.4-1_ar71xx.ipk
-Size: 214414
+Size: users
 MD5Sum: 34d78bd48b123ed6beb341cb80f0d7c8
 SHA256sum: bc5cbb1d72a5b59862f4aa7ad26347f4137cb3b74e920433aca2b5a6dc741932
 Description:  Provides rubygems for gems usage, download and installation
@@ -789,7 +860,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 4859
 Filename: ruby-io-console_2.1.3-2_ar71xx.ipk
-Size: 5450
+Size: users
 MD5Sum: 2fd87d23775672af6b3bbfbafa568d1d
 SHA256sum: e659a1ed2b126e0f7a05446ebbdc80295172670ddc550f7901421361efe0644a
 Description:  Provides io-console* files
@@ -805,7 +876,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 4857
 Filename: ruby-io-console_2.1.4-1_ar71xx.ipk
-Size: 5453
+Size: users
 MD5Sum: 404e76fc987103b96df8ae28896dab25
 SHA256sum: 67e63c3654bebba050499726c0a41a1eac08d0d519301d9ee7898066cd3f3a45
 Description:  Provides io-console* files
@@ -821,7 +892,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 44687
 Filename: ruby-irb_2.1.3-2_ar71xx.ipk
-Size: 45379
+Size: users
 MD5Sum: 529d13031e6310844491504f0a57677c
 SHA256sum: cbbf7884a358a78e53d76bb61d8d1d9ef4a8c820a07f292d87b929f84da4d394
 Description:  Provides irb* files
@@ -837,7 +908,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 44690
 Filename: ruby-irb_2.1.4-1_ar71xx.ipk
-Size: 45386
+Size: users
 MD5Sum: 265f37e6336571c73d20a872a0a35950
 SHA256sum: 7870554d76c50eec533768e9e07b0c5a95de1e414881538eb73f65195181b8d4
 Description:  Provides irb* files
@@ -853,7 +924,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 25237
 Filename: ruby-json_2.1.3-2_ar71xx.ipk
-Size: 25837
+Size: users
 MD5Sum: bb1cf4e3e5dd548024ade437e8e4c086
 SHA256sum: eef0f5653f3f0c794350674dd75e52d215efeae91e7d790b05a5b7c0e9d89728
 Description:  Provides json* files
@@ -869,7 +940,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 25229
 Filename: ruby-json_2.1.4-1_ar71xx.ipk
-Size: 25836
+Size: users
 MD5Sum: 3a7f9603dbfd65a3b021d1b022db92cd
 SHA256sum: bc1feba2771aa95315ea341a2e02933867e51a791217d48a91641c08800840d7
 Description:  Provides json* files
@@ -885,7 +956,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 13523
 Filename: ruby-logger_2.1.3-2_ar71xx.ipk
-Size: 14145
+Size: users
 MD5Sum: 00d06adbd3279fabc2559ea7720042c7
 SHA256sum: a0d5d2039826a25bb6c6cae1cb9414d1f5766731c99a9ecc6831816125cab7c2
 Description:  Provides log library, including syslog:
@@ -904,7 +975,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 13523
 Filename: ruby-logger_2.1.4-1_ar71xx.ipk
-Size: 14144
+Size: users
 MD5Sum: c4fb4fdd8e972e0b909916dfbe2e50c2
 SHA256sum: 81738947f25bd5c5e12fb92d98e14296435cb24baf6bbe21a5ad12b2b6d08b44
 Description:  Provides log library, including syslog:
@@ -923,7 +994,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 26960
 Filename: ruby-math_2.1.3-2_ar71xx.ipk
-Size: 27610
+Size: users
 MD5Sum: b493e4e6f423862611ddb5175bb2a705
 SHA256sum: 0a597372bfc34e3cfa7961edd90e9b4efd245dc8f359635c985b889acc8a0533
 Description:  Provides math related files:
@@ -949,7 +1020,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 26953
 Filename: ruby-math_2.1.4-1_ar71xx.ipk
-Size: 27607
+Size: users
 MD5Sum: 34bcb76202f11aa817c6aa3bef0e8ba8
 SHA256sum: da338708d5fecb2579ef2be613320db65430af049ddf86fb8950d21727df4e6a
 Description:  Provides math related files:
@@ -975,7 +1046,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 19969
 Filename: ruby-minitest_2.1.3-2_ar71xx.ipk
-Size: 20606
+Size: users
 MD5Sum: a90678a9f368162decdf4a30d4d79c70
 SHA256sum: 1fe7390de444206598a19b7b960dce9256d5b77a66a12e008a66903b63b1dfcc
 Description:  Provides minitest* files
@@ -991,7 +1062,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 19968
 Filename: ruby-minitest_2.1.4-1_ar71xx.ipk
-Size: 20593
+Size: users
 MD5Sum: cdf16c6527a390ae0fde15e1a7b4a1fa
 SHA256sum: 463f47d615b0a21b645fa53864daa1fb606aa06006782a923c62d6afe13b725b
 Description:  Provides minitest* files
@@ -1007,7 +1078,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 67559
 Filename: ruby-misc_2.1.3-2_ar71xx.ipk
-Size: 68463
+Size: users
 MD5Sum: 7bfa1fd4d6453dfa57fa1e61b0906bc3
 SHA256sum: c1eb7dafe29cde1f8cb9b71d30ff15d463a400470c6dcc80744386492157b3fd
 Description:  This package contains miscellaneous files from stdlib
@@ -1047,7 +1118,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 67591
 Filename: ruby-misc_2.1.4-1_ar71xx.ipk
-Size: 68543
+Size: users
 MD5Sum: a1e94c8d1989bc11b1130027b0b4d832
 SHA256sum: 97798cd6b537898e0c490d6c52aa0e1a3ecc454b6857b8872bc6ca2250d752b4
 Description:  This package contains miscellaneous files from stdlib
@@ -1087,7 +1158,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 26330
 Filename: ruby-mkmf_2.1.3-2_ar71xx.ipk
-Size: 26903
+Size: users
 MD5Sum: f7720c274c0159ca80ef99d6cc4f6897
 SHA256sum: 805be5ddb6205293ad55884e69c10906386d580ffb03f7b2f8b2169517bfde9b
 Description:  Provides mkmf* files
@@ -1103,7 +1174,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 26329
 Filename: ruby-mkmf_2.1.4-1_ar71xx.ipk
-Size: 26899
+Size: users
 MD5Sum: 7c5eb0423b71f90074882d3c1211e846
 SHA256sum: 244940d805ddcc8ad528821084b8027ff9377a8650cec97a7e9a510d46e434e1
 Description:  Provides mkmf* files
@@ -1119,7 +1190,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 13867
 Filename: ruby-multithread_2.1.3-2_ar71xx.ipk
-Size: 14554
+Size: users
 MD5Sum: 0175d07c3e7b0e8db1ac7e539e899510
 SHA256sum: b16433ced5dee95ab40ed37e6e6f64e80bd05d75b1c9f7db47bcf9507e35c04b
 Description:  Provides files for multithread usage:
@@ -1143,7 +1214,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 13870
 Filename: ruby-multithread_2.1.4-1_ar71xx.ipk
-Size: 14553
+Size: users
 MD5Sum: 3f8e19ae0338caf8ae50c2e0baebf9d8
 SHA256sum: 867a26fe817e8c23bb9f5d7b59c913e0eaf50fc1678f2e28fe26c60a59432af1
 Description:  Provides files for multithread usage:
@@ -1167,7 +1238,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 91495
 Filename: ruby-net_2.1.3-2_ar71xx.ipk
-Size: 92220
+Size: users
 MD5Sum: 50ddd4a216bbe098408a741d3db3a904
 SHA256sum: 967d80b29a77a38df0768d7b6b2074075259da88d236ce5679eca453edf8e9fc
 Description:  Provides net* files
@@ -1183,7 +1254,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 91501
 Filename: ruby-net_2.1.4-1_ar71xx.ipk
-Size: 92232
+Size: users
 MD5Sum: a4e6c45efee3ad11fccbe593fa6e80fa
 SHA256sum: 3286a7b982488bdbd0e6bd87a2094c58180d2dedf3ddcd4b5ded68272a6c083c
 Description:  Provides net* files
@@ -1199,7 +1270,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 127997
 Filename: ruby-nkf_2.1.3-2_ar71xx.ipk
-Size: 125838
+Size: users
 MD5Sum: 6a03582d8dc9d0f98ec987a6778f0699
 SHA256sum: bcaf1bf7490ad212793514c0153830d3c93d51c3c25f68f8c4594cf2e0a55bff
 Description:  Provides nkf* files
@@ -1215,7 +1286,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 127999
 Filename: ruby-nkf_2.1.4-1_ar71xx.ipk
-Size: 125837
+Size: users
 MD5Sum: 4dc1c8c33180c346031e2ab387f90c52
 SHA256sum: f7108f82fbd7bb539fb3aec91e92a399f51f021f1ac95728a7c74a8d8dd91fcf
 Description:  Provides nkf* files
@@ -1231,7 +1302,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 95379
 Filename: ruby-openssl_2.1.3-2_ar71xx.ipk
-Size: 95614
+Size: users
 MD5Sum: 72a315a034481699a612301a5ca7762c
 SHA256sum: 63ca428a1cf6c55578ef4ae37f01710efc3013edf8ee4c6e219b51d44fd0c85b
 Description:  Provides openssl* files
@@ -1247,7 +1318,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 95590
 Filename: ruby-openssl_2.1.4-1_ar71xx.ipk
-Size: 95781
+Size: users
 MD5Sum: d62950f042d3c6a1bd61d9f55033eb67
 SHA256sum: e4851ed6926c5702625090ce2c9cde1ee0ac47c3cee93bf585689f53d9594ac3
 Description:  Provides openssl* files
@@ -1263,7 +1334,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 16346
 Filename: ruby-optparse_2.1.3-2_ar71xx.ipk
-Size: 16908
+Size: users
 MD5Sum: c6b291f8f223303f3d9aed8bcaf5dce4
 SHA256sum: 8931e2ebc0f99dd399d10cb129455618166b8b5631ff118dbffb7bdbaac9f765
 Description:  Provides optparse* files
@@ -1279,7 +1350,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 16345
 Filename: ruby-optparse_2.1.4-1_ar71xx.ipk
-Size: 16904
+Size: users
 MD5Sum: f7b40436b48fd75bf81a65c2c699f8be
 SHA256sum: a7e3b172b3e9ff3fedafdb74409c366cca18be3eeb035d777ac9eb02e94d7480
 Description:  Provides optparse* files
@@ -1295,7 +1366,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6009
 Filename: ruby-patterns_2.1.3-2_ar71xx.ipk
-Size: 6612
+Size: users
 MD5Sum: e69e6c22ada07bab062c317eb24b5f15
 SHA256sum: 18363f30ccffa2c1ddbb47739a70a46edf6c740f80be87274942029277055997
 Description:  Provides design patterns helpers files:
@@ -1314,7 +1385,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6009
 Filename: ruby-patterns_2.1.4-1_ar71xx.ipk
-Size: 6619
+Size: users
 MD5Sum: 2e18d03e044ddfc38635a83df15f3e5e
 SHA256sum: 902553993f14e13d45ffef7be69618fe304cc416b0f24a00b25c52b153ff3177
 Description:  Provides design patterns helpers files:
@@ -1333,7 +1404,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 8896
 Filename: ruby-prettyprint_2.1.3-2_ar71xx.ipk
-Size: 9535
+Size: users
 MD5Sum: 8ec19ad93864b4fa8fd709025c2d0951
 SHA256sum: c3d7758a3b4ee7378fe5caee3e2faeaf4d630604c7126f7aa0f72ca465326c5d
 Description:  Provides Pretty Print library:
@@ -1351,7 +1422,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 8894
 Filename: ruby-prettyprint_2.1.4-1_ar71xx.ipk
-Size: 9532
+Size: users
 MD5Sum: 1bea2b96703b8e7b91999106f1c1555c
 SHA256sum: bee2589db49227e5bc81292c4a8cfed60dcb85c2c59a18d38078973341f7263b
 Description:  Provides Pretty Print library:
@@ -1369,7 +1440,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 4964
 Filename: ruby-pstore_2.1.3-2_ar71xx.ipk
-Size: 5575
+Size: users
 MD5Sum: 1b5f8bef9b049b437f8fa65b5b6422af
 SHA256sum: cf4cf49e325dd73dccadd9218b6f0d24ef0f4a01ed223077a529684534c14e64
 Description:  Provides pstore.rb file
@@ -1385,7 +1456,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 4964
 Filename: ruby-pstore_2.1.4-1_ar71xx.ipk
-Size: 5567
+Size: users
 MD5Sum: 9f1d5e5758c5aedf869f7438a4f93a73
 SHA256sum: a3d1ed774e9f0a8ab3d96987233ad914dfde5933249413f044480cacac5ad581
 Description:  Provides pstore.rb file
@@ -1401,7 +1472,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 66371
 Filename: ruby-psych_2.1.3-2_ar71xx.ipk
-Size: 67090
+Size: users
 MD5Sum: 4511e889d4d0af518e2849e75da0b8df
 SHA256sum: fadeec3f2aed623f319bba8d78e6d5702fe2fa97ac6315c5d4eb604eaf8632b0
 Description:  Provides psych* files
@@ -1417,7 +1488,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 66368
 Filename: ruby-psych_2.1.4-1_ar71xx.ipk
-Size: 67095
+Size: users
 MD5Sum: a71772581ef3a76c105ce0940082b5e7
 SHA256sum: 21d01b932d45381af3a86b9845687f131ca65906ef39f69b98dc6bccf464d324
 Description:  Provides psych* files
@@ -1433,7 +1504,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 11140
 Filename: ruby-racc_2.1.3-2_ar71xx.ipk
-Size: 11728
+Size: users
 MD5Sum: 5350dbab3ea64fda33c8c8e16a18d233
 SHA256sum: 6650aac2095bb1f389853c4ddcacfc70d932276c8203491020648453684e7c36
 Description:  Provides racc* files
@@ -1449,7 +1520,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 11142
 Filename: ruby-racc_2.1.4-1_ar71xx.ipk
-Size: 11730
+Size: users
 MD5Sum: 0f8c507cddbce4bcc5b384761a248384
 SHA256sum: d890ab1acdb133ca6ae732e58085f296eb22eb45deb10953cfc5230952ad97e8
 Description:  Provides racc* files
@@ -1465,7 +1536,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 40615
 Filename: ruby-rake_2.1.3-2_ar71xx.ipk
-Size: 41383
+Size: users
 MD5Sum: c2746073fa29a40570d81f12f06aebd5
 SHA256sum: 190260890aff0f23f5bd720dff1ffb7ca0f2cdede73ee3b325876652e1e2b83a
 Description:  Provides rake* files
@@ -1481,7 +1552,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 40620
 Filename: ruby-rake_2.1.4-1_ar71xx.ipk
-Size: 41379
+Size: users
 MD5Sum: 2c7c9913b88aaebe3e87219d81adf4f9
 SHA256sum: 9e4496013a540ed71ba372f73d8b1060f795bbf90cae9a265b86bdf9562c7558
 Description:  Provides rake* files
@@ -1497,7 +1568,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6037
 Filename: ruby-rbconfig_2.1.3-2_ar71xx.ipk
-Size: 6622
+Size: users
 MD5Sum: b164f34daafc4f578faae607de130fb0
 SHA256sum: acfae0aca65b7f451305d0a689a010db7de2bcf67c880fb8db63825dae47c1dc
 Description:  Provides rbconfig file
@@ -1513,7 +1584,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 6036
 Filename: ruby-rbconfig_2.1.4-1_ar71xx.ipk
-Size: 6615
+Size: users
 MD5Sum: 98dfdaf642d0cf049c0a6cc48c1647aa
 SHA256sum: ab36526c32f755793d14dcc489f4e11b05c775d1ba2afc785621b48e06f3ae90
 Description:  Provides rbconfig file
@@ -1529,7 +1600,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 556175
 Filename: ruby-rdoc_2.1.3-2_ar71xx.ipk
-Size: 521972
+Size: users
 MD5Sum: 81d765c15988534e7c7ae36c638f59fc
 SHA256sum: 7dc3b245bb7538c5fd69a638c9a30edc05cec39da0633e829a2da7738085ae41
 Description:  Provides rdoc* and ri files
@@ -1545,7 +1616,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 556179
 Filename: ruby-rdoc_2.1.4-1_ar71xx.ipk
-Size: 521909
+Size: users
 MD5Sum: 22a379fddb0b45c521c7cf0c20562735
 SHA256sum: eed2c033df5662f41bf42447fb3dbe51c308c866eb6c5af8b496d60f74ca6788
 Description:  Provides rdoc* and ri files
@@ -1561,7 +1632,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9236
 Filename: ruby-readline_2.1.3-2_ar71xx.ipk
-Size: 9852
+Size: users
 MD5Sum: 1ddf86012dbf72eda4dbe859c2401535
 SHA256sum: 13208495fa53a91a0185f58575d39beb9ca1104926b2fd92e626c59d7f7d2be1
 Description:  Provides readline* files
@@ -1577,7 +1648,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9238
 Filename: ruby-readline_2.1.4-1_ar71xx.ipk
-Size: 9853
+Size: users
 MD5Sum: c63a75d8b496a2b18e2d2fecec32969f
 SHA256sum: e2e397e651f99d8fc56f5bb93ef7c40f16b43a72c09bf05df50d06d95ed14567
 Description:  Provides readline* files
@@ -1593,7 +1664,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 70912
 Filename: ruby-rexml_2.1.3-2_ar71xx.ipk
-Size: 71658
+Size: users
 MD5Sum: 400e67d42531a905d8ff35c0f1f8d85f
 SHA256sum: 214b7da491899ce21758153895ef3f7045aa146a94aba18945a14ebd88c3c00c
 Description:  Provides rexml* files
@@ -1609,7 +1680,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 70978
 Filename: ruby-rexml_2.1.4-1_ar71xx.ipk
-Size: 71735
+Size: users
 MD5Sum: 1af169a1f2d0bf75d42655324d312946
 SHA256sum: 67b8a0b47a66f05d01c94a9572b53a2c98b3d1ff5db1279d14f874df14e8f431
 Description:  Provides rexml* files
@@ -1625,7 +1696,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9424
 Filename: ruby-rinda_2.1.3-2_ar71xx.ipk
-Size: 10047
+Size: users
 MD5Sum: c1a5f08c3855ac942c7618fd6fe66b5c
 SHA256sum: 94239e0912c509d1d3a1bb9be7b21a47266827c94fa273027bae1099e070d8e9
 Description:  Provides rinda* files
@@ -1641,7 +1712,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 9427
 Filename: ruby-rinda_2.1.4-1_ar71xx.ipk
-Size: 10048
+Size: users
 MD5Sum: 7362c966025cd81f9e0b494fdf9845ba
 SHA256sum: d4497febbbf8feb3cb8047cf316224efa7392e06e27aea92cb2908fe0d3e4923
 Description:  Provides rinda* files
@@ -1657,7 +1728,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 60393
 Filename: ruby-ripper_2.1.3-2_ar71xx.ipk
-Size: 60083
+Size: users
 MD5Sum: 3c81e7b53da5e420b89d4d1d3673683f
 SHA256sum: 7110d85919f7f8da00f00eb518a6dffe3ef9f0bea1bd7a5900396b498b04c7de
 Description:  Provides ripper* files
@@ -1673,7 +1744,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 60362
 Filename: ruby-ripper_2.1.4-1_ar71xx.ipk
-Size: 60055
+Size: users
 MD5Sum: 1190757bcf2ba55214b5e614bf5f7d10
 SHA256sum: 745dca1af2b276e1cbca0f6bbbbcea56cf1372dd4b8c721a739cdff476253e39
 Description:  Provides ripper* files
@@ -1689,7 +1760,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 48195
 Filename: ruby-rss_2.1.3-2_ar71xx.ipk
-Size: 48923
+Size: users
 MD5Sum: 99f193119d1373388616586bb2d17780
 SHA256sum: 52ad977035c10e95f3b5a7e85cd8eb48972f116bbe45edf85e70509ee0df57e8
 Description:  Provides rss* files
@@ -1705,7 +1776,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 48194
 Filename: ruby-rss_2.1.4-1_ar71xx.ipk
-Size: 48912
+Size: users
 MD5Sum: 1468162a5636980242380fd28d1e9c3d
 SHA256sum: 63ab71306b55849ec2f3aecc8dbadaca22bd04aa4860de9536c86696c0edf4a5
 Description:  Provides rss* files
@@ -1721,7 +1792,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 8939
 Filename: ruby-sdbm_2.1.3-2_ar71xx.ipk
-Size: 9526
+Size: users
 MD5Sum: d058f88a46cc5934fb514e54d0607548
 SHA256sum: 659cf581e43bd4d388b9c3a2ca45c05912b1da4145351e5aee17a59ecea99c9e
 Description:  Provides sdbm* files
@@ -1737,7 +1808,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 8942
 Filename: ruby-sdbm_2.1.4-1_ar71xx.ipk
-Size: 9524
+Size: users
 MD5Sum: 2cf3c092009ed8398c3ac0eb5ef05649
 SHA256sum: 62bef622926297fb24881d458635a58f0ca650fcb8f835d3439a3614ff7577f4
 Description:  Provides sdbm* files
@@ -1753,7 +1824,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 11933
 Filename: ruby-shell_2.1.3-2_ar71xx.ipk
-Size: 12536
+Size: users
 MD5Sum: 4458f9edfa20ba2495b13dfdb9c0b09a
 SHA256sum: 22691c2c08f5dbea95e9eb6b340804e58043290712a687f7fe14082b23175730
 Description:  Provides shell* files
@@ -1769,7 +1840,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 11933
 Filename: ruby-shell_2.1.4-1_ar71xx.ipk
-Size: 12535
+Size: users
 MD5Sum: 25c42c323e931e438b6ec8beeed0c28e
 SHA256sum: 4312053e6a1049b3cd395c8ce17e199b167e25b9e2fec735bae6ba8474e23b27
 Description:  Provides shell* files
@@ -1785,7 +1856,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 78961
 Filename: ruby-socket_2.1.3-2_ar71xx.ipk
-Size: 79714
+Size: users
 MD5Sum: 988e2f10e73bb5bfd58f4d8ffd4347b4
 SHA256sum: 038ecdc5bef46eafc249ee68986ad5f84ea89bdc771991420e0b5fb7adf1b61e
 Description:  Provides socket-related files:
@@ -1807,7 +1878,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 78962
 Filename: ruby-socket_2.1.4-1_ar71xx.ipk
-Size: 79726
+Size: users
 MD5Sum: 7ace24442d327b4fe3be1fc28d5d456a
 SHA256sum: ee70c246b1aad8d3a2fb44d2cbef65d6f11e3416052e519156a0268a158b01f4
 Description:  Provides socket-related files:
@@ -1829,7 +1900,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 105
 Filename: ruby-stdlib_2.1.3-2_ar71xx.ipk
-Size: 969
+Size: users
 MD5Sum: f951f4e4d8d8a37395c10ec0b2d9e9aa
 SHA256sum: 8c63b7e64e542d37e6096f3e5a2f019ba5f76625dfa234b53f5b1e7368f4f5c1
 Description:  This metapackage currently install all ruby-* packages,
@@ -1846,7 +1917,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 105
 Filename: ruby-stdlib_2.1.4-1_ar71xx.ipk
-Size: 967
+Size: users
 MD5Sum: 902f82f419f8e09b0768982ff0a3927c
 SHA256sum: edd794b550059cb3754df4bf76c852b627b8e9899bd0b58954e885cfdd756e24
 Description:  This metapackage currently install all ruby-* packages,
@@ -1863,7 +1934,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 12534
 Filename: ruby-testunit_2.1.3-2_ar71xx.ipk
-Size: 13144
+Size: users
 MD5Sum: c29e50911c5852caae946e7836ff44de
 SHA256sum: 0e863155ef4948d3c8f84853364bd6f5f44e654a6ab94cc262188c2140f6781a
 Description:  Provides test/unit* files
@@ -1879,7 +1950,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 12533
 Filename: ruby-testunit_2.1.4-1_ar71xx.ipk
-Size: 13140
+Size: users
 MD5Sum: 80cf24116ffaecc350f58038e9297939
 SHA256sum: 94cef0837992fd0269a26122598b1063b7e29142681f1855a40e57b24a149838
 Description:  Provides test/unit* files
@@ -1895,7 +1966,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 25473
 Filename: ruby-uri_2.1.3-2_ar71xx.ipk
-Size: 25990
+Size: users
 MD5Sum: 0167114fb60d48bc018a2e1114b9e7dd
 SHA256sum: ca27660d3a21bdd0b1cee95ee36107a27ea5ea72e02b02bd622769df4ccaf5cf
 Description:  Provides uri* files
@@ -1911,7 +1982,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 25475
 Filename: ruby-uri_2.1.4-1_ar71xx.ipk
-Size: 25996
+Size: users
 MD5Sum: bfbd71c1a4fb6b3614749b790e27bb8d
 SHA256sum: 62d6d8ff5900aa26c82541218d46e9da05c3bc2141ce0976ea712b7cee1edc00
 Description:  Provides uri* files
@@ -1927,7 +1998,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 50684
 Filename: ruby-webrick_2.1.3-2_ar71xx.ipk
-Size: 51382
+Size: users
 MD5Sum: d439524b70358d359bdd98111d24d182
 SHA256sum: fb9ab2971eb802d63652ac103501165cfc0ee810b1a0eb9729aeec4486430b4f
 Description:  Provides webrick* files
@@ -1943,7 +2014,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 50684
 Filename: ruby-webrick_2.1.4-1_ar71xx.ipk
-Size: 51377
+Size: users
 MD5Sum: 96a11d48c1908b442135e8d9a2472946
 SHA256sum: 22d84e56ff67a928d91ee5bb7f591c9e9b029a015183ee0178a546f2e4bc791c
 Description:  Provides webrick* files
@@ -1959,7 +2030,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24456
 Filename: ruby-xmlrpc_2.1.3-2_ar71xx.ipk
-Size: 25014
+Size: users
 MD5Sum: 18a9070bf54d027030bc50b891847d9d
 SHA256sum: 07de35796e2fa186f61e7616d826e98fff77af6390b7319414478969045ddb1a
 Description:  Provides xmlrpc* files
@@ -1975,7 +2046,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24460
 Filename: ruby-xmlrpc_2.1.4-1_ar71xx.ipk
-Size: 25018
+Size: users
 MD5Sum: b7aef9452e72df233a9b351e09403242
 SHA256sum: 33f556a984d648213bf3f819df31a4acacaee821bec9db8fd7b3f15212ea3976
 Description:  Provides xmlrpc* files
@@ -1991,7 +2062,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 3963
 Filename: ruby-yaml_2.1.3-2_ar71xx.ipk
-Size: 4571
+Size: users
 MD5Sum: 702350b83905fa7bb6c08b021927e815
 SHA256sum: 7c8fd81ed620294ef6afb46854fe83fb1d0755011ba1f3b49bfbbd02f8f754a3
 Description:  Provides yaml* files
@@ -2007,7 +2078,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 3962
 Filename: ruby-yaml_2.1.4-1_ar71xx.ipk
-Size: 4565
+Size: users
 MD5Sum: 97e6526ca7962c034aded168a7c2b7c0
 SHA256sum: cffb770602f4edfcfe231e341f383e0205bbc0e54957a30b56e36727c3a5b7dd
 Description:  Provides yaml* files
@@ -2023,7 +2094,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 18231
 Filename: ruby-zlib_2.1.3-2_ar71xx.ipk
-Size: 18795
+Size: users
 MD5Sum: af360fc0d6bfdcbc26d64e5a816a9d82
 SHA256sum: dd5a59d315f05e2d9cbc0050c4d20b297fb3b403a32dcf97d1655b3eb8752580
 Description:  Provides zlib* files
@@ -2039,9 +2110,1517 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 18230
 Filename: ruby-zlib_2.1.4-1_ar71xx.ipk
-Size: 18798
+Size: users
 MD5Sum: 5fe413fe64ba64c4241385ecc12d87e5
 SHA256sum: acf2e0c55928fc8a53fd31062ba2091e26172000c26e71c01e1562fe8889fcc0
 Description:  Provides zlib* files
  
+
+Package: sane-abaton
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 21622
+Filename: sane-abaton_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: dd5c16d2aa579c38ca0d90abed2c1db0
+SHA256sum: 1f110aa4f958d29b0c085057887391796a578a8a21233840a2b2e1b8c778364d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Abaton flatbed scanners.
+
+Package: sane-agfafocus
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 25755
+Filename: sane-agfafocus_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: ea6359c45af2d99665c98d1ffc12ea6e
+SHA256sum: dc4afe7953a512c09acc828f37946df267f07aff97b6a7bc9650b662a0f81c6d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for AGFA Focus flatbed scanners.
+
+Package: sane-apple
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 28045
+Filename: sane-apple_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: bd966618e8863b8de8a9e75b5944f58f
+SHA256sum: b8e1be67d5d659a652b3b1bbb4476b2e788286d01c524cec57e6900ab0098faa
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Apple flatbed scanners.
+
+Package: sane-artec
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 36002
+Filename: sane-artec_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 850e99db7eb01e2c9cb3985542280803
+SHA256sum: 34e3a3e1619d6225b448b3f5395c711cc9430c98c20f054220cbb397a8391ce5
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Artec flatbed scanners.
+
+Package: sane-artec_eplus48u
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 36561
+Filename: sane-artec_eplus48u_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: fde63b7bc29ee781f680c9c1e4c582dd
+SHA256sum: 5ba2d69ad7b62fc866748ca73ac37ef8d2bb5a00a53fd5902a5eb1cf492e0db7
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for the scanner Artec E+ 48U and re-badged models.
+
+Package: sane-as6e
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 11069
+Filename: sane-as6e_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 66f9d77e5824255cc1134b48bd92de40
+SHA256sum: 41f6cdb0c55a93d718e7668e169972f689904175c6c255cb78f1b254796b5d9e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for using the Artec AS6E parallel port interface scanner.
+
+Package: sane-avision
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 67735
+Filename: sane-avision_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 0b5e7cd0480df16259fdf24a8d001bcd
+SHA256sum: 14b41f0e85480577d295964b40a5ea3783cb84201e5ab739609ff22783941e0e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for .
+
+Package: sane-backends-all
+Version: 1.0.24-1
+Depends: libc, sane-abaton, sane-agfafocus, sane-apple, sane-artec, sane-artec_eplus48u, sane-as6e, sane-avision, sane-bh, sane-canon, sane-canon630u, sane-canon_dr, sane-cardscan, sane-coolscan, sane-coolscan2, sane-coolscan3, sane-dc210, sane-dc240, sane-dc25, sane-dell1600n_net, sane-dmc, sane-epjitsu, sane-epson, sane-epson2, sane-fujitsu, sane-genesys, sane-gt68xx, sane-hp, sane-hp3500, sane-hp3900, sane-hp4200, sane-hp5400, sane-hp5590, sane-hpljm1005, sane-hs2p, sane-ibm, sane-kodak, sane-kodakaio, sane-kvs20xx, sane-kvs40xx, sane-kvs1025, sane-leo, sane-lexmark, sane-ma1509, sane-magicolor, sane-matsushita, sane-microtek, sane-microtek2, sane-mustek, sane-mustek_usb, sane-mustek_usb2, sane-nec, sane-net, sane-niash, sane-p5, sane-pie, sane-pixma, sane-plustek, sane-plustek_pp, sane-qcam, sane-ricoh, sane-rts8891, sane-s9036, sane-sceptre, sane-sharp, sane-sm3600, sane-sm3840, sane-snapscan, sane-sp15c, sane-st400, sane-stv680, sane-tamarack, sane-teco1, sane-teco2, sane-teco3, sane-test, sane-u12, sane-umax, sane-umax1220u, sane-umax_pp, sane-v4l, sane-xerox_mfp
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 105
+Filename: sane-backends-all_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b3c3899aaf2d6600f66782f28b4275b7
+SHA256sum: 28e2f1cba76fb1d0b58a09e56fa30f000884600c4bca21c3e4cf0e831f49f702
+Description:  Scanner Access Now Easy (all backends)
+
+Package: sane-bh
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 36656
+Filename: sane-bh_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: f2fc71ff27d372a46cc41001894b43d1
+SHA256sum: 223b5b8498d9f41697edc3a483b835e0c60104c9a70c67a16ae81f59c44d4e16
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Bell+Howell Copiscan II series document scanners.
+
+Package: sane-canon
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 39642
+Filename: sane-canon_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 4cd8d2dc4009e57c5ead9d7c3779298f
+SHA256sum: b36b7f56522917348d25ebefda7bfcf6c48cc8018bff790cdabc269aa422c242
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Canon SCSI scanners.
+
+Package: sane-canon630u
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24430
+Filename: sane-canon630u_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e67bd53b40c9cb1d4792b00ec5a1a1c1
+SHA256sum: 9df44645bba1f841d6af90c11eeaa9a0cfd81a7598d04c8967c1927f86d3406f
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for the Canon 630u USB flatbed scanner.
+
+Package: sane-canon_dr
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 56803
+Filename: sane-canon_dr_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 85ba5f8547f8e2479683f16944725539
+SHA256sum: 95fe3a049e5448d714ed9521da86a2346468c56fc5dab80dedab9551d7700ee5
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Canon DR-series scanners.
+
+Package: sane-cardscan
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 19521
+Filename: sane-cardscan_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: fe2ea9d3871a582b670bc3dd72e71c88
+SHA256sum: 514c7bc42430ee2cc862a6588994ea2e1073920628c06cd2d978ab85ea026b4f
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Corex CardScan usb scanners.
+
+Package: sane-coolscan
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 41834
+Filename: sane-coolscan_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: f309f86f0a6c03b3639dc0cc68a680ed
+SHA256sum: c8c1b3c5badbd8197ee318f6b5b0ada180c3840e2944e5b4f917403f502ea096
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Nikon film-scanners.
+
+Package: sane-coolscan2
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 35553
+Filename: sane-coolscan2_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: c8d86bc6b4a13b958c7e03c1119c31fe
+SHA256sum: 1ac81eca1338135937c1ff81ef4a0ea0f3af52d4bd7e12c2a7b5bce5ba890816
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Nikon Coolscan film scanners.
+
+Package: sane-coolscan3
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 37129
+Filename: sane-coolscan3_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 0d8d74b05d51f5a1e26fc61320ddca40
+SHA256sum: a998202e2b7bf72e65958e7c0b42cd6f70b4c5c79ec7bf87944349566ae8679d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Nikon Coolscan film scanners.
+
+Package: sane-daemon
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 17703
+Filename: sane-daemon_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 411f741d44bc8bf7f0adb3a65554ea45
+SHA256sum: 77d81f38cc9054a4a6d58591b9986f896ad1941cf21d7995a66b623f40080fab
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE daemon.
+
+Package: sane-dc210
+Version: 1.0.24-1
+Depends: libc, libsane, libjpeg
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 13044
+Filename: sane-dc210_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b54cc33f8e4df649ab814b9e47dbe664
+SHA256sum: be9c8a0fd054fb2613a109bf9a72eedb8ceaabb8a2de2199f9916c9c35fa14b8
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Kodak DC210 Digital Camera.
+
+Package: sane-dc240
+Version: 1.0.24-1
+Depends: libc, libsane, libjpeg
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 16166
+Filename: sane-dc240_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 172c9ae06312d2c5699547501dc27d86
+SHA256sum: 1b80e1b5977272748812eb2e3dce2cb1fc66b0eb5d9e7f0752570cb0469ebe02
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Kodak DC240 Digital Camera.
+
+Package: sane-dc25
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20110
+Filename: sane-dc25_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e60730f314be3206b6db9a6618b63ba3
+SHA256sum: 31b7e30d2e454a00fe0ddcc7952d948ada85cc54bb3ca300447aaad8e8513dba
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Kodak DC20/DC25 Digital Cameras.
+
+Package: sane-dell1600n_net
+Version: 1.0.24-1
+Depends: libc, libsane, libtiff
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 14611
+Filename: sane-dell1600n_net_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b87bf6494c7dde1cb1f3cbcbd62252d8
+SHA256sum: 541a3a56b8bda4ddf78b2bf381693dddf6d429ee560eedb72ea8f892e917bb46
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Dell 1600n.
+
+Package: sane-dmc
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20477
+Filename: sane-dmc_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a0ba5aefbc3b3e289df87de96910e18b
+SHA256sum: f90cb0bc5122c368d6c94877d30918a7c3b766f37931521203310a928481203e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Polaroid Digital Microscope Camera.
+
+Package: sane-epjitsu
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 33462
+Filename: sane-epjitsu_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 8a8fb224f08a8c1e64da8a268d3291fc
+SHA256sum: e2723980da1747f3dbdcf4ab79c7042b617971165344d22a3384f59ee4526662
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Epson-based Fujitsu USB scanners.
+
+Package: sane-epson
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 46031
+Filename: sane-epson_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 7e16de0d5e198301c730ed74b8c77641
+SHA256sum: 028e0ae8cdfb689f2c60aa5a49f7c8309be1104a40cf961b1a51c2db176fb83b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for EPSON scanners.
+
+Package: sane-epson2
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 59524
+Filename: sane-epson2_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 9dbaa821f0d1ba615da0ae9b951f5037
+SHA256sum: ef46e9c0d0254344f2c6fbd045d45dac414d1966edf937b3c79d103b1253698e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for EPSON scanners.
+
+Package: sane-frontends
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 58366
+Filename: sane-frontends_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 1336f0a1b91bc8a95860dd308b6ea23e
+SHA256sum: 943681b8d0ba2747553f098152e0a4d6762fc76f45daaaa068ac72b87f5a1f5f
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE frontends.
+
+Package: sane-fujitsu
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 68815
+Filename: sane-fujitsu_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e8096986e866626b935b32e253e8360d
+SHA256sum: 0db04043ca4b47ceab735858bc8cdaef1efd9f6ace3b9685645f125d18d9ae30
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Fujitsu flatbed and ADF scanners.
+
+Package: sane-genesys
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 180787
+Filename: sane-genesys_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 45531aac75fb6d79e141278386172ea8
+SHA256sum: 239875cf8818375b0c35d659abd706ca69684636ce3a0478425f1384d0658a62
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for GL646 GL841 GL843 GL847 and GL124 based USB flatbed scanners.
+
+Package: sane-gt68xx
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 52282
+Filename: sane-gt68xx_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: fffac408b6c99007ce4d35a0aca8679f
+SHA256sum: 6c8e6b6adac4abd4700f2302649893998263442375daba64254281099e7b785c
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for GT-68XX based USB flatbed scanners.
+
+Package: sane-hp
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 61237
+Filename: sane-hp_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 30723b0c3e73aa19d1e35447483095bb
+SHA256sum: 79821d20bc0e033e24189841a1f7769ff363a703bb522532f8fe225633521889
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for HP ScanJet scanners.
+
+Package: sane-hp3500
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 29106
+Filename: sane-hp3500_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e1d91c484364a2981e36a1200c24bc55
+SHA256sum: 0c543232a47e756ecebad6d7491735d496294abffd658e516ee7c4f23e4698a8
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Hewlett-Packard ScanJet 3500 series scanners.
+
+Package: sane-hp3900
+Version: 1.0.24-1
+Depends: libc, libsane, libtiff
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 114193
+Filename: sane-hp3900_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: ad21cf0e38df62fc15b9188bbd461d02
+SHA256sum: 59af04813d583a470b6886d76997c1a53346668458ebe75518575313874ad6a0
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for RTS8822 chipset based scanners.
+
+Package: sane-hp4200
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 26713
+Filename: sane-hp4200_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a0bec17f3147cf28e3c06db99b479e91
+SHA256sum: 9fee169baf5c3185247eecdabaa7742f0abcb4e81972fe2a83b940eb2c21dea5
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Hewlett-Packard 4200 scanners.
+
+Package: sane-hp5400
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 21823
+Filename: sane-hp5400_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 87bea929e8ca81772d05ab40d0f5cf39
+SHA256sum: 8ed253ff88c5c92b4bca117befa86424929be74d367e40c673819eeb7cc5a9f7
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Hewlett-Packard 54XX scanners.
+
+Package: sane-hp5590
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 29071
+Filename: sane-hp5590_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 090717b012b299bcb60207553defb62f
+SHA256sum: ee10d91fd5723941edd6e6c54f82f37fce26eef50a83d98fe56682caab1e9765
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Hewlett-Packard 4500C/4570C/5500C/5550C/5590/7650 Workgroup/Document scanners.
+
+Package: sane-hpljm1005
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 18079
+Filename: sane-hpljm1005_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: bb64f48c95525eb14030016ebf7948c8
+SHA256sum: 70d586b09118b1cc88fddd1df3f603a376e35f1bd83c23fd6aefbfbd1b7b374b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Hewlett-Packard LaserJet M1005 MFP Scanner.
+
+Package: sane-hs2p
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 45176
+Filename: sane-hs2p_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a6928682d835f7e88a1197f6d8e02ef9
+SHA256sum: bbb98b9794354fdcfe2c4a96dae07dac4c2dab154056c47757bbf473dc1a3e64
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Ricoh SCSI flatbed/ADF scanners.
+
+Package: sane-ibm
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 22393
+Filename: sane-ibm_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: c502e522d6f8082292a8211c9266a09b
+SHA256sum: 9bb001c41549952441b8f0b0a2c575fc0e73042478defbb27143cf973bc5da24
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for IBM and Ricoh SCSI flatbed scanners.
+
+Package: sane-kodak
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 27943
+Filename: sane-kodak_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 1109e0994735aed18ff622904beb9bcb
+SHA256sum: be1411ab2a27ba3b30d7ef7db084d2b3ec787312c367ebc035f3424f87b0cc42
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for big Kodak flatbed and ADF scanners.
+
+Package: sane-kodakaio
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 40105
+Filename: sane-kodakaio_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: ce357d8d7967bb7fc213752082dfdf0f
+SHA256sum: 41a53300e4afdf24a25be488d543b423414c2029f9be2c6ecaf674ff65549395
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Kodak aio printer / scanners.
+
+Package: sane-kvs1025
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 40942
+Filename: sane-kvs1025_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 1e93c9da65612611def130418e8df619
+SHA256sum: 7093a846e21743e13961cc3ea2461561e143ffa1bfeb2f2d01236ce09a679547
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Panasonic KV-S102xC USB ADF scanners.
+
+Package: sane-kvs20xx
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 30111
+Filename: sane-kvs20xx_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 6558c3617d2cbb178dd7dc2a3c86d2f4
+SHA256sum: 587327e8aa657c27eb12467e80ed8009cdb86f6317167f32b78a49c5fce546ab
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Panasonic KV-S20xxC USB/SCSI ADF scanners.
+
+Package: sane-kvs40xx
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 34493
+Filename: sane-kvs40xx_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: ce6d89bcb8afcb17a19e177177706a6f
+SHA256sum: 4a59b129a40c7c16ef60a517fd8cedb74b664f764b958a99107adf9fae07967e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Panasonic KV-S40xxC USB/SCSI ADF scanners.
+
+Package: sane-leo
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24781
+Filename: sane-leo_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e0e1245fb9b058083b8a1881e3d570ad
+SHA256sum: bc24c390427da6ef5dcc26d1c954c47941ef03a823062416c03965573287e41d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for LEO Technologies scanners.
+
+Package: sane-lexmark
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 35470
+Filename: sane-lexmark_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: f46ec7c11a8ffc95c206f1d8c1d82c54
+SHA256sum: fdf67a0d5f5d353b7437f135849c8e308342aaf9d67464bdb60a935e0a94051d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Lexmark X1100/X1200 Series scanners.
+
+Package: sane-ma1509
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 23774
+Filename: sane-ma1509_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 6703dc1d1ccb21c8c458636c634dea48
+SHA256sum: 3cb56b7b65c0f2aea68ab18380e07967f92a12d1988aeb3d7f9060e082b951a9
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Mustek BearPaw 1200F USB scanner.
+
+Package: sane-magicolor
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 36851
+Filename: sane-magicolor_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e497851624dbfb8f0a521cbaed2f09e7
+SHA256sum: 2a407fe0d473d7e24590a95545113a2d4130ce0f2d6f19c9dd3c7fbebfea39fb
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for KONICA MINOLTA magicolor scanners.
+
+Package: sane-matsushita
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 26157
+Filename: sane-matsushita_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a9110be67537626b9370299d3f063b6f
+SHA256sum: 6fe0061fdab91762417492305cfd3b14ed10223da2b4338f39293c2c9c3935a5
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Panasonic KV-SS high speed scanners.
+
+Package: sane-microtek
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 39656
+Filename: sane-microtek_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 9cd1c44ccc3f5d3af206c405dfc8aad7
+SHA256sum: 3080303fb76786735ee90ad9c716e853798e1ecf7cad780d6b797d4d15d1b820
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Microtek scanners.
+
+Package: sane-microtek2
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 57401
+Filename: sane-microtek2_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 193b054644274696beb1f27a4e48d3dc
+SHA256sum: 249ea85ee0751384a2247538e8616ec97a56bd0023d65161980f615628a39a0b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Microtek scanners with SCSI-2 command set.
+
+Package: sane-mustek
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 56111
+Filename: sane-mustek_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: bcbe2c75b4b0afc024a8441ccd3da798
+SHA256sum: 4a86727b2bb26a7b3bd041c5f0d27814d0ee75fcf0a8942af7fa43d75e2905e2
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Mustek SCSI flatbed scanners and some other devices.
+
+Package: sane-mustek_usb
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 51800
+Filename: sane-mustek_usb_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 4a494e458c2ee9aceed5e2a68c222154
+SHA256sum: 180b9b49ccd9ef3c1786286c417534e1a8ab6a5ba1cc57dc7d41d733809fabb1
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Mustek USB flatbed scanners.
+
+Package: sane-mustek_usb2
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 59303
+Filename: sane-mustek_usb2_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 8ca0db6fdd8e91591b64c92b4e85cf60
+SHA256sum: c88b9f9a12b8d32bb2af1bc73906eeed800e47358f839163cc76ac135067abd2
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for SQ113 based USB flatbed scanners.
+
+Package: sane-nec
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 29258
+Filename: sane-nec_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 06b5c0556812fb5bebb67a5ebd409066
+SHA256sum: d3bd54eb77abe28f457062120b46a7bf76f74311b5101ca1d6d0d05b3f16a3bc
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for NEC scanners.
+
+Package: sane-net
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20006
+Filename: sane-net_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 2e8ceea389ec8213271a81b4765d489b
+SHA256sum: 146638eab119f11f3373c17df497838e8c0b91097ad8b3713a643d61094880ed
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for network backend.
+
+Package: sane-niash
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24705
+Filename: sane-niash_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 4927a095d0beac0633529650922ffbe7
+SHA256sum: 5873c4f3b955940d59037b1fc2c74080f97ba15b7934d939971dbf4435e11c54
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for scanners based on the NIASH chipset.
+
+Package: sane-p5
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20550
+Filename: sane-p5_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 1c4783578c8263ab84a83ee20704cc3a
+SHA256sum: ec74aefd0c8a84fd5eaabf42b318bdd362a8d4bd2c7d80050f0fcf91c2a728fb
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for the Primax PagePartner.
+
+Package: sane-pie
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 32709
+Filename: sane-pie_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e7714f5f0dd18a8619926cf9a2dd7b56
+SHA256sum: 7a98ff6416d2b039afa7cf3c6b18af3e5fd44d3f6469f560f1e57d95fc4114f1
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for PIE Devcom and AdLib SCSI flatbed scanners.
+
+Package: sane-pixma
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 61812
+Filename: sane-pixma_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 3638f7367cbaae0874a7dda359404782
+SHA256sum: 42c67754a547f0e10e93a6fb0de4eeaa86f06f06e0d7809c2e17d2f4156fbcc2
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Canon Multi-Function Printers and CanoScan Scanners.
+
+Package: sane-plustek
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 90013
+Filename: sane-plustek_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 83b643ed3bfd86e15e58c5b01ac66da7
+SHA256sum: d9713acb192b853273bcd2dd02b3aa57d569529d3b01c377e84e79d1f4ab6c3a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for LM983[1/2/3] based USB flatbed scanners.
+
+Package: sane-plustek_pp
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 73368
+Filename: sane-plustek_pp_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 8ada5d9ed1ad190fb3d710d61fc733fa
+SHA256sum: 0155b4fc3b5248808368410c930eeba1532093cdaeb57cfde94115efb1a3bdb9
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Plustek parallel port flatbed scanners.
+
+Package: sane-qcam
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 12337
+Filename: sane-qcam_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 97f5985db37d5ed0c4976e7f24494c25
+SHA256sum: 8f686d4c8b45f37b6398c5637103e8434f6aded14a8d2f3680601d25932a987b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Connectix QuickCam cameras.
+
+Package: sane-ricoh
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 21561
+Filename: sane-ricoh_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 54fa5608f8b8e816baf55bb692558b88
+SHA256sum: 4befd9427f2acd8c2d6f8a4d497b32b2dd4dd3a0eb27d8b5a13ab01a5ad12bb5
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Ricoh flatbed scanners.
+
+Package: sane-rts8891
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 56945
+Filename: sane-rts8891_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b25440c77a2640b5615e9d06bcc7318b
+SHA256sum: db9f41c25767c5ef6f311770ce0ca962fbeb5af82803feb1fc6dd41523e140be
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for rts8891 based scanners.
+
+Package: sane-s9036
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20906
+Filename: sane-s9036_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a2f38f160355418e3b9805319c716fe0
+SHA256sum: 0abb8cac3c1366f9f1a4f83d0db7c3eb00baafdf885ff0a9b3a2b1448c3221d2
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Siemens 9036 flatbed scanners.
+
+Package: sane-sceptre
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 23853
+Filename: sane-sceptre_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 4fb71d1ac8958ff73de7780f14cdab58
+SHA256sum: 7374acdec09f60061d2afed7c46ba54369d2cc6e754175302c33275cd90aeb50
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for SCEPTRE scanners.
+
+Package: sane-sharp
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 33792
+Filename: sane-sharp_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: fd2579a16aac6eec70ec50b2ac8bf1ff
+SHA256sum: dfa8c676dca765c0618afeb1e5ff30f4a41361e87d06332367af7799070a2269
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for SHARP scanners.
+
+Package: sane-sm3600
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24433
+Filename: sane-sm3600_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: e0b1cbdb119f8cb3887cfe31265ba5f4
+SHA256sum: 95ada301de8bf0f16848b39b82852f0c25b30e7035ff3cb23a1d04ffe5f3d474
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Microtek scanners with M011 USB chip.
+
+Package: sane-sm3840
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 28744
+Filename: sane-sm3840_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 5d2a19262620bad4ca34d08a456e70f5
+SHA256sum: c4cbda0efcd574998176dce23e295fc03ded4e82c641ff4ae55636c012fe39e3
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Microtek scanners with SCAN08 USB chip.
+
+Package: sane-snapscan
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 89114
+Filename: sane-snapscan_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 2181b5d88f7675b1594583b0bf0b6732
+SHA256sum: 15409754dbb2664e0bb2f442cbb914f4fb8ca7b1fbc955034dea7e7e94a9e6aa
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for AGFA SnapScan flatbed scanners.
+
+Package: sane-sp15c
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 25270
+Filename: sane-sp15c_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b3a8b3772e1b49f131a0f919d5b8d17f
+SHA256sum: 0f9a4eb8d2626afd033df0b8311b9db70d483321510519e9dbe26800df2ad68a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Fujitsu ScanPartner 15C flatbed scanner.
+
+Package: sane-st400
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 22747
+Filename: sane-st400_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 9e0f36a254e7ae7fd43bea7fa4416599
+SHA256sum: 821cefada63877ff34e0668386f98fb14a91e5d75d02c54d85b0c4996585c4cb
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Siemens ST/Highscan flatbed scanners.
+
+Package: sane-stv680
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24507
+Filename: sane-stv680_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: c77e11253f8664896726925fa3edb2e0
+SHA256sum: 001fe2f507cf6915f88c4017c97df82c83a80c9a5b14b76159d31851b4cc6f62
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for STV680 cameras.
+
+Package: sane-tamarack
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 22665
+Filename: sane-tamarack_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a52c9251faf49bc0bdda664b7871ccca
+SHA256sum: 78f9427031815874a7b4208dde7b5db830871d61714dfc71309879b1aa3c280d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Tamarack flatbed scanners.
+
+Package: sane-teco1
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24500
+Filename: sane-teco1_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 48106290e393323a3a3387da141ba4ab
+SHA256sum: 3df09183b75744c761deb8d67dc1ec49d1682585675d718ec3d9732880a0b9a7
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for TECO / RELISYS scanners.
+
+Package: sane-teco2
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 27893
+Filename: sane-teco2_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: b3920a18cda00dc8389e256827f8d699
+SHA256sum: 5da657b71444e2865f39066b6cb36a5090eb925bd2b405f6f534de3db9bc3ea2
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for TECO / RELISYS scanners.
+
+Package: sane-teco3
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24487
+Filename: sane-teco3_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 7d1699ae9f7ce21e3c58053e3515b182
+SHA256sum: 7cbe7694a665bf18075296e62016f880e7cbeb46c9e0be8242115a65562e1a66
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for TECO / RELISYS scanners.
+
+Package: sane-test
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 25780
+Filename: sane-test_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: f36816eeb523e7eddfeaa4305b6519a1
+SHA256sum: ec7ac66f389e5ed0ef75c87073d85999d758ef135bcf43b3f1e56f3f4ffbedb4
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for testing frontends.
+
+Package: sane-u12
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 50449
+Filename: sane-u12_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: a089b3b7d5d6f164d38c63f402c04ae2
+SHA256sum: abefee4d1c6c5138ad8959f2ea8c94733a470442fcb86192b997a994a4d0b2f4
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Plustek USB flatbed scanners based on older parport designs.
+
+Package: sane-umax
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 65708
+Filename: sane-umax_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 880eabc7698ebaf6ed0148dc87ad3ab2
+SHA256sum: d869fcca23d968dafe725951a29b60099774503d8d96b3fd31d31e23f40bce6a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for UMAX scanners.
+
+Package: sane-umax1220u
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 28398
+Filename: sane-umax1220u_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 5ae1cbeba924f32dacb2256cd8525131
+SHA256sum: 2f562a9d17120338fef3494f2056c33b19f3b4f769ab486cae019dd81fac58c0
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for the UMAX Astra 1220U and similar scanners.
+
+Package: sane-umax_pp
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 83098
+Filename: sane-umax_pp_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: c696bdbf061727554d636b28ced83461
+SHA256sum: f4fbc332471b1ffd42f4563b152e10d6cfd08ec15c6d7f493c05b034c4c6fe2e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Umax Astra parallel port flatbed scanners.
+
+Package: sane-v4l
+Version: 1.0.24-1
+Depends: libc, libsane, libv4l, libjpeg
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 12225
+Filename: sane-v4l_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 307a7469443b34904419742c27de4bda
+SHA256sum: d502de59c75033446133442d3e7ecd021af5057a39ead6b4ce92968af770f12e
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Video for Linux API.
+
+Package: sane-xerox_mfp
+Version: 1.0.24-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 23934
+Filename: sane-xerox_mfp_1.0.24-1_ar71xx.ipk
+Size: users
+MD5Sum: 0378f7bb40ccf779c5bb801d1d7feebb
+SHA256sum: 552537433efa4fe428339e6839c1a8f499682dc947bb1eaa3e6d55bbd7f839fb
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Xerox Phaser 3200MFP device.
 
