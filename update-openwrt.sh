@@ -1,6 +1,5 @@
 #!/bin/bash
 
-./filelist.html.sh openwrt
 for rep in openwrt/*/*/packages/; do
     echo Updating $rep
     (   
@@ -9,3 +8,4 @@ for rep in openwrt/*/*/packages/; do
         gzip -c Packages > Packages.gz
     )
 done
+./filelist.html.sh openwrt
