@@ -9,7 +9,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 140035
 Filename: hplip-common_3.15.7-1_lantiq.ipk
-Size: users
+Size: 139913
 MD5Sum: 89c70b3bed9275c255cc4a8a44eeafbb
 SHA256sum: 8bca3f7600f6688a24c5dd84eae8ec91be20f6ecc8f08b80d815d250eee69223
 Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
@@ -27,7 +27,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 5159
 Filename: hplip-cups_3.15.7-1_lantiq.ipk
-Size: users
+Size: 5860
 MD5Sum: 3a6d6ef7d01626f1d26125c599fccc4d
 SHA256sum: dce3d02ca819a7840ecf3f24ba72c23d2b4a9d0bf2bcc81855dd5f6573e55545
 Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
@@ -45,7 +45,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 61292
 Filename: hplip-sane_3.15.7-1_lantiq.ipk
-Size: users
+Size: 62158
 MD5Sum: eda311c6523b0cec19b8293fb7bd5811
 SHA256sum: 28c70cb8bd3d33e604de0e462f468ca4af3cad7523ca04712fa31dbd173fbdd1
 Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
@@ -63,7 +63,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 59038
 Filename: libsane_1.0.24-1_lantiq.ipk
-Size: users
+Size: 59864
 MD5Sum: dc296af1c7ffc69c04e5dbf8345d3a31
 SHA256sum: 3287db8464c0268a9e0e7c83e907303b5e0bafb8dc1f125afc75021245742060
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -80,7 +80,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 21618
 Filename: sane-abaton_1.0.24-1_lantiq.ipk
-Size: users
+Size: 22353
 MD5Sum: cfd0139d242f239ec8c17c139f2e1b26
 SHA256sum: 3e215c2dacdc8c496fe062e6dfaffc7a79475d9f7a250874ceb5100a81bebdb9
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -98,7 +98,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 25777
 Filename: sane-agfafocus_1.0.24-1_lantiq.ipk
-Size: users
+Size: 26475
 MD5Sum: 16f853ab27574b668ec06a2c8cf82fee
 SHA256sum: 4e864f76a08b9a5a4718e6644d2247f3022736919ed285f722e583a8d8737f89
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -116,7 +116,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 28064
 Filename: sane-apple_1.0.24-1_lantiq.ipk
-Size: users
+Size: 28832
 MD5Sum: 5bfc94f8e602a43bbeba55ea0c3e7c15
 SHA256sum: 3843833e0b121d57b52f3f28e6cd871b7c6e5268ee9e7aa95b3f125cf0a8319e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -134,7 +134,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 36015
 Filename: sane-artec_1.0.24-1_lantiq.ipk
-Size: users
+Size: 36799
 MD5Sum: 179142f861cf5b1814d25a9928897bd6
 SHA256sum: c701677a0d82defbdb87bf979ab90f4008291e17c691c0cdff9ded8645205ce7
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -152,7 +152,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 36551
 Filename: sane-artec_eplus48u_1.0.24-1_lantiq.ipk
-Size: users
+Size: 37359
 MD5Sum: 5bd0d43bc6763fb6466a1f350c06cf0a
 SHA256sum: 4e9c825f84595d53c90c0da0a9c6aa07164d1c6dd63e7e4b4c385262f30152cb
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -170,7 +170,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 11085
 Filename: sane-as6e_1.0.24-1_lantiq.ipk
-Size: users
+Size: 11804
 MD5Sum: 1eac73e7b69563cb380857fea9bc8bdd
 SHA256sum: c49014fded0a0a0b7d10e6140924e267fbfe7ea2472c9221d00603fb9c293e6f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -188,7 +188,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 67776
 Filename: sane-avision_1.0.24-1_lantiq.ipk
-Size: users
+Size: 68160
 MD5Sum: 6315e20bcfb50b82ef389443fe03565b
 SHA256sum: f2ba389dda75e16cb77d0b61944db78da054f84c641535355bc9345743f06fd6
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -206,7 +206,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 105
 Filename: sane-backends-all_1.0.24-1_lantiq.ipk
-Size: users
+Size: 1098
 MD5Sum: e500a2e12512d604342b662b4132fbc2
 SHA256sum: 843425f0065c0a9daffa3f21490e28e9b70573831d36b99e06654d59ad5570f8
 Description:  Scanner Access Now Easy (all backends)
@@ -222,7 +222,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 36642
 Filename: sane-bh_1.0.24-1_lantiq.ipk
-Size: users
+Size: 37486
 MD5Sum: d8fc563818f0299bb247f5ca7bc75ece
 SHA256sum: df807f341e8b02b6f92e54f8a44a4780479a7a7b1da07da4f2ff7f767f44e39c
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -240,7 +240,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 39626
 Filename: sane-canon_1.0.24-1_lantiq.ipk
-Size: users
+Size: 40424
 MD5Sum: cdf69a744da1ef9d79290fc94e0fb5c1
 SHA256sum: be4f0291244fa1f1ff161276e01d92ac2779e5b7d16167529160c8ef0fa6bb62
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -258,7 +258,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24410
 Filename: sane-canon630u_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25131
 MD5Sum: 125fc6dd4bf236dd00633aefb9cb0047
 SHA256sum: 578d427f128843d77488a99e13df79d7185f52f4aeb2e75f48d69e2f468b06d9
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -276,7 +276,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 56786
 Filename: sane-canon_dr_1.0.24-1_lantiq.ipk
-Size: users
+Size: 57607
 MD5Sum: fe762b473b900bbe689209c3c187d63a
 SHA256sum: 76c5f9aefe4079a0f893324545cb960b359e55ba611b88fcc33270f1f68b58d4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -294,7 +294,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 19554
 Filename: sane-cardscan_1.0.24-1_lantiq.ipk
-Size: users
+Size: 20312
 MD5Sum: 16f09b368b43ebabf039bbecf7d64532
 SHA256sum: 5dd0ce89798593f35fce3f701fa0aabb2652a7ff90c7421deda44e058df0957f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -312,7 +312,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 41772
 Filename: sane-coolscan_1.0.24-1_lantiq.ipk
-Size: users
+Size: 42623
 MD5Sum: 525b7a91d052c222afca732b648e2b5f
 SHA256sum: 6fd287962121602834251857123eb0f731d41b7def83dd1a4179bb27e810589d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -330,7 +330,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 35540
 Filename: sane-coolscan2_1.0.24-1_lantiq.ipk
-Size: users
+Size: 36375
 MD5Sum: fde83a96813ce920dd05661469edfb79
 SHA256sum: beffa3a747e403e7a575aa96f78bfa54c5a0fb81dce21489b43c3e4a6e5a534a
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -348,7 +348,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 37113
 Filename: sane-coolscan3_1.0.24-1_lantiq.ipk
-Size: users
+Size: 37953
 MD5Sum: bcd1c49c32d3487b0ad30572cda68e1a
 SHA256sum: 8e1d259cbf261b8c3976af2760aa988283fdc90015edb496e741036558b0130b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -366,7 +366,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 17704
 Filename: sane-daemon_1.0.24-1_lantiq.ipk
-Size: users
+Size: 18259
 MD5Sum: 56add386f8a3d747d82daab7a598e3bb
 SHA256sum: 17b80d7b30aa04da8ba108b20a1c29c7415c46393e813089174d5c8d1f2e6aff
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -383,7 +383,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 13047
 Filename: sane-dc210_1.0.24-1_lantiq.ipk
-Size: users
+Size: 13779
 MD5Sum: 6f96ede33cc933b48f8673e88bf8b480
 SHA256sum: a2ffd86a3a7e3df6de0515bb43f495de611c6f66a483398e607880d205f53426
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -401,7 +401,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 16159
 Filename: sane-dc240_1.0.24-1_lantiq.ipk
-Size: users
+Size: 16887
 MD5Sum: 6f02107cd850ee094dd0969b2b2359ca
 SHA256sum: e1f0e3ab97428ec399aef723940cb8338c18079c157fc70ccceb74e70829e927
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -419,7 +419,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 20117
 Filename: sane-dc25_1.0.24-1_lantiq.ipk
-Size: users
+Size: 20858
 MD5Sum: 053faf84a218ef8ce6283c8cc548b266
 SHA256sum: 7483d982f7b81dfee7f9890863b2271e743ba997d93308b55fe07247179f5c70
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -437,7 +437,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 14612
 Filename: sane-dell1600n_net_1.0.24-1_lantiq.ipk
-Size: users
+Size: 15334
 MD5Sum: bd34283242919769141e045ecb732b90
 SHA256sum: 2cf3421d10083d29d7be7e59642c2b763fe8c30332c6a46b96a503296721870a
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -455,7 +455,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 20447
 Filename: sane-dmc_1.0.24-1_lantiq.ipk
-Size: users
+Size: 21181
 MD5Sum: 080b1f093069a81cf2be25ce8cce7f07
 SHA256sum: cdbac5811a2a70feb8afb432d418af2abc6c9e79739ded2fd37719afeaaa4093
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -473,7 +473,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 33481
 Filename: sane-epjitsu_1.0.24-1_lantiq.ipk
-Size: users
+Size: 34334
 MD5Sum: aef2fd0f4f3525cb29e21a61ed51cb20
 SHA256sum: 9368408623aa816c23961dca7ff42dfac104c478ea37803204eb49ad8949eec1
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -491,7 +491,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 46036
 Filename: sane-epson_1.0.24-1_lantiq.ipk
-Size: users
+Size: 46832
 MD5Sum: aa29d9b793e6353a4462c9918190a77a
 SHA256sum: 820037f8804fe4a5cbb5f0a9181347512b349d929451f544cf79b3ba868223df
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -509,7 +509,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 59492
 Filename: sane-epson2_1.0.24-1_lantiq.ipk
-Size: users
+Size: 60155
 MD5Sum: 689fd000c34beac165eb21044e399731
 SHA256sum: f52bbd2df404be7d769b13faa7bbc70bdac2b179ff82eb0b676d4f115d7b64a4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -527,7 +527,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 58401
 Filename: sane-frontends_1.0.24-1_lantiq.ipk
-Size: users
+Size: 59174
 MD5Sum: 29cad365e09c86b0f479668cc8f3544d
 SHA256sum: ce115d1c8db69d132750e5a1662c50d88364456ceacf488aea0293f4ebd72a3e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -544,7 +544,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 68839
 Filename: sane-fujitsu_1.0.24-1_lantiq.ipk
-Size: users
+Size: 69695
 MD5Sum: bcf51305176f7c334dd27276896a8704
 SHA256sum: 0274a6c8227ac2c5298900132e658c73f1d4eb5bed4730d97af9150129ccb703
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -562,7 +562,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 180737
 Filename: sane-genesys_1.0.24-1_lantiq.ipk
-Size: users
+Size: 181396
 MD5Sum: 72f63172d34d95cbfbfb6eff09215822
 SHA256sum: e06c0eb1390b0a4aa08ece002cb3eb3522ea8fe33571baffeb8dfa9cb26e48d3
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -580,7 +580,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 52275
 Filename: sane-gt68xx_1.0.24-1_lantiq.ipk
-Size: users
+Size: 53110
 MD5Sum: 92ac36729cbe3b5c2a5606007aef52bb
 SHA256sum: fc114973b5e263d62a086827ddf6a35aec277c8ce497ae3f47f5535238bc379c
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -598,7 +598,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 61201
 Filename: sane-hp_1.0.24-1_lantiq.ipk
-Size: users
+Size: 61996
 MD5Sum: 9e6e662832e1fc26baf620559071b223
 SHA256sum: 8976e0756607141db0a988bfe03866771e21c9a59ef54fe8f82579de9bec5fc2
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -616,7 +616,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 29104
 Filename: sane-hp3500_1.0.24-1_lantiq.ipk
-Size: users
+Size: 29809
 MD5Sum: fbeae2c23b67fbdccbe47a1f11cca53f
 SHA256sum: 8c19c9e049116976d359fb9f80ae4d200bba59074e669405adfb30c52aae9c80
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -634,7 +634,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 114214
 Filename: sane-hp3900_1.0.24-1_lantiq.ipk
-Size: users
+Size: 114509
 MD5Sum: 43caf4e16485a6e627ff159acab94b90
 SHA256sum: 688af63cba8d19942d8efeacec5d811f4d3f748963ac7a20d7c99371bedbdd4d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -652,7 +652,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 26729
 Filename: sane-hp4200_1.0.24-1_lantiq.ipk
-Size: users
+Size: 27463
 MD5Sum: ec390ddf668afb20ec2ce204f7a666e9
 SHA256sum: 04852b4e75562260b0913894fadedbf8993c353810a3b453ab92cce0751e4419
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -670,7 +670,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 21812
 Filename: sane-hp5400_1.0.24-1_lantiq.ipk
-Size: users
+Size: 22577
 MD5Sum: 7d23653ae0de6a8e8e5913b7636eef7a
 SHA256sum: 769c6a9ee95dc5f4c976cb5ce363f15ebf639060b71ccb9c16f6aaa452b6e324
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -688,7 +688,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 29077
 Filename: sane-hp5590_1.0.24-1_lantiq.ipk
-Size: users
+Size: 29833
 MD5Sum: a486fe42aca4361c584cccf1b12dc71b
 SHA256sum: 30f2509345862019c87875db9526206bc2ba3c4bed9eb4b63d62c70a0cdd032a
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -706,7 +706,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 18074
 Filename: sane-hpljm1005_1.0.24-1_lantiq.ipk
-Size: users
+Size: 18817
 MD5Sum: 891c7370203f308542ba08dfb0d5c716
 SHA256sum: e049978c41d0551b8fa83fbfeca8406a6de440226392889f2e8c77f6f89428d8
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -724,7 +724,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 45130
 Filename: sane-hs2p_1.0.24-1_lantiq.ipk
-Size: users
+Size: 45879
 MD5Sum: 6405ac909d46e057b2e6d114e670af15
 SHA256sum: abdfea42cabafe39aa24c149db960906223b71a7e26dc532c88b0b9d9ccdefb7
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -742,7 +742,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 22386
 Filename: sane-ibm_1.0.24-1_lantiq.ipk
-Size: users
+Size: 23078
 MD5Sum: 5f40b6beb72021e150fee96177d7b06f
 SHA256sum: 6ca9b69d592ba1f5a10da537cd9a721b4e0c4f114fb8fed4b655bad5a85bf098
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -760,7 +760,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 27818
 Filename: sane-kodak_1.0.24-1_lantiq.ipk
-Size: users
+Size: 28604
 MD5Sum: 5ec8118413e88560deca841ca39a2ceb
 SHA256sum: 60d7621c4fea9ca91d810ec50b142370551fc0dcf9a0db7020a85650ba001b35
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -778,7 +778,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 40074
 Filename: sane-kodakaio_1.0.24-1_lantiq.ipk
-Size: users
+Size: 40920
 MD5Sum: a2b7b1eb15b349cfac57b7ebd792921d
 SHA256sum: 46b068851aa5d0a360b433156a0c7c563d2daaa783b2ebef006f1325cbf418ac
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -796,7 +796,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 40844
 Filename: sane-kvs1025_1.0.24-1_lantiq.ipk
-Size: users
+Size: 41675
 MD5Sum: 0a8c4ca8a40292a514b3abe7099ab3a6
 SHA256sum: 0fa185b0ab30b89b186ab2478ef69f0431e4f94debbf11d96a5110fa75f819fd
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -814,7 +814,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 30138
 Filename: sane-kvs20xx_1.0.24-1_lantiq.ipk
-Size: users
+Size: 30845
 MD5Sum: 5339b0f2654efb78d42cda73c62e0f19
 SHA256sum: 64bd3dfda1fbfdf45870f18f45f30ede077909778c8514fc23c1510242ef4a71
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -832,7 +832,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 34483
 Filename: sane-kvs40xx_1.0.24-1_lantiq.ipk
-Size: users
+Size: 35246
 MD5Sum: 663e8592f3d4447183cebc6f2b743db4
 SHA256sum: 2f8f08b8dc1b666f4e559a8102d229ed467623899069870069a21c6f17d74835
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -850,7 +850,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24798
 Filename: sane-leo_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25497
 MD5Sum: fb7a1397002d76b463674d0f7d30f8f8
 SHA256sum: 91c353f1b503e745e02001b1eb77cf2e0ebea53af491aa0ac58c890612dbe9ec
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -868,7 +868,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 35452
 Filename: sane-lexmark_1.0.24-1_lantiq.ipk
-Size: users
+Size: 36314
 MD5Sum: ca33a8df0871f8f0a025612b29d9e84f
 SHA256sum: 5196bed990508bc1448062df4d226599ea90e10ace3f68a6d1e2ab0d01bf96b9
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -886,7 +886,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 23755
 Filename: sane-ma1509_1.0.24-1_lantiq.ipk
-Size: users
+Size: 24493
 MD5Sum: 164521f22fa4cb5852be1af25ae406f9
 SHA256sum: 558f5f26fccf89ec12d03f5afa90689e0ad9280657df33c610a0e52d6bcc4787
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -904,7 +904,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 36849
 Filename: sane-magicolor_1.0.24-1_lantiq.ipk
-Size: users
+Size: 37668
 MD5Sum: 92ed96f12341c1bb74ba6d0f252b692a
 SHA256sum: 5304cc54d56f08725e0b7d2b7f05bfa81ea771b10d897fc99671ded13388a93c
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -922,7 +922,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 26159
 Filename: sane-matsushita_1.0.24-1_lantiq.ipk
-Size: users
+Size: 26847
 MD5Sum: 2c77a86a53d3ee0ac7a353037e8dc148
 SHA256sum: 6709a1bc4ded2da2e04e6c0f2ee6e1c16ff915f6d49d6ee2feb81dfbb9b20cb0
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -940,7 +940,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 39674
 Filename: sane-microtek_1.0.24-1_lantiq.ipk
-Size: users
+Size: 40554
 MD5Sum: 2f0ed529a9807a9be16862a40e1e68d7
 SHA256sum: 3aa314408afc6f27e4720fa7551f035856ee34440599c545b72bfc1c4d88698b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -958,7 +958,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 57409
 Filename: sane-microtek2_1.0.24-1_lantiq.ipk
-Size: users
+Size: 58246
 MD5Sum: fcc88f61a199842a5cd46e8c79bdebb2
 SHA256sum: 748fd85aa1ac5ca5d3f09f9f374f0b46efafccca68f3887a004c513ef4c8cbdf
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -976,7 +976,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 56093
 Filename: sane-mustek_1.0.24-1_lantiq.ipk
-Size: users
+Size: 56910
 MD5Sum: 7c03b158e41069421bec3bfcf1b234d9
 SHA256sum: 34c63e003faf865bb5aa10eb6cc3b20aef6b481dc1c1defb3e05ead38ffe3333
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -994,7 +994,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 51792
 Filename: sane-mustek_usb_1.0.24-1_lantiq.ipk
-Size: users
+Size: 52596
 MD5Sum: 06e546c0aea7774713c5992dd8918957
 SHA256sum: 35fcae8dcd9a3d27dd81c444bb6d49dca7b436369f91e4e3589d65b6d41bcd71
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1012,7 +1012,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 59256
 Filename: sane-mustek_usb2_1.0.24-1_lantiq.ipk
-Size: users
+Size: 60095
 MD5Sum: 8b0b65a73005c826289b29b3b244cfb5
 SHA256sum: 5385bc30836917f6d4799980159f4f6378076c1856109ab81fbce419ff821fcb
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1030,7 +1030,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 29258
 Filename: sane-nec_1.0.24-1_lantiq.ipk
-Size: users
+Size: 29967
 MD5Sum: d8876dda75cabc08cdae38c441639096
 SHA256sum: 31482654d4e45150f3949e328caebbb03967704ccefb889f56eb5ac32b803780
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1048,7 +1048,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 19971
 Filename: sane-net_1.0.24-1_lantiq.ipk
-Size: users
+Size: 20722
 MD5Sum: 60a19d95a3d7e5e669e1bae0cda7036d
 SHA256sum: e401950b4f9ab96cfcb521439cf8d05e6c01963ccc923fdd33567558acebb371
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1066,7 +1066,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24620
 Filename: sane-niash_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25309
 MD5Sum: ff4eba1ea32ee6c6dfbcb3a3cafa3e6b
 SHA256sum: b3f283ccebc45ee65bf206c9986b7cf47c046506f214d821fbc7f87e53acd057
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1084,7 +1084,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 20513
 Filename: sane-p5_1.0.24-1_lantiq.ipk
-Size: users
+Size: 21241
 MD5Sum: 62dc83994ca46a217f278d7ce0dad736
 SHA256sum: dcfe5f2ae77d6313f9b8a3e2f24313866ebe86c9ea96711f239eb113e1d62120
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1102,7 +1102,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 32743
 Filename: sane-pie_1.0.24-1_lantiq.ipk
-Size: users
+Size: 33539
 MD5Sum: bb92a3bdb03f984b53e6fdd030c09d4a
 SHA256sum: 7c96f761f2fa566938ac94cf41e33e4b18aa8d5d82f7c5227fb2f83b9ed70aef
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1120,7 +1120,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 61803
 Filename: sane-pixma_1.0.24-1_lantiq.ipk
-Size: users
+Size: 62573
 MD5Sum: 4251f6d3bf06c1a5514b317aa1b0cf11
 SHA256sum: b5a4990ff156c9b2f8ea5af14f7f52467d6efb7a25378111fdc37d10e4451dd7
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1138,7 +1138,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 90027
 Filename: sane-plustek_1.0.24-1_lantiq.ipk
-Size: users
+Size: 90600
 MD5Sum: 053d09305d2b7126228e9a2e9d70b0c7
 SHA256sum: 79c6de359c78d80832148f418cfed45e97d20e4571477e4706817e36b8691ad3
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1156,7 +1156,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 73370
 Filename: sane-plustek_pp_1.0.24-1_lantiq.ipk
-Size: users
+Size: 74198
 MD5Sum: c290d7709392b4921ff9332034c5ffd6
 SHA256sum: 9a69fe4fd914d101bea7f76574d2b5a2bf3aa05ab7809587b751c5797a1e2890
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1174,7 +1174,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 12335
 Filename: sane-qcam_1.0.24-1_lantiq.ipk
-Size: users
+Size: 13104
 MD5Sum: d0ac5c341739d837b8c92b381a51faf6
 SHA256sum: c7da076ea0b4c8fe141b28ac1d2ad12fdbcef8c1eea3f80c4517cc634f742f7c
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1192,7 +1192,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 21573
 Filename: sane-ricoh_1.0.24-1_lantiq.ipk
-Size: users
+Size: 22320
 MD5Sum: 710e9a398cb080d623ec85225921dd4a
 SHA256sum: e40eeea2352630431293fa3e4fd493e5bbe0f33335c53546a9f4c07064c65087
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1210,7 +1210,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 56878
 Filename: sane-rts8891_1.0.24-1_lantiq.ipk
-Size: users
+Size: 57634
 MD5Sum: f8142657d5c738ee998996f4ce1e5478
 SHA256sum: 6c2445dce460afc871754172739d010d8f0394341215ca68d44ac8083af9cfe8
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1228,7 +1228,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 20900
 Filename: sane-s9036_1.0.24-1_lantiq.ipk
-Size: users
+Size: 21640
 MD5Sum: 062d00d4d717a929dce296d4e8f851e5
 SHA256sum: 581af5ad84f73ef5de3c5b0d35550f7ba68b73c40ae89451423361ae9ab4f3d4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1246,7 +1246,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 23857
 Filename: sane-sceptre_1.0.24-1_lantiq.ipk
-Size: users
+Size: 24612
 MD5Sum: 842c904882c95e7282211fa32b84a91b
 SHA256sum: d25dd7c72f083c9103cd1cb9339beb0fe579f720d629d423dbdbf2143c6117ec
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1264,7 +1264,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 33830
 Filename: sane-sharp_1.0.24-1_lantiq.ipk
-Size: users
+Size: 34632
 MD5Sum: c349bc0506993b589caeb15c69978b89
 SHA256sum: 8feed73a520cf4729710742cf6ef4ecc2106f5409ac90ddf6c1db99e0ce21e48
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1282,7 +1282,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24417
 Filename: sane-sm3600_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25097
 MD5Sum: 3ffbf7e9ba883b9d99dc1afd7a07eeaf
 SHA256sum: a03229dcf2790efad7ae35a5a17913a8d1fbdec133e6705cefad802a2f716576
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1300,7 +1300,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 28740
 Filename: sane-sm3840_1.0.24-1_lantiq.ipk
-Size: users
+Size: 29479
 MD5Sum: 8ce05b12f295adafd1d672aa0f6e4d0f
 SHA256sum: 448ce80c22e5887229fcba1ebcfc4fd8d4acbf73245702fe06b7eddb921245e6
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1318,7 +1318,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 89054
 Filename: sane-snapscan_1.0.24-1_lantiq.ipk
-Size: users
+Size: 89765
 MD5Sum: 68d9b774a921ca035a358b3ecd0edea7
 SHA256sum: b5276ee7af38f49274ae7bffa80058c7542e33837c1b941c3dc28a18961580ab
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1336,7 +1336,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 25237
 Filename: sane-sp15c_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25928
 MD5Sum: 89cff3860cd7101db7bc3d0a3c08de40
 SHA256sum: 35d553440f32da87c78e18fe33614973da2ba22647364188a6e527f1ad796b97
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1354,7 +1354,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 22752
 Filename: sane-st400_1.0.24-1_lantiq.ipk
-Size: users
+Size: 23513
 MD5Sum: e3c913da501c55ca953dfa907e57aef4
 SHA256sum: 735e8878e302bd59553a5926f3d3de2d2239b7e307ea1b64f2e7441400fe6a8d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1372,7 +1372,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24525
 Filename: sane-stv680_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25250
 MD5Sum: b8f5d1075485a75250281a1b688cb97b
 SHA256sum: b581a002018265d2050c918ad255f4f4a98e2a4d19498baecd29e89cb058516b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1390,7 +1390,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 22677
 Filename: sane-tamarack_1.0.24-1_lantiq.ipk
-Size: users
+Size: 23415
 MD5Sum: e8b5edfe88a7f70cb89288012ab5f432
 SHA256sum: 655066125ba09d5ff57f0bd39f6f4cb988074badee93fc570b22ceb38c39cc6e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1408,7 +1408,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24478
 Filename: sane-teco1_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25178
 MD5Sum: 2390f86ce3163b96ab7df8a962150ca0
 SHA256sum: 53cf15f608baf4ae04306aeb2e3de55678adead411af14f4d76fd41a191e61c6
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1426,7 +1426,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 27881
 Filename: sane-teco2_1.0.24-1_lantiq.ipk
-Size: users
+Size: 28665
 MD5Sum: 4b7b0b469862123a55939b040bf0e152
 SHA256sum: 9a7825cb5cc3b0b5901208385752db7b3f7a4c74be44bdaeae3265477cf1388e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1444,7 +1444,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 24461
 Filename: sane-teco3_1.0.24-1_lantiq.ipk
-Size: users
+Size: 25148
 MD5Sum: fd0e58e89d7948b16c63823e89095c26
 SHA256sum: caeca2024108f87f707c591762f3b44319952dc3f5b6b60fc36149a35991ca35
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1462,7 +1462,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 25693
 Filename: sane-test_1.0.24-1_lantiq.ipk
-Size: users
+Size: 26362
 MD5Sum: 4cd388db96b39a64228598bbd14ae917
 SHA256sum: 89161d8771ce740ea3bd5e677e7d4537c05c3292b3f98e91e92d8d6401a8fc99
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1480,7 +1480,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 50432
 Filename: sane-u12_1.0.24-1_lantiq.ipk
-Size: users
+Size: 51333
 MD5Sum: 76acd62cc0ae26220807ed0d8505ab6a
 SHA256sum: 53a42bca02a7dfcb24f102a9f3b926dc4d154593741b9210a2ba793224c7b793
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1498,7 +1498,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 65679
 Filename: sane-umax_1.0.24-1_lantiq.ipk
-Size: users
+Size: 66164
 MD5Sum: d3d03ce7a422079ed394c5aeee613e36
 SHA256sum: ecb8a45c27ae56762bae2f76ea896723975d4925ea7764452dde986ca7f0a71b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1516,7 +1516,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 28376
 Filename: sane-umax1220u_1.0.24-1_lantiq.ipk
-Size: users
+Size: 29179
 MD5Sum: 23410a6437a7a8cb193fabe743577b89
 SHA256sum: 65efcb08f0fa1261ab233a9655d4be5cc5ce98fa135b219caacccccdb9c711c1
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1534,7 +1534,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 83148
 Filename: sane-umax_pp_1.0.24-1_lantiq.ipk
-Size: users
+Size: 84053
 MD5Sum: 61dc41ef5e7ef9fde374c9154ba46a40
 SHA256sum: 71d2a459dd656295fd3bc1854b7d93c9c670d252d1e472c5f1ba9e0474bad9e8
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1552,7 +1552,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 12211
 Filename: sane-v4l_1.0.24-1_lantiq.ipk
-Size: users
+Size: 12982
 MD5Sum: 3e808ba5dca3dc4036e5849e87ce9eee
 SHA256sum: 6cb2e3ecaf1e9dcbb2d4fd7d494246d65821055004da95e6480015998cf21c29
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
@@ -1570,7 +1570,7 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: lantiq
 Installed-Size: 23946
 Filename: sane-xerox_mfp_1.0.24-1_lantiq.ipk
-Size: users
+Size: 24694
 MD5Sum: 6d8bf7d7bb9e52395410e608c580985b
 SHA256sum: f3b2f15daf1c4db9ed1ebb7e98726df72633454779a0c4fdac26daf2761dc4f2
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
