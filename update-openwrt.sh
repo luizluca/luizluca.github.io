@@ -1,11 +1,25 @@
 #!/bin/bash
 
-for rep in openwrt/*/*/packages/; do
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+GPGKEY="D1073B56"
+
+cd $DIR
+for rep in $(find $DIR -path "$DIR/openwrt/*/*/packages"); do
     echo Updating $rep
     (   
         cd $rep
-        ~/prog-local/openwrt/bb/scripts/ipkg-make-index.sh . > Packages
-        gzip -c Packages > Packages.gz
+        $DIR/ipkg-make-index.sh . > Packages.new
+		if cmp -s Packages.new Packages; then
+			echo "Resultado igual. Ignorando..."
+			rm Packages.new
+			continue
+		fi
+		rm -f Packages Packages.gz Packages.sig Packages.key
+		mv Packages.new Packages
+        gzip --no-name -c Packages > Packages.gz
+		gpg2 --local-user $GPGKEY --output Packages.sig --armor --detach-sign Packages
+		gpg --export-options export-clean --output Packages.key --export --armor $GPGKEY
+		#opkg-key list
     )
 done
-./filelist.html.sh openwrt
+$DIR/filelist.html.sh openwrt

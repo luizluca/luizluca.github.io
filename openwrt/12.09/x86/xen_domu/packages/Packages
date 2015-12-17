@@ -11,8 +11,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 30038
 Filename: base-files_117-r36088_x86.ipk
-Size: users
+Size: 30760
 MD5Sum: 45001da8b5f90c34a3fabae9fda06110
+SHA256sum: 0ea19413cf866a21f564a682eb437a4359c06988c005441d317d1cc9e6a753a5
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: busybox
@@ -28,8 +29,9 @@ Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: x86
 Installed-Size: 247122
 Filename: busybox_1.19.4-6_x86.ipk
-Size: users
+Size: 247123
 MD5Sum: 96b3c3a59c321c968e1fb0ecf20e6f3b
+SHA256sum: 5012156ecd3d0fedbee119ff8a0c1ec50164f910e74475b0b71fcde11a927406
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
@@ -46,8 +48,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 116124
 Filename: dnsmasq-dhcpv6_2.62-2_x86.ipk
-Size: users
+Size: 116804
 MD5Sum: 1377b982a8235bd9ed25bffe5408d393
+SHA256sum: ce6a4be54b7be9b49229d41b115e7a5e3cb3c0c9b6adcbc4f3135ba81e881368
 Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
  
  This is a variant with DHCPv6 support
@@ -65,8 +68,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 90786
 Filename: dropbear_2011.54-2_x86.ipk
-Size: users
+Size: 91473
 MD5Sum: 34d5c23cdd1140e5ba37e0cd804aafd8
+SHA256sum: f6303aac613df8cdfcad582e40405d723b8fd959b270af21bebc41f8a9d8a335
 Description:  A small SSH2 server/client designed for small memory environments.
 
 Package: firewall
@@ -82,8 +86,9 @@ Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: all
 Installed-Size: 12873
 Filename: firewall_2-55.1_all.ipk
-Size: users
+Size: 13554
 MD5Sum: af489dd21ec9600639b827cf7a4e3b7c
+SHA256sum: d694a650ecac860392f54e42784dccde5bb6fa74562360c7f028c3dfdf6c5acc
 Description:  UCI based firewall for OpenWrt
 
 Package: grub
@@ -99,8 +104,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 253305
 Filename: grub_0.97-3_x86.ipk
-Size: users
+Size: 254037
 MD5Sum: ab7daefd9beee06027ffb8a08c9dd46e
+SHA256sum: cb3031b7bbfd218aa178828e9acd83eb590e270244ea8ef5437d7caa23ef7ff7
 Description:  GRand Unified Bootloader
 
 Package: hotplug2
@@ -116,8 +122,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 17589
 Filename: hotplug2_1.0-beta-4_x86.ipk
-Size: users
+Size: 18280
 MD5Sum: 19782bf10324cb288872f46abbef5df7
+SHA256sum: 1fa9f1de81af7f0628894efa5ee53fc38314e060e1a7c859c3803cfa857fe9ec
 Description:  Hotplug2 is a trivial replacement of some of the UDev functionality
  in a tiny pack, intended for Linux early userspace: Init RAM FS and InitRD.
  This is an implementation of Hotplug2-1.0-beta
@@ -135,8 +142,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 42163
 Filename: iptables_1.4.10-4_x86.ipk
-Size: users
+Size: 42991
 MD5Sum: 9bfb871b9494f0c37040db5ba771c9c1
+SHA256sum: d9e63af29c4c8281992fb4a2877b4d7bcdd38b8b403c42b2ad76e5042859c457
 Description:  IPv4 firewall administration tool.
  
  Matches:
@@ -173,8 +181,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 42621
 Filename: iw_3.6-1_x86.ipk
-Size: users
+Size: 43356
 MD5Sum: f63f140a99ba6055391d67a4ea29d11d
+SHA256sum: ad5b25a49b4593945078fa952f93f7e056bb0a5a3d1237c6f0d8549927bb2ec8
 Description:  cfg80211 interface configuration utility
 
 Package: jshn
@@ -190,8 +199,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5066
 Filename: jshn_2013-01-29-0bc317aa4d9af44806c28ca286d79a8b5a92b2b8_x86.ipk
-Size: users
+Size: 5721
 MD5Sum: 71279c4a4a0763e07d9d47332753f1a9
+SHA256sum: 0b21ef60551631a292f4b90b2aaab8a207e4211b524d8471529c4bc510bfa3f0
 Description:  Library for parsing and generating JSON from shell scripts
 
 Package: kmod-3c59x
@@ -207,8 +217,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 18486
 Filename: kmod-3c59x_3.3.8-1_x86.ipk
-Size: users
+Size: 19469
 MD5Sum: e1f9c764d33d94fff80baa96c25f0710
+SHA256sum: 0b1ed2b3384bccb4857235b9925403c7fcdc430f671137065bbfc8289045fd22
 Description:  This option enables driver support for a large number of 10mbps and
  10/100mbps EISA, PCI and PCMCIA 3Com Ethernet adapters:
  - "Vortex"    (Fast EtherLink 3c590/3c592/3c595/3c597) EISA and PCI
@@ -230,8 +241,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 103
 Filename: kmod-8021q_3.3.8-1_x86.ipk
-Size: users
+Size: 748
 MD5Sum: ba95174e869db753b062b7e13c67a461
+SHA256sum: 6cb78959aec7f92c666bcba3c0a9866b2702656f87292071f23bdadf107a126d
 Description:  Kernel module for 802.1Q VLAN support
 
 Package: kmod-8139cp
@@ -247,8 +259,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10531
 Filename: kmod-8139cp_3.3.8-1_x86.ipk
-Size: users
+Size: 11339
 MD5Sum: eb3ebdec3a1b39563c68b0c66b8422c5
+SHA256sum: 8f120145707cbdec9ca138a6599e43f6b501139f3ed63cc254fae320c7ce3de1
 Description:  Kernel module for RealTek RTL-8139C+ PCI Fast Ethernet adapters.
 
 Package: kmod-8139too
@@ -264,8 +277,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11163
 Filename: kmod-8139too_3.3.8-1_x86.ipk
-Size: users
+Size: 11978
 MD5Sum: d07f451067bb44e4d1e9387ab660fde9
+SHA256sum: 943b763048edb01bcf1dbb71c41815b9af411a5eeb4336cdd97270c5535ea111
 Description:  Kernel modules for RealTek RTL-8139 PCI Fast Ethernet adapters.
 
 Package: kmod-ac97
@@ -281,8 +295,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 38572
 Filename: kmod-ac97_3.3.8-1_x86.ipk
-Size: users
+Size: 38850
 MD5Sum: a4fc421ad13b6004a8a036f66c2bbdb9
+SHA256sum: db81d1cce92f90743ee310807310c71dbb40aec4705166c729e9cbc160e51636
 Description:  The ac97 controller
 
 Package: kmod-aoe
@@ -298,8 +313,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13317
 Filename: kmod-aoe_3.3.8-1_x86.ipk
-Size: users
+Size: 14047
 MD5Sum: 3dfcf7008b8d9fe8bffda11fcc40a0a5
+SHA256sum: 6d58e9440438646f7f99dcba10af960169318d48b218d3822538128862452b49
 Description:  Kernel support for ATA over Ethernet
 
 Package: kmod-appletalk
@@ -315,8 +331,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15950
 Filename: kmod-appletalk_3.3.8-1_x86.ipk
-Size: users
+Size: 16717
 MD5Sum: e00395d181fe62f4081d6cacb978deb5
+SHA256sum: 10a11797479fcf4ed98777b6eb8b0947bff41bcc7307f20de6b3fa704a4701bd
 Description:  Kernel module for AppleTalk protocol.
 
 Package: kmod-arptables
@@ -332,8 +349,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7539
 Filename: kmod-arptables_3.3.8-1_x86.ipk
-Size: users
+Size: 8339
 MD5Sum: 5c3d026c0b10bf1fc05a412aee4d462f
+SHA256sum: 1e879a06fc8097900ba9039fef8110fa09d1305e7266795cfb54b74275453f45
 Description:  Kernel modules for ARP firewalling
 
 Package: kmod-ata-ahci
@@ -349,8 +367,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15014
 Filename: kmod-ata-ahci_3.3.8-1_x86.ipk
-Size: users
+Size: 15681
 MD5Sum: 06e2f364986b48d9c49c29e003ee3716
+SHA256sum: 19fe08170d2982b26519ae2a2bd1afc23541a9ca90f3a870fd7ece17456da065
 Description:  Support for AHCI Serial ATA controllers.
 
 Package: kmod-ata-artop
@@ -366,8 +385,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2751
 Filename: kmod-ata-artop_3.3.8-1_x86.ipk
-Size: users
+Size: 3534
 MD5Sum: 8910d88660578c7aa2319c46edcf4e20
+SHA256sum: 47d3bf0adf539977bb9f524a5f4d4e5712455a1884f2518af6e6628ceaea52dc
 Description:  PATA support for ARTOP 6210/6260 host controllers.
 
 Package: kmod-ata-core
@@ -383,8 +403,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 104
 Filename: kmod-ata-core_3.3.8-1_x86.ipk
-Size: users
+Size: 752
 MD5Sum: a6007286700d2e73a29c99ea2e25977f
+SHA256sum: d7a8e963a42605f4bbb8cf78e6676cf3a906a593b25361596089b4f4f4a0c65f
 Description:  Serial and Parallel ATA support
 
 Package: kmod-ata-marvell-sata
@@ -400,8 +421,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13619
 Filename: kmod-ata-marvell-sata_3.3.8-1_x86.ipk
-Size: users
+Size: 14377
 MD5Sum: 5c0e26543bbb37155da2321b0cf50e07
+SHA256sum: 859eeb2d8d79447622dc08129866f7095674cb77b0a2a8f0dbd8716eaa6e8f14
 Description:  SATA support for marvell chipsets
 
 Package: kmod-ata-nvidia-sata
@@ -417,8 +439,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10510
 Filename: kmod-ata-nvidia-sata_3.3.8-1_x86.ipk
-Size: users
+Size: 11309
 MD5Sum: 4dfc7251ad23639229fa14be2c76cc4e
+SHA256sum: d97939b432f18dddb5598b73102f64237b2bc7288cf6f4601ba804f950c8c406
 Description:  Nvidia Serial ATA support
 
 Package: kmod-ata-pdc202xx-old
@@ -434,8 +457,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2658
 Filename: kmod-ata-pdc202xx-old_3.3.8-1_x86.ipk
-Size: users
+Size: 3463
 MD5Sum: 3e78d6a9b40731a03a00c8666b478d66
+SHA256sum: 2f0244f1b2085e6af704c5e1cb8e4b9efbaf3897f05c8bac2a46e012ad6ec7ce
 Description:  This option enables support for the Promise 20246, 20262, 20263,
  20265 and 20267 adapters.
 
@@ -452,8 +476,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 104
 Filename: kmod-ata-piix_3.3.8-1_x86.ipk
-Size: users
+Size: 796
 MD5Sum: 06251d546821a38ae0b7e006366429c7
+SHA256sum: 9f65470bc491cdce24aad16e32eea06462836bfab24a12b80dc431ee6c5ad232
 Description:  SATA support for Intel ICH5/6/7/8 series host controllers and
  PATA support for Intel ESB/ICH/PIIX3/PIIX4 series host controllers.
 
@@ -470,8 +495,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6573
 Filename: kmod-ata-sil24_3.3.8-1_x86.ipk
-Size: users
+Size: 7389
 MD5Sum: 9e3cfb577fe7628a19b9019e30185dab
+SHA256sum: 5349df5a05397e534bfc5a61141cbd42f2c576d4917c4e80d5c493edeb41780d
 Description:  Support for Silicon Image 3124/3132 Serial ATA controllers.
 
 Package: kmod-ata-sil
@@ -487,8 +513,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4475
 Filename: kmod-ata-sil_3.3.8-1_x86.ipk
-Size: users
+Size: 5248
 MD5Sum: 0d2be64c91e69ebd2e008aba25acf947
+SHA256sum: bc570007729a99a4ca4399102aeac187699b9d8e19d0d987f31a344f3766435e
 Description:  Support for Silicon Image Serial ATA controllers.
 
 Package: kmod-ata-sis
@@ -504,8 +531,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2719
 Filename: kmod-ata-sis_3.3.8-1_x86.ipk
-Size: users
+Size: 3491
 MD5Sum: ff2475845a58e24a800360358ab92700
+SHA256sum: 8b1dcfc3f93c1175f65edc4033f04e80635a7b6611de081d8d732a4854ac22f1
 Description:  Support for SIS Serial ATA controllers.
 
 Package: kmod-ata-via-sata
@@ -521,8 +549,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4048
 Filename: kmod-ata-via-sata_3.3.8-1_x86.ipk
-Size: users
+Size: 4832
 MD5Sum: 407ccc809db6cf1e9d34778079306753
+SHA256sum: 696da7dd2fc1d0515c4b7a1fd69a58711abecba15432f6cb329f2044971a76d3
 Description:  This option enables support for VIA Serial ATA.
 
 Package: kmod-atl1
@@ -538,8 +567,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15893
 Filename: kmod-atl1_3.3.8-1_x86.ipk
-Size: users
+Size: 16651
 MD5Sum: 259cfd2fd4a0b78edce2da44132684a4
+SHA256sum: 7aaaa0667df435ddf47189f73b8f68609d6c15d0bdf0e079fd68d9fd908434ff
 Description:  Atheros L1 Gigabit Ethernet support
 
 Package: kmod-atl1c
@@ -555,8 +585,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16834
 Filename: kmod-atl1c_3.3.8-1_x86.ipk
-Size: users
+Size: 17549
 MD5Sum: 9455942f2dc60b36474dc738e74668ae
+SHA256sum: 87d98d59813cfb1d58d24873d7a9d380cb6b2c8cab7c3ee2d10f6e55b08ee9d3
 Description:  Atheros L1C
 
 Package: kmod-atl1e
@@ -572,8 +603,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15766
 Filename: kmod-atl1e_3.3.8-1_x86.ipk
-Size: users
+Size: 16503
 MD5Sum: 867bf8244fd1612e72c27a817c0fd89b
+SHA256sum: 76b8d50ab9ed6058c00c31ad206d73f7aff0d1ab7587860371519732ed1d638a
 Description:  Atheros L1E
 
 Package: kmod-atl2
@@ -589,8 +621,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13019
 Filename: kmod-atl2_3.3.8-1_x86.ipk
-Size: users
+Size: 13786
 MD5Sum: 8daa5648b7b0d5f3cd7f24a18c459a17
+SHA256sum: 5e59ac96d3e840397b6682f55995d606520308f3bb312d0197629b1343206de5
 Description:  Atheros L2 Fast Ethernet support
 
 Package: kmod-atm
@@ -606,8 +639,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 23882
 Filename: kmod-atm_3.3.8-1_x86.ipk
-Size: users
+Size: 24597
 MD5Sum: 2181829e1ae68b69478dfac287293c0b
+SHA256sum: 88e5ff72a99a48bbad4553ee1bdfb6ff144d1f28aa8359b52ab08da202f30f0b
 Description:  Kernel modules for ATM support
 
 Package: kmod-atmtcp
@@ -623,8 +657,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3706
 Filename: kmod-atmtcp_3.3.8-1_x86.ipk
-Size: users
+Size: 4459
 MD5Sum: 4cd6bca5cdee5418c39627204d786d20
+SHA256sum: f8aae2af09a018b2ce2590001829751013c0a29b90ac9c5ffb370e0e3b70ff70
 Description:  Kernel module for ATM over TCP support
 
 Package: kmod-ax25
@@ -640,8 +675,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 29306
 Filename: kmod-ax25_3.3.8-1_x86.ipk
-Size: users
+Size: 30072
 MD5Sum: 33d2e4951fd866541b5263bf26bd5a9c
+SHA256sum: dbc6adbd5e27651703c89a61ce8e87426c9010486a3d485b6f489f04430de336
 Description:  Kernel modules for AX25 support
 
 Package: kmod-b44
@@ -657,8 +693,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13016
 Filename: kmod-b44_3.3.8-1_x86.ipk
-Size: users
+Size: 13759
 MD5Sum: b739c73fb0c3d0f7c4adba527550d19b
+SHA256sum: d8ea4eb79cd6cb5bc921691f540bdcde68a5e710f867329d4d433fb2b973ea2c
 Description:  Kernel modules for Broadcom 44xx Ethernet adapters.
 
 Package: kmod-bcma
@@ -674,8 +711,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12871
 Filename: kmod-bcma_3.3.8-1_x86.ipk
-Size: users
+Size: 13662
 MD5Sum: e4b8b7e683a9037fabf57921ae2ccb55
+SHA256sum: e93ada87d5fc1c8a9e5bc8fc221c447746fc4d71cba8716a56918d74968c0a95
 Description:  Bus driver for Broadcom specific Advanced Microcontroller Bus Architecture.
 
 Package: kmod-block2mtd
@@ -691,8 +729,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-block2mtd_3.3.8-1_x86.ipk
-Size: users
+Size: 746
 MD5Sum: 7040b545db174836011cbb08989e5163
+SHA256sum: d00d5807fffba79c1110871a6bbbf5f78575be444d4ad574ea593b33ad62eda9
 Description:  Block device MTD emulation
 
 Package: kmod-bluetooth
@@ -708,8 +747,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 117530
 Filename: kmod-bluetooth_3.3.8-1_x86.ipk
-Size: users
+Size: 117888
 MD5Sum: 2ec00660c1c1684a931151a4d65b08b8
+SHA256sum: a9c5ee8ce0f04c3b8ad1c0891218fc18cd48ab3b47300c6473482bdcd2b48b78
 Description:  Kernel support for Bluetooth devices
 
 Package: kmod-bonding
@@ -725,8 +765,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 41609
 Filename: kmod-bonding_3.3.8-1_x86.ipk
-Size: users
+Size: 42475
 MD5Sum: 2406d36db37d3c155e81cb42ae0f1df3
+SHA256sum: c0dd980d3c0edd964acebe14b498870b6495e8edbbbec7d53bc544c4389516ed
 Description:  Kernel module for NIC bonding.
 
 Package: kmod-bridge
@@ -742,8 +783,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-bridge_3.3.8-1_x86.ipk
-Size: users
+Size: 751
 MD5Sum: 3d386f7f9862689c3e8aa8d0068b400c
+SHA256sum: c04da5a1102fd71b0d99f0b548f5d2d27a596ef7a54be7a115274757c16dff70
 Description:  Kernel module for Ethernet bridging.
 
 Package: kmod-button-hotplug
@@ -759,8 +801,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2491
 Filename: kmod-button-hotplug_3.3.8-3_x86.ipk
-Size: users
+Size: 3243
 MD5Sum: 7918481948b881aa70a58057c41b7dd9
+SHA256sum: 2fd46524366fa080d0357646fcf5036deb5ef194b55e46734bc9edb4b8f7b9c6
 Description:  Kernel module to generate button hotplug events
 
 Package: kmod-capi
@@ -776,8 +819,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 17643
 Filename: kmod-capi_3.3.8-1_x86.ipk
-Size: users
+Size: 18449
 MD5Sum: b9519a5d30c91d96e482b0f37bc3dc9e
+SHA256sum: 4e882a203ca7bba314a80a1db516058211b4d9aa2bd07d75b076b0b7b0d8a034
 Description:  Kernel module for basic CAPI (ISDN) support
 
 Package: kmod-cpu-msr
@@ -793,8 +837,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2340
 Filename: kmod-cpu-msr_3.3.8-1_x86.ipk
-Size: users
+Size: 3109
 MD5Sum: 8135cdc57a3f18b55233f5b17cbe74c7
+SHA256sum: 8fe5a022958b94b03505f24a03ec97bcdcb1fe6219075cf3970525584bd0c271
 Description:  Kernel module for Model Specific Registers support in x86 CPUs
 
 Package: kmod-crypto-aes
@@ -810,8 +855,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15261
 Filename: kmod-crypto-aes_3.3.8-1_x86.ipk
-Size: users
+Size: 15538
 MD5Sum: bcffa7555f9136dad6519b92790c4f19
+SHA256sum: 043aa54613b2f617dee92f846bbcebb07f04f1f77a9848892a1dba8c26cf91dc
 Description:  AES cipher CryptoAPI module
 
 Package: kmod-crypto-arc4
@@ -827,8 +873,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1110
 Filename: kmod-crypto-arc4_3.3.8-1_x86.ipk
-Size: users
+Size: 1896
 MD5Sum: 7827a3ffe55fd4b39bb4cef5e3e5f775
+SHA256sum: 87562f01ee7035c30a412c1af9761046162d56ea543305b7c6bd9781d2999ce5
 Description:  ARC4 (RC4) cipher CryptoAPI module
 
 Package: kmod-crypto-authenc
@@ -844,8 +891,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3811
 Filename: kmod-crypto-authenc_3.3.8-1_x86.ipk
-Size: users
+Size: 4578
 MD5Sum: 2c65076a3994060e8bad5657f2e5c0fb
+SHA256sum: 52dbd9b1cd794c627944d673df2c7d84c0af258d8b5242d681ad5c8f70233abf
 Description:  Combined mode wrapper for IPsec
 
 Package: kmod-crypto-cbc
@@ -861,8 +909,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1853
 Filename: kmod-crypto-cbc_3.3.8-1_x86.ipk
-Size: users
+Size: 2654
 MD5Sum: ec1dde83cef926e60cd44afc81284bfe
+SHA256sum: 5403e77c86423b2a1ecae514ec0486462b019f1713d99bc86f96ba1b44f3541d
 Description:  Cipher Block Chaining CryptoAPI module
 
 Package: kmod-crypto-core
@@ -878,8 +927,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6716
 Filename: kmod-crypto-core_3.3.8-1_x86.ipk
-Size: users
+Size: 7527
 MD5Sum: bad95b033f62eba7cdb3800976603925
+SHA256sum: 5c4ecd7f759228f76dbd4c4f70805f3b3dd3955fb98206ba44f916afde740317
 Description:  Core CryptoAPI modules
 
 Package: kmod-crypto-crc32c
@@ -895,8 +945,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2266
 Filename: kmod-crypto-crc32c_3.3.8-1_x86.ipk
-Size: users
+Size: 3053
 MD5Sum: 5b145bccbb5c7fe3410e4f89b8ee9cdc
+SHA256sum: 2254d5d925639035769dad3cdca7b781891b511fbc85ccfa2c64c1b1fd5f1ed5
 Description:  CRC32c CRC module
 
 Package: kmod-crypto-deflate
@@ -912,8 +963,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1476
 Filename: kmod-crypto-deflate_3.3.8-1_x86.ipk
-Size: users
+Size: 2281
 MD5Sum: 8ae1c0e4477a772b35d1acfe269c23d9
+SHA256sum: f561ac9aa495a02002387f36c770f817b8501081f449dc69d524be2caa09d237
 Description:  Deflate compression CryptoAPI module
 
 Package: kmod-crypto-des
@@ -929,8 +981,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6968
 Filename: kmod-crypto-des_3.3.8-1_x86.ipk
-Size: users
+Size: 7540
 MD5Sum: 3378833527ca18ca6dc62c51adfd48d5
+SHA256sum: 95a8bdf9ceca2aac5e6ce84b1e63f4a830a9615a1ba8415b1e8401e5e9e48cac
 Description:  DES/3DES cipher CryptoAPI module
 
 Package: kmod-crypto-ecb
@@ -946,8 +999,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1498
 Filename: kmod-crypto-ecb_3.3.8-1_x86.ipk
-Size: users
+Size: 2300
 MD5Sum: 8b0ea3b830b58be85494cc396428a3e1
+SHA256sum: 495c9833b07a8aa72dbc356d3f2115ae42e2c491e84d3fd3b95de0b77db98675
 Description:  Electronic CodeBook CryptoAPI module
 
 Package: kmod-crypto-hash
@@ -963,8 +1017,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5223
 Filename: kmod-crypto-hash_3.3.8-1_x86.ipk
-Size: users
+Size: 5994
 MD5Sum: 0ddf6d775f6239b0d24431e79caa923f
+SHA256sum: c727ff5356cf276507a6a2fabde1e5bb1e696a0b1c4e6ac45fca57839d3fff99
 Description:  CryptoAPI hash support
 
 Package: kmod-crypto-hmac
@@ -980,8 +1035,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2033
 Filename: kmod-crypto-hmac_3.3.8-1_x86.ipk
-Size: users
+Size: 2836
 MD5Sum: b8de304f9d4ffbf9804c9dd0068d045c
+SHA256sum: 84fc5748931dcf9163cb8e331fb5e3d766574afd6ca0658799b4399848c15bb3
 Description:  HMAC digest CryptoAPI module
 
 Package: kmod-crypto-hw-geode
@@ -997,8 +1053,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2741
 Filename: kmod-crypto-hw-geode_3.3.8-1_x86.ipk
-Size: users
+Size: 3517
 MD5Sum: 81a8f2b14beb1de2693f573928931c9e
+SHA256sum: 91b494e26ac9137e575550c814525527371523e7a30a5c7a11aa43e883cb2d51
 Description:  AMD Geode hardware crypto module
 
 Package: kmod-crypto-hw-hifn-795x
@@ -1014,8 +1071,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9709
 Filename: kmod-crypto-hw-hifn-795x_3.3.8-1_x86.ipk
-Size: users
+Size: 10500
 MD5Sum: 6cae52abab1955a1711e638d421eea82
+SHA256sum: 56e88b1c4b998d73110cc40b3dc4439efa1c7035485fcf7db07d45ba4892f52d
 Description:  HIFN 795x crypto accelerator
 
 Package: kmod-crypto-hw-padlock
@@ -1031,8 +1089,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6237
 Filename: kmod-crypto-hw-padlock_3.3.8-1_x86.ipk
-Size: users
+Size: 7064
 MD5Sum: d73fd13217b80e07ee8e792750dd118a
+SHA256sum: 537dfdad806208809d27cb5303586aa69eed2aa91777d30001cacfa8238b5474
 Description:  VIA PadLock ACE with AES/SHA hw crypto module
 
 Package: kmod-crypto-iv
@@ -1048,8 +1107,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3290
 Filename: kmod-crypto-iv_3.3.8-1_x86.ipk
-Size: users
+Size: 4075
 MD5Sum: be3c2bfa401b9003a469ba27cf9c5be0
+SHA256sum: f7a57a051417eb5b8a0df734a5d03e6c74b932f6a9437976a11cb6a705ac02aa
 Description:  CryptoAPI initialization vectors
 
 Package: kmod-crypto-manager
@@ -1065,8 +1125,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10591
 Filename: kmod-crypto-manager_3.3.8-1_x86.ipk
-Size: users
+Size: 11364
 MD5Sum: c8d56091a289fe3943225317bc9b6a6d
+SHA256sum: a31e6d5732667dba5317a8fe25bfa96e678084b7f23aa162b8e7a512ae0381dc
 Description:  CryptoAPI algorithm manager
 
 Package: kmod-crypto-md4
@@ -1082,8 +1143,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2191
 Filename: kmod-crypto-md4_3.3.8-1_x86.ipk
-Size: users
+Size: 2984
 MD5Sum: 0e2fdb1fff03dd52169e6ae07244042a
+SHA256sum: 4e94623f872edfccb2ae0104678a70a9f0c297d33563e39005c0aa0bede66800
 Description:  MD4 digest CryptoAPI module
 
 Package: kmod-crypto-md5
@@ -1099,8 +1161,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1506
 Filename: kmod-crypto-md5_3.3.8-1_x86.ipk
-Size: users
+Size: 2297
 MD5Sum: ec63a0974c6e71ee0db436a4ab9d63b9
+SHA256sum: a2df955ab99baf565d29984ca39081b726bf2871c38cd4ef870a6931bb88d17d
 Description:  MD5 digest CryptoAPI module
 
 Package: kmod-crypto-michael-mic
@@ -1116,8 +1179,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1366
 Filename: kmod-crypto-michael-mic_3.3.8-1_x86.ipk
-Size: users
+Size: 2169
 MD5Sum: d9f95e7818b1d3365e50c36eb9ccc5e8
+SHA256sum: 3eaa88af7d51848cf2bf0e5d7df3bd7d8371087a15f5d3cb503cc7f6cfd2abb2
 Description:  Michael MIC keyed digest CryptoAPI module
 
 Package: kmod-crypto-misc
@@ -1133,8 +1197,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 108890
 Filename: kmod-crypto-misc_3.3.8-1_x86.ipk
-Size: users
+Size: 104177
 MD5Sum: bb9741aea60a0141fcc0c665d6546071
+SHA256sum: f31d566f6fe734ba3c9aefa093a5f9d255533de9d7227936a334b36f9a07150c
 Description:  Other CryptoAPI modules
 
 Package: kmod-crypto-null
@@ -1150,9 +1215,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1334
 Filename: kmod-crypto-null_3.3.8-1_x86.ipk
-Size: users
+Size: 2115
 MD5Sum: bc855114e0f649de3b656edc63f25703
+SHA256sum: d2096558477e60094fa18f4eca52498a497d419f991ad3521806eafeb39e5447
 Description:  Null CryptoAPI module
+
+Package: kmod-crypto-ocf
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-crypto-manager, kmod-crypto-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 27324
+Filename: kmod-crypto-ocf_3.3.8-1_x86.ipk
+Size: 28114
+MD5Sum: ca29a96467df871648b5ffd936156773
+SHA256sum: e0f1563580ec4ea262db2bf2df764977cfeca45e104e5566adc00f624738edd7
+Description:  OCF modules
 
 Package: kmod-crypto-ocf-hifn7751
 Version: 3.3.8-1
@@ -1167,8 +1251,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 14611
 Filename: kmod-crypto-ocf-hifn7751_3.3.8-1_x86.ipk
-Size: users
+Size: 15429
 MD5Sum: 0751cec23d5701d6e7b66270ca8e3052
+SHA256sum: 8dc021978b733b972c5a582dc11293613bc722d1d01401dfeebe1b06b23ef3f9
 Description:  OCF support for Hifn 6500/7751/7811/795x, Invertex AEON and NetSec 7751 devices
 
 Package: kmod-crypto-ocf-hifnhipp
@@ -1184,26 +1269,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2737
 Filename: kmod-crypto-ocf-hifnhipp_3.3.8-1_x86.ipk
-Size: users
+Size: 3515
 MD5Sum: 204f24ecdc781b987bbfdaca4932227a
+SHA256sum: 1ad90434a67b4d41352132ed632c1e550688cde3e22ea21848739749bea620a2
 Description:  OCF support for Hifn 7855/8155 devices
-
-Package: kmod-crypto-ocf
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-crypto-manager, kmod-crypto-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 27324
-Filename: kmod-crypto-ocf_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: ca29a96467df871648b5ffd936156773
-Description:  OCF modules
 
 Package: kmod-crypto-rng
 Version: 3.3.8-1
@@ -1218,8 +1287,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2007
 Filename: kmod-crypto-rng_3.3.8-1_x86.ipk
-Size: users
+Size: 2765
 MD5Sum: 41ef7ddae86348d7498ddfcc9ff8d33f
+SHA256sum: 898503707baee9567d10b1b2031c2a67a0e51406851c7a61f816baecf6a45b81
 Description:  CryptoAPI random number generation
 
 Package: kmod-crypto-sha1
@@ -1235,8 +1305,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1552
 Filename: kmod-crypto-sha1_3.3.8-1_x86.ipk
-Size: users
+Size: 2349
 MD5Sum: 1d72125d8b1795beb30b14e76e2617e1
+SHA256sum: 0f79e1c5ee073fc88e350dff6ab4321264ce75802eb48ee2392dfc8ce00806f6
 Description:  SHA1 digest CryptoAPI module
 
 Package: kmod-crypto-test
@@ -1252,8 +1323,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11249
 Filename: kmod-crypto-test_3.3.8-1_x86.ipk
-Size: users
+Size: 11188
 MD5Sum: 8b06e3a174e8f62a019b9533bf9a54de
+SHA256sum: a442b92a89412fb2b5610351b5bb2e8c2feb32fe6ba8ef1fd415b896b5ed9c63
 Description:  Test CryptoAPI module
 
 Package: kmod-crypto-user
@@ -1269,8 +1341,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8354
 Filename: kmod-crypto-user_3.3.8-1_x86.ipk
-Size: users
+Size: 9158
 MD5Sum: 5dae005e61899f130296c1bb666dfbd3
+SHA256sum: eb33535f75fb55e375de8683f86857c73bc6aa8953d1fd76194d597af8f83411
 Description:  CryptoAPI userspace interface
 
 Package: kmod-crypto-wq
@@ -1286,8 +1359,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 926
 Filename: kmod-crypto-wq_3.3.8-1_x86.ipk
-Size: users
+Size: 1701
 MD5Sum: 08e80ad3e41f42b13e1b48cc10c274c6
+SHA256sum: d861a60f3cf50b47f5a0b824f55b5befd15affc73f3d1490bb8694866d87b951
 Description:  CryptoAPI work queue handling
 
 Package: kmod-crypto-xts
@@ -1303,9 +1377,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5666
 Filename: kmod-crypto-xts_3.3.8-1_x86.ipk
-Size: users
+Size: 6452
 MD5Sum: 75fafee8b85363cebcdf02bb11f95285
+SHA256sum: 5f528e7dbd88d4f1d530adf796be68574fe86ba39d7acf3d5a332d63725fe4a0
 Description:  XTS cipher CryptoAPI module
+
+Package: kmod-cs5535
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ide-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1827
+Filename: kmod-cs5535_3.3.8-1_x86.ipk
+Size: 2594
+MD5Sum: d0e974f6786ba03d3a7cb99bbd8726e4
+SHA256sum: 64c026f84cc50f0ff058bb0926e810ee1dfcc483f4fccef05cddcf7a97aeb38e
+Description:  Kernel module for the NSC/AMD CS5535 companion chip
 
 Package: kmod-cs5535-clockevt
 Version: 3.3.8-1
@@ -1320,8 +1413,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1776
 Filename: kmod-cs5535-clockevt_3.3.8-1_x86.ipk
-Size: users
+Size: 2581
 MD5Sum: dd6ca4261fa2111e0d55eb2f27e514b4
+SHA256sum: d154125feec01e063b9ae61707bc1ffa01dd68401cc2cf60e5095ecc757564c8
 Description:  Kernel module for CS5535/6 high-res clock event source
 
 Package: kmod-cs5535-mfd
@@ -1337,8 +1431,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3426
 Filename: kmod-cs5535-mfd_3.3.8-1_x86.ipk
-Size: users
+Size: 4189
 MD5Sum: a35e040eadf1c2ade8540a8295eb2e2d
+SHA256sum: 00e2d501be0c8a5a53cef605f26321cd165966c3c88ae4e40916c0c24cecbb46
 Description:  Core driver for CS5535/CS5536 MFD functions.
 
 Package: kmod-cs5535-mfgpt
@@ -1354,26 +1449,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2790
 Filename: kmod-cs5535-mfgpt_3.3.8-1_x86.ipk
-Size: users
+Size: 3572
 MD5Sum: 23a3d32c512a31ab0ac8a16dc1b37868
+SHA256sum: 6c978901234cb275eea0be8407280d6160269679a8edc234b223c2207e9ec67f
 Description:  Kernel module for CS5535/6 multifunction general purpose timer.
-
-Package: kmod-cs5535
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ide-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1827
-Filename: kmod-cs5535_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: d0e974f6786ba03d3a7cb99bbd8726e4
-Description:  Kernel module for the NSC/AMD CS5535 companion chip
 
 Package: kmod-cs5536
 Version: 3.3.8-1
@@ -1388,8 +1467,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2504
 Filename: kmod-cs5536_3.3.8-1_x86.ipk
-Size: users
+Size: 3279
 MD5Sum: fa58cc965df411023d24db7dfabdd5c5
+SHA256sum: fb06441cffddcd3dfdc2c9901e44e38088200207aeac4a635c069020f97ef88a
 Description:  Kernel module for the AMD CS5536 Geode LX companion chip
 
 Package: kmod-dm
@@ -1405,8 +1485,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 56098
 Filename: kmod-dm_3.3.8-1_x86.ipk
-Size: users
+Size: 56954
 MD5Sum: dcadc3a784d24d1f88652ece993b3a27
+SHA256sum: abd6b4dbca78376db019664434423d9e6173e75b6101bdbbc5d5b7bb74fbfaa9
 Description:  Kernel module necessary for LVM2 support
 
 Package: kmod-dummy
@@ -1422,8 +1503,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1820
 Filename: kmod-dummy_3.3.8-1_x86.ipk
-Size: users
+Size: 2595
 MD5Sum: 2a03a19727878ee59f32c14801b696ea
+SHA256sum: e1f78672e51d74706fedfe44a85d075519f483aceb1574cbfa905ace53162c41
 Description:  The dummy network device
 
 Package: kmod-e1000
@@ -1439,8 +1521,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 44448
 Filename: kmod-e1000_3.3.8-1_x86.ipk
-Size: users
+Size: 45268
 MD5Sum: 482c24427d91f03a7ae64687db5b76a1
+SHA256sum: ec54686d122c3d68e09c4adf08893cc3f6e76a4660e6ecfa9e56a58707cd4528
 Description:  Kernel modules for Intel(R) PRO/1000 PCI Ethernet adapters.
 
 Package: kmod-e100
@@ -1456,9 +1539,30 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16158
 Filename: kmod-e100_3.3.8-1_x86.ipk
-Size: users
+Size: 16898
 MD5Sum: edb40f842f2a65144800a8cea3cb6ac9
+SHA256sum: a0fea0926c5b8c93192f70629c0fe0c0d871e20c21c8d7bdb37996cf02da0037
 Description:  Kernel modules for Intel(R) PRO/100+ Ethernet adapters.
+
+Package: kmod-ebtables
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 15551
+Filename: kmod-ebtables_3.3.8-1_x86.ipk
+Size: 16339
+MD5Sum: 76e26d6df60e18096766830ea996d21a
+SHA256sum: ef153fbef28b63f529330109f4fa3fb8d7276eadf352014823c336083d75cb66
+Description:  ebtables is a general, extensible frame/packet identification
+ framework. It provides you to do Ethernet
+ filtering/NAT/brouting on the Ethernet bridge.
 
 Package: kmod-ebtables-ipv4
 Version: 3.3.8-1
@@ -1473,8 +1577,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3829
 Filename: kmod-ebtables-ipv4_3.3.8-1_x86.ipk
-Size: users
+Size: 4644
 MD5Sum: 711d5aaf9853e9b4abb97dd52d8baefa
+SHA256sum: 109bd1257837c8b73f11d53706099964769c67070cedd8d5cb0eb6de4a15e5b4
 Description:  This option adds the IPv4 support to ebtables, which allows basic
  IPv4 header field filtering, ARP filtering as well as SNAT, DNAT targets.
 
@@ -1491,8 +1596,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1674
 Filename: kmod-ebtables-ipv6_3.3.8-1_x86.ipk
-Size: users
+Size: 2521
 MD5Sum: 8709e18a193373176e2a512cb16bdaac
+SHA256sum: b668f10abc342cd9f9c3c2b03a8a7e5510337ce6775c4fb5a41e33c841ddea4c
 Description:  This option adds the IPv6 support to ebtables, which allows basic
  IPv6 header field filtering and target support.
 
@@ -1509,29 +1615,11 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4824
 Filename: kmod-ebtables-watchers_3.3.8-1_x86.ipk
-Size: users
+Size: 5625
 MD5Sum: 66de63ee1206e035b923615916a8ce3a
+SHA256sum: 041918078d02b8e298555410b47b47ebf47747117ab8e723635df7ca65134648
 Description:  This option adds the log watchers, that you can use in any rule
  in any ebtables table.
-
-Package: kmod-ebtables
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 15551
-Filename: kmod-ebtables_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 76e26d6df60e18096766830ea996d21a
-Description:  ebtables is a general, extensible frame/packet identification
- framework. It provides you to do Ethernet
- filtering/NAT/brouting on the Ethernet bridge.
 
 Package: kmod-eeprom-93cx6
 Version: 3.3.8-1
@@ -1546,8 +1634,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1498
 Filename: kmod-eeprom-93cx6_3.3.8-1_x86.ipk
-Size: users
+Size: 2293
 MD5Sum: 1686c536160fdfe109210a1baa054891
+SHA256sum: d1f56803f8458a1f77da7a73e90c5ffe62e86b063c2ee3ac254ca4e3a32d8af1
 Description:  Kernel module for EEPROM 93CX6 support
 
 Package: kmod-eeprom-at24
@@ -1563,8 +1652,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3738
 Filename: kmod-eeprom-at24_3.3.8-1_x86.ipk
-Size: users
+Size: 4505
 MD5Sum: c568181d847c4d16a1418199d1f15a5a
+SHA256sum: 109d55d9d66c6326d2e5fed34004810674d9a4f91000b9fd05351358d348df98
 Description:  Kernel module for most I2C EEPROMs
 
 Package: kmod-eeprom-at25
@@ -1580,8 +1670,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2801
 Filename: kmod-eeprom-at25_3.3.8-1_x86.ipk
-Size: users
+Size: 3557
 MD5Sum: c6ed0e897505f9680101f30b8f0b3578
+SHA256sum: 59f9b66d1c3040322ad7792203249856505354327a9b4fbd0ecef0b02e243b82
 Description:  Kernel module for most SPI EEPROMs
 
 Package: kmod-et131x
@@ -1597,8 +1688,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16956
 Filename: kmod-et131x_3.3.8-1_x86.ipk
-Size: users
+Size: 17761
 MD5Sum: 1deaeadaf4cddebef62bfb5d4bd497a8
+SHA256sum: b10a8e1d5adffa363cd56232ab16b47ef02a7320515b937e52f0f4be691aa7c2
 Description:  This package contains the et131x kernel module.
 
 Package: kmod-fb
@@ -1614,9 +1706,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16309
 Filename: kmod-fb_3.3.8-1_x86.ipk
-Size: users
+Size: 17017
 MD5Sum: 4474dd46a6d0c4252e605b537fc9bdf8
+SHA256sum: a92e1d10d5da308f9594a46e4e607a2e266d8dd44b1ae630dbdead31273c0312
 Description:  Kernel support for framebuffers
+
+Package: kmod-firewire
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-lib-crc-itu-t
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 25505
+Filename: kmod-firewire_3.3.8-1_x86.ipk
+Size: 26209
+MD5Sum: 6972027c791abdbdb1d72b469a46ebcb
+SHA256sum: 9adde29e0dd12679386f21b154de0ed25c3af7a1798c64d1c1c768f53771ca23
+Description:  Kernel support for FireWire (new stack)
 
 Package: kmod-firewire-net
 Version: 3.3.8-1
@@ -1631,8 +1742,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8050
 Filename: kmod-firewire-net_3.3.8-1_x86.ipk
-Size: users
+Size: 8818
 MD5Sum: a2a1f6c86c9d172fed453536ed1c9fe7
+SHA256sum: 822e50f3abe0799c61117284dad388b2e5f9e7db78bd09cbf5862dfc53bf2c8a
 Description:  Kernel support for IPv4 over FireWire
 
 Package: kmod-firewire-ohci
@@ -1648,8 +1760,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 17389
 Filename: kmod-firewire-ohci_3.3.8-1_x86.ipk
-Size: users
+Size: 18200
 MD5Sum: 947cccd8b89fba5e8218e8a2f6812e4a
+SHA256sum: fa20014ee2ce94021e0e81fa91a064aef035ee23fdbdd9b694a52476ed3eca87
 Description:  Kernel support for FireWire OHCI-1394 controllers
 
 Package: kmod-firewire-sbp2
@@ -1665,26 +1778,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7946
 Filename: kmod-firewire-sbp2_3.3.8-1_x86.ipk
-Size: users
+Size: 8724
 MD5Sum: 621a366b5d0c6c768aa83b43e715465a
+SHA256sum: b4b348fb11a9ceafddadcff66b82e3619007b43a3ca01548c19cc19ab028884a
 Description:  Kernel support for SBP-2 devices over FireWire
-
-Package: kmod-firewire
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-lib-crc-itu-t
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 25505
-Filename: kmod-firewire_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 6972027c791abdbdb1d72b469a46ebcb
-Description:  Kernel support for FireWire (new stack)
 
 Package: kmod-fs-autofs4
 Version: 3.3.8-1
@@ -1699,8 +1796,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12498
 Filename: kmod-fs-autofs4_3.3.8-1_x86.ipk
-Size: users
+Size: 13232
 MD5Sum: 7ea7e11e3a0ac6295983812098ea8dad
+SHA256sum: b2469526d613025fb16f47de23d6d465872f44df234c956d2054191ec20fbd24
 Description:  Kernel module for AutoFS4 support
 
 Package: kmod-fs-btrfs
@@ -1716,8 +1814,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 292787
 Filename: kmod-fs-btrfs_3.3.8-1_x86.ipk
-Size: users
+Size: 293016
 MD5Sum: 82d9dc83b3514e2eb54586a445b2f0a2
+SHA256sum: b56f348cf1f777dc11882ae87310510afac1074c064665c20073b154b5fc5ba4
 Description:  Kernel module for BTRFS support
 
 Package: kmod-fs-cifs
@@ -1733,8 +1832,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 115294
 Filename: kmod-fs-cifs_3.3.8-1_x86.ipk
-Size: users
+Size: 115631
 MD5Sum: c78144c01d4cfcfa7c78f3f604a33fae
+SHA256sum: 97388a4de50fd4f0774e8992cad4d6f416e4d082cf5f44d4ce461ea4f388fbe0
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
@@ -1750,8 +1850,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2695
 Filename: kmod-fs-exportfs_3.3.8-1_x86.ipk
-Size: users
+Size: 3455
 MD5Sum: 6c0ee11893f96c8207f987402eb02521
+SHA256sum: b0d161b08d73fedfc9040122b54fd13eff3381cf7790205790df5659c28b7404
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-ext4
@@ -1767,8 +1868,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-fs-ext4_3.3.8-1_x86.ipk
-Size: users
+Size: 766
 MD5Sum: 36e45932abdb0e523f2749aff169d3e3
+SHA256sum: 883152e4b251351c25bf3d148c50bc9f935466535dae15a01e6dff6657a09cf9
 Description:  Kernel module for EXT4 filesystem support
 
 Package: kmod-fs-hfs
@@ -1784,8 +1886,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 24185
 Filename: kmod-fs-hfs_3.3.8-1_x86.ipk
-Size: users
+Size: 24928
 MD5Sum: bece49804f62c7476d78cc402025b21c
+SHA256sum: 86054ebaf6c8aff8260839edc61f3d0ae01f13d2c6b919319daba172be40f589
 Description:  Kernel module for HFS filesystem support
 
 Package: kmod-fs-hfsplus
@@ -1801,8 +1904,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 44354
 Filename: kmod-fs-hfsplus_3.3.8-1_x86.ipk
-Size: users
+Size: 45063
 MD5Sum: 4c2cda471bdbd6726884774282a8348e
+SHA256sum: 3737c2ef5b2082a3da11dccbc0ee84b17b5495791a210e68165fd9d3bf086d40
 Description:  Kernel module for HFS+ filesystem support
 
 Package: kmod-fs-isofs
@@ -1818,8 +1922,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15682
 Filename: kmod-fs-isofs_3.3.8-1_x86.ipk
-Size: users
+Size: 16406
 MD5Sum: 935bb3c3620bdedb58bb858d5fb37c66
+SHA256sum: 660a5a7dbf5180e6b1e7e4fc7c2e719388de73cd62286b4794ed4e2778fd65b2
 Description:  Kernel module for ISO9660 filesystem support
 
 Package: kmod-fs-minix
@@ -1835,8 +1940,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13918
 Filename: kmod-fs-minix_3.3.8-1_x86.ipk
-Size: users
+Size: 14690
 MD5Sum: e0a444107f8067730d086fe02099f684
+SHA256sum: b27baf2eaaf34be7c5e0b1641628e7eef7b4f155a36cfe8b3270328aaca300cc
 Description:  Kernel module for Minix filesystem support
 
 Package: kmod-fs-msdos
@@ -1852,26 +1958,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4538
 Filename: kmod-fs-msdos_3.3.8-1_x86.ipk
-Size: users
+Size: 5309
 MD5Sum: fbdd5f73550eef09fbd22771c67da8e2
+SHA256sum: 727216d84f02a1b2da9e9f9de524bfb8ab02a5dfee4c257e5903eb17087d827b
 Description:  Kernel module for MSDOS filesystem support
-
-Package: kmod-fs-nfs-common
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 109012
-Filename: kmod-fs-nfs-common_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 4249deb35270331fb55a179c5a97bdd5
-Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
 Version: 3.3.8-1
@@ -1886,9 +1976,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 70885
 Filename: kmod-fs-nfs_3.3.8-1_x86.ipk
-Size: users
+Size: 71617
 MD5Sum: eeff9b96f2aec69ceb4deebf899bc21b
+SHA256sum: 40248b6b948defb42995228d7c13c2e29afb505925f71da63b740804e7607df1
 Description:  Kernel module for NFS support
+
+Package: kmod-fs-nfs-common
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 109012
+Filename: kmod-fs-nfs-common_3.3.8-1_x86.ipk
+Size: 109674
+MD5Sum: 4249deb35270331fb55a179c5a97bdd5
+SHA256sum: 3f77a553f6afeaa90c0f8eeab08c0ad47bafbcb503611c721db4e4c9d1e18e3b
+Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfsd
 Version: 3.3.8-1
@@ -1903,8 +2012,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 39919
 Filename: kmod-fs-nfsd_3.3.8-1_x86.ipk
-Size: users
+Size: 40778
 MD5Sum: 49085cf63bda1a9fdd07e35f5deb1843
+SHA256sum: 112e788385c40b1f7c871923a8bbdcae96c0cb70233e3f58c595c5549a7cc01d
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-fs-ntfs
@@ -1920,8 +2030,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 45866
 Filename: kmod-fs-ntfs_3.3.8-1_x86.ipk
-Size: users
+Size: 46741
 MD5Sum: e1be7b2adbabf04b09fce363b75c099e
+SHA256sum: dbc0fff06a391c8399682a961d944acb19a8f9884ead4b7e43b641dd94c9cedc
 Description:  Kernel module for NTFS filesystem support
 
 Package: kmod-fs-reiserfs
@@ -1937,8 +2048,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 102204
 Filename: kmod-fs-reiserfs_3.3.8-1_x86.ipk
-Size: users
+Size: 103037
 MD5Sum: cf66650fbc3767b372482c14c260a824
+SHA256sum: eb401ffb3671a144c763b445476534ec16f60fbf364ca485075351a1f403b51c
 Description:  Kernel module for ReiserFS support
 
 Package: kmod-fs-udf
@@ -1954,8 +2066,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 43077
 Filename: kmod-fs-udf_3.3.8-1_x86.ipk
-Size: users
+Size: 43950
 MD5Sum: 7acd09400fe4b82f8b66391fc59db3c1
+SHA256sum: d0dd081b902085809a1c7f81ea50683f59107c9c04cf15b7e4b9591a91fdcb11
 Description:  Kernel module for UDF filesystem support
 
 Package: kmod-fs-vfat
@@ -1971,8 +2084,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 32050
 Filename: kmod-fs-vfat_3.3.8-1_x86.ipk
-Size: users
+Size: 32917
 MD5Sum: fae4be153f65436e7203d04d7bb4967f
+SHA256sum: c3b7a102090c393e0317d560443bac209b234e0bebf20e9ae047f15cba00a1fd
 Description:  Kernel module for VFAT filesystem support
 
 Package: kmod-fs-xfs
@@ -1988,8 +2102,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 221629
 Filename: kmod-fs-xfs_3.3.8-1_x86.ipk
-Size: users
+Size: 222133
 MD5Sum: f922b98b4194d65b33617df5482fbe15
+SHA256sum: bd0f10534d17e3dc859cc2ee2b7edb8153c8422a9dd5d6c31d6816f9f10d406f
 Description:  Kernel module for XFS support
 
 Package: kmod-fuse
@@ -2005,8 +2120,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 34065
 Filename: kmod-fuse_3.3.8-1_x86.ipk
-Size: users
+Size: 34904
 MD5Sum: 3a6386425d64aa9885c7e052a373b69f
+SHA256sum: 763627f5bf48cd69b8b565bf8de0edc5f6f44f905e572d99a499a87e6d8fdc4f
 Description:  Kernel module for userspace filesystem support
 
 Package: kmod-gigaset
@@ -2022,8 +2138,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 46916
 Filename: kmod-gigaset_3.3.8-1_x86.ipk
-Size: users
+Size: 47706
 MD5Sum: 35625096bb43ab3e576ee3871ee26b3b
+SHA256sum: bc06b3fdfb0f42d2e8d9eac17afed98ad5717b62652fdee9848cf089ff0171bf
 Description:  This driver supports the Siemens Gigaset SX205/255 family of
  ISDN DECT bases, including the predecessors Gigaset 3070/3075
  and 4170/4175 and their T-Com versions Sinus 45isdn and Sinus
@@ -2042,8 +2159,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2889
 Filename: kmod-gpio-button-hotplug_3.3.8-1_x86.ipk
-Size: users
+Size: 3650
 MD5Sum: f1b3e03d26bb28cb371f36ee4b92a9ee
+SHA256sum: c83a9a48471439c469a5da59059b8d459ad9abba6e3b9db0da4dad8c14ea93cb
 Description:  Simple GPIO Button Hotplug driver
 
 Package: kmod-gpio-nsc
@@ -2059,8 +2177,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1822
 Filename: kmod-gpio-nsc_3.3.8-1_x86.ipk
-Size: users
+Size: 2600
 MD5Sum: 7208760256352dc3aefd2f220319812c
+SHA256sum: 990b77d6f5aa5fee00b9fa9596d824c44ec8b065ec19fa93c37d0df074612d61
 Description:  Kernel module for Natsemi GPIO
 
 Package: kmod-gpio-pc8736x
@@ -2076,8 +2195,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2617
 Filename: kmod-gpio-pc8736x_3.3.8-1_x86.ipk
-Size: users
+Size: 3373
 MD5Sum: a6a344f712020e5b49ee5c465b35df40
+SHA256sum: ed0fc1dfad73f086c8dc86cdfa00bc0006b5dbe0ffce20082d422415769fa2f3
 Description:  Kernel module for PC8736x GPIO
 
 Package: kmod-gpio-scx200
@@ -2093,8 +2213,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1939
 Filename: kmod-gpio-scx200_3.3.8-1_x86.ipk
-Size: users
+Size: 2729
 MD5Sum: 259274ccbac0a97aeb521a0ef1b9780f
+SHA256sum: 7853858014d35c3de9ab989c5b42ffedbbae1ee2681e4646c6fa48e838887999
 Description:  Kernel module for SCX200 GPIO
 
 Package: kmod-gre
@@ -2110,8 +2231,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9846
 Filename: kmod-gre_3.3.8-1_x86.ipk
-Size: users
+Size: 10635
 MD5Sum: dc2505cbe8ce783440384915bc782bef
+SHA256sum: f20180cf862605bb2f48403943f207b5c5b6bc37aac3bb9846df3675ca435e78
 Description:  Generic Routing Encapsulation support
 
 Package: kmod-hfcmulti
@@ -2127,8 +2249,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 33177
 Filename: kmod-hfcmulti_3.3.8-1_x86.ipk
-Size: users
+Size: 33994
 MD5Sum: 34c2fe9d4787e62e78a55dbe8357b45e
+SHA256sum: 9c10dba7f2f21b33a993ed1fa5a6ade793a77a0baa555bfe93a076c1976e0390
 Description:  Kernel modules for Cologne AG's HFC multiport cards (HFC-4S/8S/E1)
  using the mISDN V2 stack.
 
@@ -2145,8 +2268,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13513
 Filename: kmod-hfcpci_3.3.8-1_x86.ipk
-Size: users
+Size: 14325
 MD5Sum: 9236e51c4c66adce914f4e955798c7f6
+SHA256sum: c78e29494939dcf8b1259335d344cd052f69e7c116406797453098225938b377
 Description:  Kernel modules for Cologne AG's HFC pci cards (single port)
  using the mISDN V2 stack.
 
@@ -2163,8 +2287,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 30303
 Filename: kmod-hid_3.3.8-1_x86.ipk
-Size: users
+Size: 30161
 MD5Sum: 84a16f19d50bb86280d0558821833823
+SHA256sum: 70cdbce7dabc170deeef2aa0b7b7db5d9de24fc818d4993f7b975f2ac99985ee
 Description:  Kernel modules for HID devices
 
 Package: kmod-hwmon-adt7475
@@ -2180,8 +2305,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8206
 Filename: kmod-hwmon-adt7475_3.3.8-1_x86.ipk
-Size: users
+Size: 9022
 MD5Sum: f292b093601bd1182549c71397e7f1a0
+SHA256sum: 34ff0d5e7658a5b8ed3fc00aa3b68ded0f5ea2cb9de3baf08c9600c11e2b0fcb
 Description:  Kernel module for ADT7473/7475/7476/7490 thermal monitor chip.
 
 Package: kmod-hwmon-core
@@ -2197,8 +2323,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1590
 Filename: kmod-hwmon-core_3.3.8-1_x86.ipk
-Size: users
+Size: 2381
 MD5Sum: 09e59bb0927dea9863acb703a93d6c35
+SHA256sum: bdf94901b24e5dc8dacee4b915d1845d3ca69189711aa615725e2ace0e5045bc
 Description:  Kernel modules for hardware monitoring
 
 Package: kmod-hwmon-lm63
@@ -2214,8 +2341,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5382
 Filename: kmod-hwmon-lm63_3.3.8-1_x86.ipk
-Size: users
+Size: 6168
 MD5Sum: b4c90b040679fe092c09736d834110c3
+SHA256sum: 2b6e907675ad844a530dcd0c546602c2932d81f87dd28176f8e00c90ed6719c4
 Description:  Kernel module for lm63 and lm64 thermal monitor chip
 
 Package: kmod-hwmon-lm75
@@ -2231,8 +2359,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2745
 Filename: kmod-hwmon-lm75_3.3.8-1_x86.ipk
-Size: users
+Size: 3521
 MD5Sum: 47c7d47ccde38012ad6cea8d3be957bd
+SHA256sum: 6371d5292b6980855826f9c857e3ee6564e6d7e769bd53a21182e9a4037f0b43
 Description:  Kernel module for lm75 thermal monitor chip
 
 Package: kmod-hwmon-lm77
@@ -2248,8 +2377,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2889
 Filename: kmod-hwmon-lm77_3.3.8-1_x86.ipk
-Size: users
+Size: 3657
 MD5Sum: a70e8f373bd9052edcb7c576da550af7
+SHA256sum: 82decb741b7caa13187c31f748a6d8851656d56bc075b23480defbd78af857e5
 Description:  Kernel module for LM77 thermal monitor chip
 
 Package: kmod-hwmon-lm85
@@ -2265,8 +2395,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7809
 Filename: kmod-hwmon-lm85_3.3.8-1_x86.ipk
-Size: users
+Size: 8488
 MD5Sum: 645824f3ed312fc9ff52de5b7a4055fa
+SHA256sum: 8531766f02b01bf2d0d2a07966439faefde2f8467a6a95a0ecafd24998f5a54a
 Description:  Kernel module for LM85 thermal monitor chip
 
 Package: kmod-hwmon-lm90
@@ -2282,8 +2413,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6603
 Filename: kmod-hwmon-lm90_3.3.8-1_x86.ipk
-Size: users
+Size: 7434
 MD5Sum: 327f0e8fdc3ee5e119c03ac1667fa980
+SHA256sum: b8c32d8d636037e1dd2127061a8025c060da6b93517acb86b505008553961b1b
 Description:  Kernel module for LM90 thermal monitor chip
 
 Package: kmod-hwmon-lm95241
@@ -2299,8 +2431,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2769
 Filename: kmod-hwmon-lm95241_3.3.8-1_x86.ipk
-Size: users
+Size: 3549
 MD5Sum: 2b735d5b1e4c4ec12bfa793ecc05f6ed
+SHA256sum: 245e3fb3268ae5bde565316a224b13b68df6d0c782f391b6add1a08ceecd7545
 Description:  Kernel module for LM95241 thermal monitor chip
 
 Package: kmod-hwmon-pc87360
@@ -2316,8 +2449,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8881
 Filename: kmod-hwmon-pc87360_3.3.8-1_x86.ipk
-Size: users
+Size: 9580
 MD5Sum: 653116542fd65e78801ccf3eb51b3a50
+SHA256sum: f9b56706347939980dbb85dfaa3602fc2b7750fdc887acc530e74a9a79ef3786
 Description:  Kernel modules for PC87360 chips
 
 Package: kmod-hwmon-sht21
@@ -2333,8 +2467,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1905
 Filename: kmod-hwmon-sht21_3.3.8-1_x86.ipk
-Size: users
+Size: 2727
 MD5Sum: 37ed29670a0491da1f8ae67fb00aefcf
+SHA256sum: 3988115315e46dbe32fbdc8645303c88e2ee331fff108b89aa47a099b210e6e6
 Description:  Kernel module for Sensirion SHT21 and SHT25 temperature and humidity sensors chip
 
 Package: kmod-hwmon-vid
@@ -2350,8 +2485,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2359
 Filename: kmod-hwmon-vid_3.3.8-1_x86.ipk
-Size: users
+Size: 3141
 MD5Sum: 96694548ff12dca5727dcd9d796094fc
+SHA256sum: 479ab1ac241a92b0fcfcba8cbaa847c8b43e0805181cbe0ca1046702b0c5efad
 Description:  VID/VRM/VRD voltage conversion module for hardware monitoring.
 
 Package: kmod-hwmon-w83627hf
@@ -2367,8 +2503,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9647
 Filename: kmod-hwmon-w83627hf_3.3.8-1_x86.ipk
-Size: users
+Size: 10416
 MD5Sum: 25343b1b5553f1156b0baadabd907461
+SHA256sum: a312790687fd184e69178ba1df9882c04fd4b3b0667405fdf31f1b77ef1d4a9a
 Description:  Winbond W83627HF monitoring support
 
 Package: kmod-i2c-algo-bit
@@ -2384,8 +2521,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3138
 Filename: kmod-i2c-algo-bit_3.3.8-1_x86.ipk
-Size: users
+Size: 3902
 MD5Sum: d74d4706537e496037d94c5263d55ffb
+SHA256sum: ddd3e040f4e72bb86e52643ad9a6bfc5a609a26e911abf31370737ebe23bcbb6
 Description:  Kernel modules for I2C bit-banging interfaces.
 
 Package: kmod-i2c-algo-pca
@@ -2401,8 +2539,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3574
 Filename: kmod-i2c-algo-pca_3.3.8-1_x86.ipk
-Size: users
+Size: 4334
 MD5Sum: 1f65872e0723ace4731027ea05733029
+SHA256sum: f982ce3bfd6966040d6348ba35741ece6bb1c3b9bb79e083fb04826bc832f00b
 Description:  Kernel modules for I2C PCA 9564 interfaces.
 
 Package: kmod-i2c-algo-pcf
@@ -2418,8 +2557,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2911
 Filename: kmod-i2c-algo-pcf_3.3.8-1_x86.ipk
-Size: users
+Size: 3685
 MD5Sum: 52588fe15f2a16a80d5b13833eafad66
+SHA256sum: a97a8813ed3ef1c7b855b7e707c7a05d8c5491c2f8135701693302b6945c2253
 Description:  Kernel modules for I2C PCF 8584 interfaces
 
 Package: kmod-i2c-core
@@ -2435,9 +2575,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12178
 Filename: kmod-i2c-core_3.3.8-1_x86.ipk
-Size: users
+Size: 12942
 MD5Sum: 80541ecaab24a12d5182b1fbc3b4d4a8
+SHA256sum: 1c94448686befd8233b5f5b6bcd5970b2046060ddcec794553eb26926a7abd25
 Description:  Kernel modules for I2C support
+
+Package: kmod-i2c-mux
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-i2c-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1555
+Filename: kmod-i2c-mux_3.3.8-1_x86.ipk
+Size: 2352
+MD5Sum: e200d329c18320aa389166ec87389527
+SHA256sum: 702e4b9f7bdff6c4bd8fc5db6cc192cc51dbc8724eaa8aea5bb7b4207c43a6e7
+Description:  Kernel modules for I2C bus multiplexing support.
 
 Package: kmod-i2c-mux-pca9541
 Version: 3.3.8-1
@@ -2452,8 +2611,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2107
 Filename: kmod-i2c-mux-pca9541_3.3.8-1_x86.ipk
-Size: users
+Size: 2916
 MD5Sum: ba4de0bd0663da7f0ebe83c65ae88d9f
+SHA256sum: 0c81d120d221ace8d134e8bbc682437f3da9f8651aa1451cabf717f7abaf64fc
 Description:  Kernel modules for PCA9541 I2C bus mux/switching devices.
 
 Package: kmod-i2c-mux-pca954x
@@ -2469,44 +2629,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2014
 Filename: kmod-i2c-mux-pca954x_3.3.8-1_x86.ipk
-Size: users
+Size: 2823
 MD5Sum: 219d939bb4651d0c5285ce5a3d5e76f4
+SHA256sum: 6ea6af9eaa3c41f48088cbf6622749a832581c3be7ccb87278cc3df11364a7f8
 Description:  Kernel modules for PCA954x I2C bus mux/switching devices.
-
-Package: kmod-i2c-mux
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-i2c-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1555
-Filename: kmod-i2c-mux_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: e200d329c18320aa389166ec87389527
-Description:  Kernel modules for I2C bus multiplexing support.
-
-Package: kmod-i2c-scx200-acb
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-i2c-algo-bit
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 3402
-Filename: kmod-i2c-scx200-acb_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 6e41212ca0ebcd0e2a9d88b7c61a1940
-Description:  Kernel module for I2C using the ACCESS.bus controllers on the Geode SCx200
- and SC1100 processors and the CS5535 and CS5536 Geode companion devices.
 
 Package: kmod-i2c-scx200
 Version: 3.3.8-1
@@ -2521,9 +2647,29 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1528
 Filename: kmod-i2c-scx200_3.3.8-1_x86.ipk
-Size: users
+Size: 2345
 MD5Sum: d729703d1b6ed65628561f01c10cccc7
+SHA256sum: 2c009837d31ad6ba7a8269d53f52581ae938ae0b35a43ef2245ab4c96b28b5f8
 Description:  Kernel module for I2C using GPIO pins on the Geode SCx200 processors.
+
+Package: kmod-i2c-scx200-acb
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-i2c-algo-bit
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 3402
+Filename: kmod-i2c-scx200-acb_3.3.8-1_x86.ipk
+Size: 4231
+MD5Sum: 6e41212ca0ebcd0e2a9d88b7c61a1940
+SHA256sum: 3ad0c989444322b60454da7d43d91f01c48e2797be223277bbaeb33d3d3643b6
+Description:  Kernel module for I2C using the ACCESS.bus controllers on the Geode SCx200
+ and SC1100 processors and the CS5535 and CS5536 Geode companion devices.
 
 Package: kmod-i2c-tiny-usb
 Version: 3.3.8-1
@@ -2538,8 +2684,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2250
 Filename: kmod-i2c-tiny-usb_3.3.8-1_x86.ipk
-Size: users
+Size: 3091
 MD5Sum: c289553d7b550dd0b1f7c7921b2da25c
+SHA256sum: 85ab4ec547bdd0ada5b0d8bf46b02773fcf411aa06346578b826dce58fbe42a3
 Description:  Kernel module for the I2C Tiny USB adaptor developed
  by Till Harbaum (http://www.harbaum.org/till/i2c_tiny_usb).
 
@@ -2556,8 +2703,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2623
 Filename: kmod-ide-aec62xx_3.3.8-1_x86.ipk
-Size: users
+Size: 3414
 MD5Sum: b4b465453ea4a629e2e621a399c60cd5
+SHA256sum: f379b95adb293a10963aa35c11c5b417c96a6e535b30b323db508c1d2841d76f
 Description:  Support for Acard AEC62xx (Artop ATP8xx) IDE controllers.
 
 Package: kmod-ide-core
@@ -2573,29 +2721,13 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 39974
 Filename: kmod-ide-core_3.3.8-1_x86.ipk
-Size: users
+Size: 40876
 MD5Sum: 634232b6e92da277d3ba53de945367aa
+SHA256sum: 375827e59ee511c528e2a1f3f7bf563b365fa4ebdfa92c76e4af68f5aac58887
 Description:  Kernel support for IDE, useful for usb mass storage devices (e.g. on WL-HDD)
  Includes:
  - ide-core
  - ide-gd_mod
-
-Package: kmod-ide-generic-old
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ide-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1655
-Filename: kmod-ide-generic-old_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: e2ac5823bb58e42e8f043a4628f02878
-Description:  Kernel support for generic (legacy) IDE chipsets
 
 Package: kmod-ide-generic
 Version: 3.3.8-1
@@ -2610,9 +2742,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1909
 Filename: kmod-ide-generic_3.3.8-1_x86.ipk
-Size: users
+Size: 2682
 MD5Sum: 0109288e04e27a5083c5affc70006d65
+SHA256sum: e761f85f6ebe92522c536c5c8252ca9cea2757ec10d89f48474d978b2a500c83
 Description:  Kernel support for generic PCI IDE chipsets
+
+Package: kmod-ide-generic-old
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ide-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1655
+Filename: kmod-ide-generic-old_3.3.8-1_x86.ipk
+Size: 2458
+MD5Sum: e2ac5823bb58e42e8f043a4628f02878
+SHA256sum: c44e9a2fd9c543a14f567647740b128329b3b172adb8084829a994e80ddcff87
+Description:  Kernel support for generic (legacy) IDE chipsets
 
 Package: kmod-ide-it821x
 Version: 3.3.8-1
@@ -2627,8 +2778,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3687
 Filename: kmod-ide-it821x_3.3.8-1_x86.ipk
-Size: users
+Size: 4458
 MD5Sum: ea3b916d3155cd412e5672287481caf5
+SHA256sum: 42f1d7dec24795daf902cfa55bb0388ef560c146e3c049c8354ab076656b7a02
 Description:  Kernel module for the ITE IDE821x IDE controllers.
 
 Package: kmod-ide-pdc202xx
@@ -2644,8 +2796,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2973
 Filename: kmod-ide-pdc202xx_3.3.8-1_x86.ipk
-Size: users
+Size: 3768
 MD5Sum: efe4819efd1369161d927e5e23489f46
+SHA256sum: 221a14b7aace0121562ee69c5fe7cac2a6835861ee1a30ddf03487ab0db049d5
 Description:  Support for the Promise Ultra 33/66/100 (PDC202{46|62|65|67|68}) IDE
  controllers.
 
@@ -2662,8 +2815,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2809
 Filename: kmod-ifb_3.3.8-1_x86.ipk
-Size: users
+Size: 3556
 MD5Sum: d2cbb794fbd354b1a0126cfdb46019db
+SHA256sum: fa2efebfd46b92869ac643f26a811b38a461dacea054ca25ae72b2cc99b9f165
 Description:  The Intermediate Functional Block
 
 Package: kmod-input-core
@@ -2679,8 +2833,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12804
 Filename: kmod-input-core_3.3.8-1_x86.ipk
-Size: users
+Size: 13572
 MD5Sum: 7d5d1c5ba19d3e61906d2e1286053e32
+SHA256sum: 24a815b454c4972fa935e43f574c7701153853fd00a930f755f456bbafdabac2
 Description:  Kernel modules for support of input device
 
 Package: kmod-input-evdev
@@ -2696,8 +2851,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5469
 Filename: kmod-input-evdev_3.3.8-1_x86.ipk
-Size: users
+Size: 6248
 MD5Sum: c881f4108c76bfe0278b2cb87109242e
+SHA256sum: 21e8b98f8f00198b5fc8d1bda86a0e30fac018b0094ccf1161d621c8eca3edb9
 Description:  Kernel modules for support of input device events
 
 Package: kmod-input-joydev
@@ -2713,8 +2869,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5250
 Filename: kmod-input-joydev_3.3.8-1_x86.ipk
-Size: users
+Size: 6011
 MD5Sum: 281ffaa6ab38086ebc72738cc8df2fe7
+SHA256sum: 6e536eb4710d4f37de41637c26210d945bb10ac4a13986e2e6dbf30cca22b604
 Description:  Kernel module for joystick support
 
 Package: kmod-input-polldev
@@ -2730,26 +2887,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1935
 Filename: kmod-input-polldev_3.3.8-1_x86.ipk
-Size: users
+Size: 2736
 MD5Sum: 99bf0daef5372c4db5b5b26b88690d76
+SHA256sum: 7f38adf0c25923ea7e102f3aaa4625b325b1a180539a1ae872435d0aa6059bb8
 Description:  Kernel module for support of polled input devices
-
-Package: kmod-ip6-tunnel
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipv6, kmod-iptunnel6
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8213
-Filename: kmod-ip6-tunnel_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: a36a4073030f96b311b49126699ef401
-Description:  Kernel modules for IPv6-in-IPv6 and IPv4-in-IPv6 tunnelling
 
 Package: kmod-ip6tables
 Version: 3.3.8-1
@@ -2764,9 +2905,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 28686
 Filename: kmod-ip6tables_3.3.8-1_x86.ipk
-Size: users
+Size: 29454
 MD5Sum: 5306b9405bda7fbf65aca5384961d1cc
+SHA256sum: e9e4f6901b5685925ccfd76e30f334eecb787872f050fca4afac292fcd03cd8d
 Description:  Netfilter IPv6 firewalling support
+
+Package: kmod-ip6-tunnel
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipv6, kmod-iptunnel6
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8213
+Filename: kmod-ip6-tunnel_3.3.8-1_x86.ipk
+Size: 8981
+MD5Sum: a36a4073030f96b311b49126699ef401
+SHA256sum: 66b1cd5aa0ea5ae66aa7ad3af1cd347fb6297fcf4f6d563999a1b3906b30b4f6
+Description:  Kernel modules for IPv6-in-IPv6 and IPv4-in-IPv6 tunnelling
 
 Package: kmod-ipip
 Version: 3.3.8-1
@@ -2781,8 +2941,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5237
 Filename: kmod-ipip_3.3.8-1_x86.ipk
-Size: users
+Size: 6024
 MD5Sum: fe801f4b4662efd3a0e73c328adcbc20
+SHA256sum: 4fb5dda0406f28af65c4f94b51b0a9b76f6fcb64c8727fb5f9f696197bb5b947
 Description:  Kernel modules for IP-in-IP encapsulation
 
 Package: kmod-ipoa
@@ -2798,9 +2959,32 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6103
 Filename: kmod-ipoa_3.3.8-1_x86.ipk
-Size: users
+Size: 6891
 MD5Sum: 7e63c91355ce87d86183fba084dbd1de
+SHA256sum: 13b11bcb8b3b00fd2f6ddd97cf148d91638fd5c4b0b95497b7c2c1c89ab8508b
 Description:  Kernel modules for IPoA (IP over ATM) support
+
+Package: kmod-ipsec
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-crypto-authenc, kmod-crypto-iv, kmod-crypto-des, kmod-crypto-hmac, kmod-crypto-md5, kmod-crypto-sha1, kmod-crypto-deflate, kmod-crypto-cbc
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 28019
+Filename: kmod-ipsec_3.3.8-1_x86.ipk
+Size: 28881
+MD5Sum: c93dbe25653f727711350c39be462143
+SHA256sum: 65340dbe8c550d7b3278d8b75c8c47b4c47f1e031c01eb1a3537f63ff8b13dd1
+Description:  Kernel modules for IPsec support in both IPv4 and IPv6.
+ Includes:
+ - af_key
+ - xfrm_ipcomp
+ - xfrm_user
 
 Package: kmod-ipsec4
 Version: 3.3.8-1
@@ -2815,8 +2999,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10682
 Filename: kmod-ipsec4_3.3.8-1_x86.ipk
-Size: users
+Size: 11545
 MD5Sum: aa7a916cb95abab378280466300b534b
+SHA256sum: 9be91ecaeea43583d48bf02b45115992b43e5719685d92b7055dde894a72844c
 Description:  Kernel modules for IPsec support in IPv4.
  Includes:
  - ah4
@@ -2840,8 +3025,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11715
 Filename: kmod-ipsec6_3.3.8-1_x86.ipk
-Size: users
+Size: 12561
 MD5Sum: 992b80353fbb8aa8a394ab1cbb87f283
+SHA256sum: 8a0075cfd80d1dcd01960ef882da72c444acb0e4b8dd6108ef6f4aba7e86820a
 Description:  Kernel modules for IPsec support in IPv6.
  Includes:
  - ah6
@@ -2851,50 +3037,6 @@ Description:  Kernel modules for IPsec support in IPv6.
  - xfrm6_mode_transport
  - xfrm6_mode_tunnel
  - xfrm6_tunnel
-
-Package: kmod-ipsec
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-crypto-authenc, kmod-crypto-iv, kmod-crypto-des, kmod-crypto-hmac, kmod-crypto-md5, kmod-crypto-sha1, kmod-crypto-deflate, kmod-crypto-cbc
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 28019
-Filename: kmod-ipsec_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: c93dbe25653f727711350c39be462143
-Description:  Kernel modules for IPsec support in both IPv4 and IPv6.
- Includes:
- - af_key
- - xfrm_ipcomp
- - xfrm_user
-
-Package: kmod-ipt-conntrack-extra
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-conntrack
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 7364
-Filename: kmod-ipt-conntrack-extra_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: c5b71dc2d115d30f664235b1c0083a2f
-Description:  Netfilter (IPv4) extra kernel modules for connection tracking
- Includes:
- - connbytes
- - connmark/CONNMARK
- - conntrack
- - helper
- - recent
 
 Package: kmod-ipt-conntrack
 Version: 3.3.8-1
@@ -2909,8 +3051,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 31616
 Filename: kmod-ipt-conntrack_3.3.8-1_x86.ipk
-Size: users
+Size: 32443
 MD5Sum: 6c27c65ca14647315f7d07ff6fa67da3
+SHA256sum: 03cf3882582d11ef1f5141b033906b252384fcd6dc474d16f3b9ce3f12c56760
 Description:  Netfilter (IPv4) kernel modules for connection tracking
  Includes:
  - conntrack
@@ -2918,6 +3061,30 @@ Description:  Netfilter (IPv4) kernel modules for connection tracking
  - iptables_raw
  - NOTRACK
  - state
+
+Package: kmod-ipt-conntrack-extra
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-conntrack
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 7364
+Filename: kmod-ipt-conntrack-extra_3.3.8-1_x86.ipk
+Size: 8223
+MD5Sum: c5b71dc2d115d30f664235b1c0083a2f
+SHA256sum: 440b8ca1edb4834b63d1a91d2f585c15df0f80c24432e2bb29a4d2e6613650c6
+Description:  Netfilter (IPv4) extra kernel modules for connection tracking
+ Includes:
+ - connbytes
+ - connmark/CONNMARK
+ - conntrack
+ - helper
+ - recent
 
 Package: kmod-ipt-core
 Version: 3.3.8-1
@@ -2932,8 +3099,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 23930
 Filename: kmod-ipt-core_3.3.8-1_x86.ipk
-Size: users
+Size: 24748
 MD5Sum: 7c86ca94b8bf5488ef7c008b1ff7cdd9
+SHA256sum: 4410ab17fc69aab95a41230fbf25f3feb6065f89e5653dde78ad64c7b396218c
 Description:  Netfilter core kernel modules
  Includes:
  - comment
@@ -2957,8 +3125,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 879
 Filename: kmod-ipt-debug_3.3.8-1_x86.ipk
-Size: users
+Size: 1689
 MD5Sum: c2e7739b39869c77b4e3e4c805fd51e3
+SHA256sum: dbb86f265cd04c3e9280bc2d6f3856761b9e8c3807fad7d943bf846e461a4770
 Description:  Netfilter modules for debugging/development of the firewall
  Includes:
  - TRACE
@@ -2976,8 +3145,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2902
 Filename: kmod-ipt-extra_3.3.8-1_x86.ipk
-Size: users
+Size: 3733
 MD5Sum: ea27cf41005c9d7f777f10646c83b738
+SHA256sum: 744cbc215763718e5c60dec6d525cd356557aadc4df64e21dab77d6a171814d6
 Description:  Other Netfilter (IPv4) kernel modules
  Includes:
  - owner
@@ -2998,8 +3168,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7594
 Filename: kmod-ipt-filter_3.3.8-1_x86.ipk
-Size: users
+Size: 8430
 MD5Sum: ae948735c22e7677021198d85938c63a
+SHA256sum: abd768fb710e569c78d95e048894a695ed4b7d301c0a189c52b7faa9b8042c8c
 Description:  Netfilter (IPv4) kernel modules for packet content inspection
  Includes:
  - layer7
@@ -3018,8 +3189,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4840
 Filename: kmod-ipt-hashlimit_3.3.8-1_x86.ipk
-Size: users
+Size: 5600
 MD5Sum: ea4ed23639bf2056eae17cd75e362550
+SHA256sum: b2604f32bb5ce4df9f3c80d52646e4f056475645c93547dfce14c22374d36147
 Description:  Kernel modules support for the hashlimit bucket match module
 
 Package: kmod-ipt-ipopt
@@ -3035,8 +3207,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7943
 Filename: kmod-ipt-ipopt_3.3.8-1_x86.ipk
-Size: users
+Size: 8826
 MD5Sum: 062f437c97be7686a085379eec130aeb
+SHA256sum: 3891de771fb9173ff4250c618b2ea3abda83f12f182b9540e6dc5702449ce683
 Description:  Netfilter (IPv4) modules for matching/changing IP packet options
  Includes:
  - CLASSIFY
@@ -3064,8 +3237,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1314
 Filename: kmod-ipt-iprange_3.3.8-1_x86.ipk
-Size: users
+Size: 2118
 MD5Sum: 5576a2b461ae6f39dd4b7ba13f737282
+SHA256sum: 5b2a447f129de7ec7dddcd5992848ab870628279b50f6f1ae078d5e12aa381b2
 Description:  Netfilter (IPv4) module for matching ip ranges
  Includes:
  - iprange
@@ -3083,8 +3257,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2724
 Filename: kmod-ipt-ipsec_3.3.8-1_x86.ipk
-Size: users
+Size: 3539
 MD5Sum: 2d0bf58e45cd27aeb88e2a2d360c7d15
+SHA256sum: 15c1fcbab2f972fe7674d31d2352e7c7cbf4fde3cddd118c05a9abfce57def94
 Description:  Netfilter (IPv4) modules for matching IPSec packets
  Includes:
  - ah
@@ -3104,29 +3279,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1800
 Filename: kmod-ipt-led_3.3.8-1_x86.ipk
-Size: users
+Size: 2613
 MD5Sum: 9e176f462ad366a70b49b1ed3f20f8a7
+SHA256sum: dd7bf7088e8110ec3d8a76c7ed7379ace4765d2477c0a1c786e81d0652ab8c1c
 Description:  Netfilter target to trigger a LED when a network packet is matched.
-
-Package: kmod-ipt-nat-extra
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-nat
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1523
-Filename: kmod-ipt-nat-extra_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: e4aa9a3ffc3e6a16152cdaf1abf7a120
-Description:  Netfilter (IPv4) kernel modules for extra NAT targets
- Includes:
- - NETMAP
- - REDIRECT
 
 Package: kmod-ipt-nat
 Version: 3.3.8-1
@@ -3141,15 +3297,16 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10397
 Filename: kmod-ipt-nat_3.3.8-1_x86.ipk
-Size: users
+Size: 11201
 MD5Sum: 7f815b827a627c2fd4d8704f255da5aa
+SHA256sum: 51dc50515159daef4949df850d5ad893b260190bbb25dead722186194d99e0d3
 Description:  Netfilter (IPv4) kernel modules for basic NAT targets
  Includes:
  - MASQUERADE
 
-Package: kmod-ipt-nathelper-extra
+Package: kmod-ipt-nat-extra
 Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-nat, kmod-lib-textsearch
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-nat
 Provides: 
 Source: package/kernel
 Section: kernel
@@ -3158,20 +3315,15 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
-Installed-Size: 44016
-Filename: kmod-ipt-nathelper-extra_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 7367b97cc06f48c3c21c05e8b4a3a9ad
-Description:  Extra Netfilter (IPv4) Conntrack and NAT helpers
+Installed-Size: 1523
+Filename: kmod-ipt-nat-extra_3.3.8-1_x86.ipk
+Size: 2333
+MD5Sum: e4aa9a3ffc3e6a16152cdaf1abf7a120
+SHA256sum: cdf2d0d52a6eed17b816f46340e010f6526883f79cf7bd4bed6f6063da4f0c2e
+Description:  Netfilter (IPv4) kernel modules for extra NAT targets
  Includes:
- - amanda
- - h323
- - mms
- - pptp
- - proto_gre
- - sip
- - snmp_basic
- - broadcast
+ - NETMAP
+ - REDIRECT
 
 Package: kmod-ipt-nathelper
 Version: 3.3.8-1
@@ -3186,13 +3338,41 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6651
 Filename: kmod-ipt-nathelper_3.3.8-1_x86.ipk
-Size: users
+Size: 7496
 MD5Sum: 31045d95c12d361629b07a770cdcca86
+SHA256sum: bc751c9c4a6e56017547e1315f7c87759154770feb33bbae9379a09c811bc0b1
 Description:  Default Netfilter (IPv4) Conntrack and NAT helpers
  Includes:
  - ftp
  - irc
  - tftp
+
+Package: kmod-ipt-nathelper-extra
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core, kmod-ipt-nat, kmod-lib-textsearch
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 44016
+Filename: kmod-ipt-nathelper-extra_3.3.8-1_x86.ipk
+Size: 44975
+MD5Sum: 7367b97cc06f48c3c21c05e8b4a3a9ad
+SHA256sum: 0573df8613f45af8a4e1d5554b973db1fc609c3f37834f08cff43c2febdd1011
+Description:  Extra Netfilter (IPv4) Conntrack and NAT helpers
+ Includes:
+ - amanda
+ - h323
+ - mms
+ - pptp
+ - proto_gre
+ - sip
+ - snmp_basic
+ - broadcast
 
 Package: kmod-ipt-queue
 Version: 3.3.8-1
@@ -3207,8 +3387,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3998
 Filename: kmod-ipt-queue_3.3.8-1_x86.ipk
-Size: users
+Size: 4782
 MD5Sum: 763330934eb922f4cc353fb3b0974c76
+SHA256sum: 239d08118c2f003c7720cd81935b54eea44bf47f8f5356a71335de6835793893
 Description:  Netfilter (IPv4) module for user-space packet queueing
  Includes:
  - QUEUE
@@ -3226,8 +3407,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2072
 Filename: kmod-ipt-tee_3.3.8-1_x86.ipk
-Size: users
+Size: 2848
 MD5Sum: 79d91216ca9324269c6b1d13f3d8f6e0
+SHA256sum: a60530cebffb0d34c31331428de92857f8020830e24807544dbf0d55487974b7
 Description:  Kernel modules for TEE
 
 Package: kmod-ipt-tproxy
@@ -3243,8 +3425,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5632
 Filename: kmod-ipt-tproxy_3.3.8-1_x86.ipk
-Size: users
+Size: 6376
 MD5Sum: 9729fa155fd4ea56bd9a6b10b17d668e
+SHA256sum: be81673fefc2927854069bd5218fa65db1f2a44a90e50187645f146cb84f7075
 Description:  Kernel modules for Transparent Proxying
 
 Package: kmod-ipt-u32
@@ -3260,8 +3443,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1280
 Filename: kmod-ipt-u32_3.3.8-1_x86.ipk
-Size: users
+Size: 2057
 MD5Sum: a8ed58e3dbb31ea3a546de8eb6aa3160
+SHA256sum: fb56de973df3666a21ccb49478037c0b56e839c6f9b12dc47c03c405d563e077
 Description:  Kernel modules for U32
 
 Package: kmod-ipt-ulog
@@ -3277,8 +3461,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2887
 Filename: kmod-ipt-ulog_3.3.8-1_x86.ipk
-Size: users
+Size: 3669
 MD5Sum: 1fdadb38f6fd3def207d6ee08fbb1986
+SHA256sum: bf36c3f838027d4d98b8aeaa2a1615636c55ee5e1b400f7d75ec3ff08a9b592d
 Description:  Netfilter (IPv4) module for user-space packet logging
  Includes:
  - ULOG
@@ -3296,8 +3481,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1564
 Filename: kmod-iptunnel4_3.3.8-1_x86.ipk
-Size: users
+Size: 2343
 MD5Sum: 07eb041f1655931fd1b3bbf84f6be06f
+SHA256sum: a3338e42f0c0d30ad05a765129e8d77903556b5b39d8eca0ac7aa02f70fe074f
 Description:  Kernel modules for IPv4 tunneling
 
 Package: kmod-iptunnel6
@@ -3313,8 +3499,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1606
 Filename: kmod-iptunnel6_3.3.8-1_x86.ipk
-Size: users
+Size: 2389
 MD5Sum: d65ebacf239046699dac1b50a919a03e
+SHA256sum: 82c6f78c55c53c985af164dc5f48ea7616893b4879122e5f5a92161cac0b013a
 Description:  Kernel modules for IPv6 tunneling
 
 Package: kmod-ipv6
@@ -3330,8 +3517,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 134536
 Filename: kmod-ipv6_3.3.8-1_x86.ipk
-Size: users
+Size: 134717
 MD5Sum: bba86e7855eaf979a47fd58eaed133fe
+SHA256sum: 661c3b8796c65a2a2a7f5e74705f4f6c63c898795b00724882901e8c8e7a4e51
 Description:  Kernel modules for IPv6 support
 
 Package: kmod-isdn4linux
@@ -3347,9 +3535,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 75667
 Filename: kmod-isdn4linux_3.3.8-1_x86.ipk
-Size: users
+Size: 76395
 MD5Sum: 67d21e63e81cef415c049cffcad45542
+SHA256sum: c13f96659382eac68300cc84693be51298913791a2d642ea20c3e9a8c25e3560
 Description:  This driver allows you to use an ISDN adapter for networking
+
+Package: kmod-l2tp
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 11976
+Filename: kmod-l2tp_3.3.8-1_x86.ipk
+Size: 12745
+MD5Sum: b4fa0f4a477ab6d80270ae5bb2024695
+SHA256sum: 883ad0be6fdf0e8095692357ca5894ee20455b3d8c24d1983ab43ca7432cfd0e
+Description:  Kernel modules for L2TP V3 Support
 
 Package: kmod-l2tp-eth
 Version: 3.3.8-1
@@ -3364,8 +3571,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2641
 Filename: kmod-l2tp-eth_3.3.8-1_x86.ipk
-Size: users
+Size: 3412
 MD5Sum: 4a9b416dadcc468db5ae8df1228da2cf
+SHA256sum: b9be84670d3b176279c901125b609992b4a5bdc9f212334ce14fee8c92c23fe2
 Description:  Kernel modules for L2TP ethernet pseudowire support for L2TPv3
 
 Package: kmod-l2tp-ip
@@ -3381,26 +3589,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5020
 Filename: kmod-l2tp-ip_3.3.8-1_x86.ipk
-Size: users
+Size: 5773
 MD5Sum: a83dcbcec2c5073a340d3a75672f64ee
+SHA256sum: 4a6a54ff137ccaa57ca6316ce2f8639ac030b16237270bf84e9bd56b9e375441
 Description:  Kernel modules for L2TP IP encapsulation for L2TPv3
-
-Package: kmod-l2tp
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 11976
-Filename: kmod-l2tp_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: b4fa0f4a477ab6d80270ae5bb2024695
-Description:  Kernel modules for L2TP V3 Support
 
 Package: kmod-leds-net48xx
 Version: 3.3.8-1
@@ -3415,8 +3607,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1173
 Filename: kmod-leds-net48xx_3.3.8-1_x86.ipk
-Size: users
+Size: 1970
 MD5Sum: 19d22e440a2be5d72770457d217349bd
+SHA256sum: b86cf907e1a808a7aa716837fa2a72ffa9638385a3f0cd489787ed48cd1415c0
 Description:  Kernel module for Soekris Net48xx LEDs
 
 Package: kmod-leds-wrap
@@ -3432,8 +3625,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1459
 Filename: kmod-leds-wrap_3.3.8-1_x86.ipk
-Size: users
+Size: 2260
 MD5Sum: ae421d716bcfe901cf1f3509f18a5a99
+SHA256sum: c8cac89ab6cea8e1bc9e3a640903596fdae1ea375a78dab63c1ade7a49e160f1
 Description:  Kernel module for PCengines WRAP LEDs
 
 Package: kmod-ledtrig-default-on
@@ -3449,8 +3643,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-ledtrig-default-on_3.3.8-1_x86.ipk
-Size: users
+Size: 777
 MD5Sum: aaba2ccdb2ba2f624435a6b18476729a
+SHA256sum: 36a925950b433a4328939850ce3465be68f2e050c8d966cbf9026acde6f36473
 Description:  Kernel module that allows LEDs to be initialised in the ON state.
 
 Package: kmod-ledtrig-heartbeat
@@ -3466,8 +3661,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1301
 Filename: kmod-ledtrig-heartbeat_3.3.8-1_x86.ipk
-Size: users
+Size: 2080
 MD5Sum: a92da05f13840661e3b8b192686c1cdd
+SHA256sum: 2fd0f96495ae5182a28294501de2631e3ce5586e77c2994a63f74b5eb55f8776
 Description:  LED Heartbeat Trigger
 
 Package: kmod-ledtrig-morse
@@ -3483,8 +3679,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2097
 Filename: kmod-ledtrig-morse_3.3.8-1_x86.ipk
-Size: users
+Size: 2895
 MD5Sum: 23e345b93ca04bd3bb77ef9734a27378
+SHA256sum: 975f8a987170656888f9c70dd00afe236cfc79547e05c676f24e9b579a9fefdc
 Description:  Kernel module to show morse coded messages on LEDs.
 
 Package: kmod-ledtrig-netdev
@@ -3500,8 +3697,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-ledtrig-netdev_3.3.8-1_x86.ipk
-Size: users
+Size: 763
 MD5Sum: b8796852e758290d70235f177a56efdb
+SHA256sum: ca35ff909bbffb9648b6b8abcaa00740f26d247a36e09d3340574555b1373be9
 Description:  Kernel module to drive LEDs based on network activity.
 
 Package: kmod-ledtrig-netfilter
@@ -3517,8 +3715,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1802
 Filename: kmod-ledtrig-netfilter_3.3.8-1_x86.ipk
-Size: users
+Size: 2783
 MD5Sum: 6c223374f86dd317528e1cdca40cd177
+SHA256sum: 8929ca19a46f3afe2c67e100fe7c77eb6e2bdf6b106f0d32533c3b8722a0b46f
 Description:  Kernel module to flash LED when a particular packets passing through your machine.
  
  For example to create an LED trigger for incoming SSH traffic:
@@ -3539,8 +3738,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-ledtrig-timer_3.3.8-1_x86.ipk
-Size: users
+Size: 782
 MD5Sum: 8ff89f2230ecfe1ccad1d7b1a081c294
+SHA256sum: 6413533b8f21194faf11432ed8938e97bb69a53977ba2687282766ed248c39d6
 Description:  Kernel module that allows LEDs to be controlled by a programmable timer
  via sysfs.
 
@@ -3557,8 +3757,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2368
 Filename: kmod-ledtrig-usbdev_3.3.8-1_x86.ipk
-Size: users
+Size: 3149
 MD5Sum: a61c7ab60df40234b69e92623c4e5a44
+SHA256sum: f37f529ceb81807ada0fef0c65f6a22265cfab1f173044ab6141c2f9a94f9060
 Description:  Kernel module to drive LEDs based on USB device presence/activity.
 
 Package: kmod-lib-cordic
@@ -3574,43 +3775,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1070
 Filename: kmod-lib-cordic_3.3.8-1_x86.ipk
-Size: users
+Size: 1843
 MD5Sum: e81bb96bfa1ec868a97cef355506fa95
+SHA256sum: da5f571a9c6bb1cf935ab3ad5251301704c9f75506f7bb996158f8b51bc71e8b
 Description:  Kernel module for Cordic function support
-
-Package: kmod-lib-crc-ccitt
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1380
-Filename: kmod-lib-crc-ccitt_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 97b0a48adca1dc262607672e77f6d993
-Description:  Kernel module for CRC-CCITT support
-
-Package: kmod-lib-crc-itu-t
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1383
-Filename: kmod-lib-crc-itu-t_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 9558f86604766d0705f7213569eda786
-Description:  Kernel module for CRC ITU-T V.41 support
 
 Package: kmod-lib-crc16
 Version: 3.3.8-1
@@ -3625,8 +3793,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-lib-crc16_3.3.8-1_x86.ipk
-Size: users
+Size: 750
 MD5Sum: acf0b3cb5b4492940f263b288c84b72f
+SHA256sum: b2402ed127a182718de06027b6805830eb33d3e66bf389fe41d4e470bca59e10
 Description:  Kernel module for CRC16 support
 
 Package: kmod-lib-crc32c
@@ -3642,8 +3811,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1106
 Filename: kmod-lib-crc32c_3.3.8-1_x86.ipk
-Size: users
+Size: 1904
 MD5Sum: c92466b028f0a8e750307e70981f6c43
+SHA256sum: 682d103fc489fbc14085506b334a3e215e7ebba50a40a4eb737f514a6d0c6e38
 Description:  Kernel module for CRC32 support
 
 Package: kmod-lib-crc7
@@ -3659,8 +3829,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1059
 Filename: kmod-lib-crc7_3.3.8-1_x86.ipk
-Size: users
+Size: 1838
 MD5Sum: 7eba094e7f7a071e1f0780d650fb50a1
+SHA256sum: 8cf30173561b4d19f1a7761fdff91aa5eda8840acf7ff3444598eaa406588c10
 Description:  Kernel module for CRC7 support
 
 Package: kmod-lib-crc8
@@ -3676,9 +3847,46 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 996
 Filename: kmod-lib-crc8_3.3.8-1_x86.ipk
-Size: users
+Size: 1778
 MD5Sum: e6f3b7e5f8f94e0e5ec1156185c3ff7b
+SHA256sum: b7ac5fb96bf85c3d071298330ccde426493bcba767528e9d70f003b6c8b2f187
 Description:  Kernel module for CRC8 support
+
+Package: kmod-lib-crc-ccitt
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1380
+Filename: kmod-lib-crc-ccitt_3.3.8-1_x86.ipk
+Size: 2168
+MD5Sum: 97b0a48adca1dc262607672e77f6d993
+SHA256sum: 14f553ccd6bf54ae973114110c2d5ac0457eba78ef437adb6df9cdb9fb17594c
+Description:  Kernel module for CRC-CCITT support
+
+Package: kmod-lib-crc-itu-t
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1383
+Filename: kmod-lib-crc-itu-t_3.3.8-1_x86.ipk
+Size: 2169
+MD5Sum: 9558f86604766d0705f7213569eda786
+SHA256sum: b6f9c49576fadbe801b915c39496b70f5dec04a5ca8f765f2b2288b430f0b308
+Description:  Kernel module for CRC ITU-T V.41 support
 
 Package: kmod-lib-lzo
 Version: 3.3.8-1
@@ -3693,43 +3901,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 104
 Filename: kmod-lib-lzo_3.3.8-1_x86.ipk
-Size: users
+Size: 760
 MD5Sum: a4c422dcfbdd19d2198ed3e6ce254dee
+SHA256sum: 6ec42f513e977d92b5c9ef2bda4fc2e30987f493c82c527a0b10fcd8810ca0cf
 Description:  Kernel module for LZO compression/decompression support
-
-Package: kmod-lib-textsearch
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 3437
-Filename: kmod-lib-textsearch_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 2cf5798e951ab3a2063e1b73e9ea8dd1
-Description:  Textsearch support
-
-Package: kmod-lib-zlib
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8937
-Filename: kmod-lib-zlib_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 3e58f0be26b114b70af271a4ba088e4b
-Description:  Zlib support
 
 Package: kmod-libphy
 Version: 3.3.8-1
@@ -3744,8 +3919,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8928
 Filename: kmod-libphy_3.3.8-1_x86.ipk
-Size: users
+Size: 9700
 MD5Sum: a7aca597405dca3792e4c36191da0efd
+SHA256sum: 53c85663500ea4a38ea1ac2fcd09a5118b053edcbcb19d6885b9fee88dbadb47
 Description:  PHY library
 
 Package: kmod-libsas
@@ -3761,9 +3937,46 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 37045
 Filename: kmod-libsas_3.3.8-1_x86.ipk
-Size: users
+Size: 37980
 MD5Sum: 3a4c96c5a2197dc357d7d8b28219c670
+SHA256sum: 96010cde6d60a4c9f45f30a9bb7a8a85dba870c0f03b7fc6f76e963e7d162984
 Description:  SAS Domain Transport Attributes support.
+
+Package: kmod-lib-textsearch
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 3437
+Filename: kmod-lib-textsearch_3.3.8-1_x86.ipk
+Size: 4206
+MD5Sum: 2cf5798e951ab3a2063e1b73e9ea8dd1
+SHA256sum: 047c8a9316425ef05b1ce983c47a9a6516efba65a4bc49411c0bc48b7449caaf
+Description:  Textsearch support
+
+Package: kmod-lib-zlib
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8937
+Filename: kmod-lib-zlib_3.3.8-1_x86.ipk
+Size: 9694
+MD5Sum: 3e58f0be26b114b70af271a4ba088e4b
+SHA256sum: 07e381b298085901d123ba6ed69a9c044b7f40c18ae5e260b5c7bbcbebede872
+Description:  Zlib support
 
 Package: kmod-llc
 Version: 3.3.8-1
@@ -3778,8 +3991,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-llc_3.3.8-1_x86.ipk
-Size: users
+Size: 759
 MD5Sum: 77cf7b5193d42c6b0c14d2021b76ebaf
+SHA256sum: 3dd72b792d8d76b49513226a525d05d96489bc7874b1cc91fd2647be405d0830
 Description:  Kernel module for ANSI/IEEE 802.2 LLC support.
 
 Package: kmod-loop
@@ -3795,8 +4009,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9985
 Filename: kmod-loop_3.3.8-1_x86.ipk
-Size: users
+Size: 10711
 MD5Sum: 8d42a0fb3813c38e6d53591bdb164be3
+SHA256sum: 9d3ac54de3fc3c7a1a70338ef41058b7bbc133f3a6713a6470729eae6ee93ca5
 Description:  Kernel module for loopback device support
 
 Package: kmod-macvlan
@@ -3812,8 +4027,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5017
 Filename: kmod-macvlan_3.3.8-1_x86.ipk
-Size: users
+Size: 5823
 MD5Sum: f6fd9ace9ecd6fb8a0965a2aa0e76b7a
+SHA256sum: ba5034ca60cddba8e5e8c0bf7ff675f718fabc95b39795bf8943b79901b4b0f1
 Description:  A kernel module which allows one to create virtual interfaces that
  map packets to or from specific MAC addresses to a particular interface.
 
@@ -3830,8 +4046,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2909
 Filename: kmod-md-linear_3.3.8-1_x86.ipk
-Size: users
+Size: 3683
 MD5Sum: d78ecba7960516a69d2ebfcbd7c7c54b
+SHA256sum: f135b0a5f52f4e18547b4d9ba87627a962c2f6d7c8c754acbad4bd23afc49354
 Description:  RAID "Linear" or "Append" driver module (linear.ko)
 
 Package: kmod-md-mod
@@ -3847,8 +4064,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 54110
 Filename: kmod-md-mod_3.3.8-1_x86.ipk
-Size: users
+Size: 54918
 MD5Sum: 2acd671834e9c311123891a5131b51ff
+SHA256sum: 586a0284bff6f4d077ef82b0a515bb67bdf682b1b2debea92eabb07aba3ee154
 Description:  Kernel RAID md module (md-mod.ko).
  You will need to select at least one RAID level module below.
 
@@ -3865,8 +4083,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4376
 Filename: kmod-md-multipath_3.3.8-1_x86.ipk
-Size: users
+Size: 5138
 MD5Sum: 17f4ccc9854b5913edb80c23d9d2335a
+SHA256sum: bbf10b8dfcfc0ab624177c520816a2f65bcd2cee0157c02a68729c2a7e91216e
 Description:  Multipath driver module (multipath.ko)
 
 Package: kmod-md-raid0
@@ -3882,8 +4101,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5009
 Filename: kmod-md-raid0_3.3.8-1_x86.ipk
-Size: users
+Size: 5763
 MD5Sum: d136a8c6fbf50400414429d7899cc17c
+SHA256sum: 05a1878adf9b52e07b02e7f7b6a714c0fde8963ffff4193a84d7861145f95e0d
 Description:  RAID Level 0 (Striping) driver module (raid0.ko)
 
 Package: kmod-md-raid10
@@ -3899,8 +4119,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 19030
 Filename: kmod-md-raid10_3.3.8-1_x86.ipk
-Size: users
+Size: 19796
 MD5Sum: 9a774ad389d7529fad7d5c9f72b9ae63
+SHA256sum: db64bc44cd2147770618b6dd875fa030a5e6ea9d4d556e20280854031240a22d
 Description:  RAID Level 10 (Mirroring+Striping) driver module (raid10.ko)
 
 Package: kmod-md-raid1
@@ -3916,8 +4137,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16700
 Filename: kmod-md-raid1_3.3.8-1_x86.ipk
-Size: users
+Size: 17508
 MD5Sum: 55809da19a740f8b857a8b2599df2194
+SHA256sum: a805291ae7a0fefd88f524e8e5ab16e8f53d58cf4e79cdb5d396f61c6a1f904f
 Description:  RAID Level 1 (Mirroring) driver (raid1.ko)
 
 Package: kmod-md-raid456
@@ -3933,8 +4155,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 114681
 Filename: kmod-md-raid456_3.3.8-1_x86.ipk
-Size: users
+Size: 115134
 MD5Sum: f3ec89b8b2e97bb6422b8390810975f2
+SHA256sum: 36b5449a29c4dc681e5faa1e5f365aa1ec749617db57fd96826b3824add38c7d
 Description:  RAID Level 4,5,6 kernel module (raid456.ko)
  
  Includes the following modules required by
@@ -3960,26 +4183,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 73852
 Filename: kmod-misdn_3.3.8-1_x86.ipk
-Size: users
+Size: 74431
 MD5Sum: e2ec9d1f944297689ef0a26818a9bcd3
+SHA256sum: 1e8f74442a023d225873fe73539c9ed5ac4403f06fb47aa74623e0a9c4be9df6
 Description:  Modular ISDN driver support
-
-Package: kmod-mmc-spi
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-mmc, kmod-lib-crc-itu-t, kmod-lib-crc7
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 6013
-Filename: kmod-mmc-spi_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: bf42ac89b7605382331bd8fccd5373a2
-Description:  Kernel support for MMC/SD over SPI
 
 Package: kmod-mmc
 Version: 3.3.8-1
@@ -3994,9 +4201,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 45236
 Filename: kmod-mmc_3.3.8-1_x86.ipk
-Size: users
+Size: 46015
 MD5Sum: adc4904b59ad57027e5834f6da405a97
+SHA256sum: 7060b7ca8cba25b7fbccf37511e868ee5fa3b7af837e9b18db4c7ba1ec9dba77
 Description:  Kernel support for MMC/SD cards
+
+Package: kmod-mmc-spi
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-mmc, kmod-lib-crc-itu-t, kmod-lib-crc7
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 6013
+Filename: kmod-mmc-spi_3.3.8-1_x86.ipk
+Size: 6779
+MD5Sum: bf42ac89b7605382331bd8fccd5373a2
+SHA256sum: 1c89d934f720c43beea8b7e4f9f98bad8cc37a6a0d20ad355008c895f189dc4f
+Description:  Kernel support for MMC/SD over SPI
 
 Package: kmod-mppe
 Version: 3.3.8-1
@@ -4011,8 +4237,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4249
 Filename: kmod-mppe_3.3.8-1_x86.ipk
-Size: users
+Size: 5044
 MD5Sum: af21a649af7f4ff4efe25f67e2c0db25
+SHA256sum: 116bff423f1480d08c1659312d89c58e583fac7be27ae219ffef48c0e17feedf
 Description:  Kernel modules for Microsoft PPP compression/encryption
 
 Package: kmod-mtdtests
@@ -4028,8 +4255,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 21233
 Filename: kmod-mtdtests_3.3.8-1_x86.ipk
-Size: users
+Size: 21916
 MD5Sum: f7769af01428cc9254c37138026aab15
+SHA256sum: 46c776c2ac43be3054f2b9ef7d9d7a4bc97c260edd8bce755f1daca00485a8bf
 Description:  Kernel modules for MTD subsystem/driver testing.
 
 Package: kmod-mvsas
@@ -4045,8 +4273,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 23634
 Filename: kmod-mvsas_3.3.8-1_x86.ipk
-Size: users
+Size: 24436
 MD5Sum: 40cf8230cd3bc08b7f49f51e8e550521
+SHA256sum: 04c8eedd5cc82033cb80053e3dd88e9a5d185ff2e4b77e5c27ab9339bb195b9c
 Description:  Kernel support for the Marvell SAS SCSI adapters
 
 Package: kmod-nand
@@ -4062,8 +4291,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 21738
 Filename: kmod-nand_3.3.8-1_x86.ipk
-Size: users
+Size: 22489
 MD5Sum: 1b69f0a9cd39ae53d925f9ffbae45811
+SHA256sum: bfffd7412a002ab07071e3646abedfac2f79cac986ee852e2aea6fa3bf0a8329
 Description:  Kernel module for NAND support.
 
 Package: kmod-nandsim
@@ -4079,8 +4309,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13907
 Filename: kmod-nandsim_3.3.8-1_x86.ipk
-Size: users
+Size: 14584
 MD5Sum: cb8af7493ba4250a0e4123fee2342a3c
+SHA256sum: d1ac356397d7fc68190e0b1572c7cc62208430d084d9649309471492fec3462e
 Description:  Kernel module for NAND flash simulation.
 
 Package: kmod-natsemi
@@ -4096,8 +4327,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 14037
 Filename: kmod-natsemi_3.3.8-1_x86.ipk
-Size: users
+Size: 14800
 MD5Sum: 144fb7ef43d55766a8238595c640a438
+SHA256sum: ca1693489ff9b85c6281413847b5e71413e1f15b843b2d03680069d50d4ea50a
 Description:  Kernel modules for National Semiconductor DP8381x series PCI Ethernet
  adapters.
 
@@ -4114,8 +4346,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6539
 Filename: kmod-nbd_3.3.8-1_x86.ipk
-Size: users
+Size: 7351
 MD5Sum: c236c58ad59ceb377b15432c2d0464b4
+SHA256sum: 2b9bce67e1ed521eb2c14d3d62b1debe36d4a3a548abb31241a6b4701b346346
 Description:  Kernel module for network block device support
 
 Package: kmod-ne2k-pci
@@ -4131,8 +4364,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8459
 Filename: kmod-ne2k-pci_3.3.8-1_x86.ipk
-Size: users
+Size: 9256
 MD5Sum: c1b078510cb2acc44bcb020cbe0c5ba2
+SHA256sum: 91b43c3e68e2a6ddc384c06e0fdded17f1f9ba85d43118b7cd5794e7d5665ce5
 Description:  Kernel modules for NE2000 PCI Ethernet Adapter kernel.
 
 Package: kmod-netem
@@ -4148,8 +4382,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4571
 Filename: kmod-netem_3.3.8-1_x86.ipk
-Size: users
+Size: 5243
 MD5Sum: 015e042eb7a1b524c3cb7419a92c43d7
+SHA256sum: ae7469064a1b8ed054c0958a86c6406d67541bf15f9265322200dbc2e269346d
 Description:  Kernel modules for emulating the properties of wide area networks
 
 Package: kmod-nf-conntrack-netlink
@@ -4165,10 +4400,29 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7904
 Filename: kmod-nf-conntrack-netlink_3.3.8-1_x86.ipk
-Size: users
+Size: 8730
 MD5Sum: 766da6636b0b0f7e0382e679a06c63e0
+SHA256sum: ec8fe201aa7ca1a95316cc085e09bb9ddafd26815f368c6a14baf83be569cc51
 Description:  Kernel modules support for a netlink-based connection tracking 
  userspace interface
+
+Package: kmod-nfnetlink
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 2242
+Filename: kmod-nfnetlink_3.3.8-1_x86.ipk
+Size: 3015
+MD5Sum: bd06a4ba35d759943efeda414a0a9765
+SHA256sum: 2537a27742b0ede615b5a025a98a5e5e0058401cc789bbb72cd3e791ace0f5c7
+Description:  Kernel modules support for a netlink-based userspace interface
 
 Package: kmod-nfnetlink-log
 Version: 3.3.8-1
@@ -4183,8 +4437,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4879
 Filename: kmod-nfnetlink-log_3.3.8-1_x86.ipk
-Size: users
+Size: 5641
 MD5Sum: 5c6082ecd13641a1c11226d8c49afab9
+SHA256sum: 608699860b153aab6a851bd3f3ee8349ab2535288147311a73972f94dd0bf30d
 Description:  Kernel modules support for logging packets via NFNETLINK
 
 Package: kmod-nfnetlink-queue
@@ -4200,26 +4455,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5019
 Filename: kmod-nfnetlink-queue_3.3.8-1_x86.ipk
-Size: users
+Size: 5783
 MD5Sum: 57a245ddd04963a5dd5b2d863d74492d
+SHA256sum: 177f1c9c0a4362a4d2e0229d9f0d21e9315d4aaa4035475ef3b1e8d9f6edfe3e
 Description:  Kernel modules support for queueing packets via NFNETLINK
-
-Package: kmod-nfnetlink
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ipt-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 2242
-Filename: kmod-nfnetlink_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: bd06a4ba35d759943efeda414a0a9765
-Description:  Kernel modules support for a netlink-based userspace interface
 
 Package: kmod-nls-base
 Version: 3.3.8-1
@@ -4234,8 +4473,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3218
 Filename: kmod-nls-base_3.3.8-1_x86.ipk
-Size: users
+Size: 3995
 MD5Sum: 1f084fd723fe0f0257b55eae6f1cb7ff
+SHA256sum: 284139bda6490825c1346f896eff0fcf059394cfa45a24199c04ee760e5e3d0d
 Description:  Kernel module for NLS (Native Language Support)
 
 Package: kmod-nls-cp1250
@@ -4251,8 +4491,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2004
 Filename: kmod-nls-cp1250_3.3.8-1_x86.ipk
-Size: users
+Size: 2788
 MD5Sum: 9f751a46f15aea26bd18c929eccd444d
+SHA256sum: 5efc7e09f2ff0db278b2298d8df4a95080a69acb6e1b6e9f00d8b3d5e14fee18
 Description:  Kernel module for NLS Codepage 1250 (Eastern Europe)
 
 Package: kmod-nls-cp1251
@@ -4268,8 +4509,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1923
 Filename: kmod-nls-cp1251_3.3.8-1_x86.ipk
-Size: users
+Size: 2703
 MD5Sum: 00036dfcc8e9b034765f22a4fc748d16
+SHA256sum: 99a5b4d7b4eb94868a655b494825f0267d46ea1388b8d71b52a78972920780c6
 Description:  Kernel module for NLS Codepage 1251 (Russian)
 
 Package: kmod-nls-cp437
@@ -4285,8 +4527,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2061
 Filename: kmod-nls-cp437_3.3.8-1_x86.ipk
-Size: users
+Size: 2848
 MD5Sum: 50bc763f00aec211b2e4ffe6127a0572
+SHA256sum: e27cb5e489b990370c8b23ff291d873aa405bef3a1912643f767736adccce2a1
 Description:  Kernel module for NLS Codepage 437 (United States, Canada)
 
 Package: kmod-nls-cp775
@@ -4302,8 +4545,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2103
 Filename: kmod-nls-cp775_3.3.8-1_x86.ipk
-Size: users
+Size: 2884
 MD5Sum: c69ee6c00939ebad91a2be415ee11c4a
+SHA256sum: b82e94d415a17324e608167c2fd514fcabd2b5312bc7fa505e232912a06bce55
 Description:  Kernel module for NLS Codepage 775 (Baltic Rim)
 
 Package: kmod-nls-cp850
@@ -4319,8 +4563,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2025
 Filename: kmod-nls-cp850_3.3.8-1_x86.ipk
-Size: users
+Size: 2800
 MD5Sum: 01d21620e5914fd498b913d6d3b334e9
+SHA256sum: a8aa6be53660ecc30fce8061eb02182bbf5298e32cc3117bfc4fd921f9671996
 Description:  Kernel module for NLS Codepage 850 (Europe)
 
 Package: kmod-nls-cp852
@@ -4336,8 +4581,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2099
 Filename: kmod-nls-cp852_3.3.8-1_x86.ipk
-Size: users
+Size: 2875
 MD5Sum: 0877cc58fc2458a9b908139976eb3c45
+SHA256sum: 2b152201cdeb25770062558c7f5a27c7f8d2e4925852aad5c7f0ba1706cfbc5e
 Description:  Kernel module for NLS Codepage 852 (Europe)
 
 Package: kmod-nls-cp866
@@ -4353,8 +4599,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1934
 Filename: kmod-nls-cp866_3.3.8-1_x86.ipk
-Size: users
+Size: 2710
 MD5Sum: f19e7c85a37bf7598792cc094ca9c651
+SHA256sum: 50f1a036ee046a06831cd0e56d7f13e661c5b6c7b72cab7dad7dd5dc7ef77af7
 Description:  Kernel module for NLS Codepage 866 (Cyrillic)
 
 Package: kmod-nls-iso8859-13
@@ -4370,26 +4617,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1944
 Filename: kmod-nls-iso8859-13_3.3.8-1_x86.ipk
-Size: users
+Size: 2721
 MD5Sum: ebf52e56fd773dd0c340565564f6575f
+SHA256sum: 29d877a96ed25d4c4ad19659bdd818dbbd3cbd32959537d1059e493d1d6c5ae3
 Description:  Kernel module for NLS ISO 8859-13 (Latin 7; Baltic)
-
-Package: kmod-nls-iso8859-15
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-nls-base
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1806
-Filename: kmod-nls-iso8859-15_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 068408f50f0467947432e403119f6e01
-Description:  Kernel module for NLS ISO 8859-15 (Latin 9)
 
 Package: kmod-nls-iso8859-1
 Version: 3.3.8-1
@@ -4404,9 +4635,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1711
 Filename: kmod-nls-iso8859-1_3.3.8-1_x86.ipk
-Size: users
+Size: 2511
 MD5Sum: 8ccd9d6d2e7fa3ad60e774ef275315ed
+SHA256sum: 039f010432949f60c5dc6f305873db8714b52e815d9c64a002fc6a6a5c637bee
 Description:  Kernel module for NLS ISO 8859-1 (Latin 1)
+
+Package: kmod-nls-iso8859-15
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-nls-base
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1806
+Filename: kmod-nls-iso8859-15_3.3.8-1_x86.ipk
+Size: 2580
+MD5Sum: 068408f50f0467947432e403119f6e01
+SHA256sum: 795f7a75e42bd1a0a55a9149b9e628cff672f965e2669e47ce34c76cf63dde6a
+Description:  Kernel module for NLS ISO 8859-15 (Latin 9)
 
 Package: kmod-nls-iso8859-2
 Version: 3.3.8-1
@@ -4421,8 +4671,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1950
 Filename: kmod-nls-iso8859-2_3.3.8-1_x86.ipk
-Size: users
+Size: 2724
 MD5Sum: 403c42a40e8b3ceeac50743f980750d1
+SHA256sum: 6209d11c2b4da4f893036114ec0668788da5677b68b8ce9a6f19489c28b92130
 Description:  Kernel module for NLS ISO 8859-2 (Latin 2)
 
 Package: kmod-nls-koi8r
@@ -4438,8 +4689,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1963
 Filename: kmod-nls-koi8r_3.3.8-1_x86.ipk
-Size: users
+Size: 2731
 MD5Sum: 81eb80a90321836f1218ccff27c22d4d
+SHA256sum: 14e2ee9c049a3728fa3b9be3b78c2b1ce23e968e94852e439e74a253292693eb
 Description:  Kernel module for NLS KOI8-R (Russian)
 
 Package: kmod-nls-utf8
@@ -4455,8 +4707,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 968
 Filename: kmod-nls-utf8_3.3.8-1_x86.ipk
-Size: users
+Size: 1745
 MD5Sum: d6f449823a114b7d3242ffa6475dedb4
+SHA256sum: 50fb014df611e394ec8d8da0338183265cc97c7bcb18bbb63407342e2cab0baf
 Description:  Kernel module for NLS UTF-8
 
 Package: kmod-pata-cs5535
@@ -4472,8 +4725,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2015
 Filename: kmod-pata-cs5535_3.3.8-1_x86.ipk
-Size: users
+Size: 2790
 MD5Sum: ae374a19e0fd78d96acbb4f0c2a78e49
+SHA256sum: ebf45f47f0e31029ab9aaec7d4adbe6d895339e6bb490fbe2d4fa7b79533140b
 Description:  Kernel module for the NSC/AMD CS5535 companion chip
 
 Package: kmod-pata-cs5536
@@ -4489,8 +4743,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2443
 Filename: kmod-pata-cs5536_3.3.8-1_x86.ipk
-Size: users
+Size: 3225
 MD5Sum: 258c8911f875fabeb76d35312b3e602c
+SHA256sum: b670040edc0f431b0c3bc3f295b5d0b443be55b41203aae69ef2bb5f2acbafd6
 Description:  Kernel module for the AMD CS5536 Geode LX companion chip
 
 Package: kmod-pcnet32
@@ -4506,8 +4761,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16919
 Filename: kmod-pcnet32_3.3.8-1_x86.ipk
-Size: users
+Size: 17690
 MD5Sum: 58b4eaf36f8e49351bc88aa2d5756f82
+SHA256sum: 84a42bad8a9d4a6df10aed44e7bf3358a3b08bf3a4d1b6751a7e585c6977cff7
 Description:  Kernel modules for AMD PCnet32 Ethernet adapters.
 
 Package: kmod-pktgen
@@ -4523,26 +4779,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 19694
 Filename: kmod-pktgen_3.3.8-1_x86.ipk
-Size: users
+Size: 20458
 MD5Sum: 6d44f792e3ff1c66647895877b3fa2b4
+SHA256sum: b7746fbbf09a69d52447ceb2cdbff474609d4a4e0efaa382b6e8ea9146b43a71
 Description:  Kernel modules for the Network Packet Generator
-
-Package: kmod-ppp-synctty
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ppp
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 4266
-Filename: kmod-ppp-synctty_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 5d7246433f68a2b0971d7d04187db334
-Description:  Kernel modules for PPP sync tty support
 
 Package: kmod-ppp
 Version: 3.3.8-1
@@ -4557,8 +4797,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 20195
 Filename: kmod-ppp_3.3.8-1_x86.ipk
-Size: users
+Size: 20990
 MD5Sum: 90311b5b6c3237e9dd3df08f0de097d0
+SHA256sum: b77b5271c459d1005eeeef6ad47d07857f7ed482ec8bd22d789b567055353e54
 Description:  Kernel modules for PPP support
 
 Package: kmod-pppoa
@@ -4574,8 +4815,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2754
 Filename: kmod-pppoa_3.3.8-1_x86.ipk
-Size: users
+Size: 3519
 MD5Sum: 692b331fbd1295362d546203c0281ee7
+SHA256sum: b0c8a7c5922408eb55f89ff2e1dafb7e14948368f87a70ecbb7b333136ce6e2d
 Description:  Kernel modules for PPPoA (PPP over ATM) support
 
 Package: kmod-pppoe
@@ -4591,8 +4833,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5866
 Filename: kmod-pppoe_3.3.8-1_x86.ipk
-Size: users
+Size: 6656
 MD5Sum: d01bd0a7f09a67533d2c80823bfe6552
+SHA256sum: be538f6aed0fd975567c2baed08aeabae5bd626d0ef4820132aa31ef71a904e7
 Description:  Kernel module for PPPoE (PPP over Ethernet) support
 
 Package: kmod-pppol2tp
@@ -4608,8 +4851,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8592
 Filename: kmod-pppol2tp_3.3.8-1_x86.ipk
-Size: users
+Size: 9386
 MD5Sum: 78af8a6d43314f3a7c5dff02a6d87cc5
+SHA256sum: 8725f4530f5028f0b9ae20ea0dd3a6beda0fb0759dc81d670a2e809ee4b9e735
 Description:  Kernel modules for PPPoL2TP (PPP over L2TP) support
 
 Package: kmod-pppox
@@ -4625,9 +4869,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1570
 Filename: kmod-pppox_3.3.8-1_x86.ipk
-Size: users
+Size: 2359
 MD5Sum: 604ce9fda204000f65af45375fb3de71
+SHA256sum: ef40a3bc07aff9292a3a184cfbfc8b93ad3281df9f6f1ea5bd1626cf39f08188
 Description:  Kernel helper module for PPPoE and PPTP support
+
+Package: kmod-ppp-synctty
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-ppp
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 4266
+Filename: kmod-ppp-synctty_3.3.8-1_x86.ipk
+Size: 5039
+MD5Sum: 5d7246433f68a2b0971d7d04187db334
+SHA256sum: 546811014880f3ec46f12aa18f9806d129bcbce45c65d7789023f38734a701e0
+Description:  Kernel modules for PPP sync tty support
 
 Package: kmod-pptp
 Version: 3.3.8-1
@@ -4642,26 +4905,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4678
 Filename: kmod-pptp_3.3.8-1_x86.ipk
-Size: users
+Size: 5433
 MD5Sum: 128e823067626d5016c4a88a934b709d
+SHA256sum: 367c00ed037e9e24b8a70e22452ac46607bc7baf7bfbd7702f148a4bfc45def3
 Description:  PPtP support
-
-Package: kmod-pwm-gpio
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-pwm
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 1078
-Filename: kmod-pwm-gpio_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 6c812eb3459c8ffa8347736ded552ed6
-Description:  Kernel module to models a single-channel PWM device using a timer and a GPIO pin
 
 Package: kmod-pwm
 Version: 3.3.8-1
@@ -4676,9 +4923,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4127
 Filename: kmod-pwm_3.3.8-1_x86.ipk
-Size: users
+Size: 4878
 MD5Sum: bdd6a04d953c7d2211de274d2b77a08d
+SHA256sum: aa8e4c6b089b2fb09b42461321486c566f02732f93da2a642108a1b5d326a006
 Description:  Kernel module that implement a generic PWM API
+
+Package: kmod-pwm-gpio
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-pwm
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 1078
+Filename: kmod-pwm-gpio_3.3.8-1_x86.ipk
+Size: 1885
+MD5Sum: 6c812eb3459c8ffa8347736ded552ed6
+SHA256sum: 9b85c82a2ce43b07ce5ff934b8059856af07ef30a0aefc6b092228a596a1c851
+Description:  Kernel module to models a single-channel PWM device using a timer and a GPIO pin
 
 Package: kmod-r6040
 Version: 3.3.8-1
@@ -4693,8 +4959,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7422
 Filename: kmod-r6040_3.3.8-1_x86.ipk
-Size: users
+Size: 8218
 MD5Sum: d774f7eabd46c46f83640a67556511f7
+SHA256sum: c2814abba1360237cf6f9d0dba1753b41ae90b4b64081d11cda084ddc1f0a102
 Description:  Kernel modules for RDC Fast-Ethernet adapters.
 
 Package: kmod-r8169
@@ -4710,8 +4977,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 21071
 Filename: kmod-r8169_3.3.8-1_x86.ipk
-Size: users
+Size: 21856
 MD5Sum: 5c1db24a485f739fb7476c822091dda5
+SHA256sum: 8a4edf8a44d1da73a9e537a687ecd5086aafa90ef9770b406f0d47753a48fffe
 Description:  Kernel modules for RealTek RTL-8169 PCI Gigabit Ethernet adapters.
 
 Package: kmod-regmap
@@ -4727,8 +4995,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1405
 Filename: kmod-regmap_3.3.8-1_x86.ipk
-Size: users
+Size: 2188
 MD5Sum: 8705b3ee14db2693c88e258dccc42e2d
+SHA256sum: 90c532a183f88125466393b3d9fc05116c68049db7bec4014d7fc07192f5076a
 Description:  Generic register map support
 
 Package: kmod-rfkill
@@ -4744,8 +5013,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7741
 Filename: kmod-rfkill_3.3.8-1_x86.ipk
-Size: users
+Size: 8575
 MD5Sum: bd1cd5e40f20ea97e200af4a8e1724e5
+SHA256sum: 2f103df9ef71637944c61cdbee43fd4a1b68d64859d4fb15e098cfeec7455ff3
 Description:  Say Y here if you want to have control over RF switches
  found on many WiFi and Bluetooth cards.
 
@@ -4762,8 +5032,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2609
 Filename: kmod-rtc-pcf2123_3.3.8-1_x86.ipk
-Size: users
+Size: 3381
 MD5Sum: 680c3c34e66172e6805baffef8284866
+SHA256sum: 84d0e44200294963f211c9e4297f9d7996ab558cbe55c7c0144977460c0764c4
 Description:  Kernel module for Philips PCF2123 RTC chip.
 
 Package: kmod-rtc-pcf8563
@@ -4779,8 +5050,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2090
 Filename: kmod-rtc-pcf8563_3.3.8-1_x86.ipk
-Size: users
+Size: 2911
 MD5Sum: 6de2f51d1927b7975f48623129e21f24
+SHA256sum: 8ff0427545252810b6cf628218dd6f4bea9abd9056e22aafa68611d98562f94e
 Description:  Kernel module for Philips PCF8563 RTC chip.
  The Epson RTC8564 should work as well.
 
@@ -4797,9 +5069,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1781
 Filename: kmod-rtc-pt7c4338_3.3.8-1_x86.ipk
-Size: users
+Size: 2580
 MD5Sum: b16e64d7ad03d627dab396ba3a85df5a
+SHA256sum: 755b4b9faddd115711242b74e6bbfccdf846ccd150653b20ec2d9df61d44607e
 Description:  Kernel module for Pericom PT7C4338 i2c RTC chip.
+
+Package: kmod-sched
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-sched-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 41777
+Filename: kmod-sched_3.3.8-1_x86.ipk
+Size: 42599
+MD5Sum: a8b3d10b002777cf4e05acfb10302e0c
+SHA256sum: 2c3ffe3a1a31154f6fb843c73b641b747d7e1e1d4a6d0a0ee4999b43a2a79979
+Description:  Extra kernel schedulers modules for IP traffic
 
 Package: kmod-sched-connmark
 Version: 3.3.8-1
@@ -4814,8 +5105,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1185
 Filename: kmod-sched-connmark_3.3.8-1_x86.ipk
-Size: users
+Size: 1880
 MD5Sum: 7db16b8409f2715e59241d04d91afc01
+SHA256sum: 75e1d053e679a960dcbde2a634b3d966b8d14379da810e69a50bba027bea6a4b
 Description:  Traffic shaper conntrack mark support
 
 Package: kmod-sched-core
@@ -4831,8 +5123,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 32955
 Filename: kmod-sched-core_3.3.8-1_x86.ipk
-Size: users
+Size: 33690
 MD5Sum: 5b4f994d3457e5424cd081fea3d08564
+SHA256sum: 11bceaa33e7c7028474fca6f4f59569f56320efe82fd498d53553e9fcae38356
 Description:  Core kernel scheduler support for IP traffic
 
 Package: kmod-sched-esfq
@@ -4848,26 +5141,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4313
 Filename: kmod-sched-esfq_3.3.8-1_x86.ipk
-Size: users
+Size: 4961
 MD5Sum: 5a6d1bb41fb8ed94aef8f0fe846ee038
+SHA256sum: 56bbf8774a3ab065e41521186adecbe66e889c4494138bf52e8b1836d41e35a6
 Description:  Traffic shaper ESFQ support
-
-Package: kmod-sched
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-sched-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 41777
-Filename: kmod-sched_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: a8b3d10b002777cf4e05acfb10302e0c
-Description:  Extra kernel schedulers modules for IP traffic
 
 Package: kmod-scsi-cdrom
 Version: 3.3.8-1
@@ -4882,8 +5159,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 24221
 Filename: kmod-scsi-cdrom_3.3.8-1_x86.ipk
-Size: users
+Size: 24948
 MD5Sum: 0a230b7ba3ad5a54fabbf59df7ee4c95
+SHA256sum: 846cdc33d8e57c40736ad331d6519fc3b9fb693bdaa94d03296bb126ed01b517
 Description:  Kernel support for CD / DVD drives
 
 Package: kmod-scsi-core
@@ -4899,8 +5177,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 104
 Filename: kmod-scsi-core_3.3.8-1_x86.ipk
-Size: users
+Size: 737
 MD5Sum: fb42288068d184152751116bf68ba8d5
+SHA256sum: 04b174b53c785da8cb15c06daf6840cba99d2d0294c7b0945b24c8166ca6a1ef
 Description:  SCSI device support
 
 Package: kmod-scsi-generic
@@ -4916,8 +5195,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 14095
 Filename: kmod-scsi-generic_3.3.8-1_x86.ipk
-Size: users
+Size: 14830
 MD5Sum: da6f942949534cd8d13a69d715709e32
+SHA256sum: 0ad8279e94e8bc55fdb720f9aeca3908f1db13707bafec13cac3f0d4b0af9926
 Description:  Kernel support for SCSI generic
 
 Package: kmod-sctp
@@ -4933,8 +5213,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 83029
 Filename: kmod-sctp_3.3.8-1_x86.ipk
-Size: users
+Size: 83416
 MD5Sum: 8f9e564646c4e66fa0bbdaf92b25d9c0
+SHA256sum: 6fc4732f7e8186fec88862169dd848c62c97fafe7b4f6b6c850902fcdf4aa7a1
 Description:  Kernel modules for SCTP protocol support
 
 Package: kmod-serial-8250
@@ -4950,8 +5231,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-serial-8250_3.3.8-1_x86.ipk
-Size: users
+Size: 757
 MD5Sum: 76ba7d9d78d8c9156c6a9ec3487be947
+SHA256sum: 335e49477dab823b54b876f60f0a43151c2c5c577475da1bbaf15bcd6891803b
 Description:  Kernel module for 8250 UART based serial ports.
 
 Package: kmod-siit
@@ -4967,8 +5249,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4979
 Filename: kmod-siit_3.3.8+1.1-2_x86.ipk
-Size: users
+Size: 5734
 MD5Sum: 6b4e7abb1c9d17172330810e6eab7c04
+SHA256sum: 0e8667cef882f9a8e2d6b143187a9e7b991667b4354046d07074496e944a47b7
 Description:  Stateless IP ICMP Translation Algorithm
 
 Package: kmod-sis190
@@ -4984,8 +5267,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9888
 Filename: kmod-sis190_3.3.8-1_x86.ipk
-Size: users
+Size: 10671
 MD5Sum: afd22066f4283f00520f04b51dbd2e40
+SHA256sum: ba469c1a781c086da71051580384545d860ecb5abf2e9af07a4a8e69d3d2a65f
 Description:  SiS 190 Fast/Gigabit Ethernet support
 
 Package: kmod-sis900
@@ -5001,8 +5285,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10949
 Filename: kmod-sis900_3.3.8-1_x86.ipk
-Size: users
+Size: 11751
 MD5Sum: 98d7e48d511ba9160ec1afcc2b073097
+SHA256sum: a46ca1f2b84f0a5f3f134fa51555b5c9167c50fc4945169194f78f8989d176eb
 Description:  Kernel modules for Sis 900 Ethernet adapters.
 
 Package: kmod-sit
@@ -5018,8 +5303,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7071
 Filename: kmod-sit_3.3.8-1_x86.ipk
-Size: users
+Size: 7883
 MD5Sum: 3918d104c0e73676da1289fe94b79510
+SHA256sum: ed19ce6f1dcbb0542fb4d5323bd499d3b64fa6ea0f67ce3a3923dbfcbb6a4455
 Description:  Kernel modules for IPv6-in-IPv4 tunnelling
 
 Package: kmod-skge
@@ -5035,8 +5321,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16661
 Filename: kmod-skge_3.3.8-1_x86.ipk
-Size: users
+Size: 17406
 MD5Sum: 0e71bf16c4041fe44a4c7962fe6b89fb
+SHA256sum: 26f7541f306163f51f044ab61592271feaa757e9f42f553e616284618ac55029
 Description:  SysKonnect Yukon support
 
 Package: kmod-sky2
@@ -5052,8 +5339,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 24841
 Filename: kmod-sky2_3.3.8-1_x86.ipk
-Size: users
+Size: 25674
 MD5Sum: 594bb4fe29f9c67096bcbccd97ab1132
+SHA256sum: 065ec08813e5e8c1d02090fb5ee4249e9ceb5d3263e8babf0abc5dd76f0f2fc9
 Description:  This driver supports Gigabit Ethernet adapters based on the
  Marvell Yukon 2 chipset:
  Marvell 88E8021/88E8022/88E8035/88E8036/88E8038/88E8050/88E8052/
@@ -5075,8 +5363,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6671
 Filename: kmod-slip_3.3.8-1_x86.ipk
-Size: users
+Size: 7485
 MD5Sum: 026fe00cd3e771a3ee52ad70a8fda31e
+SHA256sum: 885deee572f2e2a481af69b5f031865574e1f5ef40b9c86b190f727c57967aae
 Description:  Kernel modules for SLIP support
 
 Package: kmod-softdog
@@ -5092,8 +5381,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2601
 Filename: kmod-softdog_3.3.8-1_x86.ipk
-Size: users
+Size: 3342
 MD5Sum: 1ffa77d4a71789c0b50508c047782f80
+SHA256sum: cbd102f1c8c545e577c2a3bb7313ef3d614b9cb9896e4a65fbb538bb1e457467
 Description:  Software watchdog driver
 
 Package: kmod-solos-pci
@@ -5109,8 +5399,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11431
 Filename: kmod-solos-pci_3.3.8-1_x86.ipk
-Size: users
+Size: 12176
 MD5Sum: 49ffe0d4f149ab954706a4b7a3b27274
+SHA256sum: fc58021a0525b1ef85b4d25398f351583986fe313d3bc76caed5fcb0cc06dcda
 Description:  Kernel module for Traverse Technologies' Solos PCI cards
  and Geos ADSL2+ x86 motherboard.
 
@@ -5127,8 +5418,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 110567
 Filename: kmod-sound-core_3.3.8-1_x86.ipk
-Size: users
+Size: 111460
 MD5Sum: dc3806bed8fe44888048fc8c6ede1b28
+SHA256sum: a05628e6026c42e2a0bd3ba4bd081aa80354734033f204628a01cd04e0f47164
 Description:  Kernel modules for sound support
 
 Package: kmod-sound-cs5535audio
@@ -5144,8 +5436,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5298
 Filename: kmod-sound-cs5535audio_3.3.8-1_x86.ipk
-Size: users
+Size: 6088
 MD5Sum: 18b7c7374d6f9f166557055386cf7d57
+SHA256sum: 52e02ebd63a2a25d119414727b8a3817bd9b2e8c9be2c49b5dce87ff44e1c29e
 Description:  support for the integrated AC97 sound device on olpc
 
 Package: kmod-sound-i8x0
@@ -5161,8 +5454,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13988
 Filename: kmod-sound-i8x0_3.3.8-1_x86.ipk
-Size: users
+Size: 14844
 MD5Sum: 607210d0d5394d9ae0f13cad91c723ca
+SHA256sum: 90b5882499796b6137720f4dcf8abe4da1a0a53130b9a0e447e0ca3bda0d4cd2
 Description:  support for the integrated AC97 sound device on motherboards
  with Intel/SiS/nVidia/AMD chipsets, or ALi chipsets using 
  the M5455 Audio Controller.
@@ -5180,8 +5474,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 27862
 Filename: kmod-sound-seq_3.3.8-1_x86.ipk
-Size: users
+Size: 28654
 MD5Sum: d39c6424b221279c73a3a17ead1ce525
+SHA256sum: 7899ec01a8675409a50eb5f31cf743759f130c237b44df985dd86417f5540481
 Description:  Kernel modules for sequencer support
 
 Package: kmod-sound-soc-core
@@ -5197,8 +5492,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 29874
 Filename: kmod-sound-soc-core_3.3.8-1_x86.ipk
-Size: users
+Size: 30670
 MD5Sum: 15d11d15e5a845e5f6f3c6f53641fa99
+SHA256sum: df841f3690a5e0fc5e212413ee360172d5086beaa0b8dc9af1811787af5bbb03
 Description:  SoC sound support
 
 Package: kmod-spi-bitbang
@@ -5214,8 +5510,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2509
 Filename: kmod-spi-bitbang_3.3.8-1_x86.ipk
-Size: users
+Size: 3299
 MD5Sum: 7a6103b77d66804e03e0be78e8217868
+SHA256sum: 4db391861f032d33d1f0e9abfa757e0a723c6d5dc783633a263057a847d6b6cf
 Description:  This package contains the SPI bitbanging library
 
 Package: kmod-spi-dev
@@ -5231,8 +5528,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3987
 Filename: kmod-spi-dev_3.3.8-1_x86.ipk
-Size: users
+Size: 4748
 MD5Sum: b2bb824d77572d617aa9d354f815a154
+SHA256sum: 897c11154bfda3097e59c39375371636a9e892f528e0e680a234511b45864a5e
 Description:  This package contains the user mode SPI device driver
 
 Package: kmod-spi-ks8995
@@ -5248,8 +5546,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2270
 Filename: kmod-spi-ks8995_3.3.8-1_x86.ipk
-Size: users
+Size: 3027
 MD5Sum: 89435461912022c552e9956b89ef392f
+SHA256sum: fece6f99a6e5e618151ffd0378883d3ac8aa3d208cd3705cb9ae55ff864081cb
 Description:  Kernel module for Micrel/Kendin KS8995 ethernet switch
 
 Package: kmod-ssb
@@ -5265,8 +5564,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16861
 Filename: kmod-ssb_3.3.8-1_x86.ipk
-Size: users
+Size: 17621
 MD5Sum: 32da8a88e75c479429618cfb04756495
+SHA256sum: dafcb6e45003ecd3297ba0f575f797418fbd6d5c9818301a232896906088c666
 Description:  Silicon Sonics Backplane glue code.
 
 Package: kmod-stp
@@ -5282,8 +5582,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 105
 Filename: kmod-stp_3.3.8-1_x86.ipk
-Size: users
+Size: 767
 MD5Sum: 3faee390274b652f8a82d8524ba12226
+SHA256sum: 3c909b7e4af5483ae396b6eba015c224a4ebb937f8e853a355607e0ba79cd753
 Description:  Kernel module for Ethernet Spanning Tree Protocol support.
 
 Package: kmod-swconfig
@@ -5299,8 +5600,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5818
 Filename: kmod-swconfig_3.3.8-1_x86.ipk
-Size: users
+Size: 6596
 MD5Sum: d1f082f3d5b56864be604e70227252d5
+SHA256sum: 2bec54ebcb311dd7b847125514a5a4d817a55538c61793256971b8764ae4e9c6
 Description:  Switch configuration API module
 
 Package: kmod-switch-ip17xx
@@ -5316,8 +5618,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5818
 Filename: kmod-switch-ip17xx_3.3.8-1_x86.ipk
-Size: users
+Size: 6601
 MD5Sum: 40b88e6c82eef7d05e18d0633dbe2bf7
+SHA256sum: 9f000b61193e78fb35f2e8a2e20dc1d78d4b9f91aac8e85fec83c64faa6f4d1b
 Description:  IC+ IP175C/IP178C switch support
 
 Package: kmod-tg3
@@ -5333,8 +5636,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 62604
 Filename: kmod-tg3_3.3.8-1_x86.ipk
-Size: users
+Size: 63457
 MD5Sum: 6d0e90f4e5b9dc5edfd7ad48f3264f97
+SHA256sum: b14460242b918f871f963670dce7497be1bf69b3020b59fdc7dad341a4471429
 Description:  Kernel modules for Broadcom Tigon3 Gigabit Ethernet adapters.
 
 Package: kmod-trelay
@@ -5350,8 +5654,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2567
 Filename: kmod-trelay_3.3.8+0.1-1_x86.ipk
-Size: users
+Size: 3494
 MD5Sum: 78d56bd9b295fac72d8691ad4dee828b
+SHA256sum: 94c155617efd926f991c48fae5821ff05958292724de02f1f5d4f9f2f368785a
 Description:  trelay relays ethernet packets between two devices (similar to a bridge), but
  without any MAC address checks. This makes it possible to bridge client mode
  or ad-hoc mode wifi devices to ethernet VLANs, assuming the remote end uses
@@ -5371,8 +5676,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 85759
 Filename: kmod-tulip_3.3.8-1_x86.ipk
-Size: users
+Size: 86727
 MD5Sum: c72755887a3e86cf528746c6bfa5da57
+SHA256sum: bdb477bc86956d93275646edf92a8b4535c499ecadeb1d406a16f674b693100d
 Description:  Kernel modules for the Tulip family of network cards,
  including DECchip Tulip, DIGITAL EtherWORKS, Winbond W89c840,
  Davicom DM910x/DM980x and ULi M526x controller support.
@@ -5390,9 +5696,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8195
 Filename: kmod-tun_3.3.8-1_x86.ipk
-Size: users
+Size: 8963
 MD5Sum: af4d69109bf35c78afd4bb6355a7659d
+SHA256sum: 2379e3264b70936236592484193c8d7fbc0269b56da62cb188190dbdd0b74a05
 Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-usb2
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 23289
+Filename: kmod-usb2_3.3.8-1_x86.ipk
+Size: 24075
+MD5Sum: aa0bcd12d76c7fd5c2587fab0e3d0354
+SHA256sum: bb6a626644811277fe07335c4a1ec8bb7d935223c1301b647928df90a25a7b3d
+Description:  Kernel support for USB2 (EHCI) controllers
 
 Package: kmod-usb-acm
 Version: 3.3.8-1
@@ -5407,9 +5732,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8812
 Filename: kmod-usb-acm_3.3.8-1_x86.ipk
-Size: users
+Size: 9631
 MD5Sum: 7d6e6fc6e09f8b071d087bfc9e7c0453
+SHA256sum: 8adebcb5cfb062d03c9b9374c24be20e2e34036692c79b97924318cb03d35261
 Description:  Kernel support for USB ACM devices (modems/isdn controllers)
+
+Package: kmod-usb-atm
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-atm, kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8249
+Filename: kmod-usb-atm_3.3.8-1_x86.ipk
+Size: 9028
+MD5Sum: ac30880327ac4c73815ba57bddda8459
+SHA256sum: d5bec2f9b7df9501fa5b50aa1c49eb3fa0d935e56433b0515fcc7d1686a4ba2a
+Description:  Kernel support for USB DSL modems
 
 Package: kmod-usb-atm-cxacru
 Version: 3.3.8-1
@@ -5424,8 +5768,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8990
 Filename: kmod-usb-atm-cxacru_3.3.8-1_x86.ipk
-Size: users
+Size: 9797
 MD5Sum: 4fd8f98006405be99d694707997ecbe9
+SHA256sum: 3e7d835b994b438451dc37b10dcec7b1a0ed6121536270f54af91359dfe8eaa5
 Description:  Kernel support for cxacru based USB ADSL modems
 
 Package: kmod-usb-atm-speedtouch
@@ -5441,8 +5786,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6006
 Filename: kmod-usb-atm-speedtouch_3.3.8-1_x86.ipk
-Size: users
+Size: 6799
 MD5Sum: c68a6c945536367e6b9400582a867bdc
+SHA256sum: 7e77118e238159cd98444d1d316cf46322a9cd0c3b7f8293b3b073e6073803d3
 Description:  Kernel support for SpeedTouch USB ADSL modems
 
 Package: kmod-usb-atm-ueagle
@@ -5458,26 +5804,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12214
 Filename: kmod-usb-atm-ueagle_3.3.8-1_x86.ipk
-Size: users
+Size: 13016
 MD5Sum: df667b9d807e314854cef3a92195ae9f
+SHA256sum: 8b8297d2e9f08bb34d285eb7abb244925bb11391f4fb23e80b2310f9d0a45c9e
 Description:  Kernel support for Eagle 8051 based USB ADSL modems
-
-Package: kmod-usb-atm
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-atm, kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8249
-Filename: kmod-usb-atm_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: ac30880327ac4c73815ba57bddda8459
-Description:  Kernel support for USB DSL modems
 
 Package: kmod-usb-audio
 Version: 3.3.8-1
@@ -5492,8 +5822,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 48568
 Filename: kmod-usb-audio_3.3.8-1_x86.ipk
-Size: users
+Size: 49246
 MD5Sum: 2afa40f1ca365b15913fa2c85c104833
+SHA256sum: 2214102f4e482fe27da54e7b09c711c200631ad00460e62c88736439dfef1bfd
 Description:  Kernel support for USB audio devices
 
 Package: kmod-usb-cm109
@@ -5509,8 +5840,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5488
 Filename: kmod-usb-cm109_3.3.8-1_x86.ipk
-Size: users
+Size: 6037
 MD5Sum: 3f80db49bb3f0dce3658ce7377bd8c36
+SHA256sum: d15771c41e0b0b79952cfbd8b012e47a0caf5ecd1d838869808441aa8ea93888
 Description:  Kernel support for CM109 VOIP phone
 
 Package: kmod-usb-core
@@ -5526,8 +5858,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 63647
 Filename: kmod-usb-core_3.3.8-1_x86.ipk
-Size: users
+Size: 64497
 MD5Sum: a9c8bf72ec0b11e308d7d7ecb9a39940
+SHA256sum: 09d86bfe28d604b1373157e8b3c78cc3db6d0f0c446f83fc7fcce4a0d60e0fef
 Description:  Kernel support for USB
 
 Package: kmod-usb-hid
@@ -5543,9 +5876,82 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15045
 Filename: kmod-usb-hid_3.3.8-1_x86.ipk
-Size: users
+Size: 15838
 MD5Sum: de374aaf23318e01c2aa23cf4e213bfa
+SHA256sum: e5c411e1b855aabdd5e5c6c7d9a701788a92d1efcbe1c198297ba97ff8481192
 Description:  Kernel support for USB HID devices such as keyboards and mice
+
+Package: kmod-usbip
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 3687
+Filename: kmod-usbip_3.3.8-1_x86.ipk
+Size: 4429
+MD5Sum: 06afeb6f26ae88f64a6dcefefd9927f0
+SHA256sum: 60314a0c843207fd36085d3cbe1eff73dcdc9e18b3f63905322e8a48d219783b
+Description:  USB-over-IP kernel support
+
+Package: kmod-usbip-client
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usbip, kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8636
+Filename: kmod-usbip-client_3.3.8-1_x86.ipk
+Size: 9429
+MD5Sum: cf8e301ea1956548e70c43a9d75d95b2
+SHA256sum: e9a27c61c47d60c89703f9523ddafb4f5f65a49e4d3861d725c9e8a4d52d5a4d
+Description:  USB-over-IP client driver
+
+Package: kmod-usbip-server
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usbip, kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8249
+Filename: kmod-usbip-server_3.3.8-1_x86.ipk
+Size: 9040
+MD5Sum: 2f745c533b1d2ef9e3516ba500f7025f
+SHA256sum: b346f2a0bd1d5088816fc53504f1faeadb53d8f257a8e1f86688e0f4221e9cc6
+Description:  USB-over-IP host driver
+
+Package: kmod-usb-net
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 8906
+Filename: kmod-usb-net_3.3.8-1_x86.ipk
+Size: 9700
+MD5Sum: 59fc8836efbb67ba9188422ddc054dd2
+SHA256sum: 5934139401ce04d7611746d8b1016dd4d453a874101d22da8ed80a1d1601eb2b
+Description:  Kernel modules for USB-to-Ethernet convertors
 
 Package: kmod-usb-net-asix
 Version: 3.3.8-1
@@ -5560,8 +5966,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7328
 Filename: kmod-usb-net-asix_3.3.8-1_x86.ipk
-Size: users
+Size: 8141
 MD5Sum: 30cf6ca65b3c854708f0027609f1008d
+SHA256sum: 263c25753092c1829ceeab21df8fd0dd412d679e60957320ebd539df3f4510cc
 Description:  Kernel module for USB-to-Ethernet Asix convertors
 
 Package: kmod-usb-net-cdc-ether
@@ -5577,8 +5984,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3116
 Filename: kmod-usb-net-cdc-ether_3.3.8-1_x86.ipk
-Size: users
+Size: 3886
 MD5Sum: 13982893b8edc956fdc8cac0b6945e8e
+SHA256sum: afb22f65929f161aa41b1244258dab273a756370efc3a31c59159abb1b5a4b66
 Description:  Kernel support for USB CDC Ethernet devices
 
 Package: kmod-usb-net-dm9601-ether
@@ -5594,8 +6002,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4376
 Filename: kmod-usb-net-dm9601-ether_3.3.8-1_x86.ipk
-Size: users
+Size: 5151
 MD5Sum: 79e5249280c60fc77bf34ee870eff461
+SHA256sum: 34dc051af0f7662f860188e12e5acf04db3f87dfd8285d127029f3ecf96e42f3
 Description:  Kernel support for USB DM9601 devices
 
 Package: kmod-usb-net-hso
@@ -5611,8 +6020,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15556
 Filename: kmod-usb-net-hso_3.3.8-1_x86.ipk
-Size: users
+Size: 16297
 MD5Sum: 21aca8d49bdbc2e2bafd85a3b53d6f57
+SHA256sum: 5a0229b86945bb3908ad82bc582603a7cac8d3276e088698cbcf60e057e20bd5
 Description:  Kernel module for Option USB High Speed Mobile Devices
 
 Package: kmod-usb-net-ipheth
@@ -5628,8 +6038,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3875
 Filename: kmod-usb-net-ipheth_3.3.8-1_x86.ipk
-Size: users
+Size: 4659
 MD5Sum: 07ef039b450457e7177ba347f3bd2c14
+SHA256sum: fde9f464902470703bd2f26f5244ebc200217ca34f9a196ee5e4b314430568fc
 Description:  Kernel support for Apple iPhone USB Ethernet driver
 
 Package: kmod-usb-net-kaweth
@@ -5645,8 +6056,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6647
 Filename: kmod-usb-net-kaweth_3.3.8-1_x86.ipk
-Size: users
+Size: 7461
 MD5Sum: 2bf50719b87d26674389ed45424a81a7
+SHA256sum: 5c4e77d99d2e5b40b85fe310dd481e4e7b5e185d381c283c05563fb59217d225
 Description:  Kernel module for USB-to-Ethernet Kaweth convertors
 
 Package: kmod-usb-net-mcs7830
@@ -5662,8 +6074,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3714
 Filename: kmod-usb-net-mcs7830_3.3.8-1_x86.ipk
-Size: users
+Size: 4484
 MD5Sum: e47dc04131bc920913b209fc046326c3
+SHA256sum: 2a1a38a94a6daba432cbca644119f48ce1f1aa6b4fb306208017145156827351
 Description:  Kernel module for USB-to-Ethernet MCS7830 convertors
 
 Package: kmod-usb-net-pegasus
@@ -5679,8 +6092,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10641
 Filename: kmod-usb-net-pegasus_3.3.8-1_x86.ipk
-Size: users
+Size: 11390
 MD5Sum: 7ef6da54d321f5270dab8c8658d1c9cb
+SHA256sum: eac596669dfae4b7a4dec252e0aa064bf999c94d61e273c515fffadc835e33ec
 Description:  Kernel module for USB-to-Ethernet Pegasus convertors
 
 Package: kmod-usb-net-rndis
@@ -5696,8 +6110,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4026
 Filename: kmod-usb-net-rndis_3.3.8-1_x86.ipk
-Size: users
+Size: 4797
 MD5Sum: 1284d4ae9d1c99be345434e62b8479f8
+SHA256sum: edaa0d0cfcbe2073f2dba4e9069bf88c76d8aa165654ada21570ee6f3ac6aab4
 Description:  Kernel support for RNDIS connections
 
 Package: kmod-usb-net-sierrawireless
@@ -5713,26 +6128,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4718
 Filename: kmod-usb-net-sierrawireless_3.3.8-1_x86.ipk
-Size: users
+Size: 5492
 MD5Sum: fd30c20869934d27cb37ecb1a0610591
+SHA256sum: 1c0438f1835ded289c1df0ffcbe666d4a8c4b5c0e8f585e6fcb6a82a1facffb2
 Description:  Kernel support for Sierra Wireless devices
-
-Package: kmod-usb-net
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8906
-Filename: kmod-usb-net_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 59fc8836efbb67ba9188422ddc054dd2
-Description:  Kernel modules for USB-to-Ethernet convertors
 
 Package: kmod-usb-ohci
 Version: 3.3.8-1
@@ -5747,8 +6146,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12575
 Filename: kmod-usb-ohci_3.3.8-1_x86.ipk
-Size: users
+Size: 13376
 MD5Sum: 48ddb378f2a2a4508122da8a5750f0ec
+SHA256sum: e97049f03856907e6d4bc58fbbfecf4a9c69522056c155989b4be57ef483e133
 Description:  Kernel support for USB OHCI controllers
 
 Package: kmod-usb-printer
@@ -5764,9 +6164,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6654
 Filename: kmod-usb-printer_3.3.8-1_x86.ipk
-Size: users
+Size: 7481
 MD5Sum: 821798e96885dc22435ece7bbe8ba15f
+SHA256sum: 990d7ce9d1d2e9b1497633fa147ba0b8e0fa64baf94313af31860fa76b9ce212
 Description:  Kernel support for USB printers
+
+Package: kmod-usb-serial
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 14052
+Filename: kmod-usb-serial_3.3.8-1_x86.ipk
+Size: 14853
+MD5Sum: 062e12ca07324ff6dcf1dea3db6c2ab2
+SHA256sum: f667b55d9d983bf69dfb530cce658f50ccb7cae61cf22f45320b38a52b36508d
+Description:  Kernel support for USB-to-Serial converters
 
 Package: kmod-usb-serial-ark3116
 Version: 3.3.8-1
@@ -5781,8 +6200,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5244
 Filename: kmod-usb-serial-ark3116_3.3.8-1_x86.ipk
-Size: users
+Size: 6028
 MD5Sum: 090110de2768436e9acea58dff1de9a6
+SHA256sum: 4313ae1df2666640b7dcf654ad7a9c1968363e7051366d4821e8b20e1fa910cb
 Description:  Kernel support for ArkMicroChips ARK3116 USB-to-Serial converters
 
 Package: kmod-usb-serial-belkin
@@ -5798,8 +6218,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4255
 Filename: kmod-usb-serial-belkin_3.3.8-1_x86.ipk
-Size: users
+Size: 5037
 MD5Sum: 36ef1fb81a36974973c63006723567b3
+SHA256sum: fdcc8fd94993cd7b85c6cf9aa75e2ba0f137a93d5438cd09d54b2b9139ce1fb4
 Description:  Kernel support for Belkin USB-to-Serial converters
 
 Package: kmod-usb-serial-ch341
@@ -5815,8 +6236,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4955
 Filename: kmod-usb-serial-ch341_3.3.8-1_x86.ipk
-Size: users
+Size: 5735
 MD5Sum: 8478512ed9f798d79915f1457e64b280
+SHA256sum: d3a9fdf2ae9a72382607a975f6ff97d36b95e9b05c2c1b3d3e38614fa77bbc63
 Description:  Kernel support for Winchiphead CH341 USB-to-Serial converters
 
 Package: kmod-usb-serial-cp210x
@@ -5832,8 +6254,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6430
 Filename: kmod-usb-serial-cp210x_3.3.8-1_x86.ipk
-Size: users
+Size: 7251
 MD5Sum: 67dceebb9d9bac97687bc4a4f04782e3
+SHA256sum: 91862e818b4ab23b406781d0838579f9786c9f8323d205372439b79620b9cb01
 Description:  Kernel support for Silicon Labs cp210x USB-to-Serial converters
 
 Package: kmod-usb-serial-cypress-m8
@@ -5849,8 +6272,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9073
 Filename: kmod-usb-serial-cypress-m8_3.3.8-1_x86.ipk
-Size: users
+Size: 9969
 MD5Sum: ee67577422cbace45ad85601004bd2d7
+SHA256sum: e87acefddeaf13b57d36af49b17682bb386f40d90e433ac2603f596494f66d71
 Description:  Kernel support for devices with Cypress M8 USB to Serial chip
  (for example, the Delorme Earthmate LT-20 GPS)
  Supported microcontrollers in the CY4601 family are:
@@ -5869,8 +6293,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 14792
 Filename: kmod-usb-serial-ftdi_3.3.8-1_x86.ipk
-Size: users
+Size: 15193
 MD5Sum: c424f7e102fe259e29b1bf0dbe1c61cd
+SHA256sum: 2f13dc9a32b0890b81211cb1daeee63f2e7692e185dcd0d286f3315afd720d27
 Description:  Kernel support for FTDI USB-to-Serial converters
 
 Package: kmod-usb-serial-ipw
@@ -5886,8 +6311,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2469
 Filename: kmod-usb-serial-ipw_3.3.8-1_x86.ipk
-Size: users
+Size: 3226
 MD5Sum: e8e5cde7fd503a732b90d737f0e88bfa
+SHA256sum: fa692681c8a534ad1efb42f6cb526e1f4ee137c70e563e8b77675783a7aee135
 Description:  Support for IPWireless 3G devices
 
 Package: kmod-usb-serial-keyspan
@@ -5903,8 +6329,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13194
 Filename: kmod-usb-serial-keyspan_3.3.8-1_x86.ipk
-Size: users
+Size: 13953
 MD5Sum: 87d9b5a65260630f4137fe562b13a4a2
+SHA256sum: 4501af48046cfd8600c7e852ea5442ea0d97f9fe716374dd2b883a789d87039b
 Description:  Kernel support for Keyspan USB-to-Serial devices
 
 Package: kmod-usb-serial-mct
@@ -5920,8 +6347,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6092
 Filename: kmod-usb-serial-mct_3.3.8-1_x86.ipk
-Size: users
+Size: 6901
 MD5Sum: 4711b98d25b55d999a430847db0f9e8c
+SHA256sum: 78a9061f2d5510bcb6a1c1f719eaf828f8a167ac11725fa05252c729ed4d6fc6
 Description:  Kernel support for Magic Control Technology USB-to-Serial converters
 
 Package: kmod-usb-serial-mos7720
@@ -5937,8 +6365,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8897
 Filename: kmod-usb-serial-mos7720_3.3.8-1_x86.ipk
-Size: users
+Size: 9710
 MD5Sum: b5909b9eb6b6e3b17ee78734db5c1871
+SHA256sum: cd72a35b734c001315f8f32c2044967d8f3f3133afb6cdae6250f92af6361501
 Description:  Kernel support for Moschip MOS7720 USB-to-Serial converters
 
 Package: kmod-usb-serial-motorola-phone
@@ -5954,8 +6383,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1074
 Filename: kmod-usb-serial-motorola-phone_3.3.8-1_x86.ipk
-Size: users
+Size: 1863
 MD5Sum: 406ffc8e5a3bc637a35b33f1bc596ebe
+SHA256sum: 0c7e1a944d9346b35114d2152b6dbb9e1444419b7ff4e21f71226c7975da3989
 Description:  Kernel support for Motorola usb phone
 
 Package: kmod-usb-serial-option
@@ -5971,8 +6401,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7357
 Filename: kmod-usb-serial-option_3.3.8-1_x86.ipk
-Size: users
+Size: 7746
 MD5Sum: 42b80735cf7491ec989d9e281d390fa5
+SHA256sum: 767e87db692c478c7e0d3a7234dd21725b8af054e1de905dc1449bf87e75c8c6
 Description:  Kernel support for Option HSDPA modems
 
 Package: kmod-usb-serial-oti6858
@@ -5988,8 +6419,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6381
 Filename: kmod-usb-serial-oti6858_3.3.8-1_x86.ipk
-Size: users
+Size: 7231
 MD5Sum: 38191369ef77592662a1735001f4309a
+SHA256sum: 2b7889ecb23df265e27ef496633f1c556234d818a29031b9d28db4a0d461cbb9
 Description:  Kernel support for Ours Technology OTI6858 USB-to-Serial converters
 
 Package: kmod-usb-serial-pl2303
@@ -6005,8 +6437,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7099
 Filename: kmod-usb-serial-pl2303_3.3.8-1_x86.ipk
-Size: users
+Size: 7916
 MD5Sum: be6322b7abd89ca69f9c0311e6764413
+SHA256sum: 437a16f1acd9be482f7a9a79449226b907d04b6502823bf5c71ab0f507bc7ea8
 Description:  Kernel support for Prolific PL2303 USB-to-Serial converters
 
 Package: kmod-usb-serial-qualcomm
@@ -6022,8 +6455,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2988
 Filename: kmod-usb-serial-qualcomm_3.3.8-1_x86.ipk
-Size: users
+Size: 3772
 MD5Sum: 5d5c951bb984071dbcd9c25a3ab07b42
+SHA256sum: c25481915e9baf5229148e75affe957cfb9561a581a2a892f330592f017e8cc8
 Description:  Kernel support for Qualcomm USB Serial devices (Gobi)
 
 Package: kmod-usb-serial-sierrawireless
@@ -6039,8 +6473,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5760
 Filename: kmod-usb-serial-sierrawireless_3.3.8-1_x86.ipk
-Size: users
+Size: 6542
 MD5Sum: ff529d42405b5f6dbe1196e8c8daa97b
+SHA256sum: f95507c3cdb08963001dcdcdacb76ac8f1ccf058169e5b43b94535d51f798852
 Description:  Kernel support for Sierra Wireless devices
 
 Package: kmod-usb-serial-ti-usb
@@ -6056,8 +6491,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11713
 Filename: kmod-usb-serial-ti-usb_3.3.8-1_x86.ipk
-Size: users
+Size: 12512
 MD5Sum: 4ec7555a6bef063afa1d9c218cce052b
+SHA256sum: 56dab4054c510b418320406e2c831b1101c0cbaa6cb593953e0fdac2533ece44
 Description:  Kernel support for TI USB 3410/5052 devices
 
 Package: kmod-usb-serial-visor
@@ -6073,8 +6509,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5031
 Filename: kmod-usb-serial-visor_3.3.8-1_x86.ipk
-Size: users
+Size: 5794
 MD5Sum: 0eceb2696cb0239cc6740e78a45e26a8
+SHA256sum: ba0a0b49e28a2fb1ad1c952df8394037318d64f7f556ce837d29f0e135cb7cf0
 Description:  Kernel support for Handspring Visor PDAs
 
 Package: kmod-usb-serial-wwan
@@ -6090,26 +6527,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5674
 Filename: kmod-usb-serial-wwan_3.3.8-1_x86.ipk
-Size: users
+Size: 6459
 MD5Sum: 32bc5b0ccfef96f8b64d32c2dcc210cb
+SHA256sum: 02514126591c1fbdc46d8f55d00c9345f86fc375f27355825e7e0d579c576612
 Description:  Kernel support for USB GSM and CDMA modems
-
-Package: kmod-usb-serial
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 14052
-Filename: kmod-usb-serial_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 062e12ca07324ff6dcf1dea3db6c2ab2
-Description:  Kernel support for USB-to-Serial converters
 
 Package: kmod-usb-sierrawireless-directip
 Version: 3.3.8-10
@@ -6124,27 +6545,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11038
 Filename: kmod-usb-sierrawireless-directip_3.3.8-10_x86.ipk
-Size: users
+Size: 11825
 MD5Sum: c527230fc14c9806f3659579f9de505b
+SHA256sum: de4e300c623ab44ff49ec0aafb6b27bbb2f42f2c5290a9c6dc53197c046476b0
 Description:  Updated Sierra Wireless drivers for DirectIP
-
-Package: kmod-usb-storage-extras
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-storage
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 29696
-Filename: kmod-usb-storage-extras_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: b004885fd7700626af785f9dc7afe36e
-Description:  Say Y here if you want to have some more drivers,
- such as for SmartMedia card readers.
 
 Package: kmod-usb-storage
 Version: 3.3.8-1
@@ -6159,9 +6563,29 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 21526
 Filename: kmod-usb-storage_3.3.8-1_x86.ipk
-Size: users
+Size: 21956
 MD5Sum: eae953eff0560145ed38968d6fe46ef7
+SHA256sum: b706298ae12e8249d4805984e913ab399643a481bf233cc3b9ef1eef51319c89
 Description:  Kernel support for USB Mass Storage devices
+
+Package: kmod-usb-storage-extras
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-storage
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 29696
+Filename: kmod-usb-storage-extras_3.3.8-1_x86.ipk
+Size: 30547
+MD5Sum: b004885fd7700626af785f9dc7afe36e
+SHA256sum: b50aa09012a5e8c086ba9bf1a4e16adb08dc04dcf50cfbbe7a8b186720a46bdd
+Description:  Say Y here if you want to have some more drivers,
+ such as for SmartMedia card readers.
 
 Package: kmod-usb-uhci
 Version: 3.3.8-1
@@ -6176,8 +6600,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13478
 Filename: kmod-usb-uhci_3.3.8-1_x86.ipk
-Size: users
+Size: 14214
 MD5Sum: 92323eecbd16276cb19fc2fd577b20f6
+SHA256sum: e975a1c12258311d49cd0bedaab83bf2f447458ba75616af809d40d1e2096786
 Description:  Kernel support for USB UHCI controllers
 
 Package: kmod-usb-yealink
@@ -6193,77 +6618,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 5377
 Filename: kmod-usb-yealink_3.3.8-1_x86.ipk
-Size: users
+Size: 6171
 MD5Sum: 81831c7c21ce4ac7d7c7cb0e2e1fb400
+SHA256sum: 9b1263118bac657ad3ea8d9c98f099da890f643debdb0e42cb85c5bf8f22041d
 Description:  Kernel support for Yealink VOIP phone
-
-Package: kmod-usb2
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 23289
-Filename: kmod-usb2_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: aa0bcd12d76c7fd5c2587fab0e3d0354
-Description:  Kernel support for USB2 (EHCI) controllers
-
-Package: kmod-usbip-client
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usbip, kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8636
-Filename: kmod-usbip-client_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: cf8e301ea1956548e70c43a9d75d95b2
-Description:  USB-over-IP client driver
-
-Package: kmod-usbip-server
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usbip, kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 8249
-Filename: kmod-usbip-server_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 2f745c533b1d2ef9e3516ba500f7025f
-Description:  USB-over-IP host driver
-
-Package: kmod-usbip
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19), kmod-usb-core
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 3687
-Filename: kmod-usbip_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 06afeb6f26ae88f64a6dcefefd9927f0
-Description:  USB-over-IP kernel support
 
 Package: kmod-via-rhine
 Version: 3.3.8-1
@@ -6278,8 +6636,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11716
 Filename: kmod-via-rhine_3.3.8-1_x86.ipk
-Size: users
+Size: 12516
 MD5Sum: 90a769146cd0d5eb5b3fd9501ded0435
+SHA256sum: e578427b1648b5ecbdc38c33b204d69723946b171b53e6a626c02b35a706974b
 Description:  Kernel modules for Via Rhine Ethernet chipsets.
 
 Package: kmod-via-velocity
@@ -6295,8 +6654,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 15300
 Filename: kmod-via-velocity_3.3.8-1_x86.ipk
-Size: users
+Size: 16057
 MD5Sum: bc70cdc4de39e8a4e81bbc3439163833
+SHA256sum: 047cb45e3159158cb0f4bad2f745f15d6e0599b11dcc8eaa00bfc38a5448cb6b
 Description:  Kernel modules for VIA Velocity Gigabit Ethernet chipsets.
 
 Package: kmod-video-core
@@ -6312,8 +6672,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 38338
 Filename: kmod-video-core_3.3.8-1_x86.ipk
-Size: users
+Size: 39142
 MD5Sum: a651fae4beb22222811570914481ed52
+SHA256sum: 5977e6e9f0251e7a586eddb9a893845409ae4d615182906c42667615578ee440
 Description:  Kernel modules for Video4Linux support
 
 Package: kmod-video-cpia2
@@ -6329,8 +6690,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16894
 Filename: kmod-video-cpia2_3.3.8-1_x86.ipk
-Size: users
+Size: 17727
 MD5Sum: ec9160f22feac5f63883707460d42f92
+SHA256sum: 4376982c74a7eaa752c1c2a29cfeab3292a70def649320fa0640bb9aa7c9601d
 Description:  Kernel modules for supporting CPIA2 USB based cameras.
 
 Package: kmod-video-gspca-core
@@ -6346,8 +6708,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10611
 Filename: kmod-video-gspca-core_3.3.8-1_x86.ipk
-Size: users
+Size: 11472
 MD5Sum: 94f8c9d9858f3848ea4ab51dc53c08c9
+SHA256sum: 6c056dc1d8d18843c238704bfd55d1cd6fcce5a26cdfdea8d5a7e4869dd18bd5
 Description:  Kernel modules for supporting GSPCA based webcam devices. Note this is just
  the core of the driver, please select a submodule that supports your webcam.
 
@@ -6364,8 +6727,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 21052
 Filename: kmod-video-pwc_3.3.8-1_x86.ipk
-Size: users
+Size: 21850
 MD5Sum: 73dc3ff2dce3cd2af05dba32f770e6cd
+SHA256sum: fa013091d4911ee03057f2dc3de828bd2cdcee8c728354b2a372867a732a0761
 Description:  Kernel modules for supporting Philips USB based cameras.
 
 Package: kmod-video-sn9c102
@@ -6381,8 +6745,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 28536
 Filename: kmod-video-sn9c102_3.3.8-1_x86.ipk
-Size: users
+Size: 29112
 MD5Sum: d9787202a21bd6d37dc330cf06bc26d7
+SHA256sum: 8642e97e51934cd85390e1ca752212b9966b9d34b574fdb6df4cfe4f0fa3ccca
 Description:  Kernel modules for supporting SN9C102
  camera chips.
 
@@ -6399,8 +6764,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 32465
 Filename: kmod-video-uvc_3.3.8-1_x86.ipk
-Size: users
+Size: 33325
 MD5Sum: 69e4a8970220a08240e16fe164284cbf
+SHA256sum: eb0d824f5fc5866a48913cfda1d9e9ca75e46d8aa0c511d74e4ef2ff97e1b35d
 Description:  Kernel modules for supporting USB Video Class (UVC) devices.
 
 Package: kmod-video-videobuf2
@@ -6416,9 +6782,28 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12166
 Filename: kmod-video-videobuf2_3.3.8-1_x86.ipk
-Size: users
+Size: 12976
 MD5Sum: 09dc0c24bca22de8f908dbb7bc8478d6
+SHA256sum: d9962c7c269f43914a10b4bd35518772672a5a7fe161e49472fb68b07c786e16
 Description:  Kernel modules that implements three basic types of media buffers.
+
+Package: kmod-w1
+Version: 3.3.8-1
+Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown hold not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: x86
+Installed-Size: 9368
+Filename: kmod-w1_3.3.8-1_x86.ipk
+Size: 10146
+MD5Sum: 285641822d3c7ba04f59cf1bcc913fd5
+SHA256sum: 1984455429a9c34943a1df97b90c6e1d116dcf598e0cfaa96430b33b178f99bd
+Description:  Kernel module for Dallas's 1-wire support
 
 Package: kmod-w1-master-ds2482
 Version: 3.3.8-1
@@ -6433,8 +6818,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2370
 Filename: kmod-w1-master-ds2482_3.3.8-1_x86.ipk
-Size: users
+Size: 3203
 MD5Sum: ebe408708e599e83c2187e74fed1d368
+SHA256sum: ae8606279d3fdf7f88922a7608ffd2b3d2c723bdc3e923d3cd4e1080e00117e7
 Description:  Kernel module for the DS2482 i2c 1-wire bus master driver
  NOTE: Init with: echo ds2482 0x18 > /sys/bus/i2c/devices/i2c-0/new_device
  or use owfs
@@ -6452,8 +6838,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 4235
 Filename: kmod-w1-master-ds2490_3.3.8-1_x86.ipk
-Size: users
+Size: 5024
 MD5Sum: f64822162447ac4bc42804333480cee5
+SHA256sum: a19f23bd851925c15bb96f9f4a4830043069e2082691ece1e9eab28b84f0a3e6
 Description:  Kernel module for the DS2490 usb 1-wire bus master driver
 
 Package: kmod-w1-slave-ds2431
@@ -6469,8 +6856,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2043
 Filename: kmod-w1-slave-ds2431_3.3.8-1_x86.ipk
-Size: users
+Size: 2847
 MD5Sum: bb86086ab3da6209379201f2eba7f64d
+SHA256sum: 58aab82aa6096ca518cfa0f304000003eff989b84ee5700361fa57752648f55a
 Description:  Kernel module for 1-wire 1kb EEPROM (DS2431)
 
 Package: kmod-w1-slave-ds2433
@@ -6486,8 +6874,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1638
 Filename: kmod-w1-slave-ds2433_3.3.8-1_x86.ipk
-Size: users
+Size: 2442
 MD5Sum: 4f92201e9580c88b08471ea4320d6b00
+SHA256sum: 248ebcd6297188f38d6e8ae6d09f4352ecbd595bce6b1a329bb0beb2671601aa
 Description:  Kernel module for 1-wire 4kb EEPROM (DS2433)
 
 Package: kmod-w1-slave-ds2760
@@ -6503,8 +6892,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1956
 Filename: kmod-w1-slave-ds2760_3.3.8-1_x86.ipk
-Size: users
+Size: 2763
 MD5Sum: 548935b9958bc5403533f21cfa20cf69
+SHA256sum: 5afddd47aeda1a9c26625489e20606efcec2fa53f774b89c555b39f10ecefe40
 Description:  Kernel module for 1-wire DS2760 battery monitor chip support
 
 Package: kmod-w1-slave-smem
@@ -6520,8 +6910,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 895
 Filename: kmod-w1-slave-smem_3.3.8-1_x86.ipk
-Size: users
+Size: 1705
 MD5Sum: 568f264b682c9f7543a27e0855969a7f
+SHA256sum: 6f77c59a3d2897549a588a5724cb34f84737e9d4c07e2a46e6639cf5acdd5a21
 Description:  Kernel module for 1-wire simple 64bit memory rom(ds2401/ds2411/ds1990*)
 
 Package: kmod-w1-slave-therm
@@ -6537,26 +6928,10 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2259
 Filename: kmod-w1-slave-therm_3.3.8-1_x86.ipk
-Size: users
+Size: 3054
 MD5Sum: 2996547ed73bc32835ff409fde51c286
+SHA256sum: da34eb240069e4377b309b869bc279cad0e7ca2667d7328e080b547167a79c92
 Description:  Kernel module for 1-wire thermal sensors
-
-Package: kmod-w1
-Version: 3.3.8-1
-Depends: kernel (=3.3.8-1-d9832b46370db3263aebfcde218e4d19)
-Provides: 
-Source: package/kernel
-Section: kernel
-Status: unknown hold not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: x86
-Installed-Size: 9368
-Filename: kmod-w1_3.3.8-1_x86.ipk
-Size: users
-MD5Sum: 285641822d3c7ba04f59cf1bcc913fd5
-Description:  Kernel module for Dallas's 1-wire support
 
 Package: kmod-wdt-geode
 Version: 3.3.8-1
@@ -6571,8 +6946,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2431
 Filename: kmod-wdt-geode_3.3.8-1_x86.ipk
-Size: users
+Size: 3196
 MD5Sum: 94007b0a8d832e181ddb74d7c59d476e
+SHA256sum: 81a4157006835da671b2d0d0258067dbb6eeeb50c2474b62e17ba4c00814f0a2
 Description:  Kernel module for Geode watchdog timer.
 
 Package: kmod-wdt-sc520
@@ -6588,8 +6964,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2844
 Filename: kmod-wdt-sc520_3.3.8-1_x86.ipk
-Size: users
+Size: 3592
 MD5Sum: cac098c0e8c9eda816a6c7c11f3d3d78
+SHA256sum: 9f94068ab19c2b8bcb8de4da9600dbc5a1768c1505af089fbac081eae972107e
 Description:  Kernel module for SC520 Watchdog
 
 Package: kmod-wdt-scx200
@@ -6605,8 +6982,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 2457
 Filename: kmod-wdt-scx200_3.3.8-1_x86.ipk
-Size: users
+Size: 3202
 MD5Sum: 653c42efe3a945f4bb188b871394fbdc
+SHA256sum: 6fc51bc726e7578d3709d8e6a558f42e765b9e8c232a091f90c5d1831b0045e6
 Description:  Kernel module for SCX200 Watchdog
 
 Package: kmod-wprobe
@@ -6622,8 +7000,9 @@ Maintainer: Felix Fietkau <nbd@openwrt.org>
 Architecture: x86
 Installed-Size: 7072
 Filename: kmod-wprobe_3.3.8+1-1_x86.ipk
-Size: users
+Size: 7896
 MD5Sum: 529897845cee179710bee20f7786ab92
+SHA256sum: 423906e68bf4dae4d1dd20421b530026bb62c84be91a912fb39cdb82e30ab8f4
 Description:  A module that exports measurement data from wireless driver to user space
 
 Package: kmod-xen-evtchn
@@ -6639,8 +7018,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3861
 Filename: kmod-xen-evtchn_3.3.8-1_x86.ipk
-Size: users
+Size: 4612
 MD5Sum: 1371e8206d26a90d06cc121f1bd58ef6
+SHA256sum: 58d933582001580c6bceff1cee540f59792ae396cb4b38614ca47831ee28206c
 Description:  Kernel module for the /dev/xen/evtchn device
 
 Package: kmod-xen-fbdev
@@ -6656,8 +7036,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10269
 Filename: kmod-xen-fbdev_3.3.8-1_x86.ipk
-Size: users
+Size: 11044
 MD5Sum: e8b582b1c5489d35e0af854ae147d1b4
+SHA256sum: 80271a100b945c71cf09066f4cfedf5baa4c0131f1d5d45938388bbafc45cc29
 Description:  Kernel module for the Xen virtual frame buffer
 
 Package: kmod-xen-fs
@@ -6673,8 +7054,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1265
 Filename: kmod-xen-fs_3.3.8-1_x86.ipk
-Size: users
+Size: 2063
 MD5Sum: 461fdd553bd74e33fec96ad4c6a596e3
+SHA256sum: 45e13a4017d38d09a5b889e714d61215314be4397b40db0862d122c5e0c7e97c
 Description:  Kernel module for the Xen filesystem
 
 Package: kmod-xen-kbddev
@@ -6690,8 +7072,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3371
 Filename: kmod-xen-kbddev_3.3.8-1_x86.ipk
-Size: users
+Size: 4147
 MD5Sum: 825b451da23f2945579354f9b9fcf50b
+SHA256sum: b8e1c61bbb1b2cb3e53272b15495f61143c0ad59318a616dd6d4daa6ddf02a53
 Description:  Kernel module for the Xen virtual keyboard and mouse
 
 Package: kmod-xen-netdev
@@ -6707,8 +7090,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 10150
 Filename: kmod-xen-netdev_3.3.8-1_x86.ipk
-Size: users
+Size: 10944
 MD5Sum: b56495c3d07d2b84ccb67d2d41a12c33
+SHA256sum: a005561a3eb6152507736780be1a06acec7f0c2c6bfb8a5ad94b04233a9a6e6f
 Description:  Kernel module for the Xen network device frontend
 
 Package: kmod-xen-pcidev
@@ -6724,8 +7108,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 6836
 Filename: kmod-xen-pcidev_3.3.8-1_x86.ipk
-Size: users
+Size: 7661
 MD5Sum: e5973c774442a7c3763f36a862b6ce8c
+SHA256sum: dd3668ec4985a6c84139ff0263d9e876d0166133f066af121f7f492fe299b94a
 Description:  Kernel module for the Xen network device frontend
 
 Package: kmod-xen-privcmd
@@ -6741,8 +7126,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 1376
 Filename: kmod-xen-privcmd_3.3.8-1_x86.ipk
-Size: users
+Size: 2159
 MD5Sum: 5334be30321ed6c6176cad7af45b88b6
+SHA256sum: ba04d89f208625764fedf158a2e1e734c59b2ddda27119ff42e580ba6f72460f
 Description:  Kernel module for Xen private commands
 
 Package: libblobmsg-json
@@ -6758,8 +7144,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3347
 Filename: libblobmsg-json_2013-01-29-0bc317aa4d9af44806c28ca286d79a8b5a92b2b8_x86.ipk
-Size: users
+Size: 4038
 MD5Sum: fee62e107d3d29bea42837dd6ed6e6cc
+SHA256sum: a7d7b4fb5fc74fe3282f00897ad306023a8b50155cbf5a1453ad8cda700d23d3
 Description:  blobmsg <-> json conversion library
 
 Package: libgcc
@@ -6775,8 +7162,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 47629
 Filename: libgcc_4.6-linaro-1_x86.ipk
-Size: users
+Size: 48360
 MD5Sum: b3cffd6ecaf762ca3a04622f344373c3
+SHA256sum: 1c20e7268b1eeb9d9a71a4e85519f529bdc37f3cc4bb47ef76d5022b7918ef8f
 Description:  GCC support library
 
 Package: libip4tc
@@ -6792,8 +7180,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12288
 Filename: libip4tc_1.4.10-4_x86.ipk
-Size: users
+Size: 12936
 MD5Sum: 52f8eb80ae1fb719684d77f6e07348b3
+SHA256sum: 79346b971ef7c913884f3cb4760ebd8a1d3e37a62b387465f2dd365a2e22c383
 Description:  IPv4 firewall - shared libiptc library
 
 Package: libip6tc
@@ -6809,8 +7198,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12831
 Filename: libip6tc_1.4.10-4_x86.ipk
-Size: users
+Size: 13483
 MD5Sum: d54fc6b6247324f1285e7dae806cb570
+SHA256sum: 7ce1056f562741613ec470d69bc959f85e06d6269eea67580903cb1661c54819
 Description:  IPv6 firewall - shared libiptc library
 
 Package: libjson
@@ -6826,8 +7216,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12222
 Filename: libjson_0.9-2_x86.ipk
-Size: users
+Size: 12829
 MD5Sum: 4e161224594e4a80feb72faa572e6b68
+SHA256sum: 1677bef26f826693afcb31ae6fbb2e5ce894dfc7ebd553a6fd6dce342c4fb360
 Description:  This package contains a library for javascript object notation backends.
 
 Package: libnl-tiny
@@ -6843,8 +7234,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16826
 Filename: libnl-tiny_0.1-3_x86.ipk
-Size: users
+Size: 17258
 MD5Sum: 8209e9727413573f57cb47311448aee8
+SHA256sum: eef405f6087cb2758bb110292f4fcebc989498e84770a0f7cf46dcd376c10ede
 Description:  This package contains a stripped down version of libnl
 
 Package: libubox
@@ -6860,8 +7252,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 11809
 Filename: libubox_2013-01-29-0bc317aa4d9af44806c28ca286d79a8b5a92b2b8_x86.ipk
-Size: users
+Size: 12441
 MD5Sum: 55157a7c3a0c840d40764cfbc031de42
+SHA256sum: b4602ee1cade0b3f03aef16e088ce910a23c8662caba13c6682c485b601aa4c0
 Description:  Basic utility library
 
 Package: libubus
@@ -6877,8 +7270,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 13065
 Filename: libubus_2013-01-13-bf566871bd6a633e4504c60c6fc55b2a97305a50_x86.ipk
-Size: users
+Size: 13691
 MD5Sum: cd18d1f0c9442f6de9e94f4167988552
+SHA256sum: fbad203bb8821945196304239d3a57c058085d60b37ff4eec4ed8433510b18e5
 Description:  OpenWrt RPC client library
 
 Package: libuci
@@ -6894,8 +7288,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 16187
 Filename: libuci_2013-01-04.1-1_x86.ipk
-Size: users
+Size: 16806
 MD5Sum: e7ff3d27d36ec9eca8ac3e4c183de4fd
+SHA256sum: 7b823dfc41adf6c55bfce485d52c3b53aa3e8fb160b38da96ce26bc1cd9effb7
 Description:  C library for the Unified Configuration Interface (UCI)
 
 Package: libxtables
@@ -6911,8 +7306,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 12509
 Filename: libxtables_1.4.10-4_x86.ipk
-Size: users
+Size: 13081
 MD5Sum: e65fdec14f18401c358bf6dcfb27fc3b
+SHA256sum: 72215f4d4340b997241a575f26cd007a6674529d8227ecc0cdf67d567136606d
 Description:  IPv4/IPv6 firewall - shared xtables library
 
 Package: mtd
@@ -6928,8 +7324,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 9016
 Filename: mtd_18.1_x86.ipk
-Size: users
+Size: 9694
 MD5Sum: b37f7574499ee3930e22d7fd0bfd7c85
+SHA256sum: 42baf29f95ec7dd2ed76fa103a211c2b07b92016fefd50db936c709b2865d7e2
 Description:  This package contains an utility useful to upgrade from other firmware or
  older OpenWrt releases.
 
@@ -6946,8 +7343,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 47883
 Filename: netifd_2013-01-29.2-4bb99d4eb462776336928392010b372236ac3c93_x86.ipk
-Size: users
+Size: 48398
 MD5Sum: 8cf73a4a78084cadc46d5ea6acbc5fb4
+SHA256sum: b9c3b398db85f9aa72195ad47e3d10852159771fb32eedc291285e3221e0b9dc
 Description:  OpenWrt Network Interface Configuration Daemon
 
 Package: opkg
@@ -6963,8 +7361,9 @@ Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: x86
 Installed-Size: 66238
 Filename: opkg_618-3_x86.ipk
-Size: users
+Size: 67041
 MD5Sum: 781006c308d9daf184269dd459f2a5c0
+SHA256sum: 98c3e27a1e632ed9b058015bdc36f2f8e1c54579914a5b7f0e32012949ee3596
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
@@ -6972,23 +7371,6 @@ Description:  Lightweight package management system
  necessary to install a particular package.
  
  opkg knows how to install both .ipk and .deb packages.
-
-Package: ppp-mod-pppoe
-Version: 2.4.5-8
-Depends: libc, kmod-pppoe
-Provides: 
-Source: package/ppp
-Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: Jo-Philipp Wich <xm@subsignal.org>
-Architecture: x86
-Installed-Size: 10246
-Filename: ppp-mod-pppoe_2.4.5-8_x86.ipk
-Size: users
-MD5Sum: 7fc79c0a45e3375365a97b083cffebfc
-Description:  This package contains a PPPoE (PPP over Ethernet) plugin for ppp.
 
 Package: ppp
 Version: 2.4.5-8
@@ -7003,9 +7385,28 @@ Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: x86
 Installed-Size: 117683
 Filename: ppp_2.4.5-8_x86.ipk
-Size: users
+Size: 118298
 MD5Sum: b724d9acf90e8192c856a25f18844c97
+SHA256sum: 9e5173d5c37799788fcd88f5c95c17eceab43ce145efd5597d495e3124fb7624
 Description:  This package contains the PPP (Point-to-Point Protocol) daemon.
+
+Package: ppp-mod-pppoe
+Version: 2.4.5-8
+Depends: libc, kmod-pppoe
+Provides: 
+Source: package/ppp
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: x86
+Installed-Size: 10246
+Filename: ppp-mod-pppoe_2.4.5-8_x86.ipk
+Size: 10892
+MD5Sum: 7fc79c0a45e3375365a97b083cffebfc
+SHA256sum: 24868abc9816efc623f7dc939ff4c48e93a8e4c91e18d1615a12c55a3b2a647c
+Description:  This package contains a PPPoE (PPP over Ethernet) plugin for ppp.
 
 Package: ubus
 Version: 2013-01-13-bf566871bd6a633e4504c60c6fc55b2a97305a50
@@ -7020,8 +7421,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 3462
 Filename: ubus_2013-01-13-bf566871bd6a633e4504c60c6fc55b2a97305a50_x86.ipk
-Size: users
+Size: 4142
 MD5Sum: 9aa38cbbac2f803623a7c9382b841b11
+SHA256sum: 7f5b9370257f684dfa549f40973c4534fcf1c62f7ef2a60c86248595ad23d248
 Description:  OpenWrt RPC client utility
 
 Package: ubusd
@@ -7037,8 +7439,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 8637
 Filename: ubusd_2013-01-13-bf566871bd6a633e4504c60c6fc55b2a97305a50_x86.ipk
-Size: users
+Size: 9265
 MD5Sum: 3f612cb6c59d6b4636e065fba7c19929
+SHA256sum: aa461b6f89a4c8e7e7ee964bbe81466cd86ed5e9ab79e0170ea33ec1bc639bc9
 Description:  OpenWrt RPC daemon
 
 Package: uci
@@ -7054,8 +7457,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 7096
 Filename: uci_2013-01-04.1-1_x86.ipk
-Size: users
+Size: 7776
 MD5Sum: 896206ec64cb8f72c9328d3348341ead
+SHA256sum: 88a5ca5cebf43ad8d89bee8f73f87971fd4e9aa6f1b76fbb3f3693151e89e242
 Description:  Utility for the Unified Configuration Interface (UCI)
 
 Package: wireless-tools
@@ -7071,8 +7475,9 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: x86
 Installed-Size: 27487
 Filename: wireless-tools_29-5_x86.ipk
-Size: users
+Size: 28185
 MD5Sum: 4dbf92ec2467620371f29adbb088beaa
+SHA256sum: c1ce432396aec767c9ab0a790d9d405f975ea0fe68e9910682e3e0301d30546d
 Description:  This package contains a collection of tools for configuring wireless
  adapters implementing the "Linux Wireless Extensions".
 
