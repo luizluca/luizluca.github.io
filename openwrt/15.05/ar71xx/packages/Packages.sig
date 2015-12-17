@@ -1,11 +1,2 @@
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v2
-
-iQEcBAABCAAGBQJWcjXRAAoJELsR27rRBztWwZgH/R0aZxYpE05hzdNLLO5cLYDX
-TvHVOiegb6aoZh22inyFhW/FcK72EDksj1+kgPEooLT7vvpPP7DMcrrSKe3gOI9m
-LjlckGofnWX9Vb7kzzTQsmEDSDiAbW3kWMSqPyTw+c6ZnWluMwod6lermNtotpGG
-h7Q7RbWpeP2Mqp3reTWG79jxc1jz+xV9SqFJGBbFCmcElxesh7SigRrEE5Fo7hOv
-0kyqQvY7TfDlG11F/6uIs9qoLjL3FoTAoDeX1D0TJcBncVz1JxrUcKKOXS4czuny
-7zZ7DwskQPycElTMquBprv522ZvHTeJ8+/tXcKMuGYVp8WmULsj8cqCr8a2JHD4=
-=R8Nh
------END PGP SIGNATURE-----
+untrusted comment: signed by key fe8e1e6731dc3f26
+RWT+jh5nMdw/JqCf+4RbOVHNp6ZlTAuu+DYXUXlXctnwec8RwMMpIAf4g8OxVpJeUssGkVurCAhrUVdUFfttk+x+LHStZT8nYwI=
