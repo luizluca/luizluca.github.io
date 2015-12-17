@@ -37,6 +37,7 @@ $(
 	}'
 )
 <hr>
+$( [ -f README.txt ] && cat README.txt  )
 		</pre>
 	</body>
 </html>	
