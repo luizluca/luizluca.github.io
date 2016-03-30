@@ -1,22 +1,41 @@
-Package: libsane
-Version: 1.0.24-1
+Package: hplip-common
+Version: 3.15.7-1
 Depends: libc, libusb-compat
-Source: feeds/packages/utils/sane-backends
+Source: feeds/packages/utils/hplip
 License: GPL-2.0 GPL-2.0+
 LicenseFiles: COPYING LICENSE
-Section: libs
+Section: utils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 59135
-Filename: libsane_1.0.24-1_ar71xx.ipk
-Size: 60101
-MD5Sum: 55704adb8e79b047f6212545d9635ffb
-SHA256sum: a17da4c702b0f59135c7d29494139fdfd862aa0496d2e4b5a24c58e6901fefcb
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- This package contains the SANE shared libraries.
+Installed-Size: 140191
+Filename: hplip-common_3.15.7-1_ar71xx.ipk
+Size: 140076
+MD5Sum: d149e8c8d6c7cda537714c169137f33c
+SHA256sum: 0238c14edeebeb0e5d2f04a83739534fb70dcb340881a4cf901a7a861c58fe05
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ These are common files shared between subpackages
+
+Package: hplip-sane
+Version: 3.15.7-1
+Depends: libc, libsane, hplip-common
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 61260
+Filename: hplip-sane_3.15.7-1_ar71xx.ipk
+Size: 62303
+MD5Sum: d829c3f268117da7f12e628354bea66d
+SHA256sum: 1792c3e580169f1c1a0065002540408bc4a5328336369ea1f3555325fd67df02
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ S.A.N.E backend for HP Scanners
 
 Package: sane-abaton
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -24,17 +43,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 21646
-Filename: sane-abaton_1.0.24-1_ar71xx.ipk
-Size: 22518
-MD5Sum: 1041df2ade93c5d2108c702f2f2cde19
-SHA256sum: f8535a06745a6b82c65ccd5738d08c78e4a205ce84a614278554afd96dc75ba6
+Installed-Size: 21698
+Filename: sane-abaton_1.0.25-1_ar71xx.ipk
+Size: 22578
+MD5Sum: aeffd85c58ad5ee5aaac9d286917fe42
+SHA256sum: 72fe96ecace462ebe17696d5b6b74ae23a38e91258cb3714c2e151516baf21a6
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Abaton flatbed scanners.
 
 Package: sane-agfafocus
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -42,17 +61,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 25830
-Filename: sane-agfafocus_1.0.24-1_ar71xx.ipk
-Size: 26686
-MD5Sum: 243642cbadd0e0e2ddd70e92b7d6822f
-SHA256sum: c3b20c70fbe175fa333149ac43d8e2ac2a97cd72171d36c749ee8cbb84b3e82e
+Installed-Size: 25895
+Filename: sane-agfafocus_1.0.25-1_ar71xx.ipk
+Size: 26734
+MD5Sum: 9656d69de5881d5f2207d3828bdce72e
+SHA256sum: afab7bce604c0389357a7097345e34b93435316f76a6635dc217376b46bf9e4b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for AGFA Focus flatbed scanners.
 
 Package: sane-apple
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -60,17 +79,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 28113
-Filename: sane-apple_1.0.24-1_ar71xx.ipk
-Size: 29031
-MD5Sum: 362db5e2e313114d42904fa65cfe2910
-SHA256sum: d2632bcfb4d1b0fc7ec16df4c579d2a28f948883db6b29d4847e21687bbe8886
+Installed-Size: 28123
+Filename: sane-apple_1.0.25-1_ar71xx.ipk
+Size: 29033
+MD5Sum: 0985dcf7c05a8827437b9b4278c33582
+SHA256sum: 1cc62b25009c9a757ff80695f666ecda51bde176f3fcbda511dcafed3f7881b4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Apple flatbed scanners.
 
 Package: sane-artec
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -78,17 +97,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 36044
-Filename: sane-artec_1.0.24-1_ar71xx.ipk
-Size: 36974
-MD5Sum: 37a534e59b17dca295348d3cdc9b14ae
-SHA256sum: 6852348366a074419bb87c58af79b7cd870972e2eed6c1a0df2cbedf7ac8864d
+Installed-Size: 36039
+Filename: sane-artec_1.0.25-1_ar71xx.ipk
+Size: 36987
+MD5Sum: f6aac9811a8702d0b86ab9905eb2df5f
+SHA256sum: 6629dbb0a01428e50718e02c5c5b165a2a382df2f25b883cf4ef14ff662f5db1
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Artec flatbed scanners.
 
 Package: sane-artec_eplus48u
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -96,17 +115,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 36616
-Filename: sane-artec_eplus48u_1.0.24-1_ar71xx.ipk
-Size: 37574
-MD5Sum: f4df84a42f346bbc494e39351fed15b7
-SHA256sum: d0471edfdcbe067502509c88c04359a4b321f5c8c328bb69020e11ab7944c674
+Installed-Size: 36671
+Filename: sane-artec_eplus48u_1.0.25-1_ar71xx.ipk
+Size: 37636
+MD5Sum: 144a693e53f928993c201246b9c32476
+SHA256sum: 6954ae8b2c842ca6eb0b964b8eeada25cd32a6a83364f48ba4bca9f568884706
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Artec E+ 48U and re-badged models.
 
 Package: sane-as6e
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -114,17 +133,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 11142
-Filename: sane-as6e_1.0.24-1_ar71xx.ipk
-Size: 11997
-MD5Sum: 53cce6973f591cbce48bd3e90476aae9
-SHA256sum: b7dc94c462debef600644e94d4eb3fab69bfea66692963c23ab436b46fe5f051
+Installed-Size: 11145
+Filename: sane-as6e_1.0.25-1_ar71xx.ipk
+Size: 12011
+MD5Sum: 6f05788a091caa2a5fcc61cc3139de3f
+SHA256sum: 7c6e13d13c86f974a44ae9565ebc44c8bb8bd29a2439a773f81d89306f370d08
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Artec AS6E parallel port interface scanner.
 
 Package: sane-avision
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -132,33 +151,35 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 67795
-Filename: sane-avision_1.0.24-1_ar71xx.ipk
-Size: 68421
-MD5Sum: 1e039371d1a51a6cbb99b98786ea6574
-SHA256sum: ad88344cfc0f54160de1ccd0c262eff1ff0bd9a59fcd21f55a8b383264a7ea38
+Installed-Size: 67862
+Filename: sane-avision_1.0.25-1_ar71xx.ipk
+Size: 68470
+MD5Sum: c6260a2144caa66c13078670fa13c298
+SHA256sum: 5fd7c8bb7a5f4549a5ae7fb1a3567f73363e505903532fb4e393b73246422108
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Avision and Avision OEM scanners and possibly more flatbed and film scanners.
 
 Package: sane-backends-all
-Version: 1.0.24-1
-Depends: libc, sane-abaton, sane-agfafocus, sane-apple, sane-artec, sane-artec_eplus48u, sane-as6e, sane-avision, sane-bh, sane-canon, sane-canon630u, sane-canon_dr, sane-cardscan, sane-coolscan, sane-coolscan2, sane-coolscan3, sane-dc210, sane-dc240, sane-dc25, sane-dell1600n_net, sane-dmc, sane-epjitsu, sane-epson, sane-epson2, sane-fujitsu, sane-genesys, sane-gt68xx, sane-hp, sane-hp3500, sane-hp3900, sane-hp4200, sane-hp5400, sane-hp5590, sane-hpljm1005, sane-hs2p, sane-ibm, sane-kodak, sane-kodakaio, sane-kvs20xx, sane-kvs40xx, sane-kvs1025, sane-leo, sane-lexmark, sane-ma1509, sane-magicolor, sane-matsushita, sane-microtek, sane-microtek2, sane-mustek, sane-mustek_usb, sane-mustek_usb2, sane-nec, sane-net, sane-niash, sane-p5, sane-pie, sane-pixma, sane-plustek, sane-plustek_pp, sane-ricoh, sane-rts8891, sane-s9036, sane-sceptre, sane-sharp, sane-sm3600, sane-sm3840, sane-snapscan, sane-sp15c, sane-st400, sane-stv680, sane-tamarack, sane-teco1, sane-teco2, sane-teco3, sane-test, sane-u12, sane-umax, sane-umax1220u, sane-umax_pp, sane-v4l, sane-xerox_mfp
+Version: 1.0.25-1
+Depends: libc, sane-abaton, sane-agfafocus, sane-apple, sane-artec, sane-artec_eplus48u, sane-as6e, sane-avision, sane-bh, sane-canon, sane-canon630u, sane-canon_dr, sane-cardscan, sane-coolscan, sane-coolscan2, sane-coolscan3, sane-dc210, sane-dc240, sane-dc25, sane-dell1600n_net, sane-dmc, sane-epjitsu, sane-epson, sane-epsonds, sane-epson2, sane-fujitsu, sane-genesys, sane-gt68xx, sane-hp, sane-hp3500, sane-hp3900, sane-hp4200, sane-hp5400, sane-hp5590, sane-hpljm1005, sane-hs2p, sane-ibm, sane-kodak, sane-kodakaio, sane-kvs20xx, sane-kvs40xx, sane-kvs1025, sane-leo, sane-lexmark, sane-ma1509, sane-magicolor, sane-matsushita, sane-microtek, sane-microtek2, sane-mustek, sane-mustek_usb, sane-mustek_usb2, sane-nec, sane-net, sane-niash, sane-p5, sane-pie, sane-pieusb, sane-pixma, sane-plustek, sane-plustek_pp, sane-ricoh, sane-rts8891, sane-s9036, sane-sceptre, sane-sharp, sane-sm3600, sane-sm3840, sane-snapscan, sane-sp15c, sane-st400, sane-stv680, sane-tamarack, sane-teco1, sane-teco2, sane-teco3, sane-test, sane-u12, sane-umax, sane-umax1220u, sane-umax_pp, sane-v4l, sane-xerox_mfp
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
 LicenseFiles: COPYING LICENSE
 Section: utils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 103
-Filename: sane-backends-all_1.0.24-1_ar71xx.ipk
-Size: 1246
-MD5Sum: 20ba60d503b2ef09de37526379c43911
-SHA256sum: 60e1b8584358fb1bc889bbc650a00ed00d4b45f8ad3e1ba9bc71db6ff6223062
-Description:  Scanner Access Now Easy (all backends)
+Installed-Size: 105
+Filename: sane-backends-all_1.0.25-1_ar71xx.ipk
+Size: 1306
+MD5Sum: 9e8ccd7e2e4a4907523b80cff96f488c
+SHA256sum: 7757413713955c1e1cf8692a15b2c4c530b327812668a62bd8e4ae5030ae9e2d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ Metapackage for selecting all SANE Backends
 
 Package: sane-bh
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -166,17 +187,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 36709
-Filename: sane-bh_1.0.24-1_ar71xx.ipk
-Size: 37693
-MD5Sum: 0821a42eaeaabd3c11b1ef8e104ca922
-SHA256sum: af4aa62ba175b9d5004a9751f6835e0d656e7ae4bba0005d31472fc85ba2dd8d
+Installed-Size: 36673
+Filename: sane-bh_1.0.25-1_ar71xx.ipk
+Size: 37672
+MD5Sum: d7eaeaf6c6a3ef20ae12dc17d73dad96
+SHA256sum: 5a14bd7a110ddd77c8ca7f521ffebf1560afce45f15804cf54305403919c83bf
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Bell+Howell Copiscan II series document scanners.
 
 Package: sane-canon
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -184,17 +205,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 39657
-Filename: sane-canon_1.0.24-1_ar71xx.ipk
-Size: 40579
-MD5Sum: 2eddaef75a6378b8ec42a1bfe1d930c4
-SHA256sum: 1b77ac3f92f4d908d27576305229d1407a5acd28feedf3d0286e451ac4500e4d
+Installed-Size: 39580
+Filename: sane-canon_1.0.25-1_ar71xx.ipk
+Size: 40506
+MD5Sum: 0273197d2dd5e75328e661af43232666
+SHA256sum: ff27070fe161c5984b97530d8112d420654fbbb1cc2235b0fb0916f19e597b79
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Canon SCSI scanners.
 
 Package: sane-canon630u
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -202,17 +223,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 24449
-Filename: sane-canon630u_1.0.24-1_ar71xx.ipk
-Size: 25308
-MD5Sum: 36d91fe8dde768cad4d0d954f38f544c
-SHA256sum: b5d709a39d31b1919783d2381522b848a008b3691960a63e1bec15f0663b537f
+Installed-Size: 24400
+Filename: sane-canon630u_1.0.25-1_ar71xx.ipk
+Size: 25255
+MD5Sum: bd0b20931f06a843916ad576f528fb5b
+SHA256sum: 92eb55a800d986bccf887357b56ad56fa40ce852d9ca5d2f4bf98cbe419b0797
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for the Canon 630u USB flatbed scanner.
 
 Package: sane-canon_dr
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -220,17 +241,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 56852
-Filename: sane-canon_dr_1.0.24-1_ar71xx.ipk
-Size: 57805
-MD5Sum: c8cece8b4935e84245873caf0bc7112c
-SHA256sum: 498a90eeeefeed8a9a34f5d3d8b9def3781c38b95186dbf18352edb344a1e96e
+Installed-Size: 58729
+Filename: sane-canon_dr_1.0.25-1_ar71xx.ipk
+Size: 59753
+MD5Sum: 49c3c57baa817c98f57c164ecd521673
+SHA256sum: 3d047522e7067107ecbb6feee1cdebe6279d63316d6f60a4ed05c4aba17db06b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Canon DR-series scanners.
 
 Package: sane-cardscan
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -238,17 +259,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 19653
-Filename: sane-cardscan_1.0.24-1_ar71xx.ipk
-Size: 20508
-MD5Sum: c0a8477d211c60dee957ff69a956d758
-SHA256sum: f70b2ba17258239d67abf6223b0e96134f25827bf7f183f05bc6435948f0084b
+Installed-Size: 19547
+Filename: sane-cardscan_1.0.25-1_ar71xx.ipk
+Size: 20461
+MD5Sum: 0a522dcd5e4470d1cb9b711b3f39fff9
+SHA256sum: 95ce7992ce8bbac7b1e9a220cdfa456abd8fd5a6d8da29e7dba25411de04f98a
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Corex CardScan usb scanners.
 
 Package: sane-coolscan
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -256,17 +277,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 41826
-Filename: sane-coolscan_1.0.24-1_ar71xx.ipk
-Size: 42819
-MD5Sum: e6939326578c503183865fbeb6c88897
-SHA256sum: a56fe2ff0d7c47ca4275f4bbce2541b60c6f83d881495403f4323045e46ee400
+Installed-Size: 41871
+Filename: sane-coolscan_1.0.25-1_ar71xx.ipk
+Size: 42872
+MD5Sum: 1b19405c6e072cf6968937cd612d6941
+SHA256sum: 2259f7e1f5f2af9953c4f80f9e0a7cf87e69fddffdca40b042a5f31230181135
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Nikon film-scanners.
 
 Package: sane-coolscan2
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -274,17 +295,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 35592
-Filename: sane-coolscan2_1.0.24-1_ar71xx.ipk
-Size: 36566
-MD5Sum: 9db00a52366603174e4b03fa57eae7c5
-SHA256sum: 733e9d9a0e53079ef4f7276fd7bee3f9df918b42db560a49bd57c229eaeb24f6
+Installed-Size: 35532
+Filename: sane-coolscan2_1.0.25-1_ar71xx.ipk
+Size: 36511
+MD5Sum: fafb540054e51188af31ec842547edd4
+SHA256sum: 1e4bb5d468c7ab1e0c86db564405992f523dd53c396b4de13b5b98fe53cd4855
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Nikon Coolscan film scanners.
 
 Package: sane-coolscan3
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -292,17 +313,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 37161
-Filename: sane-coolscan3_1.0.24-1_ar71xx.ipk
-Size: 38204
-MD5Sum: 7688dc1e1aebd6c2c55e2ac98f3129ef
-SHA256sum: 3c57b330afd36ce82c7eb881e543b0704ab4deec104d34bb36eb1bd217741d30
+Installed-Size: 37053
+Filename: sane-coolscan3_1.0.25-1_ar71xx.ipk
+Size: 38091
+MD5Sum: 6777e18c8cf4319740c6a9368512101d
+SHA256sum: ae9ffdd97823b35a92c3b2e55230268c006f275f93b0992b2faea7d46fea5ffc
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Nikon Coolscan film scanners.
 
 Package: sane-daemon
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -310,16 +331,16 @@ LicenseFiles: COPYING LICENSE
 Section: utils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 17699
-Filename: sane-daemon_1.0.24-1_ar71xx.ipk
-Size: 18601
-MD5Sum: a804fbe5fe48191f4de5181efac66504
-SHA256sum: cc2dc80230fae0927d70d479d9faeb4134c7e8225baa2fbc43beae6ef7c8a050
+Installed-Size: 17706
+Filename: sane-daemon_1.0.25-1_ar71xx.ipk
+Size: 18607
+MD5Sum: 0b3ee601d9a346d3835886555e8c2268
+SHA256sum: e65192af4fa37997a8564f03757da7a3733a63237edad0618687f4d6d35da0fc
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE daemon.
 
 Package: sane-dc210
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane, libjpeg
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -327,17 +348,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 13130
-Filename: sane-dc210_1.0.24-1_ar71xx.ipk
-Size: 13997
-MD5Sum: 2b97039147a7503684cbaf373e735e8d
-SHA256sum: 587c0c6a248b2461700731810fee7954c17eae0c2ef4f1183e8964c70846560f
+Installed-Size: 13129
+Filename: sane-dc210_1.0.25-1_ar71xx.ipk
+Size: 14002
+MD5Sum: 4ecbf02fd199d623234514f019ba31e5
+SHA256sum: ed9d5499b0e1b8d6c659906674b21a15e36f76b7baa1777c8420d162aa84c171
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Kodak DC210 Digital Camera.
 
 Package: sane-dc240
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane, libjpeg
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -345,17 +366,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 16250
-Filename: sane-dc240_1.0.24-1_ar71xx.ipk
-Size: 17121
-MD5Sum: 7222c82f42bceaec2498fd7a6856b7a0
-SHA256sum: 2639ee9bbbdea86f4419f7f609b5b50d76cc1cf9bf97b8cd1aacb9f019f8ff0f
+Installed-Size: 16271
+Filename: sane-dc240_1.0.25-1_ar71xx.ipk
+Size: 17147
+MD5Sum: 0efeb9d63d4b11a32a16b18a383c9b65
+SHA256sum: 9a146a90088e2caaf84d7b1076283b33e1009c6066be063ea417029a71dd6248
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Kodak DC240 Digital Camera.
 
 Package: sane-dc25
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -363,17 +384,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 20143
-Filename: sane-dc25_1.0.24-1_ar71xx.ipk
-Size: 21026
-MD5Sum: 34f345008b9f8c2c80d8e31c48d7eb4f
-SHA256sum: 0cd084cc362498343dec5fcc70d0ebb20f15406157c3db8e2ca678c60f87f133
+Installed-Size: 20120
+Filename: sane-dc25_1.0.25-1_ar71xx.ipk
+Size: 21020
+MD5Sum: 6e960fc87095d74ba7ab34682881b816
+SHA256sum: 2421a017006bd8571e4bc99bb3c4df2367031215a4a96d8bd508c589179db810
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Kodak DC20/DC25 Digital Cameras.
 
 Package: sane-dell1600n_net
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane, libtiff
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -381,17 +402,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 14710
-Filename: sane-dell1600n_net_1.0.24-1_ar71xx.ipk
-Size: 15576
-MD5Sum: d56736e7d29da11712dd07074650ae73
-SHA256sum: fd5739eafacfa27675461a20c3d99fdbef443c52fe21441b8730990de542019e
+Installed-Size: 14705
+Filename: sane-dell1600n_net_1.0.25-1_ar71xx.ipk
+Size: 15574
+MD5Sum: 7f1fa925acd54aab524ab012e78908c0
+SHA256sum: 6fd20b5d80ad3b9ed6cb434ffb7b3f6ffe7b3fa2da2557ac9e0fd5a9864cf887
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Dell 1600n.
 
 Package: sane-dmc
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -399,17 +420,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 20527
-Filename: sane-dmc_1.0.24-1_ar71xx.ipk
-Size: 21399
-MD5Sum: 794af1d62aa121ee82779dc8b56fe9ed
-SHA256sum: e951871409527b54fbdbcc38147dc14eacf84781a835d89f31d77fa579b8da6f
+Installed-Size: 20498
+Filename: sane-dmc_1.0.25-1_ar71xx.ipk
+Size: 21379
+MD5Sum: e958d2c1e1ec59a17665be9f49cc05a2
+SHA256sum: 97910cc10cd777c5c78e3de3a5a25c035cc08fc2fc22647ecbc34b75fbe291c4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Polaroid Digital Microscope Camera.
 
 Package: sane-epjitsu
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -417,17 +438,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 33585
-Filename: sane-epjitsu_1.0.24-1_ar71xx.ipk
-Size: 34549
-MD5Sum: c46d0f582eb64372e00d305063f832ee
-SHA256sum: 906f04c4156a6c2aac39126010973c339370c3651ed3cbc6e991bf7070176e8c
+Installed-Size: 36450
+Filename: sane-epjitsu_1.0.25-1_ar71xx.ipk
+Size: 37330
+MD5Sum: 221a732f2d21b638503545cbe96c7ab6
+SHA256sum: 7ac50fc3e51d268f800349838789774afc9cdd6b78fae3a71b553bbb67fd7237
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Epson-based Fujitsu USB scanners.
 
 Package: sane-epson
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -435,17 +456,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 46072
-Filename: sane-epson_1.0.24-1_ar71xx.ipk
-Size: 47012
-MD5Sum: 3072e7ef17b5745d7f1a205328067aca
-SHA256sum: ef48aa7bda5ce70a3fe2bedbb3326bf128001bbdb7d5be83192a05b53766b516
+Installed-Size: 45911
+Filename: sane-epson_1.0.25-1_ar71xx.ipk
+Size: 46864
+MD5Sum: 6d641b7da35a1ec1e9aeff4ca81a40b4
+SHA256sum: eefffcf71e93443384d2d86e7754969609f390efd8b935de7aa422bfb7c4f02b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for EPSON scanners.
 
 Package: sane-epson2
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -453,34 +474,52 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 59532
-Filename: sane-epson2_1.0.24-1_ar71xx.ipk
-Size: 60306
-MD5Sum: 4489df5892b79ef7dbbb17349eaae4b2
-SHA256sum: e892e64f74a6d284d3c5e942224440a6f7cba1f185cbd6b20f6afc486d5d763e
+Installed-Size: 60204
+Filename: sane-epson2_1.0.25-1_ar71xx.ipk
+Size: 61030
+MD5Sum: 30598e5aed2ddbd07fc7a68194b7db22
+SHA256sum: 119028ffbbff614dc8a0cf87b964013768839c8055f54d1c7fc1249236d5a7e6
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for EPSON scanners.
+
+Package: sane-epsonds
+Version: 1.0.25-1
+Depends: libc, libsane, libjpeg
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 37919
+Filename: sane-epsonds_1.0.25-1_ar71xx.ipk
+Size: 38894
+MD5Sum: 38649312c34c72f378b88935ec2852c9
+SHA256sum: 6affac1a139204d1681b1e1774dc3d23b789c9a6c9a3fc2427fde19e2a43b579
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for EPSON scanners.
 
 Package: sane-frontends
-Version: 1.0.24-1
-Depends: libc, libsane
+Version: 1.0.25-1
+Depends: libc, libsane, libjpeg, libpng
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
 LicenseFiles: COPYING LICENSE
 Section: utils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 58476
-Filename: sane-frontends_1.0.24-1_ar71xx.ipk
-Size: 59393
-MD5Sum: 6ff211315ce6413dad987558f1b954e9
-SHA256sum: 2f6ed6ab52fc2d428dd3c0cabf564c5a8cd515d42756441bec7ae38d055230aa
+Installed-Size: 116242
+Filename: sane-frontends_1.0.25-1_ar71xx.ipk
+Size: 117135
+MD5Sum: bbe13d0d514fadefa418486c6c76761f
+SHA256sum: c309e48783ebef71f48abff3c2caa6b9e7ccff81c95d9422392e5644ecac7379
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE frontends.
 
 Package: sane-fujitsu
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -488,17 +527,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 68857
-Filename: sane-fujitsu_1.0.24-1_ar71xx.ipk
-Size: 69843
-MD5Sum: a717c008a56ad39b570cd3ca08652d56
-SHA256sum: 56785ce32673c6d0f9c9ab8b8099cb60c930c70602781949bc944b82b9de573c
+Installed-Size: 71438
+Filename: sane-fujitsu_1.0.25-1_ar71xx.ipk
+Size: 72474
+MD5Sum: 253a3d2eda4b07541a62ad9cf70afe46
+SHA256sum: 85752dcb33e603a25e2b0a7e12701a65928064e2f6e94df12e87c5b80c967168
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Fujitsu flatbed and ADF scanners.
 
 Package: sane-genesys
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -506,17 +545,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 180773
-Filename: sane-genesys_1.0.24-1_ar71xx.ipk
-Size: 181546
-MD5Sum: b371b280c5a4f07cf50a6e55c4669303
-SHA256sum: 42a55f9a9fb2ea758a85d015e9eead50c3f60a3c8fb255e929af922a1f657444
+Installed-Size: 186869
+Filename: sane-genesys_1.0.25-1_ar71xx.ipk
+Size: 187679
+MD5Sum: 43734ad24e744069544d9a1292a7dd8b
+SHA256sum: f8c5c84512751a38ce946021d306d2abffbac70a5a05ac87e21dee9346632184
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for GL646 GL841 GL843 GL847 and GL124 based USB flatbed scanners.
 
 Package: sane-gt68xx
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -524,17 +563,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 52321
-Filename: sane-gt68xx_1.0.24-1_ar71xx.ipk
-Size: 53301
-MD5Sum: 9c67951bb1cd4b0a060cba3f7509e85f
-SHA256sum: dfc9896d33f6e3b2836c00f6bf95741bfe5ed3fc86429148a6b91e8f85a0bca0
+Installed-Size: 52309
+Filename: sane-gt68xx_1.0.25-1_ar71xx.ipk
+Size: 53290
+MD5Sum: 4016a2da0a900b4a985f4d4063c42acc
+SHA256sum: 7c2962b981b3f57b47d9cd9a368c0a10aecf406a1fdfe35aea61e4a086ab965f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for GT-68XX based USB flatbed scanners.
 
 Package: sane-hp
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -542,17 +581,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 61244
-Filename: sane-hp_1.0.24-1_ar71xx.ipk
-Size: 62162
-MD5Sum: 80ea80c1d5af2339afedc78679582ca5
-SHA256sum: 5f1d565ab213883a87a16319250c0a6fac3096a280f4adcfdee423ee20bbfc0c
+Installed-Size: 61322
+Filename: sane-hp_1.0.25-1_ar71xx.ipk
+Size: 62265
+MD5Sum: d445d951dcc01c28eab1cc206184da4b
+SHA256sum: 4055c52e029a765af0f6c474cc66e1b7011a6479f108424e77f179dd321d2706
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for HP ScanJet scanners.
 
 Package: sane-hp3500
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -560,17 +599,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 29150
-Filename: sane-hp3500_1.0.24-1_ar71xx.ipk
-Size: 29999
-MD5Sum: 4654ff13291c451176020552608247d2
-SHA256sum: 037e7c67a7874c729aeaab44ad8802fd80df516c0a22b08ecd1e53b285550f1b
+Installed-Size: 29230
+Filename: sane-hp3500_1.0.25-1_ar71xx.ipk
+Size: 30085
+MD5Sum: b5893f7c328d2c1fbb2f1c314cfb3f61
+SHA256sum: 156aa46e989a9b3c8a3e660d090859c916db402914d2b242f13c8b410dff489d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Hewlett-Packard ScanJet 3500 series scanners.
 
 Package: sane-hp3900
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane, libtiff
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -578,17 +617,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 114279
-Filename: sane-hp3900_1.0.24-1_ar71xx.ipk
-Size: 114631
-MD5Sum: 161a699c336ec3afdbf9a293c9f97f31
-SHA256sum: 815945e73dacc60d843ce3a221fb0a9d4cbb4a4d4d26e4d27540222b2fac201f
+Installed-Size: 114189
+Filename: sane-hp3900_1.0.25-1_ar71xx.ipk
+Size: 114519
+MD5Sum: b12d2dd38dd8bd54a0bf59864b71acaf
+SHA256sum: 727a53384505c7e8d8eee496bcf7d39de26d1d85b0bdb72c332be052782f5eeb
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for RTS8822 chipset based scanners.
 
 Package: sane-hp4200
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -596,17 +635,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 26781
-Filename: sane-hp4200_1.0.24-1_ar71xx.ipk
-Size: 27692
-MD5Sum: 0d5658993d12c46ba86f09a260749e0f
-SHA256sum: a8b0121555761be661a0cc7d6ecb0b1f8adb64a2975f62ac9223ef3233e86cab
+Installed-Size: 26728
+Filename: sane-hp4200_1.0.25-1_ar71xx.ipk
+Size: 27673
+MD5Sum: ab969372882b20aa8ed7b497b986b134
+SHA256sum: b9eab8f6363008b1c937e51bbdf10fe8eef528d3c2ba36bf1443e1c798da8b7f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Hewlett-Packard 4200 scanners.
 
 Package: sane-hp5400
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -614,17 +653,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 21855
-Filename: sane-hp5400_1.0.24-1_ar71xx.ipk
-Size: 22761
-MD5Sum: 5b63d71a5bb96ea3c004732d9a231c12
-SHA256sum: d7f3e8d4dc5ed0fcb62ef1ee490e8b7252f0eec45faece5a11a15a52c4ad258c
+Installed-Size: 21820
+Filename: sane-hp5400_1.0.25-1_ar71xx.ipk
+Size: 22738
+MD5Sum: c1641b725d0305953aaf58fe1c02f198
+SHA256sum: 87016c95eabd74359d8b157c6429be03009d5af04367dffad565eb958e8dd4b3
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Hewlett-Packard 54XX scanners.
 
 Package: sane-hp5590
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -632,17 +671,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 29133
-Filename: sane-hp5590_1.0.24-1_ar71xx.ipk
-Size: 30043
-MD5Sum: 16a34955e2bbcd53c2c86c3ea675e0e9
-SHA256sum: 408f5692ee6ead8a984a5851a2e33c9a5f35059590aae922167f1b399ede6fe5
+Installed-Size: 29019
+Filename: sane-hp5590_1.0.25-1_ar71xx.ipk
+Size: 29921
+MD5Sum: d62728c145a7e4dce393ac8e36f5ca59
+SHA256sum: d29b295ffe3ff78b04f9577186b29009164229e98be7808d1d8b2d324dd953c1
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Hewlett-Packard 4500C/4570C/5500C/5550C/5590/7650 Workgroup/Document scanners.
 
 Package: sane-hpljm1005
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -650,17 +689,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 18110
-Filename: sane-hpljm1005_1.0.24-1_ar71xx.ipk
-Size: 18999
-MD5Sum: b7fee2d30a51c47af1a3244e58efbfa6
-SHA256sum: cce35eebd7b2c491a86680b45231154cab06f80503beb75682ad8163a8c554a7
+Installed-Size: 18083
+Filename: sane-hpljm1005_1.0.25-1_ar71xx.ipk
+Size: 18968
+MD5Sum: 4afc2ffd818ed9a9a706b7417dc5df1d
+SHA256sum: d80735f344412188c25fc3ff556497130cb3aa901dee7a77e6ab5abbc48f96d4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Hewlett-Packard LaserJet M1005 MFP Scanner.
 
 Package: sane-hs2p
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -668,17 +707,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 45211
-Filename: sane-hs2p_1.0.24-1_ar71xx.ipk
-Size: 46089
-MD5Sum: 5fb33997de8754a61abdb3bd9b499c7a
-SHA256sum: 7eb713c7c7819f1132c53cc8c6cda6ed5204eb873c78ccdda469b43471d84948
+Installed-Size: 45184
+Filename: sane-hs2p_1.0.25-1_ar71xx.ipk
+Size: 46088
+MD5Sum: b2a76b35809b1c9609c4b0ae62325b10
+SHA256sum: 1418f18d79633a78b94eac4b9dc26821f3040a93d7db5cd4ee9634b23b947f14
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Ricoh SCSI flatbed/ADF scanners.
 
 Package: sane-ibm
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -686,17 +725,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 22433
-Filename: sane-ibm_1.0.24-1_ar71xx.ipk
-Size: 23264
-MD5Sum: ee077d7455efcb6daf25cb2c48a60ffd
-SHA256sum: fded5b1edc9fe05ce3b86e6efbb0ecb4010f8c4bc24cbe4e600867be1019be74
+Installed-Size: 22438
+Filename: sane-ibm_1.0.25-1_ar71xx.ipk
+Size: 23289
+MD5Sum: 83a5175ef4cf3daa3554d68acfd7c964
+SHA256sum: 15293d168db0aca2dbe73a30a70144e9aab7dfda9128c44ad399ce5a3a61fbdc
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for IBM and Ricoh SCSI flatbed scanners.
 
 Package: sane-kodak
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -704,17 +743,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 27991
-Filename: sane-kodak_1.0.24-1_ar71xx.ipk
-Size: 28853
-MD5Sum: 6f7710db5ed6bfea54914ed26618857f
-SHA256sum: 1de19819dea306c68c25e40da26d8cb4b05d87edde2cf502f9803bd0c40d833d
+Installed-Size: 27994
+Filename: sane-kodak_1.0.25-1_ar71xx.ipk
+Size: 28860
+MD5Sum: d8ad37bb464b93b550c88fbe510dacd0
+SHA256sum: 96a963a8cd9fece5b28c43f55c6b9153733f7438c04640d44673420d7fb26d2e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for big Kodak flatbed and ADF scanners.
 
 Package: sane-kodakaio
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -722,17 +761,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 40117
-Filename: sane-kodakaio_1.0.24-1_ar71xx.ipk
-Size: 41119
-MD5Sum: f05428773998efbd8ebbb0500f31d275
-SHA256sum: 70e93880ec0b8a083071e37014515b90bae0e565cdf3f32646f3728f2b0c4394
+Installed-Size: 40964
+Filename: sane-kodakaio_1.0.25-1_ar71xx.ipk
+Size: 41887
+MD5Sum: d5b2701692ac92e019329a219ef24b3e
+SHA256sum: 4654de0ec0a3b4358d379b5b195cb2a4cab1ed3cba2855af5673215084505239
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Kodak aio printer / scanners.
 
 Package: sane-kvs1025
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -740,17 +779,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 40883
-Filename: sane-kvs1025_1.0.24-1_ar71xx.ipk
-Size: 41859
-MD5Sum: 79ce937ca859e46e9d827a45b31b648f
-SHA256sum: d614695e42d3a3480900231d4d9de2f1755831073c986c1f01cc3a0bf11c4b5c
+Installed-Size: 40798
+Filename: sane-kvs1025_1.0.25-1_ar71xx.ipk
+Size: 41760
+MD5Sum: 46afcb357d3a65fd257cf44791dcd5e5
+SHA256sum: 041574252a7437b15ebab57183db3c56bc5110eea13f956729493fdb498bb237
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Panasonic KV-S102xC USB ADF scanners.
 
 Package: sane-kvs20xx
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -758,17 +797,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 30207
-Filename: sane-kvs20xx_1.0.24-1_ar71xx.ipk
-Size: 31054
-MD5Sum: d7a3377961be4eaab61d19778a40425a
-SHA256sum: c55794944f195ba754ebeb3249bca59c9e43928711cab34d4a1105bd71d4e2c8
+Installed-Size: 30093
+Filename: sane-kvs20xx_1.0.25-1_ar71xx.ipk
+Size: 30957
+MD5Sum: 56da7fe21398cd42c0f79ec7b3042fe1
+SHA256sum: ad838d2619f59da144ee7aa6d9d4ea8620134769938c6846866d09e002453d22
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Panasonic KV-S20xxC USB/SCSI ADF scanners.
 
 Package: sane-kvs40xx
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -776,17 +815,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 34555
-Filename: sane-kvs40xx_1.0.24-1_ar71xx.ipk
-Size: 35469
-MD5Sum: ae6d6c3ad2a25824a50305a06f63c6ea
-SHA256sum: bb7a1a20a3c498075d05fe8915922dd3f96b5b2b29d64fc5040c799cdac39689
+Installed-Size: 34551
+Filename: sane-kvs40xx_1.0.25-1_ar71xx.ipk
+Size: 35485
+MD5Sum: 6a85e0270ec9266315c69bef7b6b8c89
+SHA256sum: 25d76f6f67826e4fefa70c4262fff0a4eaf3efcebedbc37ddac1144324886d99
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Panasonic KV-S40xxC USB/SCSI ADF scanners.
 
 Package: sane-leo
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -794,17 +833,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 24807
-Filename: sane-leo_1.0.24-1_ar71xx.ipk
-Size: 25654
-MD5Sum: 7c6433ee94f69494f8029200b55e0d38
-SHA256sum: b0a2cd8a56a39108a13a68f79e041dc5f7b9803f8ef0f749db80d6dc2911a12d
+Installed-Size: 24835
+Filename: sane-leo_1.0.25-1_ar71xx.ipk
+Size: 25684
+MD5Sum: a0b8b9170fde36b0fd16823c6060dd5d
+SHA256sum: 0a04c9d843cf9462fb29b7eced8d01ad992cab7b839dd005bdd5ee2a27e28c56
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for LEO Technologies scanners.
 
 Package: sane-lexmark
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -812,17 +851,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 35491
-Filename: sane-lexmark_1.0.24-1_ar71xx.ipk
-Size: 36496
-MD5Sum: 1344d7901f1e1a81f07cc4ec2f028084
-SHA256sum: 9a2138fb1d0444de652a32752551ffa0a70e9b2914b61675d4b7362d39728b09
+Installed-Size: 35436
+Filename: sane-lexmark_1.0.25-1_ar71xx.ipk
+Size: 36442
+MD5Sum: da16d0e5ff57305c4894b1c8739280e8
+SHA256sum: 1fddbf283a1cb94e049f41d9cf5e535a820aad5075af2c38f77f4644c3b028d4
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Lexmark X1100/X1200 Series scanners.
 
 Package: sane-ma1509
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -830,17 +869,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 23800
-Filename: sane-ma1509_1.0.24-1_ar71xx.ipk
-Size: 24679
-MD5Sum: a8c7e1d13398d2dbf4b4c9e69e8e84b5
-SHA256sum: 208b159c36b06431e57e7bde40094233bae4a06c8b40cb622d986024bcf65064
+Installed-Size: 23748
+Filename: sane-ma1509_1.0.25-1_ar71xx.ipk
+Size: 24614
+MD5Sum: bc8bbea6a9cbeb6b44671e0eaf36c6af
+SHA256sum: ca630a229d05f38024161dfb5baa077412a3d5e1dfdcd5e34f1848ef58f5fd7f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Mustek BearPaw 1200F USB scanner.
 
 Package: sane-magicolor
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -848,17 +887,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 36843
-Filename: sane-magicolor_1.0.24-1_ar71xx.ipk
-Size: 37808
-MD5Sum: 3306ceff2383d6d86d2b32bb822b6c65
-SHA256sum: 7f6fa7a7c4bc17dd9f3a56852ff7ce5b07cde5439a5858a48d086a3ab21e1176
+Installed-Size: 36904
+Filename: sane-magicolor_1.0.25-1_ar71xx.ipk
+Size: 37919
+MD5Sum: 8a052cccc6b8a2cf589ad58e20bf0b7c
+SHA256sum: 1565fe504ad57b9e65f40ce306891fdc32c4062f09735b3f22cd451cac76941d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for KONICA MINOLTA magicolor scanners.
 
 Package: sane-matsushita
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -866,17 +905,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 26234
-Filename: sane-matsushita_1.0.24-1_ar71xx.ipk
-Size: 27066
-MD5Sum: d0cde7d4999f449770979636ffd0616e
-SHA256sum: f50713caf2c3d29ab7da81253c0a691535f6df064ce67b7967f9202b37313689
+Installed-Size: 26227
+Filename: sane-matsushita_1.0.25-1_ar71xx.ipk
+Size: 27062
+MD5Sum: 855ffee9df887fa6956ecab42c2bebf4
+SHA256sum: 911328c63123de366fcfcae0bbdbf6076d21c08a426ed0d2248eb5aec89b0477
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Panasonic KV-SS high speed scanners.
 
 Package: sane-microtek
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -884,17 +923,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 39734
-Filename: sane-microtek_1.0.24-1_ar71xx.ipk
-Size: 40760
-MD5Sum: 1d123f74c3b7dad231bcb68409a6e62f
-SHA256sum: e15f0da0f7cf834ec2d4ca1bce7d7d2e57db14892e3bc9fb5c57e12e42b240a1
+Installed-Size: 39695
+Filename: sane-microtek_1.0.25-1_ar71xx.ipk
+Size: 40719
+MD5Sum: f8e404054901c64988d9d70498532648
+SHA256sum: 5c715ea3894f410f1126d577f05ce124aa7ef07d47332acdd6d1381b644dc3c5
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Microtek scanners.
 
 Package: sane-microtek2
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -902,17 +941,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 57432
-Filename: sane-microtek2_1.0.24-1_ar71xx.ipk
-Size: 58463
-MD5Sum: 93ae5bbcbb7abf578883a7a886b4c6a4
-SHA256sum: 68cea591d25add2aed4e093b57c40fa672f6cce808b3e00829672ea5dff64472
+Installed-Size: 57553
+Filename: sane-microtek2_1.0.25-1_ar71xx.ipk
+Size: 58605
+MD5Sum: c64d608b17edc55f9110cfe9888f5b14
+SHA256sum: 8f181f070431a608d8e86694c3d5d555c390876ce0591971da50032c7bbc9b33
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Microtek scanners with SCSI-2 command set.
 
 Package: sane-mustek
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -920,17 +959,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 56162
-Filename: sane-mustek_1.0.24-1_ar71xx.ipk
-Size: 57121
-MD5Sum: 631f23d2c671897d1200cc90511a9e8b
-SHA256sum: ec363214774d88751ca4223c7b278b69f6189a7843e35060c99797fccbf8ea61
+Installed-Size: 56248
+Filename: sane-mustek_1.0.25-1_ar71xx.ipk
+Size: 57221
+MD5Sum: a34749a6a26dfff6e89474db9d16759d
+SHA256sum: 5d99ebac0d9cd59cfa03f0fe4a37bc1195149af35a9ef573940a0e9bf83211b0
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Mustek SCSI flatbed scanners and some other devices.
 
 Package: sane-mustek_usb
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -938,17 +977,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 51835
-Filename: sane-mustek_usb_1.0.24-1_ar71xx.ipk
-Size: 52786
-MD5Sum: c5f3fc1932926495cac9f6f0fef75364
-SHA256sum: 7e3426458315f8ada9571909bbf9d0d49bc0a7e8c6e874419bc747dd1b568a60
+Installed-Size: 51791
+Filename: sane-mustek_usb_1.0.25-1_ar71xx.ipk
+Size: 52692
+MD5Sum: d8c41d8a968efbecd4026a930a1965ff
+SHA256sum: 9500708056ae70d8a1a98cfbc12dbb2c9b8025e382a14113502d108c37701fe3
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Mustek USB flatbed scanners.
 
 Package: sane-mustek_usb2
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -956,17 +995,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 59271
-Filename: sane-mustek_usb2_1.0.24-1_ar71xx.ipk
-Size: 60241
-MD5Sum: 23fa9f35eae9811d141474bc8a96fd8f
-SHA256sum: 0b0fb7b3981d760ce832cfabe3572f28a3d3d2cbb7ffaea142e0c62512b16f51
+Installed-Size: 59429
+Filename: sane-mustek_usb2_1.0.25-1_ar71xx.ipk
+Size: 60414
+MD5Sum: 608623426248f2a5a59b38187d2ed333
+SHA256sum: ccb716845084388532737fd11ff2066c1a07d1b6e2f9271acf76a6b3669cc045
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for SQ113 based USB flatbed scanners.
 
 Package: sane-nec
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -974,17 +1013,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 29284
-Filename: sane-nec_1.0.24-1_ar71xx.ipk
-Size: 30135
-MD5Sum: 6dbfb5ffc9b928f951375bca82a767d9
-SHA256sum: 4be996dcf4aebf5726b21d119fad9b3187519988bc900ba2d810ce152e66a51f
+Installed-Size: 29287
+Filename: sane-nec_1.0.25-1_ar71xx.ipk
+Size: 30149
+MD5Sum: 5f437e5599e837b48b65b52593da28ce
+SHA256sum: b09babf7292e9d7c8dce545da523565457168196cb532b5c4bd71e661d31b68c
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for NEC scanners.
 
 Package: sane-net
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -992,215 +1031,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 20005
-Filename: sane-net_1.0.24-1_ar71xx.ipk
-Size: 20892
-MD5Sum: 9ec40066d3b43dfb9067d20302be54f7
-SHA256sum: a358a1e219193d40a8b9afed08ed9ea8856860501cae8e606ff3af3934448495
+Installed-Size: 20000
+Filename: sane-net_1.0.25-1_ar71xx.ipk
+Size: 20891
+MD5Sum: 57e8cff918ceff86c9fd36e1a0da43f6
+SHA256sum: 4f9129e42fd5d08efcef18e6c1075f1ff9f127085428ee5291286fe4e3479d22
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for network backend.
 
 Package: sane-niash
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 24695
-Filename: sane-niash_1.0.24-1_ar71xx.ipk
-Size: 25531
-MD5Sum: 698c0611edba4010f49fba3163ed110f
-SHA256sum: 83a2e087498339b1376bf32229a445436ccfc46b169cc28076da3cea43f3a74b
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for scanners based on the NIASH chipset.
-
-Package: sane-p5
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 20559
-Filename: sane-p5_1.0.24-1_ar71xx.ipk
-Size: 21436
-MD5Sum: 696dca670911a64a26f29cf34ed7479a
-SHA256sum: 7b1d8dd8c3a77fd3d6ce262f2c17d340369b805760328496070fdee85ba7216d
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for the Primax PagePartner.
-
-Package: sane-pie
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 32761
-Filename: sane-pie_1.0.24-1_ar71xx.ipk
-Size: 33712
-MD5Sum: 93304d1af799f3aeaa0b6f61ee178664
-SHA256sum: 86bc33692e8947f073829988dd12598bd32799eed81493d759d53046bdc98f42
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for PIE Devcom and AdLib SCSI flatbed scanners.
-
-Package: sane-pixma
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 61861
-Filename: sane-pixma_1.0.24-1_ar71xx.ipk
-Size: 62797
-MD5Sum: ba3c88c2b6417a7e1b7b2fd8f0ace76e
-SHA256sum: b0ae6bf13a35905a6f939cc2434e4b605af9e2482af2edbc84f5bcd5fd05ba05
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for Canon Multi-Function Printers and CanoScan Scanners.
-
-Package: sane-plustek
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 90010
-Filename: sane-plustek_1.0.24-1_ar71xx.ipk
-Size: 90738
-MD5Sum: a0881595f5218f7f041ab9c1b1ab1711
-SHA256sum: 84f519f811241a8d3e358d4ec7f74778643eba00e67efd56d0745c041337a3f1
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for LM983[1/2/3] based USB flatbed scanners.
-
-Package: sane-plustek_pp
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 73411
-Filename: sane-plustek_pp_1.0.24-1_ar71xx.ipk
-Size: 74385
-MD5Sum: be919794e3c01becb55bc8cf7877a4d6
-SHA256sum: fe1c0247bc09e3278dec1535c328b67a62953ef9a118ee0e2a45c5f548085e22
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for Plustek parallel port flatbed scanners.
-
-Package: sane-ricoh
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 21581
-Filename: sane-ricoh_1.0.24-1_ar71xx.ipk
-Size: 22467
-MD5Sum: cf260f0a64e9114de3627fe424f45ba0
-SHA256sum: 3063fcd5528cfe94d2c24669a74440ba35fa2429b55954e4f1264c05e57593ef
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for Ricoh flatbed scanners.
-
-Package: sane-rts8891
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 56981
-Filename: sane-rts8891_1.0.24-1_ar71xx.ipk
-Size: 57916
-MD5Sum: 3c1017265c1b322c56aa484726d5a71a
-SHA256sum: 47de076a62b4579d2c390bb3c4f82e0b34ae7a26e70f6d3b9360fab852eed4aa
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for rts8891 based scanners.
-
-Package: sane-s9036
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 20914
-Filename: sane-s9036_1.0.24-1_ar71xx.ipk
-Size: 21786
-MD5Sum: 972d22d628b48abef0b54c2372f7d340
-SHA256sum: 5d25853720456e4093abca25804736c9a0672678612183cfe114ef3fecf5582d
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for Siemens 9036 flatbed scanners.
-
-Package: sane-sceptre
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 23889
-Filename: sane-sceptre_1.0.24-1_ar71xx.ipk
-Size: 24782
-MD5Sum: 961363f960ecc4acad7457d73a61a05c
-SHA256sum: d4e756ec1cec41aaaa5f9fc56061315021860107129c83730c124f728eaad95a
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for SCEPTRE scanners.
-
-Package: sane-sharp
-Version: 1.0.24-1
-Depends: libc, libsane
-Source: feeds/packages/utils/sane-backends
-License: GPL-2.0 GPL-2.0+
-LicenseFiles: COPYING LICENSE
-Section: opt
-Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Architecture: ar71xx
-Installed-Size: 33839
-Filename: sane-sharp_1.0.24-1_ar71xx.ipk
-Size: 34786
-MD5Sum: 660ee35765df6bb325d32ffa3ac1f3f9
-SHA256sum: ef1251d86bd96b7963b410ec2aac185589eec3e7cc20e77401a4732f8f5b099a
-Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
- .
- This package contains the SANE backend for SHARP scanners.
-
-Package: sane-sm3600
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1209,16 +1050,232 @@ Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24485
-Filename: sane-sm3600_1.0.24-1_ar71xx.ipk
-Size: 25298
-MD5Sum: 39613b656ef12a8599df53f403a8d9ca
-SHA256sum: 3b626391c80150869cb370c7cf4447dd3be3db8e251e42c978d6860ba0449409
+Filename: sane-niash_1.0.25-1_ar71xx.ipk
+Size: 25304
+MD5Sum: 8b630077b712a576dc1ea6fe62bedc60
+SHA256sum: 82e189df03311c6d62f6bb498a6fd6eb0b6505abd413da656cc5117417f3e10a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for scanners based on the NIASH chipset.
+
+Package: sane-p5
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20586
+Filename: sane-p5_1.0.25-1_ar71xx.ipk
+Size: 21472
+MD5Sum: 9634ade8030bdbfbede3da185c5ef330
+SHA256sum: e7f02aed83d8fef1e57a34651a49c36cc292b19b88f50201a1a2577abf2ff1ae
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for the Primax PagePartner.
+
+Package: sane-pie
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 32830
+Filename: sane-pie_1.0.25-1_ar71xx.ipk
+Size: 33786
+MD5Sum: 54a2efba7dd42071838f5f37abe2e754
+SHA256sum: 26da398b712d5b10835cab2fa8a64ca83656e45384d1ad6513d489f26595727a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for PIE Devcom and AdLib SCSI flatbed scanners.
+
+Package: sane-pieusb
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 68969
+Filename: sane-pieusb_1.0.25-1_ar71xx.ipk
+Size: 69960
+MD5Sum: f6474b20d8f19c950e68028bedc1c735
+SHA256sum: a3590687ae481483cde06f9e8ad21c056db19f2e6517c31eadd8f0305d26d4fb
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for PIE Devcom and AdLib SCSI flatbed scanners.
+
+Package: sane-pixma
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 64129
+Filename: sane-pixma_1.0.25-1_ar71xx.ipk
+Size: 65074
+MD5Sum: 84d5fd648554c4cb9c1646dd0ba6a069
+SHA256sum: 8986e6dd269eaafd36f7a3b0b500963f8bf4341679c72ddcc03456879cced258
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Canon Multi-Function Printers and CanoScan Scanners.
+
+Package: sane-plustek
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 90039
+Filename: sane-plustek_1.0.25-1_ar71xx.ipk
+Size: 90782
+MD5Sum: d39964d5ccc101a0e5c268dcd94ccb67
+SHA256sum: 71f2c2568abefb29d07da6a9ebeac07e11753efa9196fd9bc3b6841602065201
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for LM983[1/2/3] based USB flatbed scanners.
+
+Package: sane-plustek_pp
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 73508
+Filename: sane-plustek_pp_1.0.25-1_ar71xx.ipk
+Size: 74473
+MD5Sum: 764c9c8f218ba43a7515a609673914fa
+SHA256sum: d1a6084bcc8a171c74fbbc8fcf0602944ef505a86c40464018c47743bb01fa73
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Plustek parallel port flatbed scanners.
+
+Package: sane-ricoh
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 21569
+Filename: sane-ricoh_1.0.25-1_ar71xx.ipk
+Size: 22465
+MD5Sum: be00a213bd1090ffca7e23de2b13db5b
+SHA256sum: 7ac37fd598675d7e2d57cdba03e97148dafb45ff53e4a338ac5cd8b02760633f
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Ricoh flatbed scanners.
+
+Package: sane-rts8891
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 57019
+Filename: sane-rts8891_1.0.25-1_ar71xx.ipk
+Size: 57938
+MD5Sum: 68599a5545c0248324bbb3675f48aaf2
+SHA256sum: 1304df535c1c600f33ccd040f2e36e5130d0d03807b8ceaa8ce5b4c9c355a88a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for rts8891 based scanners.
+
+Package: sane-s9036
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 20951
+Filename: sane-s9036_1.0.25-1_ar71xx.ipk
+Size: 21833
+MD5Sum: 2daa28df91df9dcc99627c88370df131
+SHA256sum: 4207de3144cc4ce161d2ad7fc19604c191c8a51967bc32f87941e6e2eaa6d87d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for Siemens 9036 flatbed scanners.
+
+Package: sane-sceptre
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 23896
+Filename: sane-sceptre_1.0.25-1_ar71xx.ipk
+Size: 24787
+MD5Sum: c328b931cbb3baa52cbd5950a85ab3d4
+SHA256sum: dd480c28ef9ecc00d1269666a24f85fa25a6ec7c0bd115c8776b5b08387e8672
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for SCEPTRE scanners.
+
+Package: sane-sharp
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 33853
+Filename: sane-sharp_1.0.25-1_ar71xx.ipk
+Size: 34804
+MD5Sum: 322eafa960d2585fdf2bffa739dd7578
+SHA256sum: 42b75a7b12faf8a078e940ff31018bc6b72ee4212c77ee040c91649b332700a9
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ .
+ This package contains the SANE backend for SHARP scanners.
+
+Package: sane-sm3600
+Version: 1.0.25-1
+Depends: libc, libsane
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: opt
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: ar71xx
+Installed-Size: 24372
+Filename: sane-sm3600_1.0.25-1_ar71xx.ipk
+Size: 25197
+MD5Sum: 332f55e6d17acbfb8cf83b486b56dd57
+SHA256sum: 383dd75f5cdb68da1802465256048094d5de44fdf510b63c24317374224a6a8e
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Microtek scanners with M011 USB chip.
 
 Package: sane-sm3840
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1226,17 +1283,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 28775
-Filename: sane-sm3840_1.0.24-1_ar71xx.ipk
-Size: 29652
-MD5Sum: c20078eb447e0aae559884747531a248
-SHA256sum: ca77c1cc1325072768a22c4038c271ddeb9fa5cd526904f568015af85ab8a239
+Installed-Size: 28748
+Filename: sane-sm3840_1.0.25-1_ar71xx.ipk
+Size: 29621
+MD5Sum: 3081ed768f62efc1efbba1202041b009
+SHA256sum: 2c2d2947ba81afd4239973c212cc1812683b177bed02e5b3aca68d89ef88b806
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Microtek scanners with SCAN08 USB chip.
 
 Package: sane-snapscan
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1244,17 +1301,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 89144
-Filename: sane-snapscan_1.0.24-1_ar71xx.ipk
-Size: 89997
-MD5Sum: bb2d9ec11a698088f2a7574ae17068e2
-SHA256sum: d0cd621ee5ea2d5ba2abd4dba217f2e3d81aaead2e5c8d0952c1e02fb1093624
+Installed-Size: 89186
+Filename: sane-snapscan_1.0.25-1_ar71xx.ipk
+Size: 90037
+MD5Sum: 21ddcc1f3df8c432e254ebec3b2b5cd9
+SHA256sum: ccb5eb66dfe1d2355b32809f96596f620c279b8188e05c064c0610efdf59e358
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for AGFA SnapScan flatbed scanners.
 
 Package: sane-sp15c
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1262,17 +1319,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 25293
-Filename: sane-sp15c_1.0.24-1_ar71xx.ipk
-Size: 26134
-MD5Sum: 33503f377a0be3dbe3a1107d4d1af9db
-SHA256sum: 3fc5927063959d33a08a4550de48ef89c3d974c759e9f966b7873b2e0860b7b0
+Installed-Size: 25440
+Filename: sane-sp15c_1.0.25-1_ar71xx.ipk
+Size: 26278
+MD5Sum: 3dcaffe9b98eaab2a3759001ae6c05a4
+SHA256sum: 7435914667a8644bd19998c4d8d300238b3407cd4b054a3014f8ba12b768ae3b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Fujitsu ScanPartner 15C flatbed scanner.
 
 Package: sane-st400
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1280,17 +1337,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 22797
-Filename: sane-st400_1.0.24-1_ar71xx.ipk
-Size: 23693
-MD5Sum: a9e0ad2d4d032a1d453ef254357c8378
-SHA256sum: cc00473482c3b23391c7cc5fc1ce9ae49c3f86ea2be02dafa66bc24c03000c1e
+Installed-Size: 22800
+Filename: sane-st400_1.0.25-1_ar71xx.ipk
+Size: 23699
+MD5Sum: 0ceba378becee2cf604fdfa2e6f4afd7
+SHA256sum: b20449a5873b2133f1779ad95113de1c81e88669f90caf464ab77a76708d6a83
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Siemens ST/Highscan flatbed scanners.
 
 Package: sane-stv680
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1298,17 +1355,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 24576
-Filename: sane-stv680_1.0.24-1_ar71xx.ipk
-Size: 25432
-MD5Sum: 3c05ebbc22d77852925346d10ecb6c64
-SHA256sum: 0f6631a44f20bc8e98b6e873f63430823edc66739d2798197bb64c5ec0c92ed6
+Installed-Size: 24496
+Filename: sane-stv680_1.0.25-1_ar71xx.ipk
+Size: 25367
+MD5Sum: e3a117d7b3046432b7be377c9a134956
+SHA256sum: 880b5e65ed7d80224dfebee5359b8b5714f9443b9f276646c0b750627006716b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for STV680 cameras.
 
 Package: sane-tamarack
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1316,17 +1373,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 22735
-Filename: sane-tamarack_1.0.24-1_ar71xx.ipk
-Size: 23619
-MD5Sum: 43eda2810fe5e1fd7bcd279e41be18c8
-SHA256sum: 3a42bc9c37e6e67e83f1b258f11875b786b2181b01193d0173a5a925b424691b
+Installed-Size: 22840
+Filename: sane-tamarack_1.0.25-1_ar71xx.ipk
+Size: 23719
+MD5Sum: dba733a6d5789a82722137aee85840be
+SHA256sum: 090405bf93496b6d652862c3e17148ef6a81b7889f12126f3fe6f474b8e08436
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Tamarack flatbed scanners.
 
 Package: sane-teco1
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1334,17 +1391,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 24499
-Filename: sane-teco1_1.0.24-1_ar71xx.ipk
-Size: 25344
-MD5Sum: 29bb7adeca23bbbbb8567c2781ad2b21
-SHA256sum: 9ed321917f160a84d0c30524367a34b9422b0182c39ffae1a1c3bae3c13d86d5
+Installed-Size: 24495
+Filename: sane-teco1_1.0.25-1_ar71xx.ipk
+Size: 25334
+MD5Sum: 748a7bc397ebed558808a9df76748129
+SHA256sum: 1e84c9dfab7eda6f78dad9948c9387c9919b7da60685ccc57d35848a655322b6
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for TECO / RELISYS scanners.
 
 Package: sane-teco2
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1352,17 +1409,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 27935
-Filename: sane-teco2_1.0.24-1_ar71xx.ipk
-Size: 28867
-MD5Sum: d0246506ad27c8244d6efb622488273b
-SHA256sum: 816fb2898e8e311989e0a8e5aa154323f2496491933cea3c7203a50bec6923cf
+Installed-Size: 27962
+Filename: sane-teco2_1.0.25-1_ar71xx.ipk
+Size: 28889
+MD5Sum: 360c5f2db0e59478bfe2b5ab0700ea01
+SHA256sum: 79fada0b932440e5d60b0545f717ef4487fa783f93908893d5d0932b6791843f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for TECO / RELISYS scanners.
 
 Package: sane-teco3
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1371,16 +1428,16 @@ Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
 Installed-Size: 24555
-Filename: sane-teco3_1.0.24-1_ar71xx.ipk
-Size: 25389
-MD5Sum: c0a4617eb7cfa5f2f3e989242277add2
-SHA256sum: acbe77e381d3da9ed958eb8ec0d190b8fa34b427e07a160dc7bafbde5076b9cd
+Filename: sane-teco3_1.0.25-1_ar71xx.ipk
+Size: 25393
+MD5Sum: fc8f9d2814b0334937a423a104275335
+SHA256sum: 2fa20471464998a5a14ffc85923a2531e3579e8e51daf56d004cb33a7311bf5b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for TECO / RELISYS scanners.
 
 Package: sane-test
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1388,17 +1445,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 25802
-Filename: sane-test_1.0.24-1_ar71xx.ipk
-Size: 26573
-MD5Sum: a2719bc0652ccd31940bdb83e7c12553
-SHA256sum: a459a7a9b4ab3bcb9764d38c716b2cd9c274e8e0147c78e06dcb9d6a51861ad2
+Installed-Size: 25901
+Filename: sane-test_1.0.25-1_ar71xx.ipk
+Size: 26671
+MD5Sum: 24544ca47ba22aaad71f4f8172ad740a
+SHA256sum: 4beb35ba676b0876cdacebd2f7d55177a7551b355790d09fcac0661c216552f3
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for testing frontends.
 
 Package: sane-u12
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1406,17 +1463,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 50476
-Filename: sane-u12_1.0.24-1_ar71xx.ipk
-Size: 51512
-MD5Sum: 847fe392389dc77da5123bf06d769aba
-SHA256sum: a272ca2cb6431070f892107066c94f4f4450c5969c175047c6e5ac08543c3a93
+Installed-Size: 50532
+Filename: sane-u12_1.0.25-1_ar71xx.ipk
+Size: 51579
+MD5Sum: a5f4bb05259cd48c8692e774b059b18f
+SHA256sum: 1dc8ca82ef91b1883f80e91ae377fa4229a6fac850105ab94d173586a9ea6f93
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Plustek USB flatbed scanners based on older parport designs.
 
 Package: sane-umax
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1424,17 +1481,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 65716
-Filename: sane-umax_1.0.24-1_ar71xx.ipk
-Size: 66335
-MD5Sum: 76417c9dcb8bebba7b480b73418d33f1
-SHA256sum: 47aad28e57afa74f3aee52974b1d8de0298b97b6227dda5218c1df5d6ccb5a15
+Installed-Size: 65688
+Filename: sane-umax_1.0.25-1_ar71xx.ipk
+Size: 66301
+MD5Sum: 7c0fec61dee11d5ea153e3df1a5076d7
+SHA256sum: e257be6bb99f3b2791958c0ce93dda2091ed284fcd80a26a1626d6f2e8f24811
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for UMAX scanners.
 
 Package: sane-umax1220u
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1442,17 +1499,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 28439
-Filename: sane-umax1220u_1.0.24-1_ar71xx.ipk
-Size: 29387
-MD5Sum: 9e9f7a75d33dd03185e7a9a0cd665a36
-SHA256sum: a263460c50bf9e034cce86c35ae49126535fd5b4279e5a7398f5151223ae4269
+Installed-Size: 28394
+Filename: sane-umax1220u_1.0.25-1_ar71xx.ipk
+Size: 29347
+MD5Sum: e592c03f732f7393ee9f06c2a269ffd0
+SHA256sum: edfd2dd5d289ae162db297d1403d409e44c5c8851d8de885f862c55b1c22470d
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for the UMAX Astra 1220U and similar scanners.
 
 Package: sane-umax_pp
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1460,17 +1517,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 83235
-Filename: sane-umax_pp_1.0.24-1_ar71xx.ipk
-Size: 84276
-MD5Sum: ac1d2907e69cb6746fd564b9e97b9173
-SHA256sum: cbb1ec7bc769eac73740d7a25934308f91a13d35a63287b51365a67875f8242f
+Installed-Size: 83218
+Filename: sane-umax_pp_1.0.25-1_ar71xx.ipk
+Size: 84267
+MD5Sum: 2406b301f30e5b15a7de44e9b341d31a
+SHA256sum: 8ad16186f3b94bac87f01332a1da78d822312bbfb2f34ceb9961819ce5fb72d5
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Umax Astra parallel port flatbed scanners.
 
 Package: sane-v4l
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane, libv4l, libjpeg
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1478,17 +1535,17 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 12264
-Filename: sane-v4l_1.0.24-1_ar71xx.ipk
-Size: 13175
-MD5Sum: c5aad3e5b8449dd5c0cb2e95108559db
-SHA256sum: 4480459e07088746debda46153dedaa6eafa24ea23d85b708294ac0938c3a614
+Installed-Size: 12322
+Filename: sane-v4l_1.0.25-1_ar71xx.ipk
+Size: 13194
+MD5Sum: f3f30776c8b4c9d50826287af0e9e77c
+SHA256sum: c217824f72568ed9b0a8639a562b58b3e72f3a10fe201f346481895dffaa44f1
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Video for Linux API.
 
 Package: sane-xerox_mfp
-Version: 1.0.24-1
+Version: 1.0.25-1
 Depends: libc, libsane
 Source: feeds/packages/utils/sane-backends
 License: GPL-2.0 GPL-2.0+
@@ -1496,11 +1553,11 @@ LicenseFiles: COPYING LICENSE
 Section: opt
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 24007
-Filename: sane-xerox_mfp_1.0.24-1_ar71xx.ipk
-Size: 24896
-MD5Sum: 79a4d6c3f03d755730bf4100da90a833
-SHA256sum: 0585e20ce9d2fe08059921dbbcfa97f2b94c3d53964f85d5e780b7acc26aebf9
+Installed-Size: 23944
+Filename: sane-xerox_mfp_1.0.25-1_ar71xx.ipk
+Size: 24835
+MD5Sum: 5f423e6be88b32eba7ad49e99cc2ebfb
+SHA256sum: 48377786bca97b9e3590da51cf114814351407ab3ca5a83f4ad18d4ecaeb8c4f
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  .
  This package contains the SANE backend for Xerox Phaser 3200MFP device.
