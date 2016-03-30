@@ -22,18 +22,26 @@ $(
 	find -maxdepth 1 -not -name ".*" -not -name "index.html" -not -name "*~" -printf "%M;%f;%TY-%Tm-%Td %TH:%TM:%2.2TS;%s;%l\n" | sort |
 	awk -vFMT="$FMT" -F';' '
 	BEGIN {
-		printf "<b>" FMT "</b>", "Permission", "Name", "Last modified", "Size", "Description"
+		printf "<b>" FMT "</b>", "Permission", "Name", "Last modified", "Size", "Description", "Link"
 		print "<HR>"
 		FILE="[Parent]"
 		FILE = "<a href=\"..\">" FILE "</a>" sprintf ( "%" '${FILENAMESIZE}'-length(FILE) "s", "")
-		printf FMT, "drwxr-xr-x", FILE, "-", "-", ""
+		printf FMT, "drwxr-xr-x", FILE, "-", "-", "", ""
 	}
 	{
-		"numfmt --to=iec-i --suffix=B " $4 | getline SIZE;
-		if ($5) $5 = "-> " $5
+		PERM = $1
 		FILE = $2
-		FILE = "<a href=\"" FILE "\">" FILE "</a>" sprintf ( "%" '${FILENAMESIZE}'-length(FILE) "s", "")
-		printf FMT, $1, FILE, $3, SIZE, $5
+		MOD	 = $3
+		"numfmt --to=iec-i --suffix=B " $4 | getline SIZE;
+		if ($5) {
+			DESC = "-> " $5
+			TGT = $5
+		} else {
+			DESC = ""
+			TGT = $1
+		}
+		FILE = "<a href=\"" TGT "\">" FILE "</a>" sprintf ( "%" '${FILENAMESIZE}'-length(FILE) "s", "")
+		printf FMT, PERM, FILE, MOD, SIZE, DESC
 	}'
 )
 <hr>
