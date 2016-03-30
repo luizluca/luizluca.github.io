@@ -38,7 +38,7 @@ $(
 			TGT = $5
 		} else {
 			DESC = ""
-			TGT = $1
+			TGT = FILE
 		}
 		FILE = "<a href=\"" TGT "\">" FILE "</a>" sprintf ( "%" '${FILENAMESIZE}'-length(FILE) "s", "")
 		printf FMT, PERM, FILE, MOD, SIZE, DESC
