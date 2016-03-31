@@ -34,6 +34,23 @@ Description:  HPLIP is an HP developed solution for printing, scanning, and faxi
  
  S.A.N.E backend for HP Scanners
 
+Package: libsane
+Version: 1.0.25-1
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: libs
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86
+Installed-Size: 63605
+Filename: libsane_1.0.25-1_x86.ipk
+Size: 64336
+MD5Sum: ec3d7d818c746b574ebb3de468bd0ded
+SHA256sum: cd72fee95938631cd92b6bf69beeb27fca4d7b464ebc946352485370a7f0e703
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE shared libraries.
+
 Package: sane-abaton
 Version: 1.0.25-1
 Depends: libc, libsane
