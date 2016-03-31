@@ -25,11 +25,11 @@ LicenseFiles: COPYING LICENSE
 Section: utils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: ar71xx
-Installed-Size: 61256
+Installed-Size: 61260
 Filename: hplip-sane_3.15.7-1_ar71xx.ipk
-Size: 62287
-MD5Sum: 3912914a302bea2172b1f914546c34d9
-SHA256sum: 35e8ca6c179b8b70d97554fba3b426d8ad094fcbf442185563f901dda68db579
+Size: 62303
+MD5Sum: d829c3f268117da7f12e628354bea66d
+SHA256sum: 1792c3e580169f1c1a0065002540408bc4a5328336369ea1f3555325fd67df02
 Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
  
  S.A.N.E backend for HP Scanners
