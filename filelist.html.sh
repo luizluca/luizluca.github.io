@@ -42,7 +42,7 @@ $(
 		}
 		FILE = "<a href=\"" TGT "\">" FILE "</a>" sprintf ( "%" '${FILENAMESIZE}'-length(FILE) "s", "")
 		printf FMT, PERM, FILE, MOD, SIZE, DESC
-	}'
+	}' | sed -r -e 's/[[:blank:]]*$//'
 )
 <hr>
 $( [ -f README.txt ] && cat README.txt  )
