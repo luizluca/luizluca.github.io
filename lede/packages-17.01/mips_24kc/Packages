@@ -1,0 +1,53 @@
+Package: hplip-common
+Version: 3.15.7-1
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 139753
+Filename: hplip-common_3.15.7-1_mips_24kc.ipk
+Size: 139737
+MD5Sum: d27139bf178cbfb4eb53fb8859c999de
+SHA256sum: 784c72e40bd71685dfcb085a9cd30625c26fbcb0f4f5ae17c68cfee6104a37fa
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ These are common files shared between subpackages
+
+Package: hplip-sane
+Version: 3.15.7-1
+Depends: libc, libsane, hplip-common
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 58947
+Filename: hplip-sane_3.15.7-1_mips_24kc.ipk
+Size: 59946
+MD5Sum: 34ec78150cf4d5f849e8fb4dbaa3ee4d
+SHA256sum: 82d7e7b812b246e2e67350205832d63c101ecac7ee6ff2ce7eb27318d121b05b
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ S.A.N.E backend for HP Scanners
+
+Package: libsane
+Version: 1.0.25-2
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/sane-backends
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: libs
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 55994
+Filename: libsane_1.0.25-2_mips_24kc.ipk
+Size: 56958
+MD5Sum: fb933a87f7f27daa0c5576e11c333026
+SHA256sum: 8796140817e862d6331578ed1e984a6e52541187421b4619b3a38687ef570c5a
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE shared libraries.
+
