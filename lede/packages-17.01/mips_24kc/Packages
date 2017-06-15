@@ -123,6 +123,23 @@ SHA256sum: 898609e49519ed7cba73118d18f4e9e7684ecb0cf1305bd8ccbf642be3a9c8d5
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE shared libraries.
 
+Package: minidlna
+Version: 1.1.5-2
+Depends: libc, libpthread, libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid
+Source: feeds/packages/multimedia/minidlna
+License: GPL-2.0 BSD-3-Clause
+LicenseFiles: COPYING LICENCE.miniupnpd
+Section: multimedia
+Maintainer: Knyazkov Dmitry <medavedik@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 106019
+Filename: minidlna_1.1.5-2_mips_24kc.ipk
+Size: 106443
+MD5Sum: f8596090209f0a18c3d4ae139b65fb78
+SHA256sum: 2c53db1185da705f3fc0918b0635cabe19929aae2672c0626e8dc9c248fc5d1c
+Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
+ being fully compliant with DLNA/UPnP-AV clients.
+
 Package: sane-abaton
 Version: 1.0.27-1
 Depends: libc, libsane
