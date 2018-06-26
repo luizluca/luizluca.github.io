@@ -5,12 +5,12 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 #GPGKEY="D1073B56"
 USIGN=~/prog-local/openwrt/trunk/staging_dir/host/bin/usign
-USIGN=~/prog-local/lede/trunk/staging_dir/host/bin/usign
-USIGN_KEY=~/prog/openwrt/key-build
+#USIGN=~/prog-local/lede/trunk/staging_dir/host/bin/usign
+USIGN_KEY=~/Dropbox/prog/openwrt/key-build
 TEMPFILE=$(mktemp -t update-repo.sh.XXXXXXXX)
 trap "rm -f '$TEMPFILE'" EXIT
 cd $DIR
-for rep in $(find $DIR -type d -path "$DIR/openwrt/*/*/packages") $(find $DIR -type d -path "$DIR/lede/*/*"); do
+for rep in $(find $DIR -type d -path "$DIR/openwrt/*/*/packages") $(find $DIR -type d -path "$DIR/openwrt/packages-*/*" ) $(find $DIR -type d -path "$DIR/lede/*/*"); do
     echo Updating $rep
     (   
         cd $rep

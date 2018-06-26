@@ -1,0 +1,36 @@
+Package: hplip-common
+Version: 3.18.6-1
+Depends: libc, libusb-compat
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: i386_pentium4
+Installed-Size: 152195
+Filename: hplip-common_3.18.6-1_i386_pentium4.ipk
+Size: 152196
+MD5Sum: b3ff31098f860bb7a37996ef27339ae2
+SHA256sum: 91b66b9468f3350c6f98525dad5748ebeb9a05529edc981f4f13cc00c77fdefa
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ These are common files shared between subpackages
+
+Package: hplip-sane
+Version: 3.18.6-1
+Depends: libc, libsane, hplip-common
+Source: feeds/packages/utils/hplip
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: COPYING LICENSE
+Section: utils
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: i386_pentium4
+Installed-Size: 64787
+Filename: hplip-sane_3.18.6-1_i386_pentium4.ipk
+Size: 65668
+MD5Sum: bd0183a4d2c40123537c73949cfb9c9a
+SHA256sum: 4d80e1b46fcefdf82f1be4e84d793d50bf4984a7cce4c62408e7ddee4d16e59f
+Description:  HPLIP is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.
+ 
+ S.A.N.E backend for HP Scanners
+
