@@ -34,3 +34,37 @@ Description:  HPLIP is an HP developed solution for printing, scanning, and faxi
  
  S.A.N.E backend for HP Scanners
 
+Package: openvpn-easy-rsa
+Version: 3.0.4-1
+Depends: libc, openssl-util
+Source: package/network/services/openvpn-easy-rsa
+License: GPL-2.0
+Section: net
+Architecture: mips_24kc
+Installed-Size: 17296
+Filename: openvpn-easy-rsa_3.0.4-1_mips_24kc.ipk
+Size: 18086
+MD5Sum: f2023fecb35239875b6726df8bcf3171
+SHA256sum: 1365464595baff1885d9dc4db15a2174c53cf8d376d151a2c3a34fb0a20e9f16
+Description:  CLI utility to build and manage a PKI CA.
+
+Package: trafficshaper
+Version: 1.0.0-1
+Depends: libc, tc, kmod-sched-core, kmod-sched-connmark, kmod-ifb, iptables, kmod-sched-cake, iptables-mod-conntrack-extra
+Source: feeds/packages/net/trafficshaper
+License: GPLv2
+Section: net
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: all
+Installed-Size: 4188
+Filename: trafficshaper_1.0.0-1_all.ipk
+Size: 5202
+MD5Sum: 49b1514402e0b5b69be323a29917acdc
+SHA256sum: 87e24ee3a31f03eb1286e2a03ac3fa08c56b9535f8557e9ef4a07be396021955
+Description:  Setup QoS rules to limit (or reserve) traffic used by classes of clients.
+ Uplink and downlink can be controled (or not controlled) independently.
+ Client classes are defined by its network addresses (IPv4 or IPv6). Each
+ client class can define absolute or relative (to wan) bandwith, and also
+ the use (or not) of spare wan bandwidth when avaiable.
+ 
+

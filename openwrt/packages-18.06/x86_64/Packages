@@ -1,0 +1,34 @@
+Package: openvpn-easy-rsa
+Version: 3.0.4-1
+Depends: libc, openssl-util
+Source: package/network/services/openvpn-easy-rsa
+License: GPL-2.0
+Section: net
+Architecture: x86_64
+Installed-Size: 17297
+Filename: openvpn-easy-rsa_3.0.4-1_x86_64.ipk
+Size: 18075
+MD5Sum: 3b4b92e28dd469c21c3f6aba582ca413
+SHA256sum: 73e9c45aa5778e7913e2a5d8f173f3a01d1b20353cb17e7267547caa5839117b
+Description:  CLI utility to build and manage a PKI CA.
+
+Package: trafficshaper
+Version: 1.0.0-1
+Depends: libc, tc, kmod-sched-core, kmod-sched-connmark, kmod-ifb, iptables, kmod-sched-cake, iptables-mod-conntrack-extra
+Source: feeds/packages/net/trafficshaper
+License: GPLv2
+Section: net
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: all
+Installed-Size: 4189
+Filename: trafficshaper_1.0.0-1_all.ipk
+Size: 5198
+MD5Sum: 30e84babad74a976ff0332e7d2f4b426
+SHA256sum: 46289863c62c83365dd8d54a0879ef730077d8a9a49c4679361cdb78547bd99c
+Description:  Setup QoS rules to limit (or reserve) traffic used by classes of clients.
+ Uplink and downlink can be controled (or not controlled) independently.
+ Client classes are defined by its network addresses (IPv4 or IPv6). Each
+ client class can define absolute or relative (to wan) bandwith, and also
+ the use (or not) of spare wan bandwidth when avaiable.
+ 
+
