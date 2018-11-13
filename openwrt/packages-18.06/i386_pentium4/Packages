@@ -51,16 +51,16 @@ Description:  CLI utility to build and manage a PKI CA.
 Package: trafficshaper
 Version: 1.0.0-1
 Depends: libc, tc, kmod-sched-core, kmod-sched-connmark, kmod-ifb, iptables, kmod-sched-cake, iptables-mod-conntrack-extra
-Source: feeds/packages/net/trafficshaper
+Source: /srv/aob/work/18.06.1/sdk/common/feeds/luizluca_packages/net/trafficshaper
 License: GPLv2
 Section: net
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: all
-Installed-Size: 4186
+Installed-Size: 4185
 Filename: trafficshaper_1.0.0-1_all.ipk
-Size: 5200
-MD5Sum: 28842645ca67dcb16bb6c602594575ae
-SHA256sum: 8737b627b9bda3abe59c1966ee87013dced21a61a77c8449065779174d7358af
+Size: 5221
+MD5Sum: 798789630ef5ca7c9d482aff6c00f509
+SHA256sum: c0c79be5efb976f8bf05c8fc4eabfbd947a4ea8b2c6a1dccc0d8b8ff1084985b
 Description:  Setup QoS rules to limit (or reserve) traffic used by classes of clients.
  Uplink and downlink can be controled (or not controlled) independently.
  Client classes are defined by its network addresses (IPv4 or IPv6). Each
