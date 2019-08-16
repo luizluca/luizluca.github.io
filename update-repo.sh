@@ -17,7 +17,7 @@ for rep in $(find $DIR -type d -path "$DIR/openwrt/*/*/packages") $(find $DIR -t
         $DIR/ipkg-make-index.sh . > "$TEMPFILE"
 		if cmp -s "$TEMPFILE" Packages; then
 			echo "No change on Packages. ignore."
-			continue
+			exit
 		fi
 		trap "rm -f Packages Packages.gz Packages.sig Packages.key" EXIT
 		rm -f Packages Packages.gz Packages.sig Packages.key
