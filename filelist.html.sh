@@ -5,11 +5,15 @@ FMT="%10s %-${FILENAMESIZE}s %-25s %-10s %s\n"
 
 for DIR; do
 	echo Generating Filelist index pages for $DIR...
+	if [ -z "$tempfile" ]; then
+		tempfile="$(mktemp -t fileindex.XXXXXXXX)"
+		trap "rm -f '$tempfile'" EXIT
+	fi
 	find "$DIR" -type d | while read SUBDIR; do
 		(
 			echo "$SUBDIR/index.html..."
 			cd "$SUBDIR"
-			cat >index.html <<EOF
+			cat >"$tempfile" <<EOF
 <html>
 	<header>
 		<title>Index of $SUBDIR</title>
@@ -31,7 +35,8 @@ $(
 	{
 		PERM = $1
 		FILE = $2
-		MOD	 = $3
+		MOD = $3
+
 		"numfmt --to=iec-i --suffix=B " $4 | getline SIZE;
 		if ($5) {
 			DESC = "-> " $5
@@ -50,6 +55,11 @@ $( [ -f README.txt ] && cat README.txt  )
 	</body>
 </html>	
 EOF
-		)
+			if ! cmp "$tempfile" index.html; then
+				cat "$tempfile" > index.html
+			else
+				echo "No modifications in $PWD"
+			fi
+			)
 	done
 done
