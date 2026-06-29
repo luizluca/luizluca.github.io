@@ -41,8 +41,6 @@ Tree Instance. All registers on the SMI bus are 16-bit wide.
 |`INTR_CTRL_REG`|`0x1101`|`0x1101`|`0x1101`|`0x1101`|`RTL83XX_REG_INTR_IMR`|Interrupt Mask Register (Interrupt Enable).|
 |`INTR_STATUS_REG`|`0x1102`|`0x1102`|`0x1102`|`0x1102`|`RTL83XX_REG_INTR_IMS`|Interrupt Status Register (Pending Interrupts).|
 
-**Bit Details (Validated Across All Families):**
-
 #### 1.1.1. CHIP_ID_REG (0x1300)
 
 This is a 16-bit read-only register that returns the hardware chip family and
@@ -63,7 +61,7 @@ This register contains hardware identification subfields. The naming of the
 fields changes between older generations (Families A and B) and newer ones
 (Families C and D):
 
-* **Family A, B:**
+##### **Family A, B:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -76,7 +74,7 @@ fields changes between older generations (Families A and B) and newer ones
   * **MCID (11:8)**: `MCID_MASK` (`0xF00`). 4-bit Manufacturing/Chip ID.
   * **BOID (7:4)**: `BOID_MASK` (`0xF0`). 4-bit Board/Sub-model ID.
 
-* **Family C, D:**
+##### **Family C, D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -95,7 +93,7 @@ fields changes between older generations (Families A and B) and newer ones
 
 This register contains system soft reset control bits.
 
-* **Family A:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -111,7 +109,7 @@ This register contains system soft reset control bits.
   * *Note*: Bits 3 (`SDS_RST`) and 6 (`GPHY_RESET`) are reserved and not
     supported on Family A.
 
-* **Family B, C, D:**
+##### **Family B, C, D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -132,7 +130,7 @@ This register contains system soft reset control bits.
 This is a 16-bit write-only register used to unlock access to protected
 configuration registers.
 
-* **Families A, B, C, and D:** Must be written with the key value `0x0249`
+##### **Families A, B, C, and D:** Must be written with the key value `0x0249`
   (represented as `RTL83XX_REG_MAGIC_ID` or `RTL8365MB_MAGIC_VALUE`) to disable
   write protection on certain ASIC registers (such as chip ID and version
   registers) prior to accessing them. Must be written with `0x0000` to re-lock.
@@ -142,7 +140,7 @@ configuration registers.
 This register configures global interrupt pin polarity and specific sub-system
 polarity settings.
 
-* **Family A:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -155,7 +153,7 @@ polarity settings.
   * **805 (1:1)**: `INTR_POLARITY_8051`. Polarity selector for internal DW8051
     MCU interrupt.
 
-* **Family B, C:**
+##### **Family B, C:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -166,7 +164,7 @@ polarity settings.
   * **POL (0:0)**: `INTR_CTRL`. Global IRQ pin polarity. `0` = Active High, `1`
     = Active Low.
 
-* **Family D:**
+##### **Family D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -184,7 +182,7 @@ polarity settings.
 This register is the Interrupt Mask Register (IMR) which controls whether
 individual interrupt events trigger the global IRQ pin.
 
-* **Family A:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -201,7 +199,7 @@ individual interrupt events trigger the global IRQ pin.
   * **MET (1:1)**: `METER_EXCEEDED`. Bandwidth Meter Exceeded.
   * **LNK (0:0)**: `LINK_CHANGE`. Port Link Status Change.
 
-* **Family B:**
+##### **Family B:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -222,7 +220,7 @@ individual interrupt events trigger the global IRQ pin.
   * **MET (1:1)**: `METER_EXCEEDED`. Bandwidth Meter Exceeded.
   * **LNK (0:0)**: `LINK_CHANGE`. Port Link Status Change.
 
-* **Family C:**
+##### **Family C:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -243,7 +241,7 @@ individual interrupt events trigger the global IRQ pin.
   * **MET (1:1)**: `METER_EXCEEDED`. Bandwidth Meter Exceeded.
   * **LNK (0:0)**: `LINK_CHANGE`. Port Link Status Change.
 
-* **Family D:**
+##### **Family D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -270,11 +268,7 @@ individual interrupt events trigger the global IRQ pin.
 This register is the Interrupt Status Register (IMS/ISR) which records pending
 interrupt events.
 
-* **Families A, B, C, and D:** The bit layout and names correspond exactly to `
-  INTR_CTRL_REG` (0x1101) for each respective family. A bit set to `1` indicates
-  that the corresponding event is active/pending. Writing `1` to a bit clears
-  that event's pending status. Description of the events matches `INTR_CTRL_REG`
-  (0x1101).
+* **Families A, B, C, and D:** The bit layout and names correspond exactly to `INTR_CTRL_REG` (0x1101) for each respective family. A bit set to `1` indicates that the corresponding event is active/pending. Writing `1` to a bit clears that event's pending status. Description of the events matches `INTR_CTRL_REG` (0x1101).
 
 ### 1.2. Port Control, MAC and Isolation
 
@@ -286,16 +280,17 @@ interrupt events.
 |`PORT_LINKUP_IND`|`0x1107`|`0x1107`|`0x1107`|`0x1107`|Portmask of Link Up events.|
 |`PORT_MISC_CFG_REG(p)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|Miscellaneous MAC configs (`PORTx_MISC_CFG` in SDK).|
 |`CFG0_MAX_LEN_REG`|`\\\**Not found**`|`\\\**Not found**`|`0x088C`|`0x088C`|Max Frame Length allowed (MTU).|
-|`MAX_LENGTH_LIMINT_IPG`|`0x1200`|`0x1200`|`0x1200`|`0x1200`|Max Frame Length allowed (MTU) in fixed steps.|
+|`MAX_LENGTH_LIMINT_IPG`|`0x1200`|`0x1200`|`0x1200`|`0x1200`|Legacy Max Frame Length allowed (in steps).|
+|`MAX_LEN_CFG`|`\\\**Not found**`|`0x0883`|`0x0883`|`0x0883`|Max Frame Length allowed (in steps), enabled for ports/speeds defined in MAX_LENGTH_CFG.|
+|`MAX_LEN_RX_TX`|`\\\**Not found**`|`0x0884`|`0x0884`|`\\\**Not found**`|Port map for 1000 or 10/100 links, enforcing MAX_LEN_CFG.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.2.1. PORT_ISOLATION_REG(p) (0x08A2 + p)
 
 This register sets the port isolation mask for port `p`. Packets egressing port `
 p` can only be forwarded to ports set in the `PORT_MASK`.
 
-* **Family A:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -306,7 +301,7 @@ p` can only be forwarded to ports set in the `PORT_MASK`.
   * **PORT_MASK (15:0)**: 16-bit mask representing allowed destination ports
     (ports 0 to 15).
 
-* **Family B, C, D:**
+##### **Family B, C, D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -337,7 +332,7 @@ This register indicates which ports triggered a link up state transition.
 
 This register configures various MAC and flow control features per port `p`.
 
-* **Family A:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -358,7 +353,7 @@ This register configures various MAC and flow control features per port `p`.
   * **CONG_TIME (3:0)**: `CONGESTION_SUSTAIN_TIME`. Sustain thresholds for
     egress queue congestion.
 
-* **Family B, C:**
+##### **Family B, C:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -384,7 +379,7 @@ This register configures various MAC and flow control features per port `p`.
   * **CONG_TIME (3:0)**: `CONGESTION_SUSTAIN_TIME`. Sustain thresholds for
     egress queue congestion.
 
-* **Family D:**
+##### **Family D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -410,18 +405,58 @@ This register configures various MAC and flow control features per port `p`.
 
 #### 1.2.5. CFG0_MAX_LEN_REG (0x088C)
 
-This register defines the maximum frame length (MTU configuration) allowed on
-the switch.
+This register defines the system-wide maximum frame length (MTU) allowed.
 
 * **Families A and B:** Not supported at this specific address (Family A and B
   SDKs use `MAX_LENGTH_LIMINT_IPG` register, which sets the maximum frame in fixed steps.
-* **Families C and D:** Located at `0x088C` (`RTL8367C_REG_MAX_LEN_RX_TX_CFG0`
-  in the SDK), which configures global MTU limits for standard Ethernet frames.
+* **Families C, D:** Uses a 14-bit mask `CFG0_MAX_LEN_MASK` (`0x3FFF`) to define the maximum frame length in bytes (up to 16383 bytes).
 
 #### 1.2.6. MAX_LENGTH_LIMINT_IPG (0x1200)
 
-TODO: fill the docs.
-Family C sets this to MAX in jam table. Check other families.
+This register configures the legacy maximum frame length, inter-packet gap
+(IPG) limits, and flow control thresholds. The layout changes slightly from
+Family A to the newer families. In some jam tables, this field is explicitly
+written to maximum suppported frame size, delegating the limit to other
+registers.
+
+##### **Family A:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|PKT| MAX_LEN   |   EGSFC_SHARE_PKT_THR     |CHK|   LIMIT_IPG   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* PKT (15:15): PTKGEN_LENGTH_FIELD_SEL. Packet generator length field selector.
+* MAX_LEN (14:13): MAX_LENTH_CTRL. Legacy Max Frame Length control (usually 0 = 1522 bytes, 1 = 1536 bytes, 2 = 1552 bytes, 3 = 16000 bytes).
+* EGSFC_SHARE_PKT_THR (12:6): EGSFC_SHARE_PKT_THRESHOLD. Egress flow control share packet threshold.
+* CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
+* LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
+
+##### **Families B, C, D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV| MAX_LEN   |   PAGES_BEFORE_FCDROP     |CHK|   LIMIT_IPG   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* MAX_LEN (14:13): MAX_LENTH_CTRL. Legacy Max Frame Length control.
+* PAGES_BEFORE_FCDROP (12:6): PAGES_BEFORE_FCDROP. Threshold in pages before dropping packets during flow control.
+* CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
+* LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
+
+Note: Bit 15 is reserved in these families, and PTKGEN_LENGTH_FIELD_SEL is no longer available in this register.
+
+1.2.7. MAX_LEN_CFG (0x0883)
+This register defines the application of maximum frame length settings based on port speeds.
+
+Families B, C, D: Uses a 2-bit mask MAX_LEN_CFG_MASK (0x3). This determines if the maximum length limit is enforced differently based on the port's link speed (e.g., distinguishing behavior between 10/100Mbps and 1000Mbps links). Not supported on Family A.
+
+1.2.8. MAX_LEN_RX_TX (0x0884)
+This register controls whether the maximum frame length limits are applied to the RX or TX paths.
+
+Families B, C: Uses a 2-bit mask MAX_LEN_RX_TX_MASK (0x3) to independently enable or disable the frame length limit validation for ingress (RX) and egress (TX) directions. Not supported on Family A and Family D.
 
 ### 1.3. Extension Ports (EXT0, EXT1, EXT2)
 
@@ -440,13 +475,12 @@ Family A and B only support EXT0 and EXT1.
 |`EXT_RGMXF_REG(EXT1)`|`0x1307`|`0x1307`|`0x1307`|`0x1307`|`RTL83XX_REG_EXT1_RGMXF`|EXT1 RGMII TX/RX clock delay and inversion.|
 |`EXT_RGMXF_REG(EXT2)`|`\**N/A**`|`0x13C5`|`0x13C5`|`0x13C5`|`RTL83XX_REG_EXT2_RGMXF`|EXT2 RGMII TX/RX clock delay and inversion.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.3.1. DIGITAL_IF_SELECT(EXT0/1) (0x1305)
 
 This register selects the MAC interface mode for EXT0 and EXT1 ports.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -467,7 +501,7 @@ This register selects the MAC interface mode for EXT0 and EXT1 ports.
 
 This register selects the MAC interface mode for EXT2 port.
 
-* **Families B, C, and D:**
+##### **Families B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -503,7 +537,7 @@ This register selects the MAC interface mode for EXT2 port.
 This register forces the link parameters for an extension port when force mode
 is active.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -525,7 +559,7 @@ is active.
 This register configures RGMII TX/RX clock delay and optional clock inversion
 per extension port.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -554,14 +588,13 @@ per extension port.
 |`CPU_PORT_MASK_REG`|`0x1219`|`0x1219`|`0x1219`|`0x1219`|`REG_CPU_PORT_MASK`|CPU Port Mask configuration.|
 |`CPU_CTRL_REG`|`0x121A`|`0x121A`|`0x121A`|`0x121A`|`RTL83XX_REG_CPU_CTRL`|CPU Tag insertion/removal and Trap port control.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.4.1. MSTI_CTRL_REG(msti, p) (0x0A00 + (msti\*2) + (p/8))
 
 Each 16-bit register packs STP state for 8 ports (2 bits each). The register
 address encodes the MSTI index and port group.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -599,7 +632,7 @@ processing.
 This register controls CPU tag insertion, removal, and the trap port
 destination.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -632,20 +665,19 @@ destination.
 |`PORT_EFID_REG(p)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`RTL83XX_REG_EFID`|Enhanced Filtering Database ID (EFID) mapping.|
 |`VLAN_MC_BASE`|`0x0728`|`0x0728`|`0x0728`|`0x0728`|`RTL83XX_REG_VLAN_MEMBER_CONFIG_BASE`|Base for VLAN member config entries 0~31. Entry size: 4 words (64-bit) on Family A, 3 words (48-bit) on B/C/D.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.5.1. VLAN_CTRL_REG (0x07A8)
 
 This register globally enables the VLAN subsystem.
 
-* **Families A, B, C, and D:** Bit 0 (`VLAN_CTRL_ENABLE`) enables the VLAN
+##### **Families A, B, C, and D:** Bit 0 (`VLAN_CTRL_ENABLE`) enables the VLAN
   hardware engine. All other bits are reserved.
 
 #### 1.5.2. VLAN_PVID_CTRL_REG(p) (0x0700 + (p/2))
 
 Each register encodes the PVID for two ports (8 bits per port).
 
-* **Families A, B, C, and D:** Bits 15:8 = PVID for port `p | 1`, bits 7:0 =
+##### **Families A, B, C, and D:** Bits 15:8 = PVID for port `p | 1`, bits 7:0 =
   PVID for port `p & ~1`.
 
 #### 1.5.3. VLAN_ACCEPT_FRAME(p) (0x07AA + (p/4))
@@ -653,15 +685,15 @@ Each register encodes the PVID for two ports (8 bits per port).
 Each register encodes the frame acceptance mode for four ports (2 bits per
 port).
 
-* **Families A, B, C, and D:** 2-bit field per port. `0` = All frames, `1` =
+##### **Families A, B, C, and D:** 2-bit field per port. `0` = All frames, `1` =
   Tagged only, `2` = Untagged only.
 
 #### 1.5.4. VLAN_INGRESS_REG (0x07A9)
 
 This register activates ingress filtering on a per-port basis.
 
-* **Family A:** Uses a 16-bit portmask (15:0) for ports 0 to 15.
-* **Families B, C, and D:** Uses an 11-bit portmask (10:0) for ports 0 to 10.
+##### **Family A:** Uses a 16-bit portmask (15:0) for ports 0 to 15.
+##### **Families B, C, and D:** Uses an 11-bit portmask (10:0) for ports 0 to 10.
   Bits 15:11 are reserved.
 
 ### 1.6. MAC Learning & Security
@@ -671,14 +703,13 @@ This register activates ingress filtering on a per-port basis.
 |-|-|-|-|-|-|-|
 |`LUT_PORT_LEARN_LIMIT(p)`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`RTL83XX_REG_LUT_PORT_LEARN_LIMIT`|Limits maximum dynamically learned MACs per physical port.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.6.1. LUT_PORT_LEARN_LIMIT(p) (0x0A20 + p)
 
 This register defines the maximum number of MAC addresses that can be
 dynamically learned on port `p`.
 
-* **Families A, B, C, and D:** Bits 11:0 contain the learn limit count (0 =
+##### **Families A, B, C, and D:** Bits 11:0 contain the learn limit count (0 =
   disable learning on port). Bits 15:12 are reserved.
 
 ### 1.7. MIB Counters (Statistics)
@@ -698,13 +729,12 @@ then retrieving results in a structured multi-register block.
 
 - `MIB_Address = (0x007C * port + counter_offset) >> 2`
 
-**Bit Details (Validated Across All Families):**
 
 #### 1.7.1. MIB_CTRL0_REG (0x1005)
 
 This register triggers and monitors the MIB counter polling operation.
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -738,11 +768,10 @@ The CPU addresses the PHY registers through an indirect paging mechanism.
 |`GPHY_OCP_MSB_0_REG`|`\\\**Not found**`|`0x1D15`|`0x1D15`|`0x1D15`|(Bits 11:6) CPU OCPADR base.|
 |`PHY_OCP_ADDR_PHYREG_BASE`|`0xA400`|`0xA400`|`0xA400`|`0xA400`|Base address for local PHY registers 0~31 OCP queries.|
 
-**Bit Details (Validated Across All Families):**
 
 #### 2.1.1. INDIRECT_ACCESS_CTRL (0x1F00)
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -763,7 +792,7 @@ The CPU addresses the PHY registers through an indirect paging mechanism.
 
 #### 2.1.2. INDIRECT_ACCESS_ADDRESS (0x1F02)
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -790,7 +819,7 @@ VLAN tables across all families.
 
 #### 2.2.1. TABLE_CTRL_REG (0x0500)
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -805,7 +834,7 @@ VLAN tables across all families.
 
 #### 2.2.2. TABLE_STATUS_REG (0x0502)
 
-* **Families A, B, C, and D:**
+##### **Families A, B, C, and D:**
 
 ```
 
