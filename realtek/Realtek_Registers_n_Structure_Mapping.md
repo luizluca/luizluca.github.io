@@ -22,6 +22,12 @@ rtl8367c_reg.h`, and `rtl8367d_reg.h`). **Bold hexadecimal values** indicate a
 difference in address, layout, or behavior between the specific Family and the
 Family C baseline.
 
+Some general information about families:
+* Ports
+  * Family A registers uses ports mask as 0xFFFF, indicanting it can handle up to 16 ports.
+  * Families B and D registers uses ports mask as 0xFF, indicanting it can handle up to 8 ports.
+  * Family C registers uses ports mask as 0x7FF, indicanting it can handle up to 11 ports.
+
 ## 1\. Exhaustive Register Mapping (`rtl8365mb` baseline)
 
 In this section, `p` indicates the logical/physical port index, `e` indicates
@@ -301,7 +307,7 @@ p` can only be forwarded to ports set in the `PORT_MASK`.
   * **PORT_MASK (15:0)**: 16-bit mask representing allowed destination ports
     (ports 0 to 15).
 
-##### **Family B, C, D:**
+##### **Family C:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -312,21 +318,37 @@ p` can only be forwarded to ports set in the `PORT_MASK`.
   * **PORT_MASK (10:0)**: 11-bit mask representing allowed destination ports
     (ports 0 to 10).
 
+##### **Families B and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |           PORT_MASK           |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (7:0)**: 7-bit mask representing allowed destination ports
+    (ports 0 to 7).
+
+
 #### 1.2.2. PORT_LINKDOWN_IND (0x1106)
 
 This register indicates which ports triggered a link down state transition.
 
 * **Family A:** Uses a 16-bit mask (15:0) corresponding to ports 0 to 15.
-* **Families B, C, and D:** Uses an 11-bit mask (10:0) corresponding to ports 0
+* **Family C:** Uses an 11-bit mask (10:0) corresponding to ports 0
   to 10. Bits 15:11 are reserved.
+* **Families B and D:** Uses an 8-bit mask (7:0) corresponding to ports 0
+  to 7. Bits 15:8 are reserved.
 
 #### 1.2.3. PORT_LINKUP_IND (0x1107)
 
 This register indicates which ports triggered a link up state transition.
 
 * **Family A:** Uses a 16-bit mask (15:0) corresponding to ports 0 to 15.
-* **Families B, C, and D:** Uses an 11-bit mask (10:0) corresponding to ports 0
+* **Family C:** Uses an 11-bit mask (10:0) corresponding to ports 0
   to 10. Bits 15:11 are reserved.
+* **Families B and D:** Uses an 8-bit mask (7:0) corresponding to ports 0
+  to 7. Bits 15:8 are reserved.
 
 #### 1.2.4. PORT_MISC_CFG_REG(p) (0x000E + (p\<<5))
 
@@ -409,7 +431,8 @@ This register defines the system-wide maximum frame length (MTU) allowed.
 
 * **Families A and B:** Not supported at this specific address (Family A and B
   SDKs use `MAX_LENGTH_LIMINT_IPG` register, which sets the maximum frame in fixed steps.
-* **Families C, D:** Uses a 14-bit mask `CFG0_MAX_LEN_MASK` (`0x3FFF`) to define the maximum frame length in bytes (up to 16383 bytes).
+* **Families C, D:** Uses a 14-bit mask `CFG0_MAX_LEN_MASK` (`0x3FFF`) to define the maximum frame length in bytes (up to 16383 bytes). There is also aditional registers like `MAX_LEN_RX_TX_CFG0(0x088c)` and `MAX_LEN_RX_TX_CFG1(0x088d)` that are current unused in rtl8365mb but may play a similar role.
+
 
 #### 1.2.6. MAX_LENGTH_LIMINT_IPG (0x1200)
 
@@ -417,7 +440,7 @@ This register configures the legacy maximum frame length, inter-packet gap
 (IPG) limits, and flow control thresholds. The layout changes slightly from
 Family A to the newer families. In some jam tables, this field is explicitly
 written to maximum suppported frame size, delegating the limit to other
-registers.
+registers. The MAX_LEN was dropped in Family D.
 
 ##### **Family A:**
 
@@ -433,7 +456,7 @@ registers.
 * CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
 * LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
 
-##### **Families B, C, D:**
+##### **Families B, C:**
 
 ```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -446,7 +469,17 @@ registers.
 * CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
 * LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
 
-Note: Bit 15 is reserved in these families, and PTKGEN_LENGTH_FIELD_SEL is no longer available in this register.
+##### **Family D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED    |   EGSFC_SHARE_PKT_THR     |CHK|   LIMIT_IPG   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* EGSFC_SHARE_PKT_THR (12:6): EGSFC_SHARE_PKT_THRESHOLD. Egress flow control share packet threshold.
+* CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
+* LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
 
 1.2.7. MAX_LEN_CFG (0x0883)
 This register defines the application of maximum frame length settings based on port speeds.
@@ -693,8 +726,10 @@ port).
 This register activates ingress filtering on a per-port basis.
 
 ##### **Family A:** Uses a 16-bit portmask (15:0) for ports 0 to 15.
-##### **Families B, C, and D:** Uses an 11-bit portmask (10:0) for ports 0 to 10.
+##### **Family C:** Uses an 11-bit portmask (10:0) for ports 0 to 10.
   Bits 15:11 are reserved.
+##### **Families B, and D:** Uses an 8-bit portmask (7:0) for ports 0 to 7.
+  Bits 15:8 are reserved.
 
 ### 1.6. MAC Learning & Security
 
