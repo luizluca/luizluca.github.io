@@ -284,11 +284,11 @@ interrupt events.
 |`PORT_ISOLATION_REG(p)`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|Allowed ports matrix (`PORT_ISOLATION_PORTx_MASK` in SDK).|
 |`PORT_LINKDOWN_IND`|`0x1106`|`0x1106`|`0x1106`|`0x1106`|Portmask of Link Down events.|
 |`PORT_LINKUP_IND`|`0x1107`|`0x1107`|`0x1107`|`0x1107`|Portmask of Link Up events.|
-|`PORT_MISC_CFG_REG(p)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|`0x000E + (p\\\<<5)`|Miscellaneous MAC configs (`PORTx_MISC_CFG` in SDK).|
-|`CFG0_MAX_LEN_REG`|`\\\**Not found**`|`\\\**Not found**`|`0x088C`|`0x088C`|Max Frame Length allowed (MTU).|
+|`PORT_MISC_CFG_REG(p)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|Miscellaneous MAC configs (`PORTx_MISC_CFG` in SDK).|
+|`CFG0_MAX_LEN_REG`|`**Not found**`|`**Not found**`|`0x088C`|`0x088C`|Max Frame Length allowed (MTU).|
 |`MAX_LENGTH_LIMINT_IPG`|`0x1200`|`0x1200`|`0x1200`|`0x1200`|Legacy Max Frame Length allowed (in steps).|
-|`MAX_LEN_CFG`|`\\\**Not found**`|`0x0883`|`0x0883`|`0x0883`|Max Frame Length allowed (in steps), enabled for ports/speeds defined in MAX_LENGTH_CFG.|
-|`MAX_LEN_RX_TX`|`\\\**Not found**`|`0x0884`|`0x0884`|`\\\**Not found**`|Port map for 1000 or 10/100 links, enforcing MAX_LEN_CFG.|
+|`MAX_LEN_CFG`|`**Not found**`|`0x0883`|`0x0883`|`0x0883`|Max Frame Length allowed (in steps), enabled for ports/speeds defined in MAX_LENGTH_CFG.|
+|`MAX_LEN_RX_TX`|`**Not found**`|`0x0884`|`0x0884`|`**Not found**`|Port map for 1000 or 10/100 links, enforcing MAX_LEN_CFG.|
 
 
 #### 1.2.1. PORT_ISOLATION_REG(p) (0x08A2 + p)
@@ -481,39 +481,55 @@ registers. The MAX_LEN was dropped in Family D.
 * CHK (5:5): CHECK_MIN_IPG_RXDV. Check minimum IPG based on RXDV.
 * LIMIT_IPG (4:0): LIMIT_IPG_CFG. Inter-packet gap limit configuration.
 
-1.2.7. MAX_LEN_CFG (0x0883)
+#### 1.2.7. MAX_LEN_CFG (0x0883)
 This register defines the application of maximum frame length settings based on port speeds.
 
 Families B, C, D: Uses a 2-bit mask MAX_LEN_CFG_MASK (0x3). This determines if the maximum length limit is enforced differently based on the port's link speed (e.g., distinguishing behavior between 10/100Mbps and 1000Mbps links). Not supported on Family A.
 
-1.2.8. MAX_LEN_RX_TX (0x0884)
+#### 1.2.8. MAX_LEN_RX_TX (0x0884)
 This register controls whether the maximum frame length limits are applied to the RX or TX paths.
 
 Families B, C: Uses a 2-bit mask MAX_LEN_RX_TX_MASK (0x3) to independently enable or disable the frame length limit validation for ingress (RX) and egress (TX) directions. Not supported on Family A and Family D.
 
 ### 1.3. Extension Ports (EXT0, EXT1, EXT2)
 
-Family C and D support up to three extension ports (EXT0, EXT1, and EXT2).
-Family A and B only support EXT0 and EXT1.
-
-
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
-|-|-|-|-|-|-|-|
-|`DIGITAL_IF_SELECT(EXT0/1)`|`0x1305`|`0x1305`|`0x1305`|`0x1305`|`RTL83XX_REG_DIGITAL_INTERFACE_SELECT`|EXT0 and EXT1 MAC Interface Mode selectors.|
-|`DIGITAL_IF_SELECT(EXT2)`|`\**N/A**`|`0x13C3`|`0x13C3`|`0x13C3`|`RTL83XX_REG_DIGITAL_INTERFACE_SELECT_1`|EXT2 MAC Interface Mode selector.|
-|`DIGITAL_IF_FORCE(EXT0)`|`0x1310`|`0x1310`|`0x1310`|`0x1310`|`RTL83XX_REG_DIGITAL_INTERFACE0_FORCE`|EXT0 Link Force mode and parameters.|
-|`DIGITAL_IF_FORCE(EXT1)`|`0x1311`|`0x1311`|`0x1311`|`0x1311`|`RTL83XX_REG_DIGITAL_INTERFACE1_FORCE`|EXT1 Link Force mode and parameters.|
-|`DIGITAL_IF_FORCE(EXT2)`|`\**N/A**`|`0x13C4`|`0x13C4`|`0x13C4`|`RTL83XX_REG_DIGITAL_INTERFACE2_FORCE`|EXT2 Link Force mode and parameters.|
-|`EXT_RGMXF_REG(EXT0)`|`0x1306`|`0x1306`|`0x1306`|`0x1306`|`RTL83XX_REG_EXT0_RGMXF`|EXT0 RGMII TX/RX clock delay and inversion.|
-|`EXT_RGMXF_REG(EXT1)`|`0x1307`|`0x1307`|`0x1307`|`0x1307`|`RTL83XX_REG_EXT1_RGMXF`|EXT1 RGMII TX/RX clock delay and inversion.|
-|`EXT_RGMXF_REG(EXT2)`|`\**N/A**`|`0x13C5`|`0x13C5`|`0x13C5`|`RTL83XX_REG_EXT2_RGMXF`|EXT2 RGMII TX/RX clock delay and inversion.|
+|Logical Name|Family A|Family B|Family C|Family D|Function / Usage|
+|-|-|-|-|-|-|
+|`DIGITAL_IF_SELECT(EXT0/1)`|`0x1305`|`0x1305`|`0x1305`|`0x1305`|EXT0 and EXT1 MAC Interface Mode selectors.|
+|`DIGITAL_IF_SELECT(EXT2)`|`**N/A**`|`0x13C3`|`0x13C3`|`0x13C3`|EXT2 MAC Interface Mode selector.|
+|`DIGITAL_IF_FORCE(EXT0)`|`0x1310`|`0x1310`|`0x1310`|`**N/A**`|EXT0 Link Force mode and parameters.|
+|`DIGITAL_IF_FORCE(EXT1)`|`0x1311`|`0x1311`|`0x1311`|`**N/A**`|EXT1 Link Force mode and parameters.|
+|`DIGITAL_IF_FORCE(EXT2)`|`**N/A**`|`0x13C4`|`0x13C4`|`**N/A**`|Link Force mode and parameters.|
+|`MACx_FORCE_SELECT_EN`|`**N/A**`|`**N/A**`|`**N/A**`|`0x12C8+(x)`|Link Force mode for MAC x.|
+|`EXT_RGMXF_REG(EXT0)`|`0x1306`|`0x1306`|`0x1306`|`0x1306`|EXT0 RGMII TX/RX clock delay and inversion.|
+|`EXT_RGMXF_REG(EXT1)`|`0x1307`|`0x1307`|`0x1307`|`0x1307`|EXT1 RGMII TX/RX clock delay and inversion.|
+|`EXT_RGMXF_REG(EXT2)`|`**N/A**`|`0x13C5`|`0x13C5`|`0x13C5`|EXT2 RGMII TX/RX clock delay and inversion.|
 
 
 #### 1.3.1. DIGITAL_IF_SELECT(EXT0/1) (0x1305)
 
 This register selects the MAC interface mode for EXT0 and EXT1 ports.
 
-##### **Families A, B, C, and D:**
+##### **Family A:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|COL|CRS|SK1|SK0|   RESERVED    |DM0|  EXT1_SEL |DM1| EXT0_SEL  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **COL (15:15)**: `ORG_COL`. Original Collision signal behavior configuration.
+  * **CRS (14:14)**: `ORG_CRS`. Original Carrier Sense signal behavior.
+  * **SK1 (13:13)**: `SKIP_MII_1_RXER`. Ignore RXER signal from EXT1 port.
+  * **SK0 (12:12)**: `SKIP_MII_0_RXER`. Ignore RXER signal from EXT0 port.
+  * **DM0 (7:7)**: `SELECT_DUMMY_0`. Unknown.
+  * **EXT1_SEL (6:4)**: `SELECT_RGMII_1`. 3-bit interface mode for EXT1 (see mode
+    table below)
+  * **DM1 (3:3)**: `SELECT_DUMMY_1`. Unknown.
+  * **EXT0_SEL (2:0)**: `SELECT_RGMII_0`. 3-bit interface mode for EXT0 (see mode
+    table below).
+
+##### **Families B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
@@ -547,67 +563,166 @@ This register selects the MAC interface mode for EXT2 port.
     table below).
 
 **Supported Interface Modes (applies to all EXTx_SEL fields):**
-
-
-- `0` – `DISABLE` – Port disabled (supported by all families)
-- `1` – `RGMII` – Reduced Gigabit MII (supported by all families)
-- `2` – `MII_MAC` – MII in MAC mode (supported by all families)
-- `3` – `MII_PHY` – MII in PHY mode (supported by all families)
-- `4` – `TMII_MAC` – Turbo‑MII in MAC mode (supported by all families)
-- `5` – `TMII_PHY` – Turbo‑MII in PHY mode (supported by all families)
-- `6` – `GMII` – Gigabit MII (supported by all families)
-- `7` – `RMII_MAC` – Reduced MII in MAC mode (supported by all families)
-- `8` – `RMII_PHY` – Reduced MII in PHY mode (supported by all families)
-- `9` – `SGMII` – Serial‑Gigabit MII (SerDes) – supported only by families C and D
-- `10` – `HSGMII` – High‑speed SGMII (2.5 G SerDes) – supported only by families C and D
-- `11` – `1000X_100FX` – SFP auto‑detect (1000Base‑X or 100Base‑FX) – supported only by families C and D
-- `12` – `1000X` – SFP 1000Base‑X only – supported only by families C and D
-- `13` – `100FX` – SFP 100Base‑FX only – supported only by families C and D
-*Families A and B lack modes 9‑13 (SGMII, HSGMII, 1000X_100FX, 1000X, 100FX).*
+  * **All Families:**
+    - `0` – `DISABLE` – Port disabled
+    - `1` – `RGMII` – Reduced Gigabit MII
+    - `2` – `MII_MAC` – MII in MAC mode
+    - `3` – `MII_PHY` – MII in PHY mode
+    - `4` – `TMII_MAC` – Turbo‑MII in MAC mode
+    - `5` – `TMII_PHY` – Turbo‑MII in PHY mode
+    - `6` – `GMII` – Gigabit MII
+  * **Family A:**
+    - `7` – `RGMII_33V` – Reduced Gigabit MII using 3.3V
+  * **Families B, C and D:**
+    - `7` – `RMII_MAC` – Reduced MII in MAC mode
+    - `8` – `RMII_PHY` – Reduced MII in PHY mode
+  * **Families C and D:**
+    - `9` – `SGMII` – Serial‑Gigabit MII (SerDes)
+    - `10` – `HSGMII` – High‑speed SGMII (2.5 G SerDes)
+    - `11` – `1000X_100FX` – SFP auto‑detect (1000Base‑X or 100Base‑FX)
+    - `12` – `1000X` – SFP 1000Base‑X only
+    - `13` – `100FX` – SFP 100Base‑FX only
 
 #### 1.3.3. DIGITAL_IF_FORCE(EXTx) (0x1310 / 0x1311 / 0x13C4)
 
 This register forces the link parameters for an extension port when force mode
-is active.
+is active. Family D uses MACx_FORCE_SELECT_EN (0x12C8+x)
 
-##### **Families A, B, C, and D:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|   RESERVED|EN |   RESERVED    |NWY|TXP|RXP|LNK|RSV|DPX|  SPD  |
+|  RESERVED |EN |L1K|L10|MSF|MSM|NWY|TXP|RXP|LNK|RSV|DPX|  SPD  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **EN (12:12)**: forcemode / GMII_x_FORCE (0x1000). Enable Force Mode. 1 = force link parameters, 0 = auto-negotiation.
+  * **L1K (11:11)**: lpi1000. Force 1000Mbps EEE Low Power Idle capability.
+  * **L10 (10:10)**: lpi100. Force 100Mbps EEE Low Power Idle capability.
+  * **MSF (9:9)**: mstfault. Force Master/Slave fault flag.
+  * **MSM (8:8)**: mstmode. Force Master/Slave mode configuration.
+  * **NWY (7:7)**: nway. Force NWAY. MAC-side Auto-negotiation advertisement enable.
+  * **TXP (6:6)**: txpause. Force TX Pause advertisement status.
+  * **RXP (5:5)**: rxpause. Force RX Pause advertisement status.
+  * **LNK (4:4)**: link. Force Link state. 1 = Force Link UP.
+  * **RSV (3:3)**: reserve1. Reserved bit.
+  * **DPX (2:2)**: duplex. Force Duplex state.
+    * `1` = Full Duplex
+    * `0` = Half Duplex
+  * **SPD (1:0)**: speed. Force Speed rate.
+    * `0` = 10 Mbps
+    * `1` = 100 Mbps
+    * `2` = 1000 Mbps
+    * `3` = Reserved
+
+##### **Families B and C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|  RESERVED |EN |RSERVED|MSF|MSM|NWY|TXP|RXP|LNK|RSV|DPX|  SPD  |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
   * **EN (12:12)**: `GMII_x_FORCE` (`0x1000`). Enable Force Mode. `1` = force
     link parameters, `0` = auto-negotiation.
+  * **MSF (9:9)**: mstfault. Force Master/Slave fault flag.
+  * **MSM (8:8)**: mstmode. Force Master/Slave mode configuration.
   * **NWY (7:7)**: Force NWAY. MAC-side Auto-negotiation advertisement enable.
   * **TXP (6:6)**: Force TX Pause advertisement.
   * **RXP (5:5)**: Force RX Pause advertisement.
   * **LNK (4:4)**: Force Link state. `1` = Force Link UP.
-  * **DPX (2:2)**: Force Duplex. `1` = Full Duplex, `0` = Half Duplex.
-  * **SPD (1:0)**: Force Speed. `0` = 10 Mbps, `1` = 100 Mbps, `2` = 1000 Mbps.
+  * **DPX (2:2)**: Force Duplex.
+    * `1` = Full Duplex
+    * `0` = Half Duplex
+  * **SPD (1:0)**: Force Speed.
+    * `0` = 10 Mbps
+    * `1` = 100 Mbps
+    * `2` = 1000 Mbps
+    * `3` = 2500 Mbps (only Family C)
 
-#### 1.3.4. EXT_RGMXF_REG(EXTx) (0x1306 / 0x1307 / 0x13C5)
+#### 1.3.4. MACx_FORCE_SELECT_EN (0x12C8+x)
+
+This register configures the link override (Link Force) parameters individually per logical MAC port in Family D switches. While legacy hardware generations (Families A, B, and C) centralize extension port forcing within a unified DIGITAL_IF_FORCE(EXTx) register layout, the Family D architecture distributes this mechanism across individual MAC forcing registers, offering an extended bitfield array to independently force and enable abilities on a granular level.
+
+##### **Family D:**
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RESERVD|SPD_HI |L1K|L10|MSF|MSM|NWY|TXP|RXP|LNK|F1G|DPX|SPD_LO |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **RSERVED (15:13)**: Reserved bits for internal ASIC logic.
+* **SPD_HI (13:12)**: FORCE_SPEED[23]_ABLTY (0x1000). Forces the highest speed bit on interfaces.
+* **L1K (11:11)**: FORCE_LPI_1000_ABLTY (0x0800). Forces Energy-Efficient Ethernet (EEE) Low Power Idle (LPI) state capabilities when the port is operating at 1000 Mbps.
+* **L10 (10:10)**: FORCE_LPI_100_ABLTY (0x0400). Forces Energy-Efficient Ethernet (EEE) Low Power Idle (LPI) state capabilities when the port is operating at 100 Mbps.
+* **MSF (9:9)**: FORCE_MST_FAULT_ABLTY (0x0200). Forces the detection and signaling of Master/Slave auto-negotiation faults.
+* **MSM (8:8)**: FORCE_MST_MOD_ABLTY (0x0100). Forces manual Master/Slave mode selection on the physical layer interface.
+* **NWY (7:7)**: FORCE_NWAY_ABLTY (0x0080). Forces the activation or advertisement of NWAY-based auto-negotiation.
+* **TXP (6:6)**: FORCE_TXPAUSE_ABLTY (0x0040). Forces the transmission capability of flow control pause frames (TX Pause) for symmetric or asymmetric configurations.
+* **RXP (5:5)**: FORCE_RXPAUSE_ABLTY (0x0020). Forces the reception and processing capability of incoming link-partner pause frames (RX Pause).
+* **LNK (4:4)**: FORCE_LINK_ABLTY (0x0010). Forces the port's logical link state, completely overriding the physical transceiver signaling (1 = Force stable Link UP). 
+* **F1G (3:3)**: FORCE_FIB1G_ABLTY (0x0008). Forces the specific synchronization and sub-layer operation parameters for SerDes transceivers locked into 1000Base-X Fiber mode.
+* **DPX (2:2)**: FORCE_DUPLEX_ABLTY (0x0004). Forces the duplex state of the port MAC.
+  * `1` = Full Duplex
+  * `0` = Half Duplex
+* **SPD_LO (1:0)**: Forces the lowest speed bit on interfaces. Combined field matching SPD_HI and SPD_LO to define the base link speed:
+  * `0` = 10 Mbps
+  * `1` = 100 Mbps
+  * `2` = 1000 Mbps
+  * `3` = 500 Mbps
+  * `4` = Reserved
+  * `5` = 2500 Mbps
+  * `6` = Reserved
+  * `7` = Reserved
+
+#### 1.3.5. EXT_RGMXF_REG(EXTx) (0x1306 / 0x1307 / 0x13C5)
 
 This register configures RGMII TX/RX clock delay and optional clock inversion
 per extension port.
 
-##### **Families A, B, C, and D:**
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|                   RESERVED        |TXI|RXI|  TXD  |    RXD    |
+|                   RESERVED                    |TXD|    RXD    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **TXD (3:3)**: `TXDELAY`. TX delay configuration (1-bit). Controls internal TX clock  delay taps.
+    * `0` = 0 ns
+    * `1` = 2 ns
+  * **RXD (2:0)**: `RXDELAY`. 3-bit RX clock delay stages (~0.3 ns).
+    * `0` = 0 ns
+    * `1` = 0.3 ns
+    * `2` = 0.6 ns
+    * `3` = 0.9 ns
+    * `4` = 1.2 ns
+    * `5` = 1.5 ns
+    * `6` = 1.8 ns
+    * `7` = 2.1 ns
+
+##### **Families B, C, and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                   RESERVED        |TXI|RXI|RSV|TXD|    RXD    |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
   * **TXI (6:6)**: `RGTX_INV`. Invert RGMII TX clock polarity.
   * **RXI (5:5)**: `RGRX_INV`. Invert RGMII RX clock polarity.
-  * **TXD (4:3)**: TX delay configuration (2-bit). Controls internal TX clock
-    delay taps.
-  * **RXD (2:0)**: `RXDELAY`. 3-bit RX clock delay stages.
-  * *Note*: The Linux driver (`rtl8365mb_main.c`) uses `TXDELAY_MASK = 0x0008`
-    (bit 3 only) and `RXDELAY_MASK = 0x0007` for a simplified 1-bit TX + 3-bit
-    RX model.
+  * **TXD (3:3)**: `TXDELAY`. TX delay configuration (1-bit). Controls internal TX clock  delay taps.
+    * `0` = 0 ns
+    * `1` = 2 ns
+  * **RXD (2:0)**: `RXDELAY`. 3-bit RX clock delay stages (~0.3 ns).
+    * `0` = 0 ns
+    * `1` = 0.3 ns
+    * `2` = 0.6 ns
+    * `3` = 0.9 ns
+    * `4` = 1.2 ns
+    * `5` = 1.5 ns
+    * `6` = 1.8 ns
+    * `7` = 2.1 ns
 
 ### 1.4. Flooding, MSTI, and CPU Port
 
@@ -800,7 +915,7 @@ The CPU addresses the PHY registers through an indirect paging mechanism.
 |`INDIRECT_ACCESS_ADDRESS`|`0x1F02`|`0x1F02`|`0x1F02`|`0x1F02`|Formatted PHY address.|
 |`INDIRECT_ACCESS_WRITE`|`0x1F03`|`0x1F03`|`0x1F03`|`0x1F03`|Data to write to PHY.|
 |`INDIRECT_ACCESS_READ`|`0x1F04`|`0x1F04`|`0x1F04`|`0x1F04`|Data read from PHY.|
-|`GPHY_OCP_MSB_0_REG`|`\\\**Not found**`|`0x1D15`|`0x1D15`|`0x1D15`|(Bits 11:6) CPU OCPADR base.|
+|`GPHY_OCP_MSB_0_REG`|`**Not found**`|`0x1D15`|`0x1D15`|`0x1D15`|(Bits 11:6) CPU OCPADR base.|
 |`PHY_OCP_ADDR_PHYREG_BASE`|`0xA400`|`0xA400`|`0xA400`|`0xA400`|Base address for local PHY registers 0~31 OCP queries.|
 
 
@@ -981,10 +1096,10 @@ To force the purging (Flush) of dynamically learned MAC addresses.
 |Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
 |-|-|-|-|-|-|
 |`L2_FLUSH_PORT_REG`|`0x0A36`|`0x0A36`|`0x0A36`|`0x0A36`|**Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7).|
-|`L2_FLUSH_PORT_EXT_REG`|`0x0A35`|`\\\**Not found**`|`0x0A35`|`\\\**Not found**`|**Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
-|`L2_FLUSH_CTRL1_REG`|`\\\**Not found**`|`0x0A37`|`0x0A37`|`0x0A37`|**Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below.|
-|`L2_FLUSH_CTRL2_REG`|`\\\**Not found**`|`0x0A38`|`0x0A38`|`0x0A38`|**Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic).|
-|`L2_FLUSH_CTRL3_REG`|`\\\**Not found**`|`\\\**Not found**`|`0x0A39`|`0x0A39`|**Bits (0:0):** MSK. Additional global Flush trigger.|
+|`L2_FLUSH_PORT_EXT_REG`|`0x0A35`|`**Not found**`|`0x0A35`|`**Not found**`|**Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
+|`L2_FLUSH_CTRL1_REG`|`**Not found**`|`0x0A37`|`0x0A37`|`0x0A37`|**Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below.|
+|`L2_FLUSH_CTRL2_REG`|`**Not found**`|`0x0A38`|`0x0A38`|`0x0A38`|**Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic).|
+|`L2_FLUSH_CTRL3_REG`|`**Not found**`|`**Not found**`|`0x0A39`|`0x0A39`|**Bits (0:0):** MSK. Additional global Flush trigger.|
 
 ## 3\. Action Plan and Prompts for Iterative Execution
 
