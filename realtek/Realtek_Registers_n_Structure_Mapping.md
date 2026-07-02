@@ -54,7 +54,7 @@ model identifier. The exact value depends on the switch model detected by the
 SDK procedures:
 
 * **Family A (RTL8370 / RTL8367):** Returns `0x6088` (for RTL8367R).
-* **Family B (RTL8367B):** Unknown retuned value. 
+* **Family B (RTL8367B):** Unknown retuned value.
 * **Family C (RTL8367C / RTL8370B / RTL8365MB / RTL8364B / RTL8363SC_VB):**
   Returns `0x0276`, `0x0597`, or `0x6367` (for RTL8367C, RTL8367S, RTL8367SB,
   RTL8367RB-VB), `0x0652` or `0x6368` (for RTL8370B), or `0x0801` or `0x6511`
@@ -326,7 +326,7 @@ p` can only be forwarded to ports set in the `PORT_MASK`.
 |           RESERVED            |           PORT_MASK           |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-  * **PORT_MASK (7:0)**: 7-bit mask representing allowed destination ports
+  * **PORT_MASK (7:0)**: 8-bit mask representing allowed destination ports
     (ports 0 to 7).
 
 
@@ -431,7 +431,7 @@ This register defines the system-wide maximum frame length (MTU) allowed.
 
 * **Families A and B:** Not supported at this specific address (Family A and B
   SDKs use `MAX_LENGTH_LIMINT_IPG` register, which sets the maximum frame in fixed steps.
-* **Families C, D:** Uses a 14-bit mask `CFG0_MAX_LEN_MASK` (`0x3FFF`) to define the maximum frame length in bytes (up to 16383 bytes). There is also aditional registers like `MAX_LEN_RX_TX_CFG0(0x088c)` and `MAX_LEN_RX_TX_CFG1(0x088d)` that are current unused in rtl8365mb but may play a similar role.
+* **Families C, D:** Uses a 14-bit mask `CFG0_MAX_LEN_MASK` (`0x3FFF`) to define the maximum frame length in bytes (up to 16383 bytes). There is also additional registers like `MAX_LEN_RX_TX_CFG0(0x088c)` and `MAX_LEN_RX_TX_CFG1(0x088d)` that are current unused in rtl8365mb but may play a similar role.
 
 
 #### 1.2.6. MAX_LENGTH_LIMINT_IPG (0x1200)
@@ -648,10 +648,9 @@ This register configures the link override (Link Force) parameters individually 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|RESERVD|SPD_HI |L1K|L10|MSF|MSM|NWY|TXP|RXP|LNK|F1G|DPX|SPD_LO |
+|RSERVED|SPD_HI |L1K|L10|MSF|MSM|NWY|TXP|RXP|LNK|F1G|DPX|SPD_LO |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-* **RSERVED (15:13)**: Reserved bits for internal ASIC logic.
 * **SPD_HI (13:12)**: FORCE_SPEED[23]_ABLTY (0x1000). Forces the highest speed bit on interfaces.
 * **L1K (11:11)**: FORCE_LPI_1000_ABLTY (0x0800). Forces Energy-Efficient Ethernet (EEE) Low Power Idle (LPI) state capabilities when the port is operating at 1000 Mbps.
 * **L10 (10:10)**: FORCE_LPI_100_ABLTY (0x0400). Forces Energy-Efficient Ethernet (EEE) Low Power Idle (LPI) state capabilities when the port is operating at 100 Mbps.
@@ -660,7 +659,7 @@ This register configures the link override (Link Force) parameters individually 
 * **NWY (7:7)**: FORCE_NWAY_ABLTY (0x0080). Forces the activation or advertisement of NWAY-based auto-negotiation.
 * **TXP (6:6)**: FORCE_TXPAUSE_ABLTY (0x0040). Forces the transmission capability of flow control pause frames (TX Pause) for symmetric or asymmetric configurations.
 * **RXP (5:5)**: FORCE_RXPAUSE_ABLTY (0x0020). Forces the reception and processing capability of incoming link-partner pause frames (RX Pause).
-* **LNK (4:4)**: FORCE_LINK_ABLTY (0x0010). Forces the port's logical link state, completely overriding the physical transceiver signaling (1 = Force stable Link UP). 
+* **LNK (4:4)**: FORCE_LINK_ABLTY (0x0010). Forces the port's logical link state, completely overriding the physical transceiver signaling (1 = Force stable Link UP).
 * **F1G (3:3)**: FORCE_FIB1G_ABLTY (0x0008). Forces the specific synchronization and sub-layer operation parameters for SerDes transceivers locked into 1000Base-X Fiber mode.
 * **DPX (2:2)**: FORCE_DUPLEX_ABLTY (0x0004). Forces the duplex state of the port MAC.
   * `1` = Full Duplex
@@ -729,7 +728,7 @@ per extension port.
 
 |Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
 |-|-|-|-|-|-|-|
-|`MSTI_CTRL_REG(msti, p)`|`0x0A00 + (msti\*2) + (p/8)`|`0x0A00 + (msti\*2) + (p/8)`|`0x0A00 + (msti\*2) + (p/8)`|`0x0A00 + (msti\*2) + (p/8)`|`RTL83XX_REG_MSTI_CTRL`|Multiple Spanning Tree Instance state per port.|
+|`MSTI_CTRL_REG(msti, p)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`RTL83XX_REG_MSTI_CTRL`|Multiple Spanning Tree Instance state per port.|
 |`UNKNOWN_UC_FLOOD`|`0x0890`|`0x0890`|`0x0890`|`0x0890`|`RTL83XX_REG_PORTMASK_UNKNOWN_UNICAST`|Portmask for unknown Unicast flooding destination.|
 |`UNKNOWN_MC_FLOOD`|`0x0891`|`0x0891`|`0x0891`|`0x0891`|`RTL83XX_REG_PORTMASK_UNKNOWN_MULTICAST`|Portmask for unknown Multicast flooding destination.|
 |`UNKNOWN_BC_FLOOD`|`0x0892`|`0x0892`|`0x0892`|`0x0892`|`RTL83XX_REG_PORTMASK_BROADCAST`|Portmask for Broadcast flooding destination.|
@@ -737,7 +736,7 @@ per extension port.
 |`CPU_CTRL_REG`|`0x121A`|`0x121A`|`0x121A`|`0x121A`|`RTL83XX_REG_CPU_CTRL`|CPU Tag insertion/removal and Trap port control.|
 
 
-#### 1.4.1. MSTI_CTRL_REG(msti, p) (0x0A00 + (msti\*2) + (p/8))
+#### 1.4.1. MSTI_CTRL_REG(msti, p) (0x0A00 + (msti * 2) + (p/8))
 
 Each 16-bit register packs STP state for 8 ports (2 bits each). The register
 address encodes the MSTI index and port group.
@@ -756,6 +755,8 @@ address encodes the MSTI index and port group.
     * `1` = Blocking (receiving BPDUs only)
     * `2` = Learning (MAC learning, no forwarding)
     * `3` = Forwarding (normal traffic forwarding)
+  * *Note*: Family B and D ports fits in a single 16-bit register. However, Realtek reserved
+  2 register per MSTI anyway and the expression 0x0A00+(msti * 2)+(p/8) is still valid for all families.
 
 #### 1.4.2. UNKNOWN_UC_FLOOD / UNKNOWN_MC_FLOOD / UNKNOWN_BC_FLOOD (0x0890 / 0x0891 / 0x0892)
 
@@ -763,7 +764,9 @@ These three registers define the flooding portmask for their respective traffic
 class.
 
 * **Family A:** Uses a 16-bit mask (15:0) for ports 0 to 15.
-* **Families B, C, and D:** Uses an 11-bit mask (10:0) for ports 0 to 10. Bits
+* **Families B and D:** Uses an 8-bit mask (7:0) for ports 0 to 7. Bits 15:8 are
+  reserved.
+* **Family C:** Uses an 11-bit mask (10:0) for ports 0 to 10. Bits
   15:11 are reserved.
 
 #### 1.4.3. CPU_PORT_MASK_REG (0x1219)
@@ -772,7 +775,9 @@ This register defines which ports are considered CPU ports for CPU tag
 processing.
 
 * **Family A:** Uses a 16-bit mask (15:0) for ports 0 to 15.
-* **Families B, C, and D:** Uses an 11-bit mask (10:0) for ports 0 to 10. Bits
+* **Families B and D:** Uses an 8-bit mask (7:0) for ports 0 to 7. Bits 15:8 are
+  reserved.
+* **Family C:** Uses an 11-bit mask (10:0) for ports 0 to 10. Bits
   15:11 are reserved.
 
 #### 1.4.4. CPU_CTRL_REG (0x121A)
@@ -780,71 +785,352 @@ processing.
 This register controls CPU tag insertion, removal, and the trap port
 destination.
 
-##### **Families A, B, C, and D:**
+
+##### **Family A:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|     RESERVED      |EX |FMT|RSV|RX |POS|  TRAP_PORT|INSMODE|EN |
+|       RESERVED            |DRP|BYP|   TRAP_PORT   |INSMODE|EN |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-  * **EX (10:10)**: `TRAP_PORT_EXT`. Direct trapped traffic to an extension port.
-  * **FMT (9:9)**: `TAG_FORMAT`. Defines Realtek CPU Tag structure format.
-  * **RX (7:7)**: `RXBYTECOUNT`. Append RX frame length metadata in CPU tags.
-  * **POS (6:6)**: `TAG_POSITION`. Insertion position: `0` = After SA
-    (standard), `1` = Prefix (before DA).
-  * **TRAP_PORT (5:3)**: 3-bit logical port ID directing where trapped/redirected
-    system traffic is sent.
-  * **INSMODE (2:1)**: `INSERTMODE`. `0` = Disable CPU tag insertion, `1` =
-    Insert into all CPU egress frames, `2` = Insert into Trapped/Redirected
-    frames only.
-  * **EN (0:0)**: `ENABLE`. Global activation of Realtek CPU Tag processing.
+* **DRP (8:8)**: `IOL_16DROP_MASK`. Inter-packet block/drop configuration rules.
+* **BYP (7:7)**: `BYPASS_INQUEUE_MASK`. Direct ingress queue validation bypass configuration.
+* **TRAP_PORT (6:3)**: `TRAP_PORT_MASK`. A 4-bit field indexing the system trap port (required to choose among ports 0–15).
+* **INSMODE (2:1)**: `INSERTMODE_MASK`. CPU tag injection properties.
+  * `0` = Insert into all CPU egress frames.
+  * `1` = Insert into Trapped/Redirected frames only.
+  * `2` = Disabled CPU tag insertion.
+  * `3` = Reserved.
+* **EN (0:0)**: `EN_MASK`. Activates the CPU engine subsystem.
+
+##### **Family B:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          RESERVED     |FMT|DRP|RXC|POS| TRAP_PORT |INSMODE|EN |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **FMT (9:9)**: `TAG_FORMAT_MASK`. Selects the structure format of the Realtek tag layout.
+  * `0` = 8-byte format.
+  * `1` = 4-byte format.
+* **DROP (8:8)**: `IOL_16DROP_MASK`. Inter-packet drop flag.
+* **RXC (7:7)**: `TAG_RXBYTECOUNT_MASK`. Instructs hardware to append paged frame-size metadata.
+* **POS (6:6)**: `TAG_POSITION`. Insertion position:
+  * `0` = After SA (standard).
+  * `1` = Prefix (before DA).
+* **TRAP_PORT (5:3)**: `TRAP_PORT_MASK`. A down-scaled 3-bit field indexing trap destinations (sufficient for ports 0–7).
+* **INSMODE (2:1)**: `INSERTMODE_MASK`. Tag insertion policy modes.
+  * `0` = Insert into all CPU egress frames.
+  * `1` = Insert into Trapped/Redirected frames only.
+  * `2` = Disabled CPU tag insertion.
+  * `3` = Reserved.
+* **EN (0:0)**: `EN_MASK`. Global CPU tagging engine activation.
+
+##### **Family C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|     RESERVED      |THI|FMT|DRP|RXC|POS| TRAP_PORT |INSMODE|EN |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **THI (10:10)**: `TRAP_PORT_EXT`. Trap port high 1-bit.
+* **FMT (9:9)**: `TAG_FORMAT`. Defines Realtek CPU Tag structure format.
+  * `0` = 8-byte format.
+  * `1` = 4-byte format.
+* **DROP (8:8)**: `IOL_16DROP_MASK`. Inter-packet drop flag.
+* **RXC (7:7)**: `RXBYTECOUNT`. Append RX frame length metadata in CPU tags.
+* **POS (6:6)**: `TAG_POSITION`. Insertion position:
+  * `0` = After SA (standard).
+  * `1` = Prefix (before DA).
+* **TRAP_PORT (5:3)**: lower 3-bit logical port ID directing where trapped/redirected
+  system traffic is sent. Must be used with THI.
+* **INSMODE (2:1)**: `INSERTMODE`. Tag insertion policy modes.
+  * `0` = Insert into all CPU egress frames.
+  * `1` = Insert into Trapped/Redirected frames only.
+  * `2` = Disabled CPU tag insertion.
+  * `3` = Reserved.
+* **EN (0:0)**: `ENABLE`. Global activation of Realtek CPU Tag processing.
+
+##### **Family D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                   |PRI|FMT|DRP|RXC|POS| TRAP_PORT |INSMODE|EN |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **PRI (10:10)**: `TAG_FORMAT_PRI_MASK`. Enforces dedicated priority assignment rules within the Family D modified CPU tag template.
+* **FMT (9:9)**: `TAG_FORMAT`. Defines Realtek CPU Tag structure format.
+  * `0` = 8-byte format.
+  * `1` = 4-byte format.
+* **DROP (8:8)**: `IOL_16DROP_MASK`. Inter-packet drop flag.
+* **RXC (7:7)**: `RXBYTECOUNT`. Append RX frame length metadata in CPU tags.
+* **POS (6:6)**: `TAG_POSITION`. Insertion position:
+  * `0` = After SA (standard).
+  * `1` = Prefix (before DA).
+* **TRAP_PORT (5:3)**: lower 3-bit logical port ID directing where trapped/redirected
+  system traffic is sent. Must be used with THI.
+* **INSMODE (2:1)**: `INSERTMODE`. Tag insertion policy modes.
+  * `0` = Insert into all CPU egress frames.
+  * `1` = Insert into Trapped/Redirected frames only.
+  * `2` = Disabled CPU tag insertion.
+  * `3` = Reserved.
+* **EN (0:0)**: `ENABLE`. Global activation of Realtek CPU Tag processing.
+
 
 ### 1.5. VLAN Configurations
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
-|-|-|-|-|-|-|-|
-|`VLAN_CTRL_REG`|`0x07A8`|`0x07A8`|`0x07A8`|`0x07A8`|`RTL83XX_REG_VLAN_CTRL`|Global VLAN support activation (bit 0 = enable).|
-|`VLAN_PVID_CTRL_REG(p)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`RTL83XX_REG_PORT_PVID_CTRL`|Port Default VID/PVID (2 ports per register, 8 bits each).|
-|`VLAN_ACCEPT_FRAME(p)`|`0x07AA + (p/4)`|`0x07AA + (p/4)`|`0x07AA + (p/4)`|`0x07AA + (p/4)`|`RTL83XX_REG_VLAN_ACCEPT_FRAME_TYPE`|Accept Frame Type rules (Tagged/Untagged) per port.|
-|`VLAN_INGRESS_REG`|`0x07A9`|`0x07A9`|`0x07A9`|`0x07A9`|`RTL83XX_REG_VLAN_INGRESS_FILTER`|Ingress filtering activation portmask.|
-|`VLAN_EGRESS_TRANS_REG(p)`|`\**Not found**`|`\**Not found**`|`0x09D0 + (p/4)`|`0x09D0 + (p/4)`|`RTL8367C_REG_VLAN_EGRESS_TRANSPARENT`|Egress VLAN transparency mapping per port.|
-|`PORT_EFID_REG(p)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`RTL83XX_REG_EFID`|Enhanced Filtering Database ID (EFID) mapping.|
-|`VLAN_MC_BASE`|`0x0728`|`0x0728`|`0x0728`|`0x0728`|`RTL83XX_REG_VLAN_MEMBER_CONFIG_BASE`|Base for VLAN member config entries 0~31. Entry size: 4 words (64-bit) on Family A, 3 words (48-bit) on B/C/D.|
-
+|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
+|-|-|-|-|-|-|
+|`VLAN_CTRL_REG`|`0x07A8`|`0x07A8`|`0x07A8`|`0x07A8`|Global VLAN support activation (bit 0 = enable).|
+|`VLAN_PVID_CTRL_REG(p)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`**Not found**`|Port Default VID/PVID VLAN MC index (2 ports per register).|
+|`VLAN_PVID_CTRL0(p)`|`**Not found**`|`**Not found**`|`**Not found**`|`0x0700 + p`|Port Default VID/PVID Number.|
+|`VLAN_ACCEPT_FRAME(p)`|`0x07AA + (p/8)`|`0x07AA`|`0x07AA + (p/8)`|`0x07AA`|Accept Frame Type rules (Tagged/Untagged) per port.|
+|`VLAN_INGRESS_REG`|`0x07A9`|`0x07A9`|`0x07A9`|`0x07A9`|Ingress filtering activation portmask.|
+|`VLAN_EGRESS_TRANS_REG(p)`|`**Not found**`|`**Not found**`|`0x09D0 + p`|`0x09D0 + p`|Egress VLAN transparency mapping per port.|
+|`PORT_EFID_REG(p)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`**Not found**`|Enhanced Filtering Database ID (EFID) mapping.|
+|`VLAN_MC(i)`|`0x0728 + (i * 4)`|`0x0728 + (i * 3)`|`0x0728 + (i * 3)`|`**Not found**`|VLAN member config entries 0~31.|
 
 #### 1.5.1. VLAN_CTRL_REG (0x07A8)
 
 This register globally enables the VLAN subsystem.
 
-##### **Families A, B, C, and D:** Bit 0 (`VLAN_CTRL_ENABLE`) enables the VLAN
-  hardware engine. All other bits are reserved.
+##### **Families A, B, C, and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                  RESERVED                                 |EN |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **EN (0:0)**: `ENABLE`. Global activation of VLAN filtering.
 
 #### 1.5.2. VLAN_PVID_CTRL_REG(p) (0x0700 + (p/2))
 
-Each register encodes the PVID for two ports (8 bits per port).
+Each register encodes the VLAN MC index for two ports (8 bits per port).
+That VLAN MC entry will determine what is the VID number user as PVID. Check
+VLAN_MC(i).
 
-##### **Families A, B, C, and D:** Bits 15:8 = PVID for port `p | 1`, bits 7:0 =
-  PVID for port `p & ~1`.
+***Note:*** Family D dropped VLAN MC and used `VLAN_PVID_CTRL0(p)` as a way to
+directly inform the PVID VID number.
 
-#### 1.5.3. VLAN_ACCEPT_FRAME(p) (0x07AA + (p/4))
+##### **Families A, B, and C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  | PVID_IDX_PORT_N+1 | RESERVED  |  PVID_IDX_PORT_N  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **EPVID_IDX_PORT_N+1 (12:8)**: VLAN MC index that is used as PVID for port N+1.
+* **EPVID_IDX_PORT_N (4:0)**: VLAN MC index that is used as PVID for port N.
+
+#### 1.5.3. VLAN_PVID_CTRL0(p) (0x0700 + p)
+
+Family D dropped VLAN MC completely. The VLAN_PVID_CTRL0(p) now stores the VID number directly, replacing the old VLAN_PVID_CTRL_REG(p) that stores a VLAN MC index.
+
+##### **Family D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |                     PVID_VID                      |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **PVID_VID (12:0)**: VLAN VID number used as PVID for port p (up to 4095).
+
+#### 1.5.4. VLAN_ACCEPT_FRAME(p) (0x07AA + (p/8))
 
 Each register encodes the frame acceptance mode for four ports (2 bits per
 port).
 
-##### **Families A, B, C, and D:** 2-bit field per port. `0` = All frames, `1` =
-  Tagged only, `2` = Untagged only.
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|AF_P+7 |AF_P+6 |AF_P+5 |AF_P+4 |AF_P+3 |AF_P+2 |AF_P+1 |AF_P+0 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **AF_P+(n)**: Accept frame flag for port n+(p%8)
+  * `0` = Accept all type of frames.
+  * `1` = Accept tagged frames only.
+  * `2` = Accept untagged frames only.
+  * `3` = Reserved.
 
-#### 1.5.4. VLAN_INGRESS_REG (0x07A9)
+#### 1.5.5. VLAN_INGRESS_REG (0x07A9)
 
-This register activates ingress filtering on a per-port basis.
+This register activates ingress filtering on a per-port basis. Even with
+ingress filtering disabled, the packet egress will still only forward to
+ports that are member of the packet VLAN (or PVID if not tagged). For egress
+port, VLAN_EGRESS_TRANS_REG(p) can be used to forward to a port independently
+from the VLAN memberships.
 
-##### **Family A:** Uses a 16-bit portmask (15:0) for ports 0 to 15.
-##### **Family C:** Uses an 11-bit portmask (10:0) for ports 0 to 10.
-  Bits 15:11 are reserved.
-##### **Families B, and D:** Uses an 8-bit portmask (7:0) for ports 0 to 7.
-  Bits 15:8 are reserved.
+##### **Family A:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                           PORT_MASK                           |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (15:0)**: 16-bit mask representing ingress filtering for ports
+    (ports 0 to 15).
+
+##### **Family C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|     RESERVED      |                 PORT_MASK                 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (10:0)**: 11-bit mask representing ingress filtering for ports
+    (ports 0 to 10).
+
+##### **Families B and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |           PORT_MASK           |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (7:0)**: 8-bit mask representing ingress filtering for ports
+    (ports 0 to 7).
+
+#### 1.5.6. VLAN_EGRESS_TRANS_REG(p) (0x09D0 + p)
+
+Configure transparent VLAN forwarding, independtly from the VLAN membership.
+This feature is missing in family A and B.
+
+##### **Family C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|     RESERVED      |                 PORT_MASK                 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (10:0)**: 11-bit mask representing egress ports
+    (ports 0 to 10) to which traffic from port p should be forwarded,
+    independently from VLAN membership.
+
+##### **Families B and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |           PORT_MASK           |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **PORT_MASK (7:0)**: 8-bit mask representing egress ports
+    (ports 0 to 7) to which traffic from port p should be forwarded,
+    independently from VLAN membership.
+
+
+#### 1.5.7. PORT_EFID_REG(p) (0x0A32 + (p/4))
+
+This register sets the EFID for a specific port. Each family allocates the number of
+sequentional register to fit all its ports.
+- **Family A**: 0x0A32..0x0A36.
+- **Families B and D**: 0x0A32..0x0A33.
+- **Family C**: 0x0A32..0x0A34.
+
+**Note:** Family D reused 0x0A32 as `LUT_CFG2`, which was present in Family C at `0x0a3a`.
+
+##### **Families A, B and C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|  EFID_P+3 |RSV|  EFID_P+2 |RSV|  EFID_P+1 |RSV|  EFID_P+0 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **EFID_P+(n)**: EFID number (3-bit) used by port n+(p%4).
+
+#### 1.5.8. VLAN_MC(i) A:(0x0728 + (i * 4)) B,C:(0x0728 + (i * 3))
+
+VlanMC is a VLAN database composed of 32 entries (i as the table index). For
+Families A, B, and C, it is only used in driver rtl8365mb as a way to inform
+the VID for PVID register. For that usage, member is ignored by the switch.
+
+##### **Family A**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                          MEMBER                               | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|      MSTI     |                      FID                      | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+||           METERID            |POL|   VBPRI   |EN |REP| Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |                      EVID                         | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+* **MEMBER (Word 0, bits 15:0)**: Complete port member mask for the VLAN.
+* **MSTI (Word 1, bits 15:12)**: `MSTI_MASK (0xF000)` - Multiple Spanning Tree Instance index.
+* **FID (Word 1, bits 11:0)**: `FID_MASK (0xFFF)` - VLAN Forwarding ID.
+* **METERIDX (Word 2, bits 13:6)**: `METERIDX_MASK (0x3FC0)` - Traffic Meter Index.
+* **POL (Word 2, bit 5)**: `ENVLANPOL_MASK (0x20)` - Enable VLAN Policy configuration flag.
+* **VBPRI (Word 2, bits 4:2)**: `VBPRI_MASK (0x1C)` - VLAN Port Priority level.
+* **EN (Word 2, bit 1)**: `VBPEN_MASK (0x2)` - VLAN-based Priority Enable flag.
+* **REP (Word 2, bit 0)**: Lookup Replace?? Replicate?? Replay?? Representation??.
+* **EVID (Word 3, bits 12:0)**: `CTRL3_MASK (0x1FFF)` - Enhanced/Extended VLAN ID.
+
+
+##### **Family B**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |          MEMBER               | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                       RESERVED                |    FID_MSTI   | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED    |     METERIDX      |POL|   VBPRI   |EN | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|  RESERVED |                  EVID                             | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+
+* **MEMBER (Word 0, bits 7:0)**: `CTRL0_MASK (0xFF)` - Port member mask for the VLAN.
+* **FID_MSTI (Word 1, bits 3:0)**: `CTRL1_MASK (0xF)` - Shared Forwarding ID / Multiple Spanning Tree Instance configuration bits.
+* **METERIDX (Word 2, bits 9:5)**: `METERIDX_MASK (0x3E0)` - Traffic Meter Index.
+* **POL (Word 2, bit 4)**: `ENVLANPOL_MASK (0x10)` - Enable VLAN Policy configuration flag.
+* **VBPRI (Word 2, bits 3:1)**: `VBPRI_MASK (0xE)` - VLAN Port Priority level.
+* **EN (Word 2, bit 0)**: `VBPEN_MASK (0x1)` - VLAN-based Priority Enable flag.
+* **EVID (Word 3, bits 12:0)**: `CTRL3_MASK (0x1FFF)` - Enhanced/Extended VLAN ID.
+
+##### **Family C**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|        RESERVED   |                  MEMBER                   | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                       RESERVED                |   FID_MSTI    | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED    |             METERIDX      |POL|   VBPRI   |EN | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |                      EVID                         | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+* **MEMBER (Word 0, bits 10:0)**: `MBR_MASK (0x7FF)` - port member mask for the VLAN.
+* **FID_MSTI (Word 1, bits 3:0)**: `CTRL1_MASK (0xF)` - Shared Forwarding ID / Multiple Spanning Tree Instance configuration bits.
+* **METERIDX (Word 2, bits 11:5)**: `METERIDX_MASK (0x7E0)` - Traffic Meter Index.
+* **POL (Word 2, bit 4)**: `ENVLANPOL_MASK (0x10)` - Enable VLAN Policy configuration flag.
+* **VBPRI (Word 2, bits 3:1)**: `VBPRI_MASK (0xE)` - VLAN Port Priority level.
+* **EN (Word 2, bit 0)**: `VBPEN_MASK (0x1)` - VLAN-based Priority Enable flag.
+* **EVID (Word 3, bits 12:0)**: `CTRL3_MASK (0x1FFF)` - Enhanced/Extended VLAN ID.
 
 ### 1.6. MAC Learning & Security
 
@@ -950,9 +1236,9 @@ The CPU addresses the PHY registers through an indirect paging mechanism.
 |   RESERVED    |    OCP_HI     |  PHYNUM   |      OCP_LO       |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-  * **OCP_HI (11:8)**: Open Core Protocol Address high bits (`OCPADR\[9:6]`).
-  * **PHYNUM (7:5)**: PHY ID / Port number (`PHYNUM\[2:0]`).
-  * **OCP_LO (4:0)**: Open Core Protocol Address low bits (`OCPADR\[5:1]`).
+  * **OCP_HI (11:8)**: Open Core Protocol Address high bits (`OCPADR[9:6]`).
+  * **PHYNUM (7:5)**: PHY ID / Port number (`PHYNUM[2:0]`).
+  * **OCP_LO (4:0)**: Open Core Protocol Address low bits (`OCPADR[5:1]`).
 
 ### 2.2. The Unified Table Mechanism (`0x0500`)
 
