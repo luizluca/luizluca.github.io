@@ -37,15 +37,15 @@ Tree Instance. All registers on the SMI bus are 16-bit wide.
 ### 1.1. Identification, System, and Interrupts
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
-|-|-|-|-|-|-|-|
-|`CHIP_ID_REG`|`0x1300`|`0x1300`|`0x1300`|`0x1300`|`RTL83XX_REG_CHIP_NUMBER`|Family/Chip ID.|
-|`CHIP_VER_REG`|`0x1301`|`0x1301`|`0x1301`|`0x1301`|`RTL83XX_REG_CHIP_VER`|Silicon version and chip revision.|
-|`CHIP_RESET_REG`|`0x1322`|`0x1322`|`0x1322`|`0x1322`|`RTL83XX_REG_CHIP_RESET`|Soft system reset configuration.|
-|`MAGIC_REG`|`0x13C2`|`0x13C2`|`0x13C2`|`0x13C2`|`RTL83XX_REG_MAGIC_ID`|Unlock register (required value is `0x0249`).|
-|`INTR_POLARITY_REG`|`0x1100`|`0x1100`|`0x1100`|`0x1100`|`RTL83XX_REG_INTR_CTRL`|Configures global IRQ pin polarity and events.|
-|`INTR_CTRL_REG`|`0x1101`|`0x1101`|`0x1101`|`0x1101`|`RTL83XX_REG_INTR_IMR`|Interrupt Mask Register (Interrupt Enable).|
-|`INTR_STATUS_REG`|`0x1102`|`0x1102`|`0x1102`|`0x1102`|`RTL83XX_REG_INTR_IMS`|Interrupt Status Register (Pending Interrupts).|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
+|-|-|-|-|-|-|
+|`CHIP_ID_REG`|`0x1300`|`0x1300`|`0x1300`|`0x1300`|Family/Chip ID.|
+|`CHIP_VER_REG`|`0x1301`|`0x1301`|`0x1301`|`0x1301`|Silicon version and chip revision.|
+|`CHIP_RESET_REG`|`0x1322`|`0x1322`|`0x1322`|`0x1322`|Soft system reset configuration.|
+|`MAGIC_REG`|`0x13C2`|`0x13C2`|`0x13C2`|`0x13C2`|Unlock register (required value is `0x0249`).|
+|`INTR_POLARITY_REG`|`0x1100`|`0x1100`|`0x1100`|`0x1100`|Configures global IRQ pin polarity and events.|
+|`INTR_CTRL_REG`|`0x1101`|`0x1101`|`0x1101`|`0x1101`|Interrupt Mask Register (Interrupt Enable).|
+|`INTR_STATUS_REG`|`0x1102`|`0x1102`|`0x1102`|`0x1102`|Interrupt Status Register (Pending Interrupts).|
 
 #### 1.1.1. CHIP_ID_REG (0x1300)
 
@@ -279,7 +279,7 @@ interrupt events.
 ### 1.2. Port Control, MAC and Isolation
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
 |`PORT_ISOLATION_REG(p)`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|Allowed ports matrix (`PORT_ISOLATION_PORTx_MASK` in SDK).|
 |`PORT_LINKDOWN_IND`|`0x1106`|`0x1106`|`0x1106`|`0x1106`|Portmask of Link Down events.|
@@ -726,14 +726,14 @@ per extension port.
 ### 1.4. Flooding, MSTI, and CPU Port
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
-|-|-|-|-|-|-|-|
-|`MSTI_CTRL_REG(msti, p)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`RTL83XX_REG_MSTI_CTRL`|Multiple Spanning Tree Instance state per port.|
-|`UNKNOWN_UC_FLOOD`|`0x0890`|`0x0890`|`0x0890`|`0x0890`|`RTL83XX_REG_PORTMASK_UNKNOWN_UNICAST`|Portmask for unknown Unicast flooding destination.|
-|`UNKNOWN_MC_FLOOD`|`0x0891`|`0x0891`|`0x0891`|`0x0891`|`RTL83XX_REG_PORTMASK_UNKNOWN_MULTICAST`|Portmask for unknown Multicast flooding destination.|
-|`UNKNOWN_BC_FLOOD`|`0x0892`|`0x0892`|`0x0892`|`0x0892`|`RTL83XX_REG_PORTMASK_BROADCAST`|Portmask for Broadcast flooding destination.|
-|`CPU_PORT_MASK_REG`|`0x1219`|`0x1219`|`0x1219`|`0x1219`|`REG_CPU_PORT_MASK`|CPU Port Mask configuration.|
-|`CPU_CTRL_REG`|`0x121A`|`0x121A`|`0x121A`|`0x121A`|`RTL83XX_REG_CPU_CTRL`|CPU Tag insertion/removal and Trap port control.|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
+|-|-|-|-|-|-|
+|`MSTI_CTRL_REG(msti, p)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|Multiple Spanning Tree Instance state per port.|
+|`UNKNOWN_UC_FLOOD`|`0x0890`|`0x0890`|`0x0890`|`0x0890`|Portmask for unknown Unicast flooding destination.|
+|`UNKNOWN_MC_FLOOD`|`0x0891`|`0x0891`|`0x0891`|`0x0891`|Portmask for unknown Multicast flooding destination.|
+|`UNKNOWN_BC_FLOOD`|`0x0892`|`0x0892`|`0x0892`|`0x0892`|Portmask for Broadcast flooding destination.|
+|`CPU_PORT_MASK_REG`|`0x1219`|`0x1219`|`0x1219`|`0x1219`|CPU Port Mask configuration.|
+|`CPU_CTRL_REG`|`0x121A`|`0x121A`|`0x121A`|`0x121A`|CPU Tag insertion/removal and Trap port control.|
 
 
 #### 1.4.1. MSTI_CTRL_REG(msti, p) (0x0A00 + (msti * 2) + (p/8))
@@ -884,7 +884,7 @@ destination.
 ### 1.5. VLAN Configurations
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
 |`VLAN_CTRL_REG`|`0x07A8`|`0x07A8`|`0x07A8`|`0x07A8`|Global VLAN support activation (bit 0 = enable).|
 |`VLAN_PVID_CTRL_REG(p)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`**Not found**`|Port Default VID/PVID VLAN MC index (2 ports per register).|
@@ -1135,18 +1135,48 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 ### 1.6. MAC Learning & Security
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
-|-|-|-|-|-|-|-|
-|`LUT_PORT_LEARN_LIMIT(p)`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`RTL83XX_REG_LUT_PORT_LEARN_LIMIT`|Limits maximum dynamically learned MACs per physical port.|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
+|-|-|-|-|-|-|
+|`LUT_PORT_LEARN_LIMIT(p)`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|Limits maximum dynamically learned MACs per physical port.|
 
 
 #### 1.6.1. LUT_PORT_LEARN_LIMIT(p) (0x0A20 + p)
 
 This register defines the maximum number of MAC addresses that can be
-dynamically learned on port `p`.
+dynamically learned on port `p`. Setting as 0 disables learning.
 
-##### **Families A, B, C, and D:** Bits 11:0 contain the learn limit count (0 =
-  disable learning on port). Bits 15:12 are reserved.
+##### **Family A:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|                    NUMBER_OF_ADDRESS                  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **NUMBER_OF_ADDRESS (13:0)**: 14-bit (16383) number representing the
+  maximum number of dynamic address to be learned.
+
+##### **Families B and D:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED    |                NUMBER_OF_ADDRESS              |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **NUMBER_OF_ADDRESS (11:0)**: 12-bit (4095) number representing the
+  maximum number of dynamic address to be learned.
+
+##### **Family C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |                    NUMBER_OF_ADDRESS              |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **NUMBER_OF_ADDRESS (12:0)**: 13-bit (8191) number representing the
+  maximum number of dynamic address to be learned.
 
 ### 1.7. MIB Counters (Statistics)
 
@@ -1154,12 +1184,12 @@ Polling MIB counters requires first specifying the target port/counter ID and
 then retrieving results in a structured multi-register block.
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|SDK Name|Function / Usage|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|-|
-|`MIB_ADDRESS_REG`|`0x10047`|`0x1004`|`0x1004`|`0x1004`|`RTL83XX_REG_MIB_ADDRESS`|Target Port and counter selection for MIB polling.|
-|`MIB_ADDRESS_PORT_OFFSET`|`0x007C`|`0x007C`|`0x007C`|`0x007C`|`RTL83XX_MIB_PORT_OFFSET`|Per-port hardware offset for MIB address calculation. Not a register.|
-|`MIB_CTRL0_REG`|`0x1005`|`0x1005`|`0x1005`|`0x1005`|`RTL83XX_REG_MIB_CTRL0`|Poll execution trigger, reset command, and busy flag.|
-|`MIB_COUNTER_BASE`|`0x1000`|`0x1000`|`0x1000`|`0x1000`|`RTL83XX_REG_MIB_COUNTER_BASE`|Staging register block where the latched counter value resides.|
+|`MIB_ADDRESS_REG`|`0x10047`|`0x1004`|`0x1004`|`0x1004`|Target Port and counter selection for MIB polling.|
+|`MIB_ADDRESS_PORT_OFFSET`|`0x007C`|`0x007C`|`0x007C`|`0x007C`|Per-port hardware offset for MIB address calculation. Not a register.|
+|`MIB_CTRL0_REG`|`0x1005`|`0x1005`|`0x1005`|`0x1005`|Poll execution trigger, reset command, and busy flag.|
+|`MIB_COUNTER_BASE`|`0x1000`|`0x1000`|`0x1000`|`0x1000`|Staging register block where the latched counter value resides.|
 
 **MIB Address Calculation:**
 
@@ -1194,7 +1224,7 @@ implies extremely high code reusability across families.
 The CPU addresses the PHY registers through an indirect paging mechanism.
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
 |`INDIRECT_ACCESS_CTRL`|`0x1F00`|`0x1F00`|`0x1F00`|`0x1F00`|Command (Bit 0) and Access type (Bit 1).|
 |`INDIRECT_ACCESS_STATUS`|`0x1F01`|`0x1F01`|`0x1F01`|`0x1F01`|Internal transaction status.|
@@ -1379,7 +1409,7 @@ are constrained to 11 ports:
 To force the purging (Flush) of dynamically learned MAC addresses.
 
 
-|Logical Name|Family A (Hex)|Family B (Hex)|Family C (Hex)|Family D (Hex)|Function / Usage|
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
 |`L2_FLUSH_PORT_REG`|`0x0A36`|`0x0A36`|`0x0A36`|`0x0A36`|**Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7).|
 |`L2_FLUSH_PORT_EXT_REG`|`0x0A35`|`**Not found**`|`0x0A35`|`**Not found**`|**Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
