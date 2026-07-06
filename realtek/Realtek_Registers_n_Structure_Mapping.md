@@ -1181,94 +1181,372 @@ dynamically learned on port `p`. Setting as 0 disables learning.
 ### 1.7. MIB Counters (Statistics)
 
 Polling MIB counters requires first specifying the target port/counter ID and
-then retrieving results in a structured multi-register block.
-
+then retrieving results in a structured multi-register block after results are ready.
 
 |Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|-|
-|`MIB_ADDRESS_REG`|`0x10047`|`0x1004`|`0x1004`|`0x1004`|Target Port and counter selection for MIB polling.|
-|`MIB_ADDRESS_PORT_OFFSET`|`0x007C`|`0x007C`|`0x007C`|`0x007C`|Per-port hardware offset for MIB address calculation. Not a register.|
+|`MIB_ADDRESS_REG`|`0x1004`|`0x1004`|`0x1004`|`0x1004`|Target Port and counter selection for MIB polling.|
 |`MIB_CTRL0_REG`|`0x1005`|`0x1005`|`0x1005`|`0x1005`|Poll execution trigger, reset command, and busy flag.|
-|`MIB_COUNTER_BASE`|`0x1000`|`0x1000`|`0x1000`|`0x1000`|Staging register block where the latched counter value resides.|
+|`MIB_CTRL1_REG`|`0x1006`|`**Not found**`|`**Not found**`|`**Not found**`|Extra port reset command.|
+|`MIB_COUNTER(w)`|`0x1000+w`|`0x1000+w`|`0x1000+w`|`0x1000+w`|Staging register block where the latched counter value resides. It contains 4 words (w in {0..3})|
 
 **MIB Address Calculation:**
 
 - `MIB_Address = (0x007C * port + counter_offset) >> 2`
 
+#### 1.7.1. MIB_ADDRESS_REG (0x1004)
 
-#### 1.7.1. MIB_CTRL0_REG (0x1005)
+This register define the address of a MIB metric. It is calculated based on the metric order and the port.
+Each family has a different number of metrics.
+* **Family A**: ((p * 0x50) + metric_offset) / 4.
+* **Families B, C and D **: ((p * 0x7C) + metric_offset) / 4.
 
-This register triggers and monitors the MIB counter polling operation.
+All current metrics are either 64-bit or 32-bit. Metrics are read at MIB_COUNTER(w), with two 32-bit metrics sharing the same MIB_ADDRESS_REG(w={0,1} and w={2,3}).
 
 ##### **Families A, B, C, and D:**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|                           RESERVED                    |RST| B |
+|          RESERVED         |               ADDRESS             |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-  * **RST (1:1)**: MIB counter reset command (`0x0002`). Writing `1` clears
-    selected counters.
-  * **B (0:0)**: Busy flag (`0x0001`). Hardware sets to `1` during polling;
-    clears to `0` when counter data is ready in `MIB_COUNTER_BASE`.
+  * **ADDRESS (8:0)**: 9-bit number representing the MIB metric address
+  for a specific port.
 
-## 2\. Table Access and Indirect Mechanisms
+#### 1.7.2. MIB_CTRL0_REG (0x1005)
 
-All generations from RTL8370 onwards perfectly share the same Unified Table
-mechanism (`0x0500`) and the OCP Indirect mechanism for PHYs (`0x1F00`). This
-implies extremely high code reusability across families.
+This register triggers and monitors the MIB counter polling operation.
 
-### 2.1. Indirect PHY Access (MDIO via OCP)
+##### **Family A:**
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    RESERVED   |GLB| QM|P7 |P6 |P5 |P4 |P3 |P2 |P1 |P0 |RST|BSY|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **GLB (Bit 11)**: `GLOBAL_RESET_MASK (0x800)` - Global MIB counters reset flag.
+* **QM (Bit 10)**: `QM_RESET_MASK (0x400)` - Queue Management MIB counters reset flag.
+* **P7 (Bit 9)**: `PORT7_RESET_MASK (0x200)` - Port 7 MIB counters reset flag.
+* **P6 (Bit 8)**: `PORT6_RESET_MASK (0x100)` - Port 6 MIB counters reset flag.
+* **P5 (Bit 7)**: `PORT5_RESET_MASK (0x80)` - Port 5 MIB counters reset flag.
+* **P4 (Bit 6)**: `PORT4_RESET_MASK (0x40)` - Port 4 MIB counters reset flag.
+* **P3 (Bit 5)**: `PORT3_RESET_MASK (0x20)` - Port 3 MIB counters reset flag.
+* **P2 (Bit 4)**: `PORT2_RESET_MASK (0x10)` - Port 2 MIB counters reset flag.
+* **P1 (Bit 3)**: `PORT1_RESET_MASK (0x8)` - Port 1 MIB counters reset flag.
+* **P0 (Bit 2)**: `PORT0_RESET_MASK (0x4)` - Port 0 MIB counters reset flag.
+* **RST (Bit 1)**: `RESET_FLAG_MASK (0x2)` - MIB reset operation execution flag.
+* **BSY (Bit 0)**: `BUSY_FLAG_MASK (0x1)` - MIB engine busy status indicator flag.
 
-The CPU addresses the PHY registers through an indirect paging mechanism.
+##### **Families B, and D:**
 
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED|VAL|GLB| QM|P7 |P6 |P5 |P4 |P3 |P2 |P1 |P0 |RST|BSY|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **VAL (Bit 12)**: `RESET_VALUE_MASK (0x1000)` - MIB counter reset value configuration flag.
+* **GLB (Bit 11)**: `GLOBAL_RESET_MASK (0x800)` - Global MIB counters reset flag.
+* **QM (Bit 10)**: `QM_RESET_MASK (0x400)` - Queue Management MIB counters reset flag.
+* **P7 (Bit 9)**: `PORT7_RESET_MASK (0x200)` - Port 7 MIB counters reset flag.
+* **P6 (Bit 8)**: `PORT6_RESET_MASK (0x100)` - Port 6 MIB counters reset flag.
+* **P5 (Bit 7)**: `PORT5_RESET_MASK (0x80)` - Port 5 MIB counters reset flag.
+* **P4 (Bit 6)**: `PORT4_RESET_MASK (0x40)` - Port 4 MIB counters reset flag.
+* **P3 (Bit 5)**: `PORT3_RESET_MASK (0x20)` - Port 3 MIB counters reset flag.
+* **P2 (Bit 4)**: `PORT2_RESET_MASK (0x10)` - Port 2 MIB counters reset flag.
+* **P1 (Bit 3)**: `PORT1_RESET_MASK (0x8)` - Port 1 MIB counters reset flag.
+* **P0 (Bit 2)**: `PORT0_RESET_MASK (0x4)` - Port 0 MIB counters reset flag.
+* **RST (Bit 1)**: `RESET_FLAG_MASK (0x2)` - MIB reset operation execution flag.
+* **BSY (Bit 0)**: `MIB_CTRL0_BUSY_FLAG_MASK (0x1)` - MIB engine busy status indicator flag.
+
+##### **Family C:**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|P10| P9| P8|VAL|GLB| QM|P7 |P6 |P5 |P4 |P3 |P2 |P1 |P0 |RST|BSY|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **P10 (Bit 15)**: `PORT10_RESET_MASK (0x8000)` - Port 10 MIB counters reset flag.
+* **P9 (Bit 14)**: `PORT9_RESET_MASK (0x4000)` - Port 9 MIB counters reset flag.
+* **P8 (Bit 13)**: `PORT8_RESET_MASK (0x2000)` - Port 8 MIB counters reset flag.
+* **VAL (Bit 12)**: `RESET_VALUE_MASK (0x1000)` - MIB counter reset value configuration flag.
+* **GLB (Bit 11)**: `GLOBAL_RESET_MASK (0x800)` - Global MIB counters reset flag.
+* **QM (Bit 10)**: `QM_RESET_MASK (0x400)` - Queue Management MIB counters reset flag.
+* **P7 (Bit 9)**: `PORT7_RESET_MASK (0x200)` - Port 7 MIB counters reset flag.
+* **P6 (Bit 8)**: `PORT6_RESET_MASK (0x100)` - Port 6 MIB counters reset flag.
+* **P5 (Bit 7)**: `PORT5_RESET_MASK (0x80)` - Port 5 MIB counters reset flag.
+* **P4 (Bit 6)**: `PORT4_RESET_MASK (0x40)` - Port 4 MIB counters reset flag.
+* **P3 (Bit 5)**: `PORT3_RESET_MASK (0x20)` - Port 3 MIB counters reset flag.
+* **P2 (Bit 4)**: `PORT2_RESET_MASK (0x10)` - Port 2 MIB counters reset flag.
+* **P1 (Bit 3)**: `PORT1_RESET_MASK (0x8)` - Port 1 MIB counters reset flag.
+* **P0 (Bit 2)**: `PORT0_RESET_MASK (0x4)` - Port 0 MIB counters reset flag.
+* **RST (Bit 1)**: `RESET_FLAG_MASK (0x2)` - MIB reset operation execution flag.
+* **BSY (Bit 0)**: `MIB_CTRL0_BUSY_FLAG_MASK (0x1)` - MIB engine busy status indicator flag.
+
+#### 1.7.3. MIB_CTRL1_REG (0x1006)
+
+This register expands MIB_CTRL0_REG port resets for family A. Families B, C and D do not
+use register 0x1006 but reuse the MIB_CTRL1_REG name for `0x1008`, while family A calls it
+MIB_CTRL2_REG.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED        |P15|P14|P13|P12|P11|P10| P9| P8|RSV|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **P15 (Bit 9)**: `PORT15_RESET_MASK (0x200)` - Port 15 MIB counters reset flag.
+* **P14 (Bit 8)**: `PORT14_RESET_MASK (0x100)` - Port 14 MIB counters reset flag.
+* **P13 (Bit 7)**: `PORT13_RESET_MASK (0x80)` - Port 13 MIB counters reset flag.
+* **P12 (Bit 6)**: `PORT12_RESET_MASK (0x40)` - Port 12 MIB counters reset flag.
+* **P11 (Bit 5)**: `PORT11_RESET_MASK (0x20)` - Port 11 MIB counters reset flag.
+* **P10 (Bit 4)**: `PORT10_RESET_MASK (0x10)` - Port 10 MIB counters reset flag.
+* **P9 (Bit 3)**: `PORT9_RESET_MASK (0x8)` - Port 9 MIB counters reset flag.
+* **P8 (Bit 2)**: `PORT8_RESET_MASK (0x4)` - Port 8 MIB counters reset flag.
+
+#### 1.7.4 MIB_COUNTER (0x1000 + w)
+
+The sequence of registers 0x1000..0x1003 holds the metric data selected by
+MIB_ADDRESS_REG after MIB_CTRL0_BUSY_FLAG_MASK at MIB_CTRL0_REG clears.
+
+All current MIB metrics uses either 2 or 4 words. When it uses 4 words (64-bit)
+the layout is:
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                      METRIC DATA [63:48]                      | 0x1000
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                      METRIC DATA [47:32]                      | 0x1001
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                      METRIC DATA [31:16]                      | 0x1002
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                      METRIC DATA [15:0]                       | 0x1003
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+When a metric uses 2 words (32-bit), it will share the 4 words with another metric,
+with one occupying the higher registers and the other one the lower ones.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                     METRIC DATA A [31:16]                     | 0x1000
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                     METRIC DATA A [15:0]                      | 0x1001
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                     METRIC DATA B [31:16]                     | 0x1002
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                     METRIC DATA B [15:0]                      | 0x1003
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+## 2. PHYs REG access mechanism
+
+The Realtek switches provide an indirect access mechanism to read and write PHY
+registers, including OCP registers.
+
+The vendor code mentions two PHY register bases
+* **Internal PHYs**: `BASE = 0x2000`, `OFFSET = 5`.
+* **External PHYs**: `BASE = 0xA000`, `OFFSET = 9`.
+
+However the code just uses the Internal PHYs base.
+
+### 2.1 Direct PHY Access (MDIO controlled switches)
+
+For switches connected to the host via the MDC/MDIO interface, the internal PHYs are directly exposed on the MDIO bus and respond to their respective PHY addresses (typically corresponding to their port numbers). Thus, the host can access the PHY registers directly using standard MDIO read/write operations.
 
 |Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
-|`INDIRECT_ACCESS_CTRL`|`0x1F00`|`0x1F00`|`0x1F00`|`0x1F00`|Command (Bit 0) and Access type (Bit 1).|
-|`INDIRECT_ACCESS_STATUS`|`0x1F01`|`0x1F01`|`0x1F01`|`0x1F01`|Internal transaction status.|
-|`INDIRECT_ACCESS_ADDRESS`|`0x1F02`|`0x1F02`|`0x1F02`|`0x1F02`|Formatted PHY address.|
-|`INDIRECT_ACCESS_WRITE`|`0x1F03`|`0x1F03`|`0x1F03`|`0x1F03`|Data to write to PHY.|
-|`INDIRECT_ACCESS_READ`|`0x1F04`|`0x1F04`|`0x1F04`|`0x1F04`|Data read from PHY.|
-|`GPHY_OCP_MSB_0_REG`|`**Not found**`|`0x1D15`|`0x1D15`|`0x1D15`|(Bits 11:6) CPU OCPADR base.|
-|`PHY_OCP_ADDR_PHYREG_BASE`|`0xA400`|`0xA400`|`0xA400`|`0xA400`|Base address for local PHY registers 0~31 OCP queries.|
+|`PHY_REG(p, r)`|`0x2000 + (p<<5) + r`|`0x2000 + (p<<5) + r`|`**Not found**`|`**Not found**`|PHY p register r|
+|`PHY_OCP_REG(p, r)`|`**Not found**`|`**Not found**`|`0x2000 + (p<<5) + r`|`0x2000 + (p<<5) + r`|PHY p OCP register r|
+|`GPHY_OCP_MSB_0`|`**Not found**`|`**Not found**`|`0x1d15`|`0x1d15`|TODO|
 
+#### PHY_REG(p, r) (0x2000 + (p<<5) + r)
 
-#### 2.1.1. INDIRECT_ACCESS_CTRL (0x1F00)
-
-##### **Families A, B, C, and D:**
+This register directly access IEEE PHY registers. The register address is formed as:
 
 ```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    0x1    |     RESERVED      |  PHY_NUM  |    PHY_OCP_REG    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+p represents the internal PHY number and r is the PHY register (0..0x1F). The register, for MDIO-controlled switches, can be read or written directly as any other register.
+
+##### ** Family A ** #####
+
+For family A, PHY number can be from 0 to 7 (3-bit) and PHY registers are from 0 to 0x1F (5-bit). Only standard IEEE registers are supported.
+
+##### ** Family B ** #####
+
+For family B, PHY number can be from 0 to 4 (3-bit) and PHY OCP registers are from 0 to 0x1F (5-bit). Only standard IEEE registers are supported.
+
+##### ** Families C and D ** #####
+
+These families reused the same register to access OCP registers instead of the standard IEEE. See PHY_OCP_REG.
+
+#### PHY_OCP_REG(p, r) (0x2000 + ((r >> 6) & 0x000F)<<8)  + (p<<5) + ((r >> 1) & 0x001F))
+
+While sharing the same 0x2000 address as PHY_REG for families A and B, family C and D only exposes PHY registers as OCP registers.
+
+OCP register addresses are 16-bit and point to a single 8-bit value. The access is divided in two steps:
+1. The page is selected using the 6 MSB of the OCP register address.
+2. The remainging OCP register address with the PHY address is used to calculate the index in the selected page where the register can be accessed.
+
+As Realtek uses 16-bit values and OCP register addresses points to a single 8-bit value, the least significant bit is ignored as the two following OCP register addresses are always accessed together.
+
+##### ** Families A and B ** #####
+
+These families do not support OCP registers, only standard IEEE direcly mapped at 0x2000-0x2FFF.
+
+##### ** Families C and D ** #####
+
+The OCP register address (OCP_ADD) is decomposed this way:
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| GPHY_OCP_MSB_0[11:6]  |PHY_OCP_REG[]  | PHY_OCP_REG[4:0]  |PAR|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* ** GPHY_OCP_MSB_0[11:6](15:10) ** - The 6-most significant bits set the page using GPHY_OCP_MSB_0.
+  ** PHY_OCP_REG[:](9:6) ** - The next 4-most siginificant bits are used to index the register, together with PHY_OCP_REG_5_1.
+  ** PHY_OCP_REG[4:0](5:1) ** - The next 5-most siginificant bits are used to index the register, together with PHY_OCP_REG_9_6.
+  ** PAR(0:0) - As OCS address points to a single bit and Realtek registers has 16-bit, the last bit is ignored on read/write operations. That way, OCS register address must always be even.
+
+After the PHY register address [15:10] bits defines the page (in GPHY_OCP_MSB_0[11:6]), the remaining bits and the phy number can be used to index the data register.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    0x1    |RSV| OCP_ADD[9:6]  |  PHY_NUM  |    OCP_ADD[5:1]   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+And the PHY OCP register at OCP_ADD and OCP_ADD+1 can be accessed at the switch register PHY_OCP_REG(p, r), from range 0x2000-0x2FFF.
+
+#### GPHY_OCP_MSB_0 (0x1d15)
+
+This register define the OCP register page for families C and D. It sets the 15:10 bits (0xfc00) of a 16-bit OCP address (actually 15-bit for these switches). It should be used together with PHY_OCP_REG that uses the 9:1 bits to index the switch register (0x2000-0x2FFF).
+
+##### ** Families A and B ** #####
+
+These families do not support OCP registers, only standard IEEE direcly mapped at 0x2000-0x2FFF.
+
+##### ** Families C and D ** #####
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    RESERVED   |    CPU_OCPADDR_MSB    |  DW8051_OCPADR_MSB    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **CPU_OCPADDR_MSB (11:6)**: `PORT10_RESET_MASK (0x0FC0)` - CPU OCP Address MSB
+* **DW8051_OCPADR_MSB (5:0)**: `DW8051_OCPADR_MSB (0x003F)` - DW8051 OCP Address MSB
+
+### 2.2 Indirect PHY Access (via Switch Registers)
+
+The CPU can address the PHY registers through an indirect paging mechanism implemented in the switch's register space. For SMI-controlled switches, the indirect access is the only way to read/write PHY (OCP) registers.
+
+|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
+|-|-|-|-|-|-|
+|`INDIRECT_ACCESS_CTRL`|`0x1F00`|`0x1F00`|`0x1F00`|`0x1F00`|Command (Bit 0) and Access direction (Bit 1).|
+|`INDIRECT_ACCESS_STATUS`|`0x1F01`|`0x1F01`|`0x1F01`|`0x1F01`|Internal transaction status (Busy flags).|
+|`INDIRECT_ACCESS_ADDRESS`|`0x1F02`|`0x1F02`|`0x1F02`|`0x1F02`|Formatted PHY address (Base + Port + Offset).|
+|`INDIRECT_ACCESS_WRITE_DATA`|`0x1F03`|`0x1F03`|`0x1F03`|`0x1F03`|Data to write to the PHY.|
+|`INDIRECT_ACCESS_READ_DATA`|`0x1F04`|`0x1F04`|`0x1F04`|`0x1F04`|Data read from the PHY.|
+
+** Note: ** the driver rtl8365mb uses the indirect access independently from the interface used to controle the switch (SMI or MDIO).
+
+The sequence of reading/writes is:
+* Check if all busy flags at INDIRECT_ACCESS_STATUS are cleared.
+* Sets the address:
+  * Families A and B:
+    * Write PHY_REG(p, r) to INDIRECT_ACCESS_ADDRESS.
+  * Families C and D:
+    * Set the page at GPHY_OCP_MSB_0.
+    * Write PHY_OCP_REG(p, r) to INDIRECT_ACCESS_ADDRESS.
+* Write data to INDIRECT_ACCESS_WRITE_DATA (if writting).
+* Issue the indirect access by writting to INDIRECT_ACCESS_CTRL.
+* Read data to INDIRECT_ACCESS_READ_DATA (if reading).
+* Wait for completition checking if all busy flags at INDIRECT_ACCESS_STATUS are cleared.
+
+#### 2.2.1. INDIRECT_ACCESS_CTRL (0x1F00)
+
+This register initiates the indirect access transaction to the PHYs.
+
+**Families A, B, C, and D:**
+
+```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 |                           RESERVED                    |RW | C |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-```
-  * **RW (1:1)**: Operation direction. `0` = Read PHY register, `1` = Write PHY
-    register.
-  * **C (0:0)**: Command trigger. Write `1` to execute transaction; hardware
-    clears it to `0` upon completion.
-
-**Addressing the PHY via OCP:**
-
-- `OCP_Address = BASE | (phyNum << OFFSET) | phyReg`
-- **Internal PHYs**: `BASE = 0x2000`, `OFFSET = 5`.
-- **External PHYs**: `BASE = 0xA000`, `OFFSET = 9`.
-
-#### 2.1.2. INDIRECT_ACCESS_ADDRESS (0x1F02)
-
-##### **Families A, B, C, and D:**
 
 ```
+
+* **RW (1:1)**: Operation direction.
+  * `0` = Read PHY register
+  * `1` = Write PHY register.
+* **C (0:0)**: Command trigger. Write `1` to execute transaction; hardware clears it to `0` upon completion.
+
+#### 2.2.2. INDIRECT_ACCESS_STATUS (0x1F01)
+
+This register returns the status of the indirect access mechanism, indicating if the bus is busy.
+
+**Family A:**
+
+```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|   RESERVED    |    OCP_HI     |  PHYNUM   |      OCP_LO       |
+|                           RESERVED                |PHY|SDS|MDX|
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 ```
-  * **OCP_HI (11:8)**: Open Core Protocol Address high bits (`OCPADR[9:6]`).
-  * **PHYNUM (7:5)**: PHY ID / Port number (`PHYNUM[2:0]`).
-  * **OCP_LO (4:0)**: Open Core Protocol Address low bits (`OCPADR[5:1]`).
+
+* **PHY (2:2)**: `PHY_BUSY_MASK` (`0x4`). PHY is busy.
+* **SDS (1:1)**: `SDS_BUSY_MASK` (`0x2`). SerDes is busy.
+* **MDX (0:0)**: `MDX_BUSY_MASK` (`0x1`). MDIO/MDC is busy.
+
+**Families B, C and D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                           RESERVED                |BSY|RSERVED|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+* **BSY (2:2)**: `BUSY_MASK` (`0x4`). Mechanism is busy.
+
+**Note**: Family C sets BUSY_MASK as 0x7 but it still defines the offset as 2. It is probaly a bug in vendor API.
+
+#### 2.2.3. INDIRECT_ACCESS_ADDRESS (0x1F02)
+
+This register specifies the target PHY and the register to be accessed.
+
+**Families A and B:**
+
+The register value must be in the 0x2000-0x201F range, and use the same register address from PHY_REG(p, r) used in direct access.
+
+
+**Families C and D:**
+
+The register value must be in the 0x2000-0x2FFF range, and use the same register address from PHY_OCP_REG(p, r) used in direct access.
+
+The register GPHY_OCP_MSB_0 must also be set the same way as in the direct access.
+
+## 3. Table Access and Indirect Mechanisms
+
+All families perfectly share the same Unified Table
+mechanism (`0x0500`) and the OCP Indirect mechanism for PHYs (`0x1F00`). This
+implies extremely high code reusability across families.
 
 ### 2.2. The Unified Table Mechanism (`0x0500`)
 
