@@ -1345,6 +1345,125 @@ with one occupying the higher registers and the other one the lower ones.
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
 
+#### 1.7.5. L2 Flush Interface (Dynamic Table Purge)
+
+The selective or total purging of dynamic MAC addresses relies on specific registers tailored to each family:
+
+* **Base Ports Mapping (`L2_FLUSH_PORT_REG` - `0x0A36`):** Present in all families for quick control over ports 0 to 7.
+* **Extension Ports (`L2_FLUSH_PORT_EXT_REG` - `0x0A35`):** Exclusively used by **Family C** to cover the additional extension ports (EXT0 to EXT2). This functionality is not natively supported by hardware in Families B and D.
+* **Advanced Conditional Purge (VLAN/FID):** **Families B, C, and D** gain the `L2_FLUSH_CTRL1_REG` (`0x0A37`) and `L2_FLUSH_CTRL2_REG` (`0x0A38`) registers, allowing entries to be purged based on refined filters (e.g., clearing only dynamic entries associated with a specific VLAN or Forwarding ID).
+
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| `L2_FLUSH_PORT_REG` | `0x0A36` | `0x0A36` | `0x0A36` | `0x0A36` | **Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7). |
+| `L2_FLUSH_PORT_EXT_REG` | `**Not found**` | `**Not found**` | `0x0A35` | `**Not found**` | **Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
+| `L2_FLUSH_CTRL1_REG` | `**Not found**` | `0x0A37` | `0x0A37` | `0x0A37` | **Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below.|
+| `L2_FLUSH_CTRL2_REG` | `**Not found**` | `0x0A38` | `0x0A38` | `0x0A38` | **Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic).|
+| `L2_FLUSH_CTRL3_REG` | `**Not found**` | `**Not found**` | `0x0A39` | `0x0A39` | **Bits (0:0):** MSK. Additional global Flush trigger.|
+
+#### 1.7.5.1. L2_FLUSH_PORT_REG (0x0A36) / REG_FORCE_FLUSH
+
+This register triggers or checks the status of the dynamic table flush operation for the primary ports (ports 0 to 7).
+
+##### **Family A:**
+
+Family A maps this register layout cleanly to a basic trigger address without separate bitfield macros or split status lines within its native files, handling full system purges via an indivisible instruction.
+
+##### **Families B, C, and D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          BUSY_STATUS          |       FORCE_FLUSH_PORTMASK    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **BUSY_STATUS (15:8)**: `RTL8367B_BUSY_STATUS_MASK` / `RTL8367C_BUSY_STATUS_MASK` / `RTL8367D_BUSY_STATUS_MASK` (`0xFF00`). Per-port flush engine busy execution status flags.
+* **FORCE_FLUSH_PORTMASK (7:0)**: `RTL8367B_FORCE_FLUSH_PORTMASK_MASK` / `RTL8367C_FORCE_FLUSH_PORTMASK_MASK` / `RTL8367D_FORCE_FLUSH_PORTMASK_MASK` (`0xFF`). Port mask selector to execute dynamic or static flushes on physical ports 0 to 7.
+
+
+#### 1.7.5.2. L2_FLUSH_PORT_EXT_REG (0x0A35) / REG_FORCE_FLUSH1
+
+This register handles extended port flushes for families expanding past 8 logical port channels.
+> ⚠️ **Peer Correction Note:** In **Family A**, the register address `0x0A35` is actually used for `RTL8370_REG_PORT_EFID_CTRL3` to map the Enhanced Filtering Database IDs for ports 12 to 15 rather than any flush operation. It is completely **Not Found** as a flush register on Families B and D.
+
+##### **Family C:**
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                       RESERVED        | BUSY_ST1  |  PMASK1   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **BUSY_ST1 (5:3)**: `RTL8367C_BUSY_STATUS1_MASK` (`0x38`). Busy execution status flags for the extended logical port channels.
+* **PMASK1 (2:0)**: `RTL8367C_PORTMASK1_MASK` (`0x7`). Extended port mask selector targeting logical ports 8 to 10.
+
+
+#### 1.7.5.3. L2_FLUSH_CTRL1_REG (0x0A37) / REG_L2_FLUSH_CTRL1
+
+This register specifies the explicit Filtering ID (FID) or Customer VLAN ID (VID) filters used during advanced dynamic purging operations.
+
+##### **Family A:**
+
+* **Not Found** on Family A hardware.
+
+##### **Families B and C:**
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    FLUSH_FID  |                   FLUSH_VID                   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **FLUSH_FID (15:12)**: `RTL8367B_LUT_FLUSH_FID_MASK` / `RTL8367C_LUT_FLUSH_FID_MASK` (`0xF000`). 4-bit Forwarding Database ID filter parameter.
+* **FLUSH_VID (11:0)**: `RTL8367B_LUT_FLUSH_VID_MASK` / `RTL8367C_LUT_FLUSH_VID_MASK` (`0xFFF`). 12-bit Customer VLAN ID filter parameter.
+
+##### **Family D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|FLU_FID|                   FLUSH_VID                   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **FLU_FID (13:12)**: `RTL8367D_LUT_FLUSH_FID_MASK` (`0x3000`). 2-bit compressed Forwarding Database ID filter parameter.
+* **FLUSH_VID (11:0)**: `RTL8367D_LUT_FLUSH_VID_MASK` (`0xFFF`). 12-bit Customer VLAN ID filter parameter.
+
+#### 1.7.5.4. L2_FLUSH_CTRL2_REG (0x0A38) / REG_L2_FLUSH_CTRL2
+
+This register configures the primary condition filters (Modes) and entry classification targets (Types) for purging execution.
+
+##### **Family A:**
+* **Not Found** on Family A hardware.
+
+##### **Families B, C, and D:**
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                       RESERVED                    |TYP|MODE   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **TYP (2:2)**: `RTL8367B_LUT_FLUSH_TYPE_MASK` / `RTL8367C_LUT_FLUSH_TYPE_MASK` / `RTL8367D_LUT_FLUSH_TYPE_MASK` (`0x4`). Purge row classification selection. `0` = Dynamic entries only, `1` = Both static and dynamic entries.
+* **MODE (1:0)**: `RTL8367B_LUT_FLUSH_MODE_MASK` / `RTL8367C_LUT_FLUSH_MODE_MASK` / `RTL8367D_LUT_FLUSH_MODE_MASK` (`0x3`). Condition lookup rule filter:
+* `0` = Port-based flush mode.
+* `1` = Port + VID based flush mode.
+* `2` = Port + FID/MSTI based flush mode.
+
+#### 1.7.5.5. L2_FLUSH_CTRL3_REG (0x0A39) / REG_L2_FLUSH_CTRL3
+
+This register serves as an automated global trigger to flush the entire Look-Up Table simultaneously.
+
+##### **Families A and B:**
+* **Not Found** on Family A and Family B configurations.
+
+##### **Families C and D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                              RESERVED                     |MSK|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MSK (0:0)**: `RTL8367C_L2_FLUSH_CTRL3_MASK` / `RTL8367D_L2_FLUSH_CTRL3_MASK` (`0x1`). Writing `1` initiates a complete table flush including static and dynamic entries; hardware automatically clears this bit to `0` once the operation finishes.
+
+
 ## 2. PHYs REG access mechanism
 
 The Realtek switches provide an indirect access mechanism to read and write PHY
@@ -1542,181 +1661,683 @@ The register value must be in the 0x2000-0x2FFF range, and use the same register
 
 The register GPHY_OCP_MSB_0 must also be set the same way as in the direct access.
 
-## 3. Table Access and Indirect Mechanisms
+## 3. Table Access Mechanism
 
-All families perfectly share the same Unified Table
-mechanism (`0x0500`) and the OCP Indirect mechanism for PHYs (`0x1F00`). This
-implies extremely high code reusability across families.
+All families share a unified indirect mechanism for manipulating internal hardware tables, including Layer 2 forwarding (L2/FDB), VLAN 4K (CVLAN), Access Control Lists (ACL - rules and actions), and IGMP groups (read-only).
 
-### 2.2. The Unified Table Mechanism (`0x0500`)
+There is a crucial physical divergence in the data staging area: **Family A** uses a contiguous block of mixed registers (`0x0503` to `0x0525`) for both reading and writing operations. Meanwhile, **Families B, C, and D** separate these buses, dedicating the `0x0510–0x0519` block strictly for write operations and the `0x0520–0x0529` block for read operations.
 
-The **Unified Central Mechanism** is located at base `0x0500` to operate L2 and
-VLAN tables across all families.
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| `TABLE_CTRL` | `0x0500` | `0x0500` | `0x0500` | `0x0500` | Defines the Command, Operation (R/W), and Target Table. |
+| `TABLE_ACCESS_ADDR` | `0x0501` | `0x0501` | `0x0501` | `0x0501` | Direct index or address of the table entry to be accessed. |
+| `TABLE_LUT_ADDR` | `0x0502` | `0x0502` | `0x0502` | `0x0502` | Hardware execution status (Busy, Hit, and Matched Address). |
+| `TABLE_DATA(w)` | `0x0503 + w` | `**Not found**` | `**Not found**` | `**Not found**` | Staging area of 32 words for Read/Write operations. |
+| `TABLE_WRITE(w)` | `**Not found**` | `0x0510 + w` | `0x0510 + w` | `0x0510 + w` | Staging area of 16 words for Write operations. |
+| `TABLE_READ(w)` | `**Not found**` | `0x0520 + w` | `0x0520 + w` | `0x0520 + w` | Staging area of 16 words for Read operations. |
 
-**Central Registers:**
+> **Note:** The Family C API redefines the `0x0502` register internally as `TABLE_ACCESS_STATUS_REG`, while Family D keeps the native `REG_TABLE_LUT_ADDR` nomenclature. Both point to the exact same physical hardware address.
 
-- `TABLE_CTRL_REG` (`0x0500`): Defines the Command and the Target Table.
-- `TABLE_ACCESS_ADDR_REG` (`0x0501`): Index to access.
-- `TABLE_STATUS_REG` (`0x0502`): Status returned by the hardware (BUSY, HIT).
-- `TABLE_WRITE_BASE` (`0x0510` to `0x0519`): Staging area for Write operations.
-- `TABLE_READ_BASE` (`0x0520` to `0x0529`): Staging area for Read operations.
+### 3.2. Detailed Registers and Bitfields
 
-#### 2.2.1. TABLE_CTRL_REG (0x0500)
+### 3.2.1. TABLE_CTRL (0x0500)
 
-##### **Families A, B, C, and D:**
-
-```
- 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|   RESERVED    |     PORT      |RSV|  METHOD   |OP |   TABLE   |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-```
-  * **PORT (11:8)**: Target Port index (applicable for port-based lookups).
-  * **METHOD (6:4)**: Access method selector.
-  * **OP (3:3)**: Operation. `0` = Read, `1` = Write.
-  * **TABLE (2:0)**: Target table selector.
-
-#### 2.2.2. TABLE_STATUS_REG (0x0502)
-
-##### **Families A, B, C, and D:**
-
-```
-
- 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|RSV|EX |BSY|HIT| T |                ADDRESS_STATUS             |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-```
-  * **EX (14:14)**: Extension bit for Address (`ADDRESS_EXT`).
-  * **BSY (13:13)**: `BUSY_FLAG`. `1` = Hardware is executing the command.
-  * **HIT (12:12)**: `HIT_STATUS`. `1` = Entry was found during a lookup/search.
-  * **T (11:11)**: `ADDR_TYPE`. Address type qualifier.
-  * **ADDRESS_STATUS (10:0)**: Internal hardware index of the matched/written
-    entry.
-
-### 2.3. Meticulous Bitfield Comparison of RAM Tables
-
-A deep validation of the table architectures shows major structural divergences
-due to physical port limitations (16 ports on Family A versus 11 ports on
-Family B, C, and D).
-
-#### A. CVLAN (Customer VLAN) Table Layout Comparison
-
-##### Family A (RTL8370) - 64-bit Structure (4 Words)
-
-Family A requires 64-bits (4 registers) to host the full 16-bit physical port
-member mask:
-
-```
-Family A CVLAN Word 0
- 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|                          MBR [15:0]                           | Word 0
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|  MSTI [3:0]   |                   FID [11:0]                  | Word 1
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| R |LUR|         METERIDX [7:0]        |POL|   VBPRI   |EN | R | Word 2
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| RESERVED  |                  EVID [12:0]                      | Word 3
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-```
-- **MBR (Word 0, bits 15:0)**: Full 16-bit Spanning Member Portmask.
-- **MSTI (Word 1, bits 15:12)**: MSTP Spanning Tree Index.
-- **FID (Word 1, bits 11:0)**: Forwarding Database ID (SVL/IVL mapping).
-- **LUR (Word 2, bit 14)**: L2 Lookup learning bypass flag (`lurep`).
-- **METERIDX (Word 2, bits 13:6)**: Traffic Limiter Meter index.
-- **POL (Word 2, bit 5)**: VLAN Egress Priority Remarking configuration (`
-  envlanpol`).
-- **VBPRI (Word 2, bits 4:2)**: Port Priority value.
-- **EN (Word 2, bit 1)**: Port-based VLAN Priority override enabled (`vbpen`).
-- **EVID (Word 3, bits 12:0)**: Extended 802.1Q VLAN ID.
-
-##### Family B, C, and D - 48-bit Structure (3 Words)
-
-Families B, C, and D only require 48-bits (3 registers) because member masks
-are constrained to 11 ports:
+#### **Family A**
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|          UNTAG [7:0]          |           MBR [7:0]           | Word 0
+|   RESERVED    |ST |       RESERVED        |MET|OP |   TABLE   |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| RS|IS |      METER_LO [4:0]   |POL| VBPRI |EN |   FID [3:0]   | Word 1
+
+```
+* **ST (12:12)**: `ACCESS_STATUS` (`0x1000`). Target access status bit.
+* **MET (5:5)**: `ACCESS_METHOD` (`0x20`). 1-bit access method selector.
+  * `0` = Retrieve the entry by MAC address informed in TABLE_DATA.
+  * `1` = Retrieve the entry by table index informed in TABLE_ACCESS_ADDR.
+* **OP (4:4)**: `COMMAND_TYPE` (`0x10`). Operation direction.
+  * `0` = Read.
+  * `1` = Write.
+* **TABLE (2:0)**: `TABLE_TYPE` (`0x7`). Target table selector.
+  * `0` = Reserved.
+  * `1` = ACL rule.
+  * `2` = ACL action.
+  * `3` = CVLAN (Vlan4K).
+  * `4` = L2.
+  * `5` = Reserved.
+  * `6` = Reserved.
+  * `7` = Reserved.
+
+#### **Families B, and D**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|               RESERVED                |MH | UNT_E |   MBR_E   | Word 2
+|     RESERVED      |    SPA    |RSV|  METHOD   |OP |   TABLE   |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-- **MBR \[7:0] (Word 0, bits 7:0)**: Lower member ports (0-7).
-- **UNTAG \[7:0] (Word 0, bits 15:8)**: Lower untagged ports (0-7).
-- **FID \[3:0] (Word 1, bits 3:0)**: VLAN Forwarding ID (scaled down to 4 bits in
-  modern configurations).
-- **EN (Word 1, bit 4)**: `vbpen`.
-- **VBPRI (Word 1, bits 7:5)**: VLAN port priority.
-- **POL (Word 1, bit 8)**: `envlanpol`.
-- **METER_LO \[4:0] (Word 1, bits 13:9)**: Low bits of traffic Meter index.
-- **IS (Word 1, bit 14)**: Independent/Shared Learning configuration flag (`
-  IVL_SVL`).
-- **MBR_E (Word 2, bits 2:0)**: Extension Member Portmask for ports EXT0, EXT1,
-  and EXT2.
-- **UNT_E (Word 2, bits 5:3)**: Extension Untagged Portmask for ports EXT0, EXT1,
-  and EXT2.
-- **MH (Word 2, bit 6)**: High bit of traffic Meter index (`METERIDX_HI`).
+* **SPA (10:8)**: `SPA` (`0x700`). Source Port Address / Target Port index for port-based lookups (3-bit field).
+* **METHOD (6:4)**: `ACCESS_METHOD` (`0x70`). Access method selector (3-bit field).
+  * `0` = Retrieve the entry by MAC address informed in TABLE_DATA.
+  * `1` = Retrieve the entry by table index informed in TABLE_ACCESS_ADDR.
+  * `2` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR.
+  * `3` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Unicast entries.
+  * `4` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Multicast entries.
+  * `5` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L3 Multicast entries.
+  * `6` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2/L3 Multicast entries.
+  * `7` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Unicast entries associated with the port informed in the SPA field.
+* **OP (3:3)**: `COMMAND_TYPE` (`0x8`). Operation direction.
+  * `0` = Read.
+  * `1` = Write.
+* **TABLE (2:0)**: `TABLE_TYPE` (`0x7`). Target table selector (L2, CVLAN, ACL, etc.).
+  * `0` = Reserved.
+  * `1` = ACL rule.
+  * `2` = ACL action.
+  * `3` = CVLAN (Vlan4K).
+  * `4` = L2.
+  * `5` = IGMP group (read-only).
+  * `6` = Reserved.
+  * `7` = Reserved.
 
-#### B. L2 (FDB) Lookup Table Layout Comparison
+#### **Family C**
 
-##### Family A (RTL8370) - 96-bit Structure (6 Words)
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED    |      SPA      |RSV|  METHOD   |OP |   TABLE   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **SPA (11:8)**: `SPA` (`0xF00`). Source Port Address / Target Port index for port-based lookups (4-bit field).
+* **METHOD (6:4)**: `ACCESS_METHOD` (`0x70`). Access method selector (3-bit field).
+  * `0` = Retrieve the entry by MAC address informed in TABLE_DATA.
+  * `1` = Retrieve the entry by table index informed in TABLE_ACCESS_ADDR.
+  * `2` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR.
+  * `3` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Unicast entries.
+  * `4` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Multicast entries.
+  * `5` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L3 Multicast entries.
+  * `6` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2/L3 Multicast entries.
+  * `7` = Retrieve the next address starting from table index informed in TABLE_ACCESS_ADDR, but only considering L2 Unicast entries associated with the port informed in the SPA field.
+* **OP (3:3)**: `COMMAND_TYPE` (`0x8`). Operation direction.
+  * `0` = Read.
+  * `1` = Write.
+* **TABLE (2:0)**: `TABLE_TYPE` (`0x7`). Target table selector (L2, CVLAN, ACL, etc.).
+  * `0` = Reserved.
+  * `1` = ACL rule.
+  * `2` = ACL action.
+  * `3` = CVLAN (Vlan4K).
+  * `4` = L2.
+  * `5` = IGMP group (read-only).
+  * `6` = Reserved.
+  * `7` = Reserved.
 
-- **Port Representation**: Direct 4-bit representation in the FDB entry because
-  of the 16-port layout.
-- **Struct Bits**:
-  - MAC Address: Word 0 to Word 2.
-  - Port Field: Mapped inside a clean 4-bit field in Word 4.
+#### 3.2.2. TABLE_ACCESS_ADDR (0x0501)
 
-##### Family B, C, and D - 96-bit Structure (6 Words)
+Inform the address / table index to retrieve/modify or look up from.
 
-- **Port Representation**: Split layout (3 bits `PORT` \+ 1 bit `PORT_EXT`) to
-  handle the 11-port logical arrangement:
-  - **Word 3**: Contains MAC, `VID` \[11:0], `IVL` \[13:13], and `PORT_EXT`
-    \[15:15] (EXT port mask).
-  - **Word 4**: Contains `EFID`, `FID`, `SA_PRI`, `PORT` \[10:8] (lower 3 bits
-    of logical port), `AGE`, `AUTH`, and `SA_BLOCK`.
-  - **Word 5**: Contains `DA_BLOCK`, `PRIORITY`, `FWD_PRI`, and `STATIC` status.
+#### **Family A**
 
-### 2.4. L2 Flush Interface (Dynamic Table Purge)
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|                        ADDRESS                        |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+> **Note:** Bit 13 is probably the Address TYPE (see REG_TABLE_LUT_ADDR).
 
-To force the purging (Flush) of dynamically learned MAC addresses.
+#### **Families B, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    RESERVED   |                    ADDRESS                    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+> **Note:** Bit 11 is probably the Address TYPE (see REG_TABLE_LUT_ADDR).
+
+#### **Family C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|  RESERVED |                      ADDRESS                      |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+> **Note:** Bit 12 is probably the Address TYPE (see REG_TABLE_LUT_ADDR).
+
+### 3.2.2. REG_TABLE_LUT_ADDR / TABLE_STATUS_REG (0x0502)
+
+This register monitors the runtime execution status, busy flags, match indications, and target address indexing results of the table access engine.
+
+#### **Family A**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|HIT|TYP|                    ADDRESS                        |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **HIT (14:14)**: `HIT_STATUS` (`0x4000`) - Hit status indicator.
+  * `0` = Not found.
+  * `1` = Match found.
+* **TYP (13:13)**: `TYPE` (`0x2000`) - Address type qualifier.
+  * `0` = L2 table.
+  * `1` = CAM table.
+* **ADDRESS (12:0)**: `ADDRESS` (`0x1FFF`) - 13-bit complete table entry address field.
+
+> **Note:** Busy flag is in TABLE_CTRL for Family A.
+
+#### **Families B and D**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|BSY|HIT|TYP|                   ADDRESS                 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **BSY (13:13)**: `BUSY_FLAG` (`0x2000`) - Table access engine busy status indicator
+  * `0` = Ready.
+  * `1` = Busy/Executing.
+* **HIT (12:12)**: `STATUS` (`0x1000`) - Hit status indicator
+  * `0` = Not found.
+  * `1` = Match found.
+* **TYP (11:11)**: `TYPE` (`0x800`) - Address type qualifier.
+  * `0` = L2 table.
+  * `1` = CAM table.
+* **ADDRESS (10:0)**: `ADDRESS` (`0x7FF`) - 11-bit table entry address field.
+
+#### **Family C**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|AHI|BSY|HIT|TYP|                   ADDRESS                 |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **AHI (14:14)**: `ADDRESS_HIGH` (`0x4000`) - Most significant address bit.
+* **BSY (13:13)**: `BUSY_FLAG` (`0x2000`) - Table access engine busy status indicator
+  * `0` = Ready.
+  * `1` = Busy/Executing.
+* **HIT (12:12)**: `STATUS` (`0x1000`) - Hit status indicator
+  * `0` = Not found.
+  * `1` = Match found.
+* **TYP (11:11)**: `TYPE` (`0x800`) - Address type qualifier.
+  * `0` = L2 table.
+  * `1` = CAM table.
+* **ADDRESS_LO (10:0)**: `ADDRESS` (`0x7FF`) - 11-bit least significant table entry address field. Must be combined with ADDRESS_HIGH.
+
+### 3.2.3. TABLE_DATA(w) (0x0503 + w)
+
+This block represents the data staging register array unique to Family A. It is used both as input (writting/look up) or reading entries from tabables.
+It is composed of 32 sequential registers.
+
+Families B, C and D uses TABLE_WRITE(w) and TABLE_READ(w).
+
+### 3.2.4. TABLE_WRITE(w) (0x0510 + w)
+
+This block represents the data staging register array for Families B, C and D. It is used exclusively as input (writting/look up).
+It is composed of 16 sequential registers.
+
+### 3.2.5. TABLE_READ(w) (0x0520 + w)
+
+This block represents the data staging register array for Families B, C and D. It is used exclusively as output (reading).
+It is composed of 16 sequential registers.
+
+### 3.3. Operation Flow (Sequence of Access)
+
+Read and write operations must follow the sequences below:
+
+#### Write Flow
+1. Ensure the method is idle
+* **Family A**: Check ACCESS_STATUS in `TABLE_CTRL`
+* **Families B, C, D**: Check `BSY` bit in `TABLE_LUT_ADDR/TABLE_STATUS`.
+2. Write the target table entry index to `TABLE_ACCESS_ADDR`.
+3. Load the new entry data into the staging area:
+* **Family A**: Use the `TABLE_DATA(w)` registers.
+* **Families B, C, D**: Use the `TABLE_WRITE(w)` registers.
+4. Issue the command by configuring the `TABLE`, `OP=1` fields in `TABLE_CTRL`.
+5. Wait until the method is idle again (as in step 1.)
+
+#### Read / Search Flow
+
+1. Ensure the method is idle
+* **Family A**: Check ACCESS_STATUS in `TABLE_CTRL`
+* **Families B, C, D**: Check `BSY` bit in `TABLE_LUT_ADDR/TABLE_STATUS`.
+2A. If performing an associative search (e.g., L2 MAC search), load the search key into:
+* **Family A**: `TABLE_DATA(w)` registers
+* **Families B, C, D**: `TABLE_WRITE(w)` registers.
+2B. If not, write the target table entry index to `TABLE_ACCESS_ADDR`.
+3. Issue the command by configuring `TABLE`, `OP=0`, and the appropriate `METHOD` in `TABLE_CTRL_REG`.
+5. Wait until the method is idle again (as in step 1.)
+5. For associative searches, the corresponding hardware index will be available in the `ADDRESS_STATUS` field of `TABLE_LUT_ADDR/TABLE_STATUS`.
+6. Retrieve the table entry structure from the reading region:
+* **Family A**: Read from TABLE_DATA(w) registers.
+* **Families B, C, D**: Read from `TABLE_READ`.
 
 
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`L2_FLUSH_PORT_REG`|`0x0A36`|`0x0A36`|`0x0A36`|`0x0A36`|**Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7).|
-|`L2_FLUSH_PORT_EXT_REG`|`0x0A35`|`**Not found**`|`0x0A35`|`**Not found**`|**Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
-|`L2_FLUSH_CTRL1_REG`|`**Not found**`|`0x0A37`|`0x0A37`|`0x0A37`|**Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below.|
-|`L2_FLUSH_CTRL2_REG`|`**Not found**`|`0x0A38`|`0x0A38`|`0x0A38`|**Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic).|
-|`L2_FLUSH_CTRL3_REG`|`**Not found**`|`**Not found**`|`0x0A39`|`0x0A39`|**Bits (0:0):** MSK. Additional global Flush trigger.|
+## 4. Table Structures
 
-## 3\. Action Plan and Prompts for Iterative Execution
+Each table and family has its own memory layout and size
 
-### Step 1: check each section from 1.3 and on using local agent
+### 4.1. ACL Rule
 
-The web agent is flawled. Section 1.1 and 1.2 are already checked but quota
-ended before 1.3 ended.
+Pending (Not used by rtl8365mb).
 
-### Step 2: Integrate Family B and D Bitfield Structs
+### 4.2. ACL Action 
 
-**Copy and paste the prompt:**
+Pending (Not used by rtl8365mb).
 
-> "Initiate Step 2. Having successfully completed the register validation, we
-> must confirm the detailed struct packing for Family B and Family D.
-> Double-check if Family B and Family D tables (L2, CVLAN) are completely
-> bit-compatible with Family C (48-bit structures), and list any field
-> differences."
+### 4.3. CVLAN (Vlan4K)
 
-### Step 3: Handle Advanced Port Isolation and CPU Tagging
+The 4K VLAN table entry configurations establish a direct 1-to-1 hardware mapping across all 4096 available VIDs.
 
-**Copy and paste the prompt:**
+#### **Family A**
 
-> "Initiate Step 3. Let's write the C functions for reading/writing CVLAN and
-> FDB tables in our driver using conditional branching (Family A vs Family B/C/D)
-> based on the table sizing discrepancies we mapped."
+Family A requires a 64-bit row map distributed over 4 sequential words (4 registers) to host its expanded 16-port filtering architecture.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                              MBR                              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   MSTI    |                      FID                          | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| UNT1 |            METERIDX            |POL|   VBPRI   |EN |LUR| Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RSV  |                            UNT2                        | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MBR**: (Word 0, bits 15:0) `mbr` — Complete 16-bit physical port member mask for the VLAN.
+* **MSTI**: (Word 1, bits 15:12) `msti` — 4-bit Multiple Spanning Tree Instance index.
+* **FID**: (Word 1, bits 11:0) `fid` — 12-bit VLAN Forwarding ID mapping.
+* **UNT1**: (Word 2, bits 15:14) `untag1` — Lower 2 bits (bits 1:0) of the untagged egress portmask.
+* **METERIDX**: (Word 2, bits 13:6) `meteridx` — 8-bit Traffic Limiter Meter entry index.
+* **POL**: (Word 2, bit 5) `envlanpol` — 1-bit VLAN Egress Priority Remarking configuration enable flag.
+* **VBPRI**: (Word 2, bits 4:2) `vbpri` — 3-bit VLAN Port Priority value.
+* **EN**: (Word 2, bit 1) `vbpen` — 1-bit Port-based VLAN Priority override control flag.
+* **LUR**: (Word 2, bit 0) `lurep` — 1-bit L2 Lookup learning bypass configuration flag.
+* **UNT2**: (Word 3, bits 13:0) `untag2` — Upper 14 bits (bits 15:2) of the untagged egress portmask.
+
+#### **Family B**
+
+Family B compacts its registers into a tight 32-bit layout across 2 sequential words (2 registers), optimizing for its native 8-port design constraint.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             UNTAG             |              MBR              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|IS |        METERIDX       |POL|   VBPRI   |EN | FID_MST   | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **MBR**: (Word 0, bits 7:0) `mbr` — 8-bit member portmask for ports 0–7.
+* **UNTAG**: (Word 0, bits 15:8) `untag` — 8-bit untagged portmask for ports 0–7.
+* **FID_MST**: (Word 1, bits 3:0) `fid_msti` — 4-bit multiplexed Forwarding ID / Multiple Spanning Tree Instance field.
+* **EN**: (Word 1, bit 4) `vbpen` — 1-bit Port-based VLAN Priority override control flag.
+* **VBPRI**: (Word 1, bits 7:5) `vbpri` — 3-bit VLAN Port Priority value.
+* **POL**: (Word 1, bit 8) `envlanpol` — 1-bit VLAN Egress Priority Remarking enable flag.
+* **METERIDX**: (Word 1, bits 13:9) `meteridx` — 5-bit Traffic Limiter Meter index.
+* **IS**: (Word 1, bit 14) `ivl_svl` — 1-bit Independent/Shared Learning selector flag (`0` = SVL, `1` = IVL).
+
+#### **Family C**
+
+Family C uses a 48-bit layout mapping parameters onto 3 words (3 registers) to natively coordinate an 11-port logical map alongside extended meter indexing depths.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           UNTAG_LO            |            MBR_LO             | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|IS |       METER_LO        |POL|   VBPRI   |EN |  FID_MST  | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|               RESERVED                |MH |  UNT_HI   |MBR_HI | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **MBR_LO**: (Word 0, bits 7:0) `mbr` — Lower member portmask bits for ports 0–7.
+* **UNTAG_LO**: (Word 0, bits 15:8) `untag` — Lower untagged portmask bits for ports 0–7.
+* **FID_MST**: (Word 1, bits 3:0) `fid_msti` — 4-bit Shared Forwarding ID / Multiple Spanning Tree Instance configuration index field.
+* **EN**: (Word 1, bit 4) `vbpen` — 1-bit Port-based VLAN Priority override enable flag.
+* **VBPRI**: (Word 1, bits 7:5) `vbpri` — 3-bit VLAN Port Priority value.
+* **POL**: (Word 1, bit 8) `envlanpol` — 1-bit VLAN Egress Priority Remarking configuration enable flag.
+* **METER_LO**: (Word 1, bits 13:9) `meteridx` — Lower 5 bits of the traffic Meter index (`meteridx[4:0]`).
+* **IS**: (Word 1, bit 14) `ivl_svl` — 1-bit Independent/Shared Learning configuration flag (`0` = SVL, `1` = IVL).
+* **RSV**: (Word 1, bit 15) — Reserved padding bit.
+* **MBR_HI**: (Word 2, bits 2:0) `mbr` — Extension Member Portmask bits for logical ports 8–10 (`mbr[10:8]`).
+* **UNT_HI**: (Word 2, bits 5:3) `untag` — Extension Untagged Portmask bits for logical ports 8–10 (`untag[10:8]`).
+* **MH**: (Word 2, bit 6) `meteridx` — Most significant bit (MSB) of the traffic Meter index (`meteridx[5]`).
+
+> **Note:** Word 0 and Word 1 are equal to Family B
+
+#### **Family D**
+
+Family D eliminates policy overrides, priority structures, and meter references from the CVLAN lookup tree, processing table configurations via an 8-port optimized 3-word map where only the first 2 words are actively driven.
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             UNTAG             |              MBR              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                     RESERVED                  |IS |CHK|FID_MST| Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MBR**: (Word 0, bits 7:0) `mbr` — 8-bit member portmask targeting physical ports 0–7.
+* **UNTAG**: (Word 0, bits 15:8) `untag` — 8-bit untagged egress portmask targeting physical ports 0–7.
+* **FID_MST**: (Word 1, bits 1:0) `fid_msti` — 2-bit compressed Forwarding ID / Multiple Spanning Tree Instance index field.
+* **CHK**: (Word 1, bit 2) `svlan_chk_ivl_svl` — 1-bit SVLAN Independent/Shared check control flag.
+* **IS**: (Word 1, bit 3) `ivl_svl` — 1-bit Independent/Shared Learning configuration flag (`0` = SVL, `1` = IVL).
+
+### 4.4. L2 (FDB Lookup)
+
+The Layer 2 Forwarding Database (FDB / LUT) represents the core dynamic and static MAC address table space. Across generations, this architecture transformed from a legacy 7-word contiguous structure to structured 5-word or 6-word blocks to coordinate decreasing physical port lines and unified Layer 3 multicast optimization flags.
+
+#### **Family A**
+
+Family A uses a 7-word wide table layout. Due to its 16-port pipeline architecture, it maps full linear port masks directly into its auto-learning entry space.
+
+##### **Unicast L2**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|   AGE     |      SPA      |SAE|DAE|   MACPRI  |ATH|BLK|STA| Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC5              |            RESERVED           | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC3              |              MAC4             | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC2              |              MAC1             | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             FID1              |              MAC0             | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |IPM|   EFID    |     FID2      | Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                           RESERVED                        |VAL| Word 6
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **STA**: (Word 0, bit 0) `smi_auto.static_bit` — Static entry flag. Disables aging processing for the row.
+* **BLK**: (Word 0, bit 1) `smi_auto.block` — Blocked address flag. Drops matching source or destination traffic.
+* **ATH**: (Word 0, bit 2) `smi_auto.auth` — 802.1X authorization status for the entry.
+* **MACPRI**: (Word 0, bits 5:3) `smi_auto.macpri` — 3-bit priority value assigned to the matching MAC entry.
+* **DAE**: (Word 0, bit 6) `smi_auto.da_en` — Destination MAC priority classification enable flag.
+* **SAE**: (Word 0, bit 7) `smi_auto.sa_en` — Source MAC priority classification enable flag.
+* **SPA**: (Word 0, bits 11:8) `smi_auto.spa` — 4-bit Source Port Address mapping (ports 0 to 15).
+* **AGE**: (Word 0, bits 14:12) `smi_auto.age` - 3-bit entry aging timer state.
+* **MAC5**: (Word 1, bits 15:8) `smi_auto.mac5` - MAC address octet 5.
+* **MAC4**: (Word 2, bits 7:0) `smi_auto.mac4` - MAC address octet 4.
+* **MAC3**: (Word 2, bits 15:8) `smi_auto.mac3` - MAC address octet 3.
+* **MAC2**: (Word 3, bits 7:0) `smi_auto.mac2` - MAC address octet 2.
+* **MAC1**: (Word 3, bits 15:8) `smi_auto.mac1` - MAC address octet 1.
+* **MAC0**: (Word 4, bits 7:0) `smi_auto.mac0` - MAC address octet 0. 
+* **FID1**: (Word 4, bits 15:8) `smi_auto.fid1` - lower 8 bits of Forwarding ID.
+* **FID2**: (Word 5, bits 3:0) `smi_auto.fid2` — Upper 4 bits of the Forwarding ID.
+* **EFID**: (Word 5, bits 6:4) `smi_auto.efid` — 3-bit Enhanced Filtering Database ID.
+* **IPM**: (Word 5, bit 7) `smi_auto.ipmul` — Layer 3 IP Multicast lookup validation selector
+  * `0` = L2 MAC lookup.
+  * `1` = L3 Multicast.
+* **VAL**: (Word 6, bit 0) `smi_auto.valid` — Hardware entry valid indicator.
+
+##### **Multicast L2**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           PORTMASK1           |SAE|DAE|   MACPRI  |ATH|BLK|STA| Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC5              |           PORTMASK2           | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC3              |              MAC4             | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC1              |              MAC2             | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             FID1              |              MAC0             | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |IPM|   EFID    |      FID2     | Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                           RESERVED                        |VAL| Word 6
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **STA**: (Word 0, bit 0) `smi_l2mul.static_bit` — Static entry flag (forced to `1`).
+* **BLK**: (Word 0, bit 1) `smi_l2mul.block` — Blocked multicast entry status flag.
+* **ATH**: (Word 0, bit 2) `smi_l2mul.auth` — Multicast row 802.1X authorization flag.
+* **MACPRI**: (Word 0, bits 5:3) `smi_l2mul.macpri` — 3-bit priority configuration assigned to this multicast stream.
+* **DAE**: (Word 0, bit 6) `smi_l2mul.da_en` — Destination-based multicast priority enable flag.
+* **SAE**: (Word 0, bit 7) `smi_l2mul.sa_en` — Source-based multicast priority enable flag.
+* **PORTMASK1**: (Word 0, bits 15:8) `smi_l2mul.portmask1` — Lower 8 bits (ports 0 to 7) of the multicast forwarding portmask.
+* **PORTMASK2**: (Word 1, bits 7:0) `smi_l2mul.portmask2` — Upper 8 bits (ports 8 to 15) of the multicast forwarding portmask.
+* **MAC5**: (Word 1, bits 15:8) `smi_l2mul.mac5` — Multicast MAC address octet 5.
+* **MAC4**: (Word 2, bits 7:0) `smi_l2mul.mac4` — Multicast MAC address octet 4.
+* **MAC3**: (Word 2, bits 15:8) `smi_l2mul.mac3` — Multicast MAC address octet 3.
+* **MAC2**: (Word 3, bits 7:0) `smi_l2mul.mac2` — Multicast MAC address octet 2.
+* **MAC1**: (Word 3, bits 15:8) `smi_l2mul.mac1` — Multicast MAC address octet 1.
+* **MAC0**: (Word 4, bits 7:0) `smi_l2mul.mac0` — Multicast MAC address octet 0.
+* **FID1**: (Word 4, bits 15:8) `smi_l2mul.fid1` — Lower 8 bits of the Forwarding ID.
+* **FID2**: (Word 5, bits 3:0) `smi_l2mul.fid2` — Upper 4 bits of the Forwarding ID.
+* **EFID**: (Word 5, bits 6:4) `smi_l2mul.efid` — 3-bit Enhanced Filtering Database ID.
+* **IPM**: (Word 5, bit 7) `smi_l2mul.ipmul` — Layer 3 IP Multicast identifier (forced to `0`).
+* **VAL**: (Word 6, bit 0) `smi_l2mul.valid` — Hardware row validation indicator.
+
+#### **Family B**
+
+Family B maps entries onto a 6-word structure. Ports are constrained to an 8-port model.
+
+##### **Unicast L2**
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC4                 |             MAC5              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC2                 |             MAC3              | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC0                 |             MAC1              | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |BLK|ATH|    AGE    |    SPA    |SAE|      FID      | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                  RESERVED             |STA|FWD|    LPRI   |DBE| Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MAC5**: (Word 0, bits 7:0) `smi_auto.mac5` - MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `smi_auto.mac4` - MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `smi_auto.mac3` - MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `smi_auto.mac2` - MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `smi_auto.mac1` - MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `smi_auto.mac0` - MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `smi_auto.cvid_fid` — 12-bit combined CVLAN ID or Forwarding ID string.
+* **L3M**: (Word 3, bit 12) `smi_auto.l3lookup` — Layer 3 lookup initialization validation bit.
+* **IS**: (Word 3, bit 13) `smi_auto.ivl_svl` — Independent/Shared learning classification mode bit.
+* **FID**: (Word 4, bits 3:0) `smi_auto.fid` — 4-bit localized Forwarding ID mapping index.
+* **SAE**: (Word 4, bit 4) `smi_auto.sa_en` — Source MAC priority enforcement bit.
+* **SPA**: (Word 4, bits 7:5) `smi_auto.spa` — 3-bit physical Source Port Address line (ports 0 to 7).
+* **AGE**: (Word 4, bits 10:8) `smi_auto.age` — 3-bit entry lifetime aging counter.
+* **ATH**: (Word 4, bit 11) `smi_auto.auth` — Port authorization state identifier.
+* **BLK**: (Word 4, bit 12) `smi_auto.sa_block` — Ingress source hardware block enforcement flag. Bits (`efid`) map filtering domains.
+* **DBE**: (Word 5, bit 0) `smi_auto.da_block` — Egress destination block enforcement flag.
+* **LPRI**: (Word 5, bits 3:1) `smi_auto.lut_pri` — 3-bit Lookup Table absolute priority override profile.
+* **FWD**: (Word 5, bit 4) `smi_auto.fwd_en` — Priority forwarding selection enable bit.
+* **STA**: (Word 5, bit 5) `smi_auto.nosalearn` — Static entry flag. Clears aging tracking.
+
+##### **Multicast L2**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC4              |              MAC5             | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC2              |              MAC3             | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC0              |              MAC1             | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSERVED|IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|            IGMPIDX            |              MBR              | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             RESERVED              |VAL|STA|FWD|   LPRI    |IGM| Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MAC5**: (Word 0, bits 7:0) `smi_l2mul.mac5` — Multicast MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `smi_l2mul.mac4` — Multicast MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `smi_l2mul.mac3` — Multicast MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `smi_l2mul.mac2` — Multicast MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `smi_l2mul.mac1` — Multicast MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `smi_l2mul.mac0` — Multicast MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `smi_l2mul.cvid_fid` — 12-bit VLAN ID or Filtering ID configuration.
+* **L3M**: (Word 3, bit 12) `smi_l2mul.l3lookup` — L3 lookup validation bit (forced to `0`).
+* **IS**: (Word 3, bit 13) `smi_l2mul.ivl_svl` — IVL/SVL classification filter selector.
+* **MBR**: (Word 4, bits 7:0) `smi_l2mul.mbr` — 8-bit forwarding port mask for ports 0–7.
+* **IGMPIDX**: (Word 4, bits 15:8) `smi_l2mul.igmpidx` — 8-bit internal hardware IGMP table index mapping.
+* **IGM**: (Word 5, bit 0) `smi_l2mul.igmp_asic` — IGMP hardware tracking enable bit.
+* **LPRI**: (Word 5, bits 3:1) `smi_l2mul.lut_pri` — 3-bit static stream destination priority override.
+* **FWD**: (Word 5, bit 4) `smi_l2mul.fwd_en` — Multicast stream priority classification enable.
+* **STA**: (Word 5, bit 5) `smi_l2mul.nosalearn` — Static persistent row configuration marker.
+* **VAL**: (Word 5, bit 6) `smi_l2mul.valid` — Entry row valid status bit.
+
+#### **Family C**
+
+Family C expands the logical tracking framework over 6 registers to support an 11-port layout.
+
+##### **Unicast L2**
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC4                 |             MAC5              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC2                 |             MAC3              | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC0                 |             MAC1              | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|SAH|RSV|IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |BLK|ATH|    AGE    |  SPA_LO   |SAE|      FID      | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                  RESERVED             |STA|FWD|    LPRI   |DBE| Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+* **MAC5**: (Word 0, bits 7:0) `smi_auto.mac5` - MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `smi_auto.mac4` - MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `smi_auto.mac3` - MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `smi_auto.mac2` - MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `smi_auto.mac1` - MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `smi_auto.mac0` - MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `cvid_fid` — 12-bit core VLAN ID or Forwarding ID string.
+* **L3M**: (Word 3, bit 12) `l3lookup` — Layer 3 IP multicast lookup flag.
+* **IS**: (Word 3, bit 13) `ivl_svl` — Independent/Shared learning selection bit.
+* **SAH**: (Word 3, bit 15) `spa` — Most significant bit of Source Port Address.
+* **FID**: (Word 4, bits 3:0) `fid` — 4-bit localized Forwarding ID index.
+* **SAE**: (Word 4, bit 4) `sa_en` — Source MAC priority selection enforcement bit.
+* **SPA_LO**: (Word 4, bits 7:5) `spa` — Lower 3 bits of Source Port Address. Used together with SAH.
+* **AGE**: (Word 4, bits 10:8) `age` — 3-bit entry lifetime aging tracker.
+* **ATH**: (Word 4, bit 11) `auth` — 802.1X authentication state identifier.
+* **BLK**: (Word 4, bit 12) `sa_block` — Ingress source hardware block line. Bits (`efid`) map the filtering database.
+* **DBE**: (Word 5, bit 0) `da_block` — Egress destination block override bit.
+* **LPRI**: (Word 5, bits 3:1) `lut_pri` — 3-bit absolute priority value profile.
+* **FWD**: (Word 5, bit 4) `fwd_en` — Priority forwarding selection enable bit.
+* **STA**: (Word 5, bit 5) `nosalearn` — Static entry flag. Stops the aging cycle.
+
+##### **Multicast L2**
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC4              |              MAC5             | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC2              |              MAC3             | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC0              |              MAC1             | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|MBR_HI |IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|            IGMPIDX            |            MBR_LO             | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|            RESERVED           |MBE|RSV|STA|FWD|   LPRI    |IGM| Word 5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MAC5**: (Word 0, bits 7:0) `mac.octet[5]` — Multicast MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `mac.octet[4]` — Multicast MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `mac.octet[3]` — Multicast MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `mac.octet[2]` — Multicast MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `mac.octet[1]` — Multicast MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `mac.octet[0]` — Multicast MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `cvid_fid` — 12-bit CVID or FID grouping tag.
+* **L3M**: (Word 3, bit 12) `l3lookup` — L3 lookup validation bit (forced to `0`).
+* **IS**: (Word 3, bit 13) `ivl_svl` — 1-bit Independent/Shared learning selection bit.
+* **MBR_HI**: (Word 3, bits 15:14) `mbr` — Intermediate 2 bits (`mbr[9:8]`) of the 11-port multicast forwarding mask.
+* **MBR_LO**: (Word 4, bits 7:0) `mbr` — Lower 8 bits (`mbr[7:0]`) of the 11-port multicast forwarding mask.
+* **IGMPIDX**: (Word 4, bits 15:8) `igmpidx` — 8-bit dynamic hardware IGMP tracking index assignment.
+* **IGM**: (Word 5, bit 0) `igmp_asic` — Automated ASIC IGMP snooping validation flag.
+* **LPRI**: (Word 5, bits 3:1) `lut_pri` — 3-bit absolute priority tag assignment.
+* **FWD**: (Word 5, bit 4) `fwd_en` — Priority classification forwarding path enforcer.
+* **STA**: (Word 5, bit 5) `nosalearn` — Static persistent entry indicator flag.
+* **MBE**: (Word 5, bit 7) `mbr` — Most significant bit (`mbr[10]`) of the 11-port multicast forwarding mask.
+
+#### **Family D**
+
+Family D optimizes data packing into 5 sequential words.
+
+##### **Unicast L2**
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC4                 |             MAC5              | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC2                 |             MAC3              | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|          MAC0                 |             MAC1              | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|SPA_LO |IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                   RESERVED        |STA|RSERVED|    AGE    |SHI| Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MAC5**: (Word 0, bits 7:0) `smi_auto.mac5` - MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `smi_auto.mac4` - MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `smi_auto.mac3` - MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `smi_auto.mac2` - MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `smi_auto.mac1` - MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `smi_auto.mac0` - MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `cvid_fid` — 12-bit integrated CVLAN ID or Forwarding ID string.
+* **L3M**: (Word 3, bit 12) `l3lookup` — Layer 3 IP multicast lookup flag.
+* **IS**: (Word 3, bit 13) `ivl_svl` — 1-bit Independent/Shared learning selection bit.
+* **SPA_LO**: (Word 3, bits 15:14) `spa` — Lower 2 bits of Source Port Address.
+* **SHI**: (Word 4, bit 0) `spa` — Most significant bit of Source Port Address.
+* **AGE**: (Word 4, bits 3:1) `age` — 3-bit entry lifetime aging tracker.
+* **STA**: (Word 4, bit 6) `nosalearn` — Static entry flag. Bypasses hardware aging cycles. Bits [15:7] are zero-padded hardware constants.
+
+##### **Multicast L2**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC4              |              MAC5             | Word 0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC2              |              MAC3             | Word 1
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             MAC0              |              MAC1             | Word 2
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|MBR_LO |IS |L3M|                    CVID_FID                   | Word 3
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                   RESERVED        |STA|        MBR_HI         | Word 4
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+* **MAC5**: (Word 0, bits 7:0) `mac.octet[5]` — Multicast MAC address octet 5.
+* **MAC4**: (Word 0, bits 15:8) `mac.octet[4]` — Multicast MAC address octet 4.
+* **MAC3**: (Word 1, bits 7:0) `mac.octet[3]` — Multicast MAC address octet 3.
+* **MAC2**: (Word 1, bits 15:8) `mac.octet[2]` — Multicast MAC address octet 2.
+* **MAC1**: (Word 2, bits 7:0) `mac.octet[1]` — Multicast MAC address octet 1.
+* **MAC0**: (Word 2, bits 15:8) `mac.octet[0]` — Multicast MAC address octet 0.
+* **CVID_FID**: (Word 3, bits 11:0) `cvid_fid` — 12-bit targeted CVLAN ID or Forwarding ID alignment string.
+* **L3M**: (Word 3, bit 12) `l3lookup` — Layer 3 lookup bit (forced to `0`).
+* **IS**: (Word 3, bit 13) `ivl_svl` — 1-bit Independent/Shared learning selection bit.
+* **MBR_LO**: (Word 3, bits 15:14) `mbr` — Lower 2 bits (`mbr[1:0]`) of the physical multicast forwarding mask.
+* **MBR_HI**: (Word 4, bits 5:0) `mbr` — Upper 6 bits (`mbr[7:2]`) of the physical multicast forwarding mask.
+* **STA**: (Word 4, bit 6) `nosalearn` — Static persistent row assignment selector flag.
+
+### 4.5. IGMP group
+
+Pending (Not used by rtl8365mb).
+
 
