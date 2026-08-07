@@ -18,9 +18,7 @@ of an existing model from a previous family.
 
 The columns and descriptions of all families have been strictly validated
 against the respective vendor structs (`rtl8370_reg.h`, `rtl8367b_reg.h`, `
-rtl8367c_reg.h`, and `rtl8367d_reg.h`). **Bold hexadecimal values** indicate a
-difference in address, layout, or behavior between the specific Family and the
-Family C baseline.
+rtl8367c_reg.h`, and `rtl8367d_reg.h`).
 
 Some general information about families:
 * Ports
@@ -54,7 +52,7 @@ model identifier. The exact value depends on the switch model detected by the
 SDK procedures:
 
 * **Family A (RTL8370 / RTL8367):** Returns `0x6088` (for RTL8367R).
-* **Family B (RTL8367B):** Unknown retuned value.
+* **Family B (RTL8367B):** Returns `0x6000` (for RTL8363SB, RTL8367RB - not checked yet).
 * **Family C (RTL8367C / RTL8370B / RTL8365MB / RTL8364B / RTL8363SC_VB):**
   Returns `0x0276`, `0x0597`, or `0x6367` (for RTL8367C, RTL8367S, RTL8367SB,
   RTL8367RB-VB), `0x0652` or `0x6368` (for RTL8370B), or `0x0801` or `0x6511`
@@ -872,7 +870,7 @@ destination.
   * `0` = After SA (standard).
   * `1` = Prefix (before DA).
 * **TRAP_PORT (5:3)**: lower 3-bit logical port ID directing where trapped/redirected
-  system traffic is sent. Must be used with THI.
+  system traffic is sent.
 * **INSMODE (2:1)**: `INSERTMODE`. Tag insertion policy modes.
   * `0` = Insert into all CPU egress frames.
   * `1` = Insert into Trapped/Redirected frames only.
@@ -911,7 +909,7 @@ This register globally enables the VLAN subsystem.
 
 #### 1.5.2. VLAN_PVID_CTRL_REG(p) (0x0700 + (p/2))
 
-Each register encodes the VLAN MC index for two ports (8 bits per port).
+Each register encodes the VLAN MC index for two ports.
 That VLAN MC entry will determine what is the VID number user as PVID. Check
 VLAN_MC(i).
 
@@ -1038,10 +1036,12 @@ This feature is missing in family A and B.
 This register sets the EFID for a specific port. Each family allocates the number of
 sequentional register to fit all its ports.
 - **Family A**: 0x0A32..0x0A36.
-- **Families B and D**: 0x0A32..0x0A33.
+- **Family B**: 0x0A32..0x0A33.
 - **Family C**: 0x0A32..0x0A34.
 
 **Note:** Family D reused 0x0A32 as `LUT_CFG2`, which was present in Family C at `0x0a3a`.
+
+TODO: How family D handles it!?
 
 ##### **Families A, B and C:**
 
@@ -1068,7 +1068,7 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 |      MSTI     |                      FID                      | Word 1
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-||           METERID            |POL|   VBPRI   |EN |REP| Word 2
+|RSERVED|           METERID             |POL|   VBPRI   |EN |REP| Word 2
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 | RESERVED  |                      EVID                         | Word 3
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
@@ -1081,7 +1081,7 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 * **POL (Word 2, bit 5)**: `ENVLANPOL_MASK (0x20)` - Enable VLAN Policy configuration flag.
 * **VBPRI (Word 2, bits 4:2)**: `VBPRI_MASK (0x1C)` - VLAN Port Priority level.
 * **EN (Word 2, bit 1)**: `VBPEN_MASK (0x2)` - VLAN-based Priority Enable flag.
-* **REP (Word 2, bit 0)**: Lookup Replace?? Replicate?? Replay?? Representation??.
+* **REP (Word 2, bit 0)**: `LUREP(0x1)` - Lookup Replace?? Replicate?? Replay?? Representation??.
 * **EVID (Word 3, bits 12:0)**: `CTRL3_MASK (0x1FFF)` - Enhanced/Extended VLAN ID.
 
 
@@ -1118,7 +1118,7 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 |                       RESERVED                |   FID_MSTI    | Word 1
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|   RESERVED    |             METERIDX      |POL|   VBPRI   |EN | Word 2
+|   RESERVED        |        METERIDX       |POL|   VBPRI   |EN | Word 2
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 | RESERVED  |                      EVID                         | Word 3
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
@@ -1126,7 +1126,7 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 ```
 * **MEMBER (Word 0, bits 10:0)**: `MBR_MASK (0x7FF)` - port member mask for the VLAN.
 * **FID_MSTI (Word 1, bits 3:0)**: `CTRL1_MASK (0xF)` - Shared Forwarding ID / Multiple Spanning Tree Instance configuration bits.
-* **METERIDX (Word 2, bits 11:5)**: `METERIDX_MASK (0x7E0)` - Traffic Meter Index.
+* **METERIDX (Word 2, bits 10:5)**: `METERIDX_MASK|METERIDX_EXT_MASK (0xFE0)` - Traffic Meter Index.
 * **POL (Word 2, bit 4)**: `ENVLANPOL_MASK (0x10)` - Enable VLAN Policy configuration flag.
 * **VBPRI (Word 2, bits 3:1)**: `VBPRI_MASK (0xE)` - VLAN Port Priority level.
 * **EN (Word 2, bit 0)**: `VBPEN_MASK (0x1)` - VLAN-based Priority Enable flag.
@@ -1482,8 +1482,8 @@ For switches connected to the host via the MDC/MDIO interface, the internal PHYs
 |Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
 |`PHY_REG(p, r)`|`0x2000 + (p<<5) + r`|`0x2000 + (p<<5) + r`|`**Not found**`|`**Not found**`|PHY p register r|
-|`PHY_OCP_REG(p, r)`|`**Not found**`|`**Not found**`|`0x2000 + (p<<5) + r`|`0x2000 + (p<<5) + r`|PHY p OCP register r|
-|`GPHY_OCP_MSB_0`|`**Not found**`|`**Not found**`|`0x1d15`|`0x1d15`|TODO|
+|`PHY_OCP_REG(p, r)`|`**Not found**`|`**Not found**`|`0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1`|`0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1`|PHY p OCP register r on page `r & 0xFC00` set by GPHY_OCP_MSB_0 |
+|`GPHY_OCP_MSB_0`|`**Not found**`|`**Not found**`|`0x1d15`|`0x1d15`|PHY OCP register page for CPU and DW8051 access of PHY_OCP_REG(p, r)|
 
 #### PHY_REG(p, r) (0x2000 + (p<<5) + r)
 
@@ -1510,7 +1510,7 @@ For family B, PHY number can be from 0 to 4 (3-bit) and PHY OCP registers are fr
 
 These families reused the same register to access OCP registers instead of the standard IEEE. See PHY_OCP_REG.
 
-#### PHY_OCP_REG(p, r) (0x2000 + ((r >> 6) & 0x000F)<<8)  + (p<<5) + ((r >> 1) & 0x001F))
+#### PHY_OCP_REG(p, r) (0x2000 + ((r >> 6) & 0x000F)<<8) + (p<<5) + ((r >> 1) & 0x001F))
 
 While sharing the same 0x2000 address as PHY_REG for families A and B, family C and D only exposes PHY registers as OCP registers.
 
@@ -1526,17 +1526,17 @@ These families do not support OCP registers, only standard IEEE direcly mapped a
 
 ##### ** Families C and D ** #####
 
-The OCP register address (OCP_ADD) is decomposed this way:
+The OCP register address (OCP_ADD) is decomposed this way into registers:
 
 ```
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| GPHY_OCP_MSB_0[11:6]  |PHY_OCP_REG[]  | PHY_OCP_REG[4:0]  |PAR|
+| GPHY_OCP_MSB_0_11_6   |PHY_OCP_REG11_8|  PHY_OCP_REG_4_0  |PAR|
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-* ** GPHY_OCP_MSB_0[11:6](15:10) ** - The 6-most significant bits set the page using GPHY_OCP_MSB_0.
-  ** PHY_OCP_REG[:](9:6) ** - The next 4-most siginificant bits are used to index the register, together with PHY_OCP_REG_5_1.
-  ** PHY_OCP_REG[4:0](5:1) ** - The next 5-most siginificant bits are used to index the register, together with PHY_OCP_REG_9_6.
+* ** GPHY_OCP_MSB_0_11_6(15:10) ** - The 6-most significant bits set the page using GPHY_OCP_MSB_0.
+  ** PHY_OCP_REG11_8(9:6) ** - The next 4-most siginificant bits are used to index the register.
+  ** PHY_OCP_REG_4_0(5:1) ** - The reaming 5-least siginificant bits are used to index the register.
   ** PAR(0:0) - As OCS address points to a single bit and Realtek registers has 16-bit, the last bit is ignored on read/write operations. That way, OCS register address must always be even.
 
 After the PHY register address [15:10] bits defines the page (in GPHY_OCP_MSB_0[11:6]), the remaining bits and the phy number can be used to index the data register.
@@ -1566,8 +1566,8 @@ These families do not support OCP registers, only standard IEEE direcly mapped a
 |    RESERVED   |    CPU_OCPADDR_MSB    |  DW8051_OCPADR_MSB    |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-* **CPU_OCPADDR_MSB (11:6)**: `PORT10_RESET_MASK (0x0FC0)` - CPU OCP Address MSB
-* **DW8051_OCPADR_MSB (5:0)**: `DW8051_OCPADR_MSB (0x003F)` - DW8051 OCP Address MSB
+* **CPU_OCPADDR_MSB (11:6)**: `CPU_OCPADR_MSB (0x0FC0)` - CPU OCP Address 6 MSB
+* **DW8051_OCPADR_MSB (5:0)**: `DW8051_OCPADR_MSB (0x003F)` - DW8051 OCP Address 6 MSB
 
 ### 2.2 Indirect PHY Access (via Switch Registers)
 
