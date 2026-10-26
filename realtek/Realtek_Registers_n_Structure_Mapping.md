@@ -1643,6 +1643,396 @@ This register serves as an automated global trigger to flush the entire Look-Up 
 * **MSK (0:0)**: `RTL8367C_L2_FLUSH_CTRL3_MASK` / `RTL8367D_L2_FLUSH_CTRL3_MASK` (`0x1`). Writing `1` initiates a complete table flush including static and dynamic entries; hardware automatically clears this bit to `0` once the operation finishes.
 
 
+### 1.8. LED Configuration and Control
+
+This section covers the registers responsible for configuring the switch LEDs, including system-wide LED modes, parallel/serial IO enables, and CPU-forced LED overrides.
+
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| `LED_SYS_CONFIG_REG` | `0x1B00` | `0x1B00` | `0x1B00` | `0x1B00` | LED system configuration (interfaces, EEE LPI, power-on). |
+| `LED_SYS_CONFIG2_REG` | `**Not found**` | `0x1B01` | `0x1B01` | `0x1B01` | LED system configuration 2 (bypass, speed mode). |
+| `LED_MODE_REG` | `0x1B02` | `0x1B02` | `0x1B02` | `0x1B02` | LED force rate and general behavior modes. |
+| `LED_CONFIGURATION_REG`| `0x1B03` | `0x1B03` | `0x1B03` | `0x1B03` | LED group mode configuration (selectors for LED0/1/2). |
+| `CPU_FORCE_LED_CFG_REG`| `0x1B07` | `0x1B07` | `0x1B07` | `0x1B07` | CPU forced LED configuration mode. |
+| `CPU_FORCE_LED_REG(g, p)`| `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | CPU forced LED states per port p and LED group g. |
+| `PARA_LED_IO_EN3_REG` | `**Not found**` | `**Not found**` | `0x1B13` | `**Not found**` | Parallel LED IO enable 3 (upper ports). |
+| `PARA_LED_IO_EN1_REG` | `0x1B24` | `0x1B24` | `0x1B24` | `0x1B24` | Parallel LED IO enable 1. |
+| `PARA_LED_IO_EN2_REG` | `0x1B25` | `0x1B25` | `0x1B25` | `0x1B25` | Parallel LED IO enable 2. |
+| `SCAN0_LED_IO_EN1_REG` | `0x1B26` | `0x1B26` | `0x1B26` | `0x1B26` | Scan0 LED IO enable (serial/buzzer config). |
+| `SERIAL_LED_CTRL_REG` | `**Not found**` | `**Not found**` | `0x1B3A` | `**Not found**` | Serial LED control sequence and group number. |
+
+> **Note on `0x1B13`:** In the vendor SDK, this register is named `EXT_GPIO_ENABLE_CTRL1` for Family A, serving a different semantic purpose. Therefore, it is marked as **Not found** under the `PARA_LED_IO_EN3_REG` mapping for Family A. The `rtl8365mb` driver maps `0x1B13` as `PARA_LED_IO_EN3_REG` specifically to configure the parallel LED IO for logical ports 8 and above, which are physically present in the 11-port layout of Family C.
+
+> **Note on `0x1B3A`:** Serial LED control appears uniquely mapped in Family C (`RTL8367C_REG_SERIAL_LED_CTRL`) within the provided vendor definitions.
+
+#### 1.8.1. LED_SYS_CONFIG_REG (0x1B00)
+
+This register configures the global system-level LED behaviors, including EEE (Energy Efficient Ethernet) Low Power Idle (LPI) LED modes, power-on defaults, and IO disabling.
+
+##### **Family A**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|  RSV  |LPM|LPE|L10|C10|  LPI  |ACT| P2| P1| P0|IOD|SER|  SEL  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:14)**: `DUMMY_0`. Reserved/Dummy bits.
+* **LPM (13:13)**: `LED_EEE_LPI_MODE`. EEE LPI LED Mode.
+* **LPE (12:12)**: `LED_EEE_LPI_EN`. EEE LPI LED Enable.
+* **L10 (11:11)**: `LED_EEE_LPI_10`. EEE LPI 10M configuration.
+* **C10 (10:10)**: `LED_EEE_CAP_10`. EEE 10M capability flag.
+* **LPI (9:8)**: `LED_LPI_SEL`. 2-bit Low Power Idle LED selector.
+* **ACT (7:7)**: `SERI_LED_ACT_LOW`. Serial LED active-low configuration.
+* **P2 (6:6)**: `LED_POWERON_2`. Power-on default LED state 2.
+* **P1 (5:5)**: `LED_POWERON_1`. Power-on default LED state 1.
+* **P0 (4:4)**: `LED_POWERON_0`. Power-on default LED state 0.
+* **IOD (3:3)**: `LED_IO_DISABLE`. Disables physical IO for LEDs.
+* **SER (2:2)**: `SEL_SERIAL_LED`. Serial LED selection.
+* **SEL (1:0)**: `LED_SELECT`. 2-bit LED selection mask.
+
+##### **Family B**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|SOM|LPM|LPE|L10|C10|  LPI  |ACT| P2| P1| P0|IOD|  RSV  |SEL|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:15)**: `DUMMY_15`. Reserved/Dummy bit.
+* **SOM (14:14)**: `LED_SERIAL_OUT_MODE`. Serial output mode configuration.
+* **LPM (13:13)**: `LED_EEE_LPI_MODE`. EEE LPI LED Mode.
+* **LPE (12:12)**: `LED_EEE_LPI_EN`. EEE LPI LED Enable.
+* **L10 (11:11)**: `LED_EEE_LPI_10`. EEE LPI 10M configuration.
+* **C10 (10:10)**: `LED_EEE_CAP_10`. EEE 10M capability flag.
+* **LPI (9:8)**: `LED_LPI_SEL`. 2-bit Low Power Idle LED selector.
+* **ACT (7:7)**: `SERI_LED_ACT_LOW`. Serial LED active-low configuration.
+* **P2 (6:6)**: `LED_POWERON_2`. Power-on default LED state 2.
+* **P1 (5:5)**: `LED_POWERON_1`. Power-on default LED state 1.
+* **P0 (4:4)**: `LED_POWERON_0`. Power-on default LED state 0.
+* **IOD (3:3)**: `LED_IO_DISABLE`. Disables physical IO for LEDs.
+* **RSV (2:1)**: `DUMMY_2_1`. Reserved/Dummy bits.
+* **SEL (0:0)**: `LED_SELECT`. 1-bit LED selection mask.
+
+##### **Family C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|SOM|LPM|LPE|L10|C10|  LPI  |ACT| P2| P1| P0|IOD|RSV|  SEL  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:15)**: `DUMMY_15`. Reserved/Dummy bit.
+* **SOM (14:14)**: `LED_SERIAL_OUT_MODE`. Serial output mode configuration.
+* **LPM (13:13)**: `LED_EEE_LPI_MODE`. EEE LPI LED Mode.
+* **LPE (12:12)**: `LED_EEE_LPI_EN`. EEE LPI LED Enable.
+* **L10 (11:11)**: `LED_EEE_LPI_10`. EEE LPI 10M configuration.
+* **C10 (10:10)**: `LED_EEE_CAP_10`. EEE 10M capability flag.
+* **LPI (9:8)**: `LED_LPI_SEL`. 2-bit Low Power Idle LED selector.
+* **ACT (7:7)**: `SERI_LED_ACT_LOW`. Serial LED active-low configuration.
+* **P2 (6:6)**: `LED_POWERON_2`. Power-on default LED state 2.
+* **P1 (5:5)**: `LED_POWERON_1`. Power-on default LED state 1.
+* **P0 (4:4)**: `LED_POWERON_0`. Power-on default LED state 0.
+* **IOD (3:3)**: `LED_IO_DISABLE`. Disables physical IO for LEDs.
+* **RSV (2:2)**: `DUMMY_2_2`. Reserved/Dummy bit.
+* **SEL (1:0)**: `LED_SELECT`. 2-bit LED selection mask.
+
+##### **Family D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|SOM|LPM|LPE|L10|C10|  LPI  |ACT| P2| P1| P0|IOD|RSV|SE2|SEL|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:15)**: `DUMMY_15`. Reserved/Dummy bit.
+* **SOM (14:14)**: `LED_SERIAL_OUT_MODE`. Serial output mode configuration.
+* **LPM (13:13)**: `LED_EEE_LPI_MODE`. EEE LPI LED Mode.
+* **LPE (12:12)**: `LED_EEE_LPI_EN`. EEE LPI LED Enable.
+* **L10 (11:11)**: `LED_EEE_LPI_10`. EEE LPI 10M configuration.
+* **C10 (10:10)**: `LED_EEE_CAP_10`. EEE 10M capability flag.
+* **LPI (9:8)**: `LED_LPI_SEL`. 2-bit Low Power Idle LED selector.
+* **ACT (7:7)**: `SERI_LED_ACT_LOW`. Serial LED active-low configuration.
+* **P2 (6:6)**: `LED_POWERON_2`. Power-on default LED state 2.
+* **P1 (5:5)**: `LED_POWERON_1`. Power-on default LED state 1.
+* **P0 (4:4)**: `LED_POWERON_0`. Power-on default LED state 0.
+* **IOD (3:3)**: `LED_IO_DISABLE`. Disables physical IO for LEDs.
+* **RSV (2:2)**: `DUMMY_2`. Reserved/Dummy bit.
+* **SE2 (1:1)**: `LED_SERIAL2`. Secondary serial LED configuration.
+* **SEL (0:0)**: `LED_SELECT`. 1-bit LED selection mask.
+
+
+#### 1.8.2. LED_SYS_CONFIG2_REG (0x1B01)
+
+This register provides additional system-level LED configuration, specifically controlling the LED speed mode and bypass settings for the GATE LPTD logic.
+
+##### **Family A**
+
+* **Not found** on Family A hardware.
+
+##### **Families B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                        RESERVED                       |GBP|SPD|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:2)**: `DUMMY`. Reserved/Dummy bits.
+* **GBP (1:1)**: `GATE_LPTD_BYPASS`. Gate LPTD bypass configuration flag.
+* **SPD (0:0)**: `LED_SPD_MODE`. LED speed mode configuration.
+
+#### 1.8.3. LED_MODE_REG (0x1B02)
+
+This register configures various LED behavior modes, including buzzer rates, loop detection settings, and force rates.
+
+##### **Family A**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RTT|BZD|  BZR  |LDM|  SPT  |EDL|  LDR  |  FRC  |    SLR    |SUP|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RTT (15:15)**: `RTCT_TEST_TIME`. Real-Time Cable Test time configuration.
+* **BZD (14:14)**: `LED_BUZZ_DUTY`. LED buzzer duty cycle configuration.
+* **BZR (13:12)**: `BUZZER_RATE`. 2-bit buzzer rate selection.
+* **LDM (11:11)**: `LOOP_DETECT_MODE`. Loop detection mode indicator.
+* **SPT (10:9)**: `SEL_PWRON_TIME`. 2-bit power-on time selection.
+* **EDL (8:8)**: `EN_DLINK_LED`. Enable D-Link LED mode.
+* **LDR (7:6)**: `LOOP_DETECT_RATE`. 2-bit loop detection rate.
+* **FRC (5:4)**: `FORCE_RATE`. 2-bit forced rate configuration.
+* **SLR (3:1)**: `SEL_LEDRATE`. 3-bit LED rate selection.
+* **SUP (0:0)**: `SPEED_UP`. Speed up mode indicator.
+
+##### **Families B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|DLT|BZD|  BZR  |LDM|  SPT  |EDL|  LDR  |  FRC  |    SLR    |SUP|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **DLT (15:15)**: `DLINK_TIME`. D-Link time configuration.
+* **BZD (14:14)**: `LED_BUZZ_DUTY`. LED buzzer duty cycle configuration.
+* **BZR (13:12)**: `BUZZER_RATE`. 2-bit buzzer rate selection.
+* **LDM (11:11)**: `LOOP_DETECT_MODE`. Loop detection mode indicator.
+* **SPT (10:9)**: `SEL_PWRON_TIME`. 2-bit power-on time selection.
+* **EDL (8:8)**: `EN_DLINK_LED`. Enable D-Link LED mode.
+* **LDR (7:6)**: `LOOP_DETECT_RATE`. 2-bit loop detection rate.
+* **FRC (5:4)**: `FORCE_RATE`. 2-bit forced rate configuration.
+* **SLR (3:1)**: `SEL_LEDRATE`. 3-bit LED rate selection.
+* **SUP (0:0)**: `SPEED_UP`. Speed up mode indicator.
+
+#### 1.8.4. LED_CONFIGURATION_REG (0x1B03)
+
+This register configures the specific behavior or grouping modes for individual LED sets (LED0, LED1, and LED2), as well as data LED flashing patterns.
+
+##### **Families A, B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|SEL|  DAT  |     LED2      |     LED1      |     LED0      |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:15)**: `LED_CONFIGURATION_DUMMY` / `DUMMY_0`. Reserved/Dummy bit.
+* **SEL (14:14)**: `LED_CONFIG_SEL`. LED configuration selector.
+* **DAT (13:12)**: `DATA_LED`. 2-bit data LED mode configuration.
+* **LED2 (11:8)**: `LED2_CFG`. 4-bit configuration mode for LED2 group.
+* **LED1 (7:4)**: `LED1_CFG`. 4-bit configuration mode for LED1 group.
+* **LED0 (3:0)**: `LED0_CFG`. 4-bit configuration mode for LED0 group.
+
+#### 1.8.5. CPU_FORCE_LED_CFG_REG (0x1B07)
+
+This register configures the global forcing mode for CPU-controlled LEDs.
+
+##### **Families A, B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |    LED_FORCE_MODE     |  FRC  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:8)**: `DUMMY`. Reserved/Dummy bits.
+* **LED_FORCE_MODE (7:2)**: `LED_FORCE_MODE`. 6-bit LED force mode configuration pattern.
+* **FRC (1:0)**: `FORCE_MODE`. 2-bit CPU force mode selector.
+
+| `CPU_FORCE_LED_REG(g, p)`| `0x1B08 + (g*2) + (p/8)` | `0x1B08 + (g*2)` | `0x1B08 + (g*2) + (p/8)` | `0x1B08 + (g*2)` | CPU forced LED states per port `p` and LED group `g`. |
+
+#### 1.8.6. CPU_FORCE_LED_REG(g, p) (0x1B08 + (g * 2) + (p / 8))
+
+Each 16-bit register packs the CPU-forced LED mode for 8 ports (2 bits each). The register address encodes the LED group index `g` (0 to 2) and the port group (e.g., ports 0 to 7, or 8 to 15).
+
+##### **Families A, B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| PORT_7| PORT_6| PORT_5| PORT_4| PORT_3| PORT_2| PORT_1| PORT_0|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **PORT_x (2 bits)**: Forced LED mode for port `x` (where `x = p % 8`) in LED group `g`. Field offset = `(p % 8) * 2`.
+  * `0` = Normal / Auto
+  * `1` = Force Blink
+  * `2` = Force Off
+  * `3` = Force On
+
+> **Note:** Families B and D have up to 8 ports, meaning `p/8` is always `0` and all ports fit within a single 16-bit register per LED group. Families A and C use the subsequent register (`+ 1`) for ports 8 and above.
+
+
+#### 1.8.7. PARA_LED_IO_EN3_REG (0x1B13)
+
+This register enables the parallel LED IO signals for the upper logical ports (ports 8 and above) which are present in the extended 11-port layout of Family C.
+
+##### **Families A, B, and D**
+
+* **Not found** (Family A uses `0x1B13` as `EXT_GPIO_ENABLE_CTRL1` with completely different semantics; Families B and D lack upper ports and do not implement this register).
+
+##### **Family C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|         RESERVED          |    G2_UP  |    G1_UP  |    G0_UP  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:9)**: Reserved bits.
+* **G2_UP (8:6)**: `LED2_PARA_P10_08`. Parallel LED IO enable for LED group 2, upper ports 10 to 8 (bit 8 = port 10; bit 6 = port 8).
+* **G1_UP (5:3)**: `LED1_PARA_P10_08`. Parallel LED IO enable for LED group 1, upper ports 10 to 8 (bit 5 = port 10; bit 3 = port 8).
+* **G0_UP (2:0)**: `LED0_PARA_P10_08`. Parallel LED IO enable for LED group 0, upper ports 10 to 8 (bit 2 = port 10; bit 0 = port 8).
+
+#### 1.8.8. PARA_LED_IO_EN1_REG (0x1B24)
+
+This register enables the parallel LED IO signals for LED groups 0 and 1 on the base physical ports.
+
+##### **Families A and C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             L1_EN             |             L0_EN             |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **L1_EN (15:8)**: `LED1_PARA_P07_00`. Parallel LED IO enable for LED group 1, ports 7 to 0 (1-bit per port).
+* **L0_EN (7:0)**: `LED0_PARA_P07_00`. Parallel LED IO enable for LED group 0, ports 7 to 0 (1-bit per port).
+
+##### **Families B and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|    RSV    |       L1_EN       |    RSV    |       L0_EN       |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:13)**: `DUMMY`. Reserved/Dummy bits.
+* **L1_EN (12:8)**: `LED1_PARA_P04_00`. Parallel LED IO enable for LED group 1, ports 4 to 0 (1-bit per port).
+* **RSV (7:5)**: `DUMMY`. Reserved/Dummy bits.
+* **L0_EN (4:0)**: `LED0_PARA_P04_00`. Parallel LED IO enable for LED group 0, ports 4 to 0 (1-bit per port).
+
+#### 1.8.9. PARA_LED_IO_EN2_REG (0x1B25)
+
+This register enables the parallel LED IO signals for LED group 2 on the base physical ports.
+
+##### **Families A and C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|           RESERVED            |             L2_EN             |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:8)**: `DUMMY`. Reserved/Dummy bits.
+* **L2_EN (7:0)**: `LED2_PARA_P07_00`. Parallel LED IO enable for LED group 2, ports 7 to 0 (1-bit per port).
+
+##### **Families B and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                  RESERVED                 |       L2_EN       |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:5)**: `DUMMY`. Reserved/Dummy bits.
+* **L2_EN (4:0)**: `LED2_PARA_P04_00`. Parallel LED IO enable for LED group 2, ports 4 to 0 (1-bit per port).
+
+#### 1.8.10. SCAN0_LED_IO_EN1_REG (0x1B26)
+
+This register configures the Scan0 LED IO enables, including the serial data/clock pins and the loop detection buzzer enable.
+
+##### **Family A**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|             BIP               |    BIS    |  RSV  |BUZ|DAT|CLK|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **BIP (15:8)**: `LED_SCAN0_BI_PORT_EN`. Bi-color port enable for Scan0.
+* **BIS (7:5)**: `LED_SCAN0_BI_STA_EN`. Bi-color status enable for Scan0.
+* **RSV (4:3)**: `DUMMY_0`. Reserved/Dummy bits.
+* **BUZ (2:2)**: `LED_LOOP_DET_BUZZER_EN`. Loop detection buzzer enable.
+* **DAT (1:1)**: `LED_SERI_DATA_EN`. Serial LED data pin enable.
+* **CLK (0:0)**: `LED_SERI_CLK_EN`. Serial LED clock pin enable.
+
+
+
+##### **Families B, C, and D**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                       RESERVED                    |BUZ|DAT|CLK|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RESERVED (15:3)**: `DUMMY`. Reserved/Dummy bits.
+* **BUZ (2:2)**: `LED_LOOP_DET_BUZZER_EN`. Loop detection buzzer enable.
+* **DAT (1:1)**: `LED_SERI_DATA_EN`. Serial LED data pin enable.
+* **CLK (0:0)**: `LED_SERI_CLK_EN`. Serial LED clock pin enable.
+
+
+
+#### 1.8.11. SERIAL_LED_CTRL_REG (0x1B3A)
+
+This register configures the serial LED shift sequence, group number, and port enables. It is exclusively mapped in Family C hardware.
+
+##### **Families A, B, and D**
+
+* **Not found** on Family A, B, and D hardware.
+
+##### **Family C**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|RSV|  SEQ  |SQE|  GRP  |                  PEN                  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **RSV (15:15)**: Reserved bit.
+* **SEQ (14:13)**: `SERIAL_LED_SHIFT_SEQUENCE`. Serial LED shift sequence configuration.
+* **SQE (12:12)**: `SERIAL_LED_SHIFT_SEQUENCE_EN`. Serial LED shift sequence enable.
+* **GRP (11:10)**: `SERIAL_LED_GROUP_NUM`. Number of serial LED groups.
+* **PEN (9:0)**: `SERIAL_LED_PORT_EN`. 10-bit serial LED port enable mask.
+
 ## 2. PHYs REG access mechanism
 
 The Realtek switches provide an indirect access mechanism to read and write PHY
