@@ -1,0 +1,77 @@
+Nome do Registro,Endereço,Descrição (Inglês)
+RTL8365MB_PORT_MISC_CFG_REG_BASE,0x000E,"Miscellaneous port configuration, incl. VLAN egress mode"
+RTL8365MB_INGRESSBW_PORT6_RATE_CTRL0_REG,0x00CF,Port 6 ingress rate limiter LSB
+RTL8365MB_INGRESSBW_PORT6_RATE_CTRL1_REG,0x00D0,Port 6 ingress rate limiter MSB
+RTL8365MB_PORT6_EGRESSBW_CTRL0_REG,0x0398,Port 6 egress rate limiter LSB
+RTL8365MB_PORT6_EGRESSBW_CTRL1_REG,0x0399,Port 6 egress rate limiter MSB
+RTL8365MB_BYPASS_LINE_RATE_REG,0x03F7,External interface line rate bypass
+RTL8365MB_TABLE_CTRL_REG,0x0500,Look-up table access control
+RTL8365MB_TABLE_ACCESS_ADDR_REG,0x0501,Look-up table access address
+RTL8365MB_TABLE_STATUS_REG,0x0502,Look-up table status
+RTL8365MB_TABLE_WRITE_BASE,0x0510,Look-up table write data base
+RTL8365MB_TABLE_READ_BASE,0x0520,Look-up table read data base
+RTL8365MB_VLAN_PVID_CTRL_BASE,0x0700,Port-based VID configuration base
+RTL8365MB_VLAN_MC_BASE,0x0728,VLAN member configuration database base
+RTL8365MB_VLAN_CTRL_REG,0x07A8,VLAN control (enable/disable)
+RTL8365MB_VLAN_INGRESS_REG,0x07A9,VLAN ingress filter
+RTL8365MB_VLAN_ACCEPT_FRAME_TYPE_BASE,0x07AA,VLAN frame type filtering base
+RTL8365MB_CFG0_MAX_LEN_REG,0x088C,Maximum packet length configuration
+RTL8365MB_UNKNOWN_UNICAST_FLOODING_PMASK_REG,0x0890,Unknown unicast flooding port mask
+RTL8365MB_UNKNOWN_MULTICAST_FLOODING_PMASK_REG,0x0891,Unknown multicast flooding port mask
+RTL8365MB_UNKNOWN_BROADCAST_FLOODING_PMASK_REG,0x0892,Broadcast flooding port mask
+RTL8365MB_PORT_ISOLATION_REG_BASE,0x08A2,Port isolation (forwarding mask) base
+RTL8365MB_VLAN_EGRESS_TRANSPARENT_REG_BASE,0x09D0,VLAN transparent setting base
+RTL8365MB_MSTI_CTRL_BASE,0x0A00,MSTP port state control base
+RTL8365MB_LUT_PORT_LEARN_LIMIT_BASE,0x0A20,Port learning limit base
+RTL8365MB_PORT_EFID_REG_BASE,0x0A32,Extended filter ID (EFID) base
+RTL8365MB_L2_FLUSH_PORT_EXT_REG,0x0A35,L2 table flush command for extended ports
+RTL8365MB_L2_FLUSH_PORT_REG,0x0A36,L2 table flush command for standard ports
+RTL8365MB_L2_FLUSH_CTRL1_REG,0x0A37,L2 table flush control 1
+RTL8365MB_L2_FLUSH_CTRL2_REG,0x0A38,L2 table flush control 2
+RTL8365MB_L2_FLUSH_CTRL3_REG,0x0A39,L2 table flush entire LUT command
+RTL8365MB_MIB_COUNTER_BASE,0x1000,MIB counter value registers base
+RTL8365MB_MIB_ADDRESS_REG,0x1004,MIB counter address
+RTL8365MB_MIB_CTRL0_REG,0x1005,MIB counter access control
+RTL8365MB_INTR_POLARITY_REG,0x1100,Interrupt polarity control
+RTL8365MB_INTR_CTRL_REG,0x1101,Interrupt control (enable/disable specific types)
+RTL8365MB_INTR_STATUS_REG,0x1102,Interrupt status
+RTL8365MB_PORT_LINKDOWN_IND_REG,0x1106,Port link-down interrupt indicator
+RTL8365MB_PORT_LINKUP_IND_REG,0x1107,Port link-up interrupt indicator
+RTL8365MB_CPU_PORT_MASK_REG,0x1219,CPU port mask control
+RTL8365MB_CPU_CTRL_REG,0x121A,"CPU port control (tagging, formats, traps)"
+RTL8365MB_CHIP_ID_REG,0x1300,Chip identification
+RTL8365MB_CHIP_VER_REG,0x1301,Chip silicon version
+RTL8365MB_DIGITAL_INTERFACE_SELECT_REG0,0x1305,External interface EXT0/EXT1 mode select
+RTL8365MB_EXT_RGMXF_REG0,0x1306,External interface EXT0 RGMII delay config
+RTL8365MB_EXT_RGMXF_REG1,0x1307,External interface EXT1 RGMII delay config
+RTL8365MB_MISC_CFG0_REG,0x130C,Miscellaneous configuration (incl. DW8051 MCU control)
+RTL8365MB_DIGITAL_INTERFACE_FORCE_REG0,0x1310,External interface EXT0 force config
+RTL8365MB_DIGITAL_INTERFACE_FORCE_REG1,0x1311,External interface EXT1 force config
+RTL8365MB_CHIP_RESET_REG,0x1322,Chip software/hardware reset control
+RTL8365MB_SDS_OPTION_ARM_REG,0x13C0,SerDes tuning option read arm control
+RTL8365MB_SDS_OPTION_REG,0x13C1,SerDes tuning option selection
+RTL8365MB_MAGIC_REG,0x13C2,Magic register for chip ID access authorization
+RTL8365MB_DIGITAL_INTERFACE_SELECT_REG1,0x13C3,External interface EXT2 mode select
+RTL8365MB_DIGITAL_INTERFACE_FORCE_REG2,0x13C4,External interface EXT2 force config
+RTL8365MB_EXT_RGMXF_REG2,0x13C5,External interface EXT2 RGMII delay config
+RTL8365MB_LED_SYS_CONFIG_REG,0x1B00,LED system configuration
+RTL8365MB_LED_SYS_CONFIG2_REG,0x1B01,LED system configuration 2
+RTL8365MB_LED_MODE_REG,0x1B02,LED force rate and general mode
+RTL8365MB_LED_CONFIGURATION_REG,0x1B03,LED group mode configuration
+RTL8365MB_CPU_FORCE_LED_CFG_REG,0x1B07,CPU forced LED configuration
+RTL8365MB_CPU_FORCE_LED_BASE_REG,0x1B08,CPU forced LED base register
+RTL8365MB_PARA_LED_IO_EN3_REG,0x1B13,Parallel LED IO enable 3 (upper ports)
+RTL8365MB_PARA_LED_IO_EN1_REG,0x1B24,Parallel LED IO enable 1
+RTL8365MB_PARA_LED_IO_EN2_REG,0x1B25,Parallel LED IO enable 2
+RTL8365MB_SCAN0_LED_IO_EN1_REG,0x1B26,Scan0 LED IO enable 1
+RTL8365MB_SERIAL_LED_CTRL_REG,0x1B3A,Serial LED control
+RTL8365MB_SDS_MISC_REG,0x1D11,"SerDes miscellaneous configuration (mux, speed, flow control)"
+RTL8365MB_GPHY_OCP_MSB_0_REG,0x1D15,PHY OCP address prefix MSB
+RTL8365MB_INDIRECT_ACCESS_CTRL_REG,0x1F00,PHY indirect access control
+RTL8365MB_INDIRECT_ACCESS_STATUS_REG,0x1F01,PHY indirect access status
+RTL8365MB_INDIRECT_ACCESS_ADDRESS_REG,0x1F02,PHY indirect access address
+RTL8365MB_INDIRECT_ACCESS_WRITE_DATA_REG,0x1F03,PHY indirect access write data
+RTL8365MB_INDIRECT_ACCESS_READ_DATA_REG,0x1F04,PHY indirect access read data
+RTL8365MB_SDS_INDACS_CMD_REG,0x6600,SerDes indirect access command
+RTL8365MB_SDS_INDACS_ADR_REG,0x6601,SerDes indirect access address
+RTL8365MB_SDS_INDACS_DATA_REG,0x6602,SerDes indirect access data
