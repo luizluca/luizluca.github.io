@@ -491,30 +491,30 @@ Families B, C: Uses a 2-bit mask MAX_LEN_RX_TX_MASK (0x3) to independently enabl
 
 ### 1.3. Extension Ports (EXT0, EXT1, EXT2)
 
-|Logical Name|Family A|Family B|Family C|Family D|Function / Usage|
-|-|-|-|-|-|-|
-|`DIGITAL_IF_SELECT(EXT0/1)`|`0x1305`|`0x1305`|`0x1305`|`0x1305`|EXT0 and EXT1 MAC Interface Mode selectors.|
-|`DIGITAL_IF_SELECT(EXT2)`|`**N/A**`|`0x13C3`|`0x13C3`|`0x13C3`|EXT2 MAC Interface Mode selector.|
-|`DIGITAL_IF_FORCE(EXT0)`|`0x1310`|`0x1310`|`0x1310`|`**N/A**`|EXT0 Link Force mode and parameters.|
-|`DIGITAL_IF_FORCE(EXT1)`|`0x1311`|`0x1311`|`0x1311`|`**N/A**`|EXT1 Link Force mode and parameters.|
-|`DIGITAL_IF_FORCE(EXT2)`|`**N/A**`|`0x13C4`|`0x13C4`|`**N/A**`|Link Force mode and parameters.|
-|`MACx_FORCE_SELECT_EN`|`**N/A**`|`**N/A**`|`**N/A**`|`0x12C8+(x)`|Link Force mode for MAC x.|
-|`EXT_RGMXF_REG(EXT0)`|`0x1306`|`0x1306`|`0x1306`|`0x1306`|EXT0 RGMII TX/RX clock delay and inversion.|
-|`EXT_RGMXF_REG(EXT1)`|`0x1307`|`0x1307`|`0x1307`|`0x1307`|EXT1 RGMII TX/RX clock delay and inversion.|
-|`EXT_RGMXF_REG(EXT2)`|`**N/A**`|`0x13C5`|`0x13C5`|`0x13C5`|EXT2 RGMII TX/RX clock delay and inversion.|
-|`MISC_CFG0_REG`|`**Not found**`|`**Not found**`|`0x130C`|`**Not found**`|Miscellaneous config (DW8051 enable).|
-|`BYPASS_LINE_RATE_REG`|`**Not found**`|`**Not found**`|`0x03F7`|`**Not found**`|Line rate bypass portmask.|
-|`SDS_OPTION_ARM_REG`|`**Not found**`|`**Not found**`|`0x13C0`|`**Not found**`|Arming for SerDes option read.|
-|`SDS_OPTION_REG`|`**Not found**`|`**Not found**`|`0x13C1`|`**Not found**`|SerDes tuning variant selector.|
-|`SDS_INDACS_CMD_REG`|`**Not found**`|`**Not found**`|`0x6600`|`**Not found**`|SerDes indirect access command.|
-|`SDS_INDACS_ADR_REG`|`**Not found**`|`**Not found**`|`0x6601`|`**Not found**`|SerDes indirect access address.|
-|`SDS_INDACS_DATA_REG`|`**Not found**`|`**Not found**`|`0x6602`|`**Not found**`|SerDes indirect access data.|
-|`SDS_MISC_REG`|`**Not found**`|`**Not found**`|`0x1D11`|`**Not found**`|SerDes miscellaneous config.|
-|`ING_P6_RATE_CTRL0`|`**Not found**`|`**Not found**`|`0x00CF`|`**Not found**`|Port 6 Ingress rate limit LSB.|
-|`ING_P6_RATE_CTRL1`|`**Not found**`|`**Not found**`|`0x00D0`|`**Not found**`|Port 6 Ingress rate limit MSB.|
-|`EGR_P6_RATE_CTRL0`|`**Not found**`|`**Not found**`|`0x0398`|`**Not found**`|Port 6 Egress rate limit LSB.|
-|`EGR_P6_RATE_CTRL1`|`**Not found**`|`**Not found**`|`0x0399`|`**Not found**`|Port 6 Egress rate limit MSB.|
-
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| `DIGITAL_IF_SELECT(EXT0/1)` | `0x1305` | `0x1305` | `0x1305` | `0x1305` | EXT0 and EXT1 MAC Interface Mode selectors. |
+| `DIGITAL_IF_SELECT(EXT2)` | `**N/A**` | `0x13C3` | `0x13C3` | `0x13C3` | EXT2 MAC Interface Mode selector. |
+| `DIGITAL_IF_FORCE(EXT0)` | `0x1310` | `0x1310` | `0x1310` | `**N/A**` | EXT0 Link Force mode and parameters. |
+| `DIGITAL_IF_FORCE(EXT1)` | `0x1311` | `0x1311` | `0x1311` | `**N/A**` | EXT1 Link Force mode and parameters. |
+| `DIGITAL_IF_FORCE(EXT2)` | `**N/A**` | `0x13C4` | `0x13C4` | `**N/A**` | Link Force mode and parameters. |
+| `MACx_FORCE_SELECT_EN` | `**N/A**` | `**N/A**` | `**N/A**` | `0x12C8+(x)` | Link Force mode for MAC x. |
+| `EXT_RGMXF_REG(EXT0)` | `0x1306` | `0x1306` | `0x1306` | `0x1306` | EXT0 RGMII TX/RX clock delay and inversion. |
+| `EXT_RGMXF_REG(EXT1)` | `0x1307` | `0x1307` | `0x1307` | `0x1307` | EXT1 RGMII TX/RX clock delay and inversion. |
+| `EXT_RGMXF_REG(EXT2)` | `**N/A**` | `0x13C5` | `0x13C5` | `0x13C5` | EXT2 RGMII TX/RX clock delay and inversion. |
+| `MISC_CFG0_REG` | `0x130C` | `0x130C` | `0x130C` | `0x130C` | Miscellaneous config (DW8051 enable). |
+| `BYPASS_LINE_RATE_REG` | `0x03F7` | `0x03F7` | `0x03F7` | `0x03F7` | Line rate bypass portmask. |
+| `RTL_NO` | `0x13C0` | `**Not found**` | `**Not found**` | `**Not found**` | Realtek Chip Number. |
+| `SDS_OPTION_ARM_REG` | `**Not found**` | `**Not found**` | `0x13C0` | `0x13C0` | Arming for SerDes option read. |
+| `SDS_OPTION_REG` | `0x13C1` | `**Not found**` | `0x13C1` | `0x13C1` | SerDes tuning variant selector. |
+| `SDS_INDACS_CMD_REG` | `**Not found**` | `**Not found**` | `0x6600` | `0x6600` | SerDes indirect access command. |
+| `SDS_INDACS_ADR_REG` | `**Not found**` | `**Not found**` | `0x6601` | `0x6601` | SerDes indirect access address. |
+| `SDS_INDACS_DATA_REG` | `**Not found**` | `**Not found**` | `0x6602` | `0x6602` | SerDes indirect access data. |
+| `SDS_MISC_REG` | `**Not found**` | `**Not found**` | `0x1D11` | `0x1D11` | SerDes miscellaneous config. |
+| `ING_P6_RATE_CTRL0` | `0x00CF` | `0x00CF` | `0x00CF` | `0x00CF` | Port 6 Ingress rate limit LSB. |
+| `ING_P6_RATE_CTRL1` | `0x00D0` | `0x00D0` | `0x00D0` | `0x00D0` | Port 6 Ingress rate limit MSB. |
+| `EGR_P6_RATE_CTRL0` | `0x0398` | `0x0398` | `0x0398` | `0x0398` | Port 6 Egress rate limit LSB. |
+| `EGR_P6_RATE_CTRL1` | `0x0399` | `0x0399` | `0x0399` | `0x0399` | Port 6 Egress rate limit MSB. |
 
 #### 1.3.1. DIGITAL_IF_SELECT(EXT0/1) (0x1305)
 
@@ -738,14 +738,68 @@ per extension port.
 This register contains miscellaneous system-wide configuration bits for various
 internal controllers and features.
 
-##### **Family C:**
+##### **Family A:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |FLS|EEE|NIC| FT|OLT|RTC|PON|805|AUT|SDS|PTI|BST|EFU|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
 ```
+
+* **FLS (12:12)**: `FLASH_ENABLE`. Internal/External Flash interface enable.
+* **EEE (11:11)**: `EEE_ENABLE`. Energy Efficient Ethernet global enable.
+* **NIC (10:10)**: `NIC_ENABLE`. Network Interface Controller enable.
+* **FT  (9:9)**: `FT_ENABLE`. Fault Tolerance feature enable.
+* **OLT (8:8)**: `OLT_ENABLE`. Optical Line Terminal (PON) logic enable.
+* **RTC (7:7)**: `RTCT_EN`. Real-Time Cable Diagnosis enable.
+* **PON (6:6)**: `PON_LIGHT_EN`. PON Light-sleep/power-saving enable.
+* **805 (5:5)**: `DW8051_EN`. Enable the embedded DW8051 MCU.
+* **AUT (4:4)**: `AUTOLOAD_EN`. EEPROM/Efuse autoload enable.
+* **SDS (3:3)**: `SDS_INBAND_EN`. SerDes in-band configuration enable.
+* **PTI (2:2)**: `DIS_PON_TABLE_INIT`. Disable PON table auto-initialization.
+* **BST (1:1)**: `DIS_PON_BIST`. Disable PON Built-In Self Test.
+* **EFU (0:0)**: `EFUSE_EN`. Efuse controller enable.
+
+##### **Family B:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|VIA|ADP|ADE|FLS|EEE|NIC| FT|OLT|RTC|PON|805|AUT|NRS|PTI|BST|EFU|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+
+* **VIA (15:15)**: `VIAROM_ENABLE`. VIAROM enable.
+* **ADP (14:14)**: `ADCCKI_FROM_PAD`. ADC clock source selection (1=Pad).
+* **ADE (13:13)**: `ADCCKI_EN`. ADC clock enable.
+* **FLS (12:12)**: `FLASH_ENABLE`. Internal/External Flash interface enable.
+* **EEE (11:11)**: `EEE_ENABLE`. Energy Efficient Ethernet global enable.
+* **NIC (10:10)**: `NIC_ENABLE`. Network Interface Controller enable.
+* **FT  (9:9)**: `FT_ENABLE`. Fault Tolerance feature enable.
+* **OLT (8:8)**: `OLT_ENABLE`. Optical Line Terminal (PON) logic enable.
+* **RTC (7:7)**: `RTCT_EN`. Real-Time Cable Diagnosis enable.
+* **PON (6:6)**: `PON_LIGHT_EN`. PON Light-sleep/power-saving enable.
+* **805 (5:5)**: `DW8051_EN`. Enable the embedded DW8051 MCU.
+* **AUT (4:4)**: `AUTOLOAD_EN`. EEPROM/Efuse autoload enable.
+* **NRS (3:3)**: `NRESTORE_EN`. Network restore (backup) logic enable.
+* **PTI (2:2)**: `DIS_PON_TABLE_INIT`. Disable PON table auto-initialization.
+* **BST (1:1)**: `DIS_PON_BIST`. Disable PON Built-In Self Test.
+* **EFU (0:0)**: `EFUSE_EN`. Efuse controller enable.
+
+
+##### **Family B, C:**
+
+```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 |RSV|ADP|ADE|FLS|EEE|NIC| FT|OLT|RTC|PON|805|AUT|NRS|PTI|BST|EFU|
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 ```
+
   * **ADP (14:14)**: `ADCCKI_FROM_PAD`. ADC clock source selection (1=Pad).
   * **ADE (13:13)**: `ADCCKI_EN`. ADC clock enable.
   * **FLS (12:12)**: `FLASH_ENABLE`. Internal/External Flash interface enable.
@@ -762,11 +816,51 @@ internal controllers and features.
   * **BST (1:1)**: `DIS_PON_BIST`. Disable PON Built-In Self Test.
   * **EFU (0:0)**: `EFUSE_EN`. Efuse controller enable.
 
+##### **Family D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| RESERVED  |FLS|EEE|NIC| FT|OLT|RTC|PON|805|AUT|NRS|PTI|BST|EFU|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **FLS (12:12)**: `FLASH_ENABLE`. Internal/External Flash interface enable.
+* **EEE (11:11)**: `EEE_ENABLE`. Energy Efficient Ethernet global enable.
+* **NIC (10:10)**: `NIC_ENABLE`. Network Interface Controller enable.
+* **FT  (9:9)**: `FT_ENABLE`. Fault Tolerance feature enable.
+* **OLT (8:8)**: `OLT_ENABLE`. Optical Line Terminal (PON) logic enable.
+* **RTC (7:7)**: `RTCT_EN`. Real-Time Cable Diagnosis enable.
+* **PON (6:6)**: `PON_LIGHT_EN`. PON Light-sleep/power-saving enable.
+* **805 (5:5)**: `DW8051_EN`. Enable the embedded DW8051 MCU.
+* **AUT (4:4)**: `AUTOLOAD_EN`. EEPROM/Efuse autoload enable.
+* **NRS (3:3)**: `NRESTORE_EN`. Network restore (backup) logic enable.
+* **PTI (2:2)**: `DIS_PON_TABLE_INIT`. Disable PON table auto-initialization.
+* **BST (1:1)**: `DIS_PON_BIST`. Disable PON Built-In Self Test.
+* **EFU (0:0)**: `EFUSE_EN`. Efuse controller enable.
+
 
 #### 1.3.7. BYPASS_LINE_RATE_REG (0x03F7)
 
 This register allows bypassing the line rate constraints (scheduler) for
 external ports.
+
+##### **Family A:**
+
+* Present in hardware mapping (`0x03F7`) but specific bitfield offsets for bypass limits are undocumented in the SDK.
+
+##### **Families B and D:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|               RESERVED                            | P7| P6| P5|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* **P7 (2:2)**: `BYPASS_PORT7_CONSTRAINT`. Bypasses scheduler for Port 7.
+* **P6 (1:1)**: `BYPASS_PORT6_CONSTRAINT`. Bypasses scheduler for Port 6.
+* **P5 (0:0)**: `BYPASS_PORT5_CONSTRAINT`. Bypasses scheduler for Port 5.
 
 ##### **Family C:**
 
@@ -783,12 +877,43 @@ external ports.
   * **P6  (1:1)**: `BYPASS_PORT6_CONSTRAINT`. Bypasses scheduler for Port 6.
   * **P5  (0:0)**: `BYPASS_PORT5_CONSTRAINT`. Bypasses scheduler for Port 5.
 
-#### 1.3.8. SDS_OPTION_ARM_REG (0x13C0) / SDS_OPTION_REG (0x13C1)
+#### 1.3.8. RTL_NO (0x13C0) / RTL_VER (0x13C1)
+
+These registers are use to identify the chip number and version.
+
+##### **Family A:**
+
+  * **RTL_NO (0x13C0)**: FIXME: check what it returns
+  * **RTL_VER (0x13C1)**: FIXME: check what it returns
+
+```
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                   RESERVED                    |    VERSION    |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+  * **VERSION (3:0)**: `VERSION`. Internal chip version/variant
+
+
+##### **Families B, C and D:**
+
+It is missing in Family B and repurposed as SDS_OPTION_ARM_REG/SDS_OPTION_REG
+in families C and D.
+
+#### 1.3.9. SDS_OPTION_ARM_REG (0x13C0) / SDS_OPTION_REG (0x13C1)
 
 These registers are used to probe the SerDes tuning parameter variant (chip
 option).
 
-##### **Family C:**
+##### **Family A:**
+
+It collides with RTL_NO/RTL_VER.
+
+##### **Family B:**
+
+It is missing.
+
+##### **Family C and D:**
   * **SDS_OPTION_ARM_REG (0x13C0)**: `RTL8367C_REG_PROTECT_ID`. Arming register.
     Write magic key `0x0249` to arm the option read, and `0x0000` to disarm.
   * **SDS_OPTION_REG (0x13C1)**: `RTL8367C_REG_CHIP_VER_INTL`.
@@ -802,11 +927,16 @@ option).
   * **OPTION (3:0)**: `CHIP_VER_INTL`. Internal chip version/variant selector
     used to pick SerDes tuning parameters.
 
-#### 1.3.9. SerDes Indirect Access (SDS_INDACS) (0x6600-0x6602)
+#### 1.3.10. SerDes Indirect Access (SDS_INDACS) (0x6600-0x6602)
 
 Registers used for indirect access to the internal SerDes PHY registers.
 
-##### **Family C:**
+##### **Family A and B:**
+
+It is missing in those families, although there is a more recent RTL8367B
+SDK that mentions 0x6600-0x6602 in the code.
+
+##### **Family C and D:**
 
 **SDS_INDACS_CMD_REG (0x6600):**
 ```
@@ -839,10 +969,13 @@ Registers used for indirect access to the internal SerDes PHY registers.
   * `0x0003`: `RESET`. SerDes data path reset control.
   * `0x003d`: `LINK_STATUS`. Internal SerDes link status.
 
-#### 1.3.10. SerDes Miscellaneous Configuration (SDS_MISC) (0x1D11)
+#### 1.3.11. SerDes Miscellaneous Configuration (SDS_MISC) (0x1D11)
 
-This register provides direct control over the SerDes mux and forced link
-parameters for the HSGMII/SGMII CPU port.
+This register provides direct control over the SerDes mux, power states, and forced link parameters. Its internal layout underwent a complete redesign between Family C and Family D.
+
+##### **Family A and B:**
+
+It is missing in those families.
 
 ##### **Family C:**
 
@@ -873,32 +1006,72 @@ parameters for the HSGMII/SGMII CPU port.
     * `5` = 100Base-FX
     * `7` = Auto-detect (1000Base-X / 100Base-FX)
 
-#### 1.3.11. Port 6 Rate Control (0x00CF-0x00D0, 0x0398-0x0399)
+##### **Family D:**
 
-Bandwidth rate limiters specifically for Port 6. Limits are 19-bit values in
-units of 8 Kbps.
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   RESERVED    |P33|P12|MS0|PWR|FRC|FIB|UTX|      SDS_MODE     |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+```
+
+* **P33 (11:11)**: `PA33PC_EN_S0`. Parameter tuning enable line.
+* **P12 (10:10)**: `PA12PC_EN_S0`. Parameter tuning enable line.
+* **MS0 (9:9)**: `MAC6_SEL_SDS0`. Select SerDes 0 to be mapped to MAC 6.
+* **PWR (8:8)**: `SDS_PWR_ISO_EN_1`. SerDes power isolation enable.
+* **FRC (7:7)**: `SDS_FRC_REG4_EN_1`. SerDes force register 4 enable.
+* **FIB (6:6)**: `SDS_FRC_REG4_FIB100_1`. SerDes force Fiber 100M mode.
+* **UTX (5:5)**: `CFG_UNIDIR_TX`. Unidirectional TX configuration.
+* **SDS_MODE (4:0)**: `CFG_SDS_MODE`. SerDes extended protocol mode selector (5-bit).
+
+
+#### 1.3.12. Port 6 Rate Control (0x00CF-0x00D0, 0x0398-0x0399)
+
+Bandwidth rate limiters specifically for Port 6. Depending on the generation, limits are either 17-bit (A and B) or 19-bit (C and D) values in units of 8 Kbps.
+
+**CTRL0 (0x00CF Ingress / 0x0398 Egress):**
+
+* **Families A, B, C, and D:**
+
+Uses all 16 bits `[15:0]` for the LSB portion of the rate limit.
+
+**CTRL1 (0x00D0 Ingress / 0x0399 Egress):**
+
+##### **Families A and B:**
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|                      RESERVED                             |MSB|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+```
+
+* ** MSB (0:0)**: `INGRESSBW_RATE16_MASK` / `EGRESSBW_RATE16_MASK`. A single MSB bit extending the limiter threshold to 17 bits.
 
 ##### **Family C:**
 
-**CTRL0 (LSB):**
-```
+```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|                           RATE_LSB                            |
+|                      RESERVED                     |    MSB    |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 ```
-  * **RATE_LSB (15:0)**: `INGRESSBW_RATE15_0` / `EGRESSBW_RATE15_0`. Lower 16
-    bits of the rate limit.
 
-**CTRL1 (MSB):**
-```
+* ** MSB (0:0)**: `INGRESSBW_RATE16_MASK` / `EGRESSBW_RATE16_MASK`. Upper 3 bits extending the limiter threshold to 19 bits.
+
+##### **Family D:**
+
+```text
  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-|                     RESERVED                      |  RATE_MS  |
+|                      RESERVED                 |LCK|     MSB   |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 ```
-  * **RATE_MSB (2:0)**: `INGRESSBW_RATE18_16` / `EGRESSBW_RATE18_16`. Upper 3
-    bits of the rate limit.
+
+* **LCK (3:3)**: `BYPASS_ABILITY_LOCK`. Hardware ability override locking flag.
+* **MSB (2:0)**: `INGRESSBW_RATE16_MASK` (`0x7`). Upper 3 bits extending the limiter threshold to 19 bits.
 
 ### 1.4. Flooding, MSTI, and CPU Port
 
