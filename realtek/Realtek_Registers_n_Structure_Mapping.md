@@ -1243,7 +1243,7 @@ destination.
 |`VLAN_INGRESS_REG`|`0x07A9`|`0x07A9`|`0x07A9`|`0x07A9`|Ingress filtering activation portmask.|
 |`VLAN_EGRESS_TRANS_REG(p)`|`**Not found**`|`**Not found**`|`0x09D0 + p`|`0x09D0 + p`|Egress VLAN transparency mapping per port.|
 |`PORT_EFID_REG(p)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`**Not found**`|Enhanced Filtering Database ID (EFID) mapping.|
-|`VLAN_MC(i)`|`0x0728 + (i * 4)`|`0x0728 + (i * 3)`|`0x0728 + (i * 3)`|`**Not found**`|VLAN member config entries 0~31.|
+|`VLAN_MC(i)`|`0x0728 + (i * 4)`|`0x0728 + (i * 4)`|`0x0728 + (i * 4)`|`**Not found**`|VLAN member config entries 0~31.|
 
 #### 1.5.1. VLAN_CTRL_REG (0x07A8)
 
@@ -1405,7 +1405,7 @@ TODO: How family D handles it!?
 ```
 * **EFID_P+(n)**: EFID number (3-bit) used by port n+(p%4).
 
-#### 1.5.8. VLAN_MC(i) A:(0x0728 + (i * 4)) B,C:(0x0728 + (i * 3))
+#### 1.5.8. VLAN_MC(i) (0x0728 + (i * 4))
 
 VlanMC is a VLAN database composed of 32 entries (i as the table index). For
 Families A, B, and C, it is only used in driver rtl8365mb as a way to inform
