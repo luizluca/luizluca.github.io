@@ -26,6 +26,28 @@ Some general information about families:
   * Families B and D registers uses ports mask as 0xFF, indicanting it can handle up to 8 ports.
   * Family C registers uses ports mask as 0x7FF, indicanting it can handle up to 11 ports.
 
+* [1. Exhaustive Register Mapping (`rtl8365mb` baseline)](#1-exhaustive-register-mapping-rtl8365mb-baseline)
+* [1.1. Identification, System, and Interrupts](#11-identification-system-and-interrupts)
+* [1.2. Port Control, MAC and Isolation](#12-port-control-mac-and-isolation)
+* [1.3. Extension Ports (EXT0, EXT1, EXT2)](#13-extension-ports-ext0-ext1-ext2)
+* [1.4. Flooding, MSTI, and CPU Port](#14-flooding-msti-and-cpu-port)
+* [1.5. VLAN Configurations](#15-vlan-configurations)
+* [1.6. MAC Learning & Security](#16-mac-learning--security)
+* [1.7. MIB Counters (Statistics)](#17-mib-counters-statistics)
+* [1.8. LED Configuration and Control](#18-led-configuration-and-control)
+* [2. PHYs REG access mechanism](#2-phys-reg-access-mechanism)
+* [2.1 Direct PHY Access (MDIO controlled switches)](#21-direct-phy-access-mdio-controlled-switches)
+* [2.2 Indirect PHY Access (via Switch Registers)](#22-indirect-phy-access-via-switch-registers)
+* [3. Table Access Mechanism](#3-table-access-mechanism)
+* [3.2. Detailed Registers and Bitfields](#32-detailed-registers-and-bitfields)
+* [3.3. Operation Flow (Sequence of Access)](#33-operation-flow-sequence-of-access)
+* [4. Table Structures](#4-table-structures)
+* [4.1. ACL Rule](#41-acl-rule)
+* [4.2. ACL Action](#42-acl-action)
+* [4.3. CVLAN (Vlan4K)](#43-cvlan-vlan4k)
+* [4.4. L2 (FDB Lookup)](#44-l2-fdb-lookup)
+* [4.5. IGMP group](#45-igmp-group)
+
 ## 1\. Exhaustive Register Mapping (`rtl8365mb` baseline)
 
 In this section, `p` indicates the logical/physical port index, `e` indicates
@@ -33,7 +55,6 @@ the extension port index (EXT0~2), and `msti` indicates the Multiple Spanning
 Tree Instance. All registers on the SMI bus are 16-bit wide.
 
 ### 1.1. Identification, System, and Interrupts
-
 
 |Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
 |-|-|-|-|-|-|
