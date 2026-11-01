@@ -56,15 +56,15 @@ Tree Instance. All registers on the SMI bus are 16-bit wide.
 
 ### 1.1. Identification, System, and Interrupts
 
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`CHIP_ID_REG`|`0x1300`|`0x1300`|`0x1300`|`0x1300`|Family/Chip ID.|
-|`CHIP_VER_REG`|`0x1301`|`0x1301`|`0x1301`|`0x1301`|Silicon version and chip revision.|
-|`CHIP_RESET_REG`|`0x1322`|`0x1322`|`0x1322`|`0x1322`|Soft system reset configuration.|
-|`MAGIC_REG`|`0x13C2`|`0x13C2`|`0x13C2`|`0x13C2`|Unlock register (required value is `0x0249`).|
-|`INTR_POLARITY_REG`|`0x1100`|`0x1100`|`0x1100`|`0x1100`|Configures global IRQ pin polarity and events.|
-|`INTR_CTRL_REG`|`0x1101`|`0x1101`|`0x1101`|`0x1101`|Interrupt Mask Register (Interrupt Enable).|
-|`INTR_STATUS_REG`|`0x1102`|`0x1102`|`0x1102`|`0x1102`|Interrupt Status Register (Pending Interrupts).|
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`CHIP_ID_REG`](#111-chip_id_reg-0x1300) | `0x1300` | `0x1300` | `0x1300` | `0x1300` | Family/Chip ID. |
+| [`CHIP_VER_REG`](#112-chip_ver_reg-0x1301) | `0x1301` | `0x1301` | `0x1301` | `0x1301` | Silicon version and chip revision. |
+| [`CHIP_RESET_REG`](#113-chip_reset_reg-0x1322) | `0x1322` | `0x1322` | `0x1322` | `0x1322` | Soft system reset configuration. |
+| [`MAGIC_REG`](#114-magic_reg-0x13c2) | `0x13C2` | `0x13C2` | `0x13C2` | `0x13C2` | Unlock register (required value is `0x0249`). |
+| [`INTR_POLARITY_REG`](#115-intr_polarity_reg-0x1100) | `0x1100` | `0x1100` | `0x1100` | `0x1100` | Configures global IRQ pin polarity and events. |
+| [`INTR_CTRL_REG`](#116-intr_ctrl_reg-0x1101) | `0x1101` | `0x1101` | `0x1101` | `0x1101` | Interrupt Mask Register (Interrupt Enable). |
+| [`INTR_STATUS_REG`](#117-intr_status_reg-0x1102) | `0x1102` | `0x1102` | `0x1102` | `0x1102` | Interrupt Status Register (Pending Interrupts). |
 
 #### 1.1.1. CHIP_ID_REG (0x1300)
 
@@ -297,18 +297,16 @@ interrupt events.
 
 ### 1.2. Port Control, MAC and Isolation
 
-
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`PORT_ISOLATION_REG(p)`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|`0x08A2 + p`|Allowed ports matrix (`PORT_ISOLATION_PORTx_MASK` in SDK).|
-|`PORT_LINKDOWN_IND`|`0x1106`|`0x1106`|`0x1106`|`0x1106`|Portmask of Link Down events.|
-|`PORT_LINKUP_IND`|`0x1107`|`0x1107`|`0x1107`|`0x1107`|Portmask of Link Up events.|
-|`PORT_MISC_CFG_REG(p)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|`0x000E + (p<<5)`|Miscellaneous MAC configs (`PORTx_MISC_CFG` in SDK).|
-|`CFG0_MAX_LEN_REG`|`**Not found**`|`**Not found**`|`0x088C`|`0x088C`|Max Frame Length allowed (MTU).|
-|`MAX_LENGTH_LIMINT_IPG`|`0x1200`|`0x1200`|`0x1200`|`0x1200`|Legacy Max Frame Length allowed (in steps).|
-|`MAX_LEN_CFG`|`**Not found**`|`0x0883`|`0x0883`|`0x0883`|Max Frame Length allowed (in steps), enabled for ports/speeds defined in MAX_LENGTH_CFG.|
-|`MAX_LEN_RX_TX`|`**Not found**`|`0x0884`|`0x0884`|`**Not found**`|Port map for 1000 or 10/100 links, enforcing MAX_LEN_CFG.|
-
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`PORT_ISOLATION_REG(p)`](#121-port_isolation_regp-0x08a2--p) | `0x08A2 + p` | `0x08A2 + p` | `0x08A2 + p` | `0x08A2 + p` | Allowed ports matrix (`PORT_ISOLATION_PORTx_MASK` in SDK). |
+| [`PORT_LINKDOWN_IND`](#122-port_linkdown_ind-0x1106) | `0x1106` | `0x1106` | `0x1106` | `0x1106` | Portmask of Link Down events. |
+| [`PORT_LINKUP_IND`](#123-port_linkup_ind-0x1107) | `0x1107` | `0x1107` | `0x1107` | `0x1107` | Portmask of Link Up events. |
+| [`PORT_MISC_CFG_REG(p)`](#124-port_misc_cfg_regp-0x000e--p5) | `0x000E + (p<<5)` | `0x000E + (p<<5)` | `0x000E + (p<<5)` | `0x000E + (p<<5)` | Miscellaneous MAC configs (`PORTx_MISC_CFG` in SDK). |
+| [`CFG0_MAX_LEN_REG`](#125-cfg0_max_len_reg-0x088c) | `**Not found**` | `**Not found**` | `0x088C` | `0x088C` | Max Frame Length allowed (MTU). |
+| [`MAX_LENGTH_LIMINT_IPG`](#126-max_length_limint_ipg-0x1200) | `0x1200` | `0x1200` | `0x1200` | `0x1200` | Legacy Max Frame Length allowed (in steps). |
+| [`MAX_LEN_CFG`](#127-max_len_cfg-0x0883) | `**Not found**` | `0x0883` | `0x0883` | `0x0883` | Max Frame Length allowed (in steps), enabled for ports/speeds defined in MAX_LENGTH_CFG. |
+| [`MAX_LEN_RX_TX`](#128-max_len_rx_tx-0x0884) | `**Not found**` | `0x0884` | `0x0884` | `**Not found**` | Port map for 1000 or 10/100 links, enforcing MAX_LEN_CFG. |
 
 #### 1.2.1. PORT_ISOLATION_REG(p) (0x08A2 + p)
 
@@ -514,28 +512,28 @@ Families B, C: Uses a 2-bit mask MAX_LEN_RX_TX_MASK (0x3) to independently enabl
 
 | Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
 | --- | --- | --- | --- | --- | --- |
-| `DIGITAL_IF_SELECT(EXT0/1)` | `0x1305` | `0x1305` | `0x1305` | `0x1305` | EXT0 and EXT1 MAC Interface Mode selectors. |
-| `DIGITAL_IF_SELECT(EXT2)` | `**N/A**` | `0x13C3` | `0x13C3` | `0x13C3` | EXT2 MAC Interface Mode selector. |
-| `DIGITAL_IF_FORCE(EXT0)` | `0x1310` | `0x1310` | `0x1310` | `**N/A**` | EXT0 Link Force mode and parameters. |
-| `DIGITAL_IF_FORCE(EXT1)` | `0x1311` | `0x1311` | `0x1311` | `**N/A**` | EXT1 Link Force mode and parameters. |
-| `DIGITAL_IF_FORCE(EXT2)` | `**N/A**` | `0x13C4` | `0x13C4` | `**N/A**` | Link Force mode and parameters. |
-| `MACx_FORCE_SELECT_EN` | `**N/A**` | `**N/A**` | `**N/A**` | `0x12C8+(x)` | Link Force mode for MAC x. |
-| `EXT_RGMXF_REG(EXT0)` | `0x1306` | `0x1306` | `0x1306` | `0x1306` | EXT0 RGMII TX/RX clock delay and inversion. |
-| `EXT_RGMXF_REG(EXT1)` | `0x1307` | `0x1307` | `0x1307` | `0x1307` | EXT1 RGMII TX/RX clock delay and inversion. |
-| `EXT_RGMXF_REG(EXT2)` | `**N/A**` | `0x13C5` | `0x13C5` | `0x13C5` | EXT2 RGMII TX/RX clock delay and inversion. |
-| `MISC_CFG0_REG` | `0x130C` | `0x130C` | `0x130C` | `0x130C` | Miscellaneous config (DW8051 enable). |
-| `BYPASS_LINE_RATE_REG` | `0x03F7` | `0x03F7` | `0x03F7` | `0x03F7` | Line rate bypass portmask. |
-| `RTL_NO` | `0x13C0` | `**Not found**` | `**Not found**` | `**Not found**` | Realtek Chip Number. |
-| `SDS_OPTION_ARM_REG` | `**Not found**` | `**Not found**` | `0x13C0` | `0x13C0` | Arming for SerDes option read. |
-| `SDS_OPTION_REG` | `0x13C1` | `**Not found**` | `0x13C1` | `0x13C1` | SerDes tuning variant selector. |
-| `SDS_INDACS_CMD_REG` | `**Not found**` | `**Not found**` | `0x6600` | `0x6600` | SerDes indirect access command. |
-| `SDS_INDACS_ADR_REG` | `**Not found**` | `**Not found**` | `0x6601` | `0x6601` | SerDes indirect access address. |
-| `SDS_INDACS_DATA_REG` | `**Not found**` | `**Not found**` | `0x6602` | `0x6602` | SerDes indirect access data. |
-| `SDS_MISC_REG` | `**Not found**` | `**Not found**` | `0x1D11` | `0x1D11` | SerDes miscellaneous config. |
-| `ING_P6_RATE_CTRL0` | `0x00CF` | `0x00CF` | `0x00CF` | `0x00CF` | Port 6 Ingress rate limit LSB. |
-| `ING_P6_RATE_CTRL1` | `0x00D0` | `0x00D0` | `0x00D0` | `0x00D0` | Port 6 Ingress rate limit MSB. |
-| `EGR_P6_RATE_CTRL0` | `0x0398` | `0x0398` | `0x0398` | `0x0398` | Port 6 Egress rate limit LSB. |
-| `EGR_P6_RATE_CTRL1` | `0x0399` | `0x0399` | `0x0399` | `0x0399` | Port 6 Egress rate limit MSB. |
+| [`DIGITAL_IF_SELECT(EXT0/1)`](#131-digital_if_selectext01-0x1305) | `0x1305` | `0x1305` | `0x1305` | `0x1305` | EXT0 and EXT1 MAC Interface Mode selectors. |
+| [`DIGITAL_IF_SELECT(EXT2)`](#132-digital_if_selectext2-0x13c3) | `**N/A**` | `0x13C3` | `0x13C3` | `0x13C3` | EXT2 MAC Interface Mode selector. |
+| [`DIGITAL_IF_FORCE(EXT0)`](#133-digital_if_forceextx-0x1310--0x1311--0x13c4) | `0x1310` | `0x1310` | `0x1310` | `**N/A**` | EXT0 Link Force mode and parameters. |
+| [`DIGITAL_IF_FORCE(EXT1)`](#133-digital_if_forceextx-0x1310--0x1311--0x13c4) | `0x1311` | `0x1311` | `0x1311` | `**N/A**` | EXT1 Link Force mode and parameters. |
+| [`DIGITAL_IF_FORCE(EXT2)`](#133-digital_if_forceextx-0x1310--0x1311--0x13c4) | `**N/A**` | `0x13C4` | `0x13C4` | `**N/A**` | Link Force mode and parameters. |
+| [`MACx_FORCE_SELECT_EN`](#134-macx_force_select_en-0x12c8x) | `**N/A**` | `**N/A**` | `**N/A**` | `0x12C8+(x)` | Link Force mode for MAC x. |
+| [`EXT_RGMXF_REG(EXT0)`](#135-ext_rgmxf_regextx-0x1306--0x1307--0x13c5) | `0x1306` | `0x1306` | `0x1306` | `0x1306` | EXT0 RGMII TX/RX clock delay and inversion. |
+| [`EXT_RGMXF_REG(EXT1)`](#135-ext_rgmxf_regextx-0x1306--0x1307--0x13c5) | `0x1307` | `0x1307` | `0x1307` | `0x1307` | EXT1 RGMII TX/RX clock delay and inversion. |
+| [`EXT_RGMXF_REG(EXT2)`](#135-ext_rgmxf_regextx-0x1306--0x1307--0x13c5) | `**N/A**` | `0x13C5` | `0x13C5` | `0x13C5` | EXT2 RGMII TX/RX clock delay and inversion. |
+| [`MISC_CFG0_REG`](#136-misc_cfg0_reg-0x130c) | `0x130C` | `0x130C` | `0x130C` | `0x130C` | Miscellaneous config (DW8051 enable). |
+| [`BYPASS_LINE_RATE_REG`](#137-bypass_line_rate_reg-0x03f7) | `0x03F7` | `0x03F7` | `0x03F7` | `0x03F7` | Line rate bypass portmask. |
+| [`RTL_NO`](#138-rtl_no-0x13c0--rtl_ver-0x13c1) | `0x13C0` | `**Not found**` | `**Not found**` | `**Not found**` | Realtek Chip Number. |
+| [`SDS_OPTION_ARM_REG`](#139-sds_option_arm_reg-0x13c0--sds_option_reg-0x13c1) | `**Not found**` | `**Not found**` | `0x13C0` | `0x13C0` | Arming for SerDes option read. |
+| [`SDS_OPTION_REG`](#139-sds_option_arm_reg-0x13c0--sds_option_reg-0x13c1) | `0x13C1` | `**Not found**` | `0x13C1` | `0x13C1` | SerDes tuning variant selector. |
+| [`SDS_INDACS_CMD_REG`](#1310-serdes-indirect-access-sds_indacs-0x6600-0x6602) | `**Not found**` | `**Not found**` | `0x6600` | `0x6600` | SerDes indirect access command. |
+| [`SDS_INDACS_ADR_REG`](#1310-serdes-indirect-access-sds_indacs-0x6600-0x6602) | `**Not found**` | `**Not found**` | `0x6601` | `0x6601` | SerDes indirect access address. |
+| [`SDS_INDACS_DATA_REG`](#1310-serdes-indirect-access-sds_indacs-0x6600-0x6602) | `**Not found**` | `**Not found**` | `0x6602` | `0x6602` | SerDes indirect access data. |
+| [`SDS_MISC_REG`](#1311-serdes-miscellaneous-configuration-sds_misc-0x1d11) | `**Not found**` | `**Not found**` | `0x1D11` | `0x1D11` | SerDes miscellaneous config. |
+| [`ING_P6_RATE_CTRL0`](#1312-port-6-rate-control-0x00cf-0x00d0-0x0398-0x0399) | `0x00CF` | `0x00CF` | `0x00CF` | `0x00CF` | Port 6 Ingress rate limit LSB. |
+| [`ING_P6_RATE_CTRL1`](#1312-port-6-rate-control-0x00cf-0x00d0-0x0398-0x0399) | `0x00D0` | `0x00D0` | `0x00D0` | `0x00D0` | Port 6 Ingress rate limit MSB. |
+| [`EGR_P6_RATE_CTRL0`](#1312-port-6-rate-control-0x00cf-0x00d0-0x0398-0x0399) | `0x0398` | `0x0398` | `0x0398` | `0x0398` | Port 6 Egress rate limit LSB. |
+| [`EGR_P6_RATE_CTRL1`](#1312-port-6-rate-control-0x00cf-0x00d0-0x0398-0x0399) | `0x0399` | `0x0399` | `0x0399` | `0x0399` | Port 6 Egress rate limit MSB. |
 
 #### 1.3.1. DIGITAL_IF_SELECT(EXT0/1) (0x1305)
 
@@ -1096,16 +1094,14 @@ Uses all 16 bits `[15:0]` for the LSB portion of the rate limit.
 
 ### 1.4. Flooding, MSTI, and CPU Port
 
-
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`MSTI_CTRL_REG(msti, p)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|`0x0A00 + (msti * 2) + (p/8)`|`0x0A00 + (msti * 2)`|Multiple Spanning Tree Instance state per port.|
-|`UNKNOWN_UC_FLOOD`|`0x0890`|`0x0890`|`0x0890`|`0x0890`|Portmask for unknown Unicast flooding destination.|
-|`UNKNOWN_MC_FLOOD`|`0x0891`|`0x0891`|`0x0891`|`0x0891`|Portmask for unknown Multicast flooding destination.|
-|`UNKNOWN_BC_FLOOD`|`0x0892`|`0x0892`|`0x0892`|`0x0892`|Portmask for Broadcast flooding destination.|
-|`CPU_PORT_MASK_REG`|`0x1219`|`0x1219`|`0x1219`|`0x1219`|CPU Port Mask configuration.|
-|`CPU_CTRL_REG`|`0x121A`|`0x121A`|`0x121A`|`0x121A`|CPU Tag insertion/removal and Trap port control.|
-
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`MSTI_CTRL_REG(msti, p)`](#141-msti_ctrl_regmsti-p-0x0a00--msti--2--p8) | `0x0A00 + (msti * 2) + (p/8)` | `0x0A00 + (msti * 2)` | `0x0A00 + (msti * 2) + (p/8)` | `0x0A00 + (msti * 2)` | Multiple Spanning Tree Instance state per port. |
+| [`UNKNOWN_UC_FLOOD`](#142-unknown_uc_flood--unknown_mc_flood--unknown_bc_flood-0x0890--0x0891--0x0892) | `0x0890` | `0x0890` | `0x0890` | `0x0890` | Portmask for unknown Unicast flooding destination. |
+| [`UNKNOWN_MC_FLOOD`](#142-unknown_uc_flood--unknown_mc_flood--unknown_bc_flood-0x0890--0x0891--0x0892) | `0x0891` | `0x0891` | `0x0891` | `0x0891` | Portmask for unknown Multicast flooding destination. |
+| [`UNKNOWN_BC_FLOOD`](#142-unknown_uc_flood--unknown_mc_flood--unknown_bc_flood-0x0890--0x0891--0x0892) | `0x0892` | `0x0892` | `0x0892` | `0x0892` | Portmask for Broadcast flooding destination. |
+| [`CPU_PORT_MASK_REG`](#143-cpu_port_mask_reg-0x1219) | `0x1219` | `0x1219` | `0x1219` | `0x1219` | CPU Port Mask configuration. |
+| [`CPU_CTRL_REG`](#144-cpu_ctrl_reg-0x121a) | `0x121A` | `0x121A` | `0x121A` | `0x121A` | CPU Tag insertion/removal and Trap port control. |
 
 #### 1.4.1. MSTI_CTRL_REG(msti, p) (0x0A00 + (msti * 2) + (p/8))
 
@@ -1251,20 +1247,18 @@ destination.
   * `3` = Reserved.
 * **EN (0:0)**: `ENABLE`. Global activation of Realtek CPU Tag processing.
 
-
 ### 1.5. VLAN Configurations
 
-
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`VLAN_CTRL_REG`|`0x07A8`|`0x07A8`|`0x07A8`|`0x07A8`|Global VLAN support activation (bit 0 = enable).|
-|`VLAN_PVID_CTRL_REG(p)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`0x0700 + (p/2)`|`**Not found**`|Port Default VID/PVID VLAN MC index (2 ports per register).|
-|`VLAN_PVID_CTRL0(p)`|`**Not found**`|`**Not found**`|`**Not found**`|`0x0700 + p`|Port Default VID/PVID Number.|
-|`VLAN_ACCEPT_FRAME(p)`|`0x07AA + (p/8)`|`0x07AA`|`0x07AA + (p/8)`|`0x07AA`|Accept Frame Type rules (Tagged/Untagged) per port.|
-|`VLAN_INGRESS_REG`|`0x07A9`|`0x07A9`|`0x07A9`|`0x07A9`|Ingress filtering activation portmask.|
-|`VLAN_EGRESS_TRANS_REG(p)`|`**Not found**`|`**Not found**`|`0x09D0 + p`|`0x09D0 + p`|Egress VLAN transparency mapping per port.|
-|`PORT_EFID_REG(p)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`0x0A32 + (p/4)`|`**Not found**`|Enhanced Filtering Database ID (EFID) mapping.|
-|`VLAN_MC(i)`|`0x0728 + (i * 4)`|`0x0728 + (i * 4)`|`0x0728 + (i * 4)`|`**Not found**`|VLAN member config entries 0~31.|
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`VLAN_CTRL_REG`](#151-vlan_ctrl_reg-0x07a8) | `0x07A8` | `0x07A8` | `0x07A8` | `0x07A8` | Global VLAN support activation (bit 0 = enable). |
+| [`VLAN_PVID_CTRL_REG(p)`](#152-vlan_pvid_ctrl_regp-0x0700--p2) | `0x0700 + (p/2)` | `0x0700 + (p/2)` | `0x0700 + (p/2)` | `**Not found**` | Port Default VID/PVID VLAN MC index (2 ports per register). |
+| [`VLAN_PVID_CTRL0(p)`](#153-vlan_pvid_ctrl0p-0x0700--p) | `**Not found**` | `**Not found**` | `**Not found**` | `0x0700 + p` | Port Default VID/PVID Number. |
+| [`VLAN_ACCEPT_FRAME(p)`](#154-vlan_accept_framep-0x07aa--p8) | `0x07AA + (p/8)` | `0x07AA` | `0x07AA + (p/8)` | `0x07AA` | Accept Frame Type rules (Tagged/Untagged) per port. |
+| [`VLAN_INGRESS_REG`](#155-vlan_ingress_reg-0x07a9) | `0x07A9` | `0x07A9` | `0x07A9` | `0x07A9` | Ingress filtering activation portmask. |
+| [`VLAN_EGRESS_TRANS_REG(p)`](#156-vlan_egress_trans_regp-0x09d0--p) | `**Not found**` | `**Not found**` | `0x09D0 + p` | `0x09D0 + p` | Egress VLAN transparency mapping per port. |
+| [`PORT_EFID_REG(p)`](#157-port_efid_regp-0x0a32--p4) | `0x0A32 + (p/4)` | `0x0A32 + (p/4)` | `0x0A32 + (p/4)` | `**Not found**` | Enhanced Filtering Database ID (EFID) mapping. |
+| [`VLAN_MC(i)`](#158-vlan_mci-0x0728--i--4) | `0x0728 + (i * 4)` | `0x0728 + (i * 4)` | `0x0728 + (i * 4)` | `**Not found**` | VLAN member config entries 0~31. |
 
 #### 1.5.1. VLAN_CTRL_REG (0x07A8)
 
@@ -1507,11 +1501,9 @@ the VID for PVID register. For that usage, member is ignored by the switch.
 
 ### 1.6. MAC Learning & Security
 
-
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`LUT_PORT_LEARN_LIMIT(p)`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|`0x0A20 + p`|Limits maximum dynamically learned MACs per physical port.|
-
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`LUT_PORT_LEARN_LIMIT(p)`](#161-lut_port_learn_limitp-0x0a20--p) | `0x0A20 + p` | `0x0A20 + p` | `0x0A20 + p` | `0x0A20 + p` | Limits maximum dynamically learned MACs per physical port. |
 
 #### 1.6.1. LUT_PORT_LEARN_LIMIT(p) (0x0A20 + p)
 
@@ -1556,12 +1548,12 @@ dynamically learned on port `p`. Setting as 0 disables learning.
 Polling MIB counters requires first specifying the target port/counter ID and
 then retrieving results in a structured multi-register block after results are ready.
 
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|-|
-|`MIB_ADDRESS_REG`|`0x1004`|`0x1004`|`0x1004`|`0x1004`|Target Port and counter selection for MIB polling.|
-|`MIB_CTRL0_REG`|`0x1005`|`0x1005`|`0x1005`|`0x1005`|Poll execution trigger, reset command, and busy flag.|
-|`MIB_CTRL1_REG`|`0x1006`|`**Not found**`|`**Not found**`|`**Not found**`|Extra port reset command.|
-|`MIB_COUNTER(w)`|`0x1000+w`|`0x1000+w`|`0x1000+w`|`0x1000+w`|Staging register block where the latched counter value resides. It contains 4 words (w in {0..3})|
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`MIB_ADDRESS_REG`](#171-mib_address_reg-0x1004) | `0x1004` | `0x1004` | `0x1004` | `0x1004` | Target Port and counter selection for MIB polling. |
+| [`MIB_CTRL0_REG`](#172-mib_ctrl0_reg-0x1005) | `0x1005` | `0x1005` | `0x1005` | `0x1005` | Poll execution trigger, reset command, and busy flag. |
+| [`MIB_CTRL1_REG`](#173-mib_ctrl1_reg-0x1006) | `0x1006` | `**Not found**` | `**Not found**` | `**Not found**` | Extra port reset command. |
+| [`MIB_COUNTER(w)`](#174-mib_counter-0x1000--w) | `0x1000+w` | `0x1000+w` | `0x1000+w` | `0x1000+w` | Staging register block where the latched counter value resides. |
 
 **MIB Address Calculation:**
 
@@ -1728,11 +1720,11 @@ The selective or total purging of dynamic MAC addresses relies on specific regis
 
 | Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
 | --- | --- | --- | --- | --- | --- |
-| `L2_FLUSH_PORT_REG` | `0x0A36` | `0x0A36` | `0x0A36` | `0x0A36` | **Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7). |
-| `L2_FLUSH_PORT_EXT_REG` | `**Not found**` | `**Not found**` | `0x0A35` | `**Not found**` | **Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2).|
-| `L2_FLUSH_CTRL1_REG` | `**Not found**` | `0x0A37` | `0x0A37` | `0x0A37` | **Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below.|
-| `L2_FLUSH_CTRL2_REG` | `**Not found**` | `0x0A38` | `0x0A38` | `0x0A38` | **Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic).|
-| `L2_FLUSH_CTRL3_REG` | `**Not found**` | `**Not found**` | `0x0A39` | `0x0A39` | **Bits (0:0):** MSK. Additional global Flush trigger.|
+| [`L2_FLUSH_PORT_REG`](#1751-l2_flush_port_reg-0x0a36--reg_force_flush) | `0x0A36` | `0x0A36` | `0x0A36` | `0x0A36` | **Bits (7:0):** PORT_MSK. **Bits (15:8):** BUSY. (Ports 0 to 7). |
+| [`L2_FLUSH_PORT_EXT_REG`](#1752-l2_flush_port_ext_reg-0x0a35--reg_force_flush1) | `**Not found**` | `**Not found**` | `0x0A35` | `**Not found**` | **Bits (2:0):** PORT_EXT_MSK. **Bits (5:3):** BUSY. (EXT0 to EXT2). |
+| [`L2_FLUSH_CTRL1_REG`](#1753-l2_flush_ctrl1_reg-0x0a37--reg_l2_flush_ctrl1) | `**Not found**` | `0x0A37` | `0x0A37` | `0x0A37` | **Bits (11:0):** VID. **Bits (15:12):** FID. Used in modes below. |
+| [`L2_FLUSH_CTRL2_REG`](#1754-l2_flush_ctrl2_reg-0x0a38--reg_l2_flush_ctrl2) | `**Not found**` | `0x0A38` | `0x0A38` | `0x0A38` | **Bits (1:0):** MODE (0=Port, 1=Port+VID). **Bit (2:2):** TYPE (0=Dynamic). |
+| [`L2_FLUSH_CTRL3_REG`](#1755-l2_flush_ctrl3_reg-0x0a39--reg_l2_flush_ctrl3) | `**Not found**` | `**Not found**` | `0x0A39` | `0x0A39` | **Bits (0:0):** MSK. Additional global Flush trigger. |
 
 #### 1.7.5.1. L2_FLUSH_PORT_REG (0x0A36) / REG_FORCE_FLUSH
 
@@ -1840,20 +1832,20 @@ This register serves as an automated global trigger to flush the entire Look-Up 
 ### 1.8. LED Configuration and Control
 
 This section covers the registers responsible for configuring the switch LEDs, including system-wide LED modes, parallel/serial IO enables, and CPU-forced LED overrides.
-
+/
 | Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
 | --- | --- | --- | --- | --- | --- |
-| `LED_SYS_CONFIG_REG` | `0x1B00` | `0x1B00` | `0x1B00` | `0x1B00` | LED system configuration (interfaces, EEE LPI, power-on). |
-| `LED_SYS_CONFIG2_REG` | `**Not found**` | `0x1B01` | `0x1B01` | `0x1B01` | LED system configuration 2 (bypass, speed mode). |
-| `LED_MODE_REG` | `0x1B02` | `0x1B02` | `0x1B02` | `0x1B02` | LED force rate and general behavior modes. |
-| `LED_CONFIGURATION_REG`| `0x1B03` | `0x1B03` | `0x1B03` | `0x1B03` | LED group mode configuration (selectors for LED0/1/2). |
-| `CPU_FORCE_LED_CFG_REG`| `0x1B07` | `0x1B07` | `0x1B07` | `0x1B07` | CPU forced LED configuration mode. |
-| `CPU_FORCE_LED_REG(g, p)`| `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | CPU forced LED states per port p and LED group g. |
-| `PARA_LED_IO_EN3_REG` | `**Not found**` | `**Not found**` | `0x1B13` | `**Not found**` | Parallel LED IO enable 3 (upper ports). |
-| `PARA_LED_IO_EN1_REG` | `0x1B24` | `0x1B24` | `0x1B24` | `0x1B24` | Parallel LED IO enable 1. |
-| `PARA_LED_IO_EN2_REG` | `0x1B25` | `0x1B25` | `0x1B25` | `0x1B25` | Parallel LED IO enable 2. |
-| `SCAN0_LED_IO_EN1_REG` | `0x1B26` | `0x1B26` | `0x1B26` | `0x1B26` | Scan0 LED IO enable (serial/buzzer config). |
-| `SERIAL_LED_CTRL_REG` | `**Not found**` | `**Not found**` | `0x1B3A` | `**Not found**` | Serial LED control sequence and group number. |
+| [`LED_SYS_CONFIG_REG`](#181-led_sys_config_reg-0x1b00) | `0x1B00` | `0x1B00` | `0x1B00` | `0x1B00` | LED system configuration (interfaces, EEE LPI, power-on). |
+| [`LED_SYS_CONFIG2_REG`](#182-led_sys_config2_reg-0x1b01) | `**Not found**` | `0x1B01` | `0x1B01` | `0x1B01` | LED system configuration 2 (bypass, speed mode). |
+| [`LED_MODE_REG`](#183-led_mode_reg-0x1b02) | `0x1B02` | `0x1B02` | `0x1B02` | `0x1B02` | LED force rate and general behavior modes. |
+| [`LED_CONFIGURATION_REG`](#184-led_configuration_reg-0x1b03) | `0x1B03` | `0x1B03` | `0x1B03` | `0x1B03` | LED group mode configuration (selectors for LED0/1/2). |
+| [`CPU_FORCE_LED_CFG_REG`](#185-cpu_force_led_cfg_reg-0x1b07) | `0x1B07` | `0x1B07` | `0x1B07` | `0x1B07` | CPU forced LED configuration mode. |
+| [`CPU_FORCE_LED_REG(g, p)`](#186-cpu_force_led_regg-p-0x1b08--g--2--p--8) | `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | `0x1B08+(g*2)+(p/8)` | `0x1B08+(g*2)` | CPU forced LED states per port p and LED group g. |
+| [`PARA_LED_IO_EN3_REG`](#187-para_led_io_en3_reg-0x1b13) | `**Not found**` | `**Not found**` | `0x1B13` | `**Not found**` | Parallel LED IO enable 3 (upper ports). |
+| [`PARA_LED_IO_EN1_REG`](#188-para_led_io_en1_reg-0x1b24) | `0x1B24` | `0x1B24` | `0x1B24` | `0x1B24` | Parallel LED IO enable 1. |
+| [`PARA_LED_IO_EN2_REG`](#189-para_led_io_en2_reg-0x1b25) | `0x1B25` | `0x1B25` | `0x1B25` | `0x1B25` | Parallel LED IO enable 2. |
+| [`SCAN0_LED_IO_EN1_REG`](#1810-scan0_led_io_en1_reg-0x1b26) | `0x1B26` | `0x1B26` | `0x1B26` | `0x1B26` | Scan0 LED IO enable (serial/buzzer config). |
+| [`SERIAL_LED_CTRL_REG`](#1811-serial_led_ctrl_reg-0x1b3a) | `**Not found**` | `**Not found**` | `0x1B3A` | `**Not found**` | Serial LED control sequence and group number. |
 
 > **Note on `0x1B13`:** In the vendor SDK, this register is named `EXT_GPIO_ENABLE_CTRL1` for Family A, serving a different semantic purpose. Therefore, it is marked as **Not found** under the `PARA_LED_IO_EN3_REG` mapping for Family A. The `rtl8365mb` driver maps `0x1B13` as `PARA_LED_IO_EN3_REG` specifically to configure the parallel LED IO for logical ports 8 and above, which are physically present in the 11-port layout of Family C.
 
@@ -2242,11 +2234,16 @@ However the code just uses the Internal PHYs base.
 
 For switches connected to the host via the MDC/MDIO interface, the internal PHYs are directly exposed on the MDIO bus and respond to their respective PHY addresses (typically corresponding to their port numbers). Thus, the host can access the PHY registers directly using standard MDIO read/write operations.
 
-|Logical Name|Family A |Family B |Family C |Family D |Function / Usage|
-|-|-|-|-|-|-|
-|`PHY_REG(p, r)`|`0x2000 + (p<<5) + r`|`0x2000 + (p<<5) + r`|`**Not found**`|`**Not found**`|PHY p register r|
-|`PHY_OCP_REG(p, r)`|`**Not found**`|`**Not found**`|`0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1`|`0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1`|PHY p OCP register r on page `r & 0xFC00` set by GPHY_OCP_MSB_0 |
-|`GPHY_OCP_MSB_0`|`**Not found**`|`**Not found**`|`0x1d15`|`0x1d15`|PHY OCP register page for CPU and DW8051 access of PHY_OCP_REG(p, r)|
+| Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
+| --- | --- | --- | --- | --- | --- |
+| [`PHY_REG(p, r)`](#phy_regp-r-0x2000--p5--r) | `0x2000 + (p<<5) + r` | `0x2000 + (p<<5) + r` | `**Not found**` | `**Not found**` | PHY p register r |
+| [`PHY_OCP_REG(p, r)`](#phy_ocp_regp-r-0x2000--r--6--0x000f8--p5--r--1--0x001f) | `**Not found**` | `**Not found**` | `0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1` | `0x2000 + (r & 0x3C0)>>6<<8  + (p<<5) + (r & 0x3E)>>1` | PHY p OCP register r on page |
+| [`GPHY_OCP_MSB_0`](#gphy_ocp_msb_0-0x1d15) | `**Not found**` | `**Not found**` | `0x1d15` | `0x1d15` | PHY OCP register page for CPU and DW8051 access |
+| [`INDIRECT_ACCESS_CTRL`](#221-indirect_access_ctrl-0x1f00) | `0x1F00` | `0x1F00` | `0x1F00` | `0x1F00` | Command (Bit 0) and Access direction (Bit 1). |
+| [`INDIRECT_ACCESS_STATUS`](#222-indirect_access_status-0x1f01) | `0x1F01` | `0x1F01` | `0x1F01` | `0x1F01` | Internal transaction status (Busy flags). |
+| [`INDIRECT_ACCESS_ADDRESS`](#223-indirect_access_address-0x1f02) | `0x1F02` | `0x1F02` | `0x1F02` | `0x1F02` | Formatted PHY address (Base + Port + Offset). |
+| [`INDIRECT_ACCESS_WRITE_DATA`](#22-indirect-phy-access-via-switch-registers) | `0x1F03` | `0x1F03` | `0x1F03` | `0x1F03` | Data to write to the PHY. |
+| [`INDIRECT_ACCESS_READ_DATA`](#22-indirect-phy-access-via-switch-registers) | `0x1F04` | `0x1F04` | `0x1F04` | `0x1F04` | Data read from the PHY. |
 
 #### PHY_REG(p, r) (0x2000 + (p<<5) + r)
 
@@ -2432,12 +2429,12 @@ There is a crucial physical divergence in the data staging area: **Family A** us
 
 | Logical Name | Family A | Family B | Family C | Family D | Function / Usage |
 | --- | --- | --- | --- | --- | --- |
-| `TABLE_CTRL` | `0x0500` | `0x0500` | `0x0500` | `0x0500` | Defines the Command, Operation (R/W), and Target Table. |
-| `TABLE_ACCESS_ADDR` | `0x0501` | `0x0501` | `0x0501` | `0x0501` | Direct index or address of the table entry to be accessed. |
-| `TABLE_LUT_ADDR` | `0x0502` | `0x0502` | `0x0502` | `0x0502` | Hardware execution status (Busy, Hit, and Matched Address). |
-| `TABLE_DATA(w)` | `0x0503 + w` | `**Not found**` | `**Not found**` | `**Not found**` | Staging area of 32 words for Read/Write operations. |
-| `TABLE_WRITE(w)` | `**Not found**` | `0x0510 + w` | `0x0510 + w` | `0x0510 + w` | Staging area of 16 words for Write operations. |
-| `TABLE_READ(w)` | `**Not found**` | `0x0520 + w` | `0x0520 + w` | `0x0520 + w` | Staging area of 16 words for Read operations. |
+| [`TABLE_CTRL`](#321-table_ctrl-0x0500) | `0x0500` | `0x0500` | `0x0500` | `0x0500` | Defines the Command, Operation (R/W), and Target Table. |
+| [`TABLE_ACCESS_ADDR`](#322-table_access_addr-0x0501) | `0x0501` | `0x0501` | `0x0501` | `0x0501` | Direct index or address of the table entry to be accessed. |
+| [`TABLE_LUT_ADDR`](#322-reg_table_lut_addr--table_status_reg-0x0502) | `0x0502` | `0x0502` | `0x0502` | `0x0502` | Hardware execution status (Busy, Hit, and Matched Address). |
+| [`TABLE_DATA(w)`](#323-table_dataw-0x0503--w) | `0x0503 + w` | `**Not found**` | `**Not found**` | `**Not found**` | Staging area of 32 words for Read/Write operations. |
+| [`TABLE_WRITE(w)`](#324-table_writew-0x0510--w) | `**Not found**` | `0x0510 + w` | `0x0510 + w` | `0x0510 + w` | Staging area of 16 words for Write operations. |
+| [`TABLE_READ(w)`](#325-table_readw-0x0520--w) | `**Not found**` | `0x0520 + w` | `0x0520 + w` | `0x0520 + w` | Staging area of 16 words for Read operations. |
 
 > **Note:** The Family C API redefines the `0x0502` register internally as `TABLE_ACCESS_STATUS_REG`, while Family D keeps the native `REG_TABLE_LUT_ADDR` nomenclature. Both point to the exact same physical hardware address.
 
